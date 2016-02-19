@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>腾势</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script type="text/javascript">
+        !(function(){
+            var phoneWidth = parseInt(window.screen.width);
+            var phoneScale = phoneWidth/640;
+
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                document.write('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">');
+            } else {
+                document.write('<meta name="viewport" content="width=320, user-scalable=no, target-densitydpi=device-dpi">');
+            }
+        })();
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+<body>
+
+<div class="loading" id="J_loading">
+    <div class="loading-cont">
+        <div class="loading-cont-pro" id="J_loading_pro"></div>
+    </div>
+</div>
+
+<div id="J_main" class="main hide">
+    <section class="index" id="J_index">
+        <div class="logo">
+            <img data-src="./images/index/logo.png">
+        </div>
+        <div class="idx-banner" id="J_idx_banner">
+            <img data-src="./images/index/banner_idx.png">
+            <div class="idx-car">
+                <div class="idx-car1">
+                    <img class="idx-car-act" data-src="./images/index/car1.png">
+                </div>
+                <div class="idx-car2">
+                    <img class="idx-car-act" data-src="./images/index/car2.png">
+                </div>
+            </div>
+            <div class="idx-fengche">
+                <img data-src="./images/index/fengche.png">
+            </div>
+            <div class="idx-change"></div>
+        </div>
+        <div class="idx-bottom" id="J_idx_bottom">
+            <img data-src="./images/index/bottom_idx.png">
+            <div class="idx-car3">
+                <img class="idx-car-act" data-src="./images/index/car3.png">
+            </div>
+            <div class="idx-car4">
+                <img class="idx-car-act" data-src="./images/index/car4.png">
+            </div>
+            <div class="idx-car5">
+                <img class="idx-car-act" data-src="./images/index/car5.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="section1">
+        <div class="section1-chart-w" id="J_sec1_chart">
+            <div class="section1-chart">
+                <div class="sec1-c-l">
+                    <img class="sec1-c-bg" data-src="./images/1/1.png">
+                    <div class="sec1-c-car">
+                        <img class="sec1-c-car-i" data-src="./images/1/car.png">
+                        <img class="sec1-c-car-lt" data-src="./images/1/luntan.png">
+                        <div class="sec1-c-power">
+                            <img data-src="./images/1/power.png">
+                        </div>
+                    </div>
+                    <div class="sec1-c-arr1">
+                        <div class="sec1-c-arr1-i"><img data-src="./images/1/arrow1.png"></div>
+                    </div>
+                    <div class="sec1-c-arr2">
+                        <div class="sec1-c-arr2-i"><img data-src="./images/1/arrow2.png"></div>
+                    </div>
+                    <img class="sec1-c-t1" data-src="./images/1/title1.png">
+                    <img class="sec1-c-t2" data-src="./images/1/title2.png">
+                </div>
+                <div class="sec1-c-arr3 J_sec1_arr">
+                    <img data-src="./images/1/arrow3.png">
+                </div>
+                <div class="sec1-c-arr4 J_sec1_arr">
+                    <img data-src="./images/1/arrow4.png">
+                </div>
+                <div class="sec1-c-arr5 J_sec1_arr">
+                    <img data-src="./images/1/arrow5.png">
+                </div>
+                <div class="sec1-c-arr6 J_sec1_arr">
+                    <img data-src="./images/1/arrow6.png">
+                </div>
+                <div class="sec1-c-arr7 J_sec1_arr">
+                    <img data-src="./images/1/arrow7.png">
+                </div>
+            </div>
+        </div>
+        <div class="section1-book" id="J_sec1_book">
+            <img class="sec1-book" data-src="./images/1/book.png">
+            <img class="sec1-title3 J_sec1_t3" data-src="./images/1/title3.png">
+            <img class="sec1-title4 J_sec1_t3" data-src="./images/1/title4.png">
+            <div class="sec1-book-cont">
+                <img class="sec1-rmb" id="J_sec1_rmb" data-src="./images/1/rmb.png">
+                <img class="sec1-word" id="J_sec1_word" data-src="./images/1/word.png">
+            </div>
+            <div class="sec1-mask"></div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="sec2-title">
+            <div class="sec2-t-w J_sec2_t">
+                <img data-src="./images/2/keyword.png">
+            </div>
+            <div class="sec2-t-w J_sec2_t">
+                <img data-src="./images/2/keyword.png">
+            </div>
+            <div class="sec2-t-w J_sec2_t">
+                <img data-src="./images/2/keyword.png">
+            </div>
+            <img class="sec2-t-wenhao" id="J_sec2_wenhao" data-src="./images/2/wenhao.png">
+        </div>
+        <div class="sec2-title1">
+            <div class="sec2-title1-i" id="J_sec2_title1"></div>
+        </div>
+        <div class="sec2-bing">
+            <div class="sec2-bing1-w" id="J_sec2_bing1">
+                <img class="sec2-bing1" data-src="./images/2/bing1.png">
+                <img class="sec2-lt1" data-src="./images/2/luntai.png">
+                <img class="sec2-lt2" data-src="./images/2/luntai.png">
+            </div>
+
+            <img class="sec2-bing2" id="J_sec2_bing2" data-src="./images/2/bing2.png">
+            <div class="sec2-zx-w" id="J_sec2_zx"></div>
+
+            <img class="sec2-bing3" id="J_sec2_bing3" data-src="./images/2/bing3.png">
+        </div>
+        <div class="sec2-renwu" id="J_sec2_renwu">
+            <img class="sec2-rw-bg" data-src="./images/2/bg.png">
+            <div class="sec2-rw-img">
+                <img class="J_sec2_jb" data-src="./images/2/1.png">
+                <img class="J_sec2_jb" data-src="./images/2/2.png">
+                <img class="J_sec2_jb" data-src="./images/2/3.png">
+                <img class="J_sec2_jb" data-src="./images/2/4.png">
+                <img class="J_sec2_jb" data-src="./images/2/5.png">
+                <img class="J_sec2_jb" data-src="./images/2/6.png">
+                <img class="J_sec2_jb" data-src="./images/2/7.png">
+                <img class="J_sec2_jb" data-src="./images/2/8.png">
+                <img class="J_sec2_jb" data-src="./images/2/9.png">
+
+                <img class="J_sec2_jb_info hide" data-src="./images/2/1_1.png">
+                <img class="J_sec2_jb_info hide" data-src="./images/2/2_1.png">
+                <img class="J_sec2_jb_info hide" data-src="./images/2/3_1.png">
+                <img class="J_sec2_jb_info hide" data-src="./images/2/4_1.png">
+                <img class="J_sec2_jb_info hide" data-src="./images/2/5_1.png">
+                <img class="J_sec2_jb_info hide" data-src="./images/2/6_1.png">
+                <img class="J_sec2_jb_info hide" data-src="./images/2/7_1.png">
+                <img class="J_sec2_jb_info hide" data-src="./images/2/8_1.png">
+                <img class="J_sec2_jb_info hide" data-src="./images/2/9_1.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="section3">
+        <div class="sec3-title" id="J_sec3_title">
+            <img data-src="./images/3/title.png">
+        </div>
+        <div class="sec3-bing">
+            <img class="sec3-bing-i J_sec3_bing" data-src="./images/3/bing1.png">
+            <img class="sec3-bing-i J_sec3_bing" data-src="./images/3/bing2.png">
+            <img class="sec3-bing-i J_sec3_bing" data-src="./images/3/bing3.png">
+            <img class="sec3-bing-c J_sec3_c" data-src="./images/3/center.png">
+        </div>
+        <div class="sec3-cont" id="J_sec3_cont">
+            <img data-src="./images/3/cont.png">
+        </div>
+        <div class="sec3-bing1">
+            <img class="sec3-bing1-i J_sec3_bing1" data-src="./images/3/bing4.png">
+            <img class="sec3-bing1-i J_sec3_bing1" data-src="./images/3/bing5.png">
+            <img class="sec3-bing1-i J_sec3_bing1" data-src="./images/3/bing6.png">
+            <img class="sec3-bing1-c J_sec3_c1" data-src="./images/3/center1.png">
+        </div>
+        <div class="sec3-computer">
+            <div class="sec3-com-t">
+                <img class="sec3-c-t1" id="J_sec3_t1" data-src="./images/3/title2.png">
+                <img class="sec3-c-t2" id="J_sec3_t2" data-src="./images/3/title3.png">
+            </div>
+            <img class="sec3-c-c" id="J_sec3_com" data-src="./images/3/computer.png">
+        </div>
+    </section>
+
+    <section class="section4">
+        <div class="sec4-title" id="J_sec4_title">
+            <img data-src="./images/4/title.png">
+        </div>
+        <div class="sec4-cont1" id="J_sec4_cont1">
+            <img class="sec4-cont1-i" data-src="./images/4/cont1.png">
+            <img class="sec4-cont1-qp" data-src="./images/4/qipao.png">
+        </div>
+        <div class="sec4-cont3" id="J_sec4_cont3">
+            <img class="sec4-cont2" data-src="./images/4/cont2.png">
+            <img class="sec4-cont3-i" data-src="./images/4/cont3.png">
+            <img class="sec4-cont3-cz" data-src="./images/4/chuizi.png">
+        </div>
+        <div class="sec4-loufang">
+            <img class="sec4-loufang-i" data-src="./images/4/loufang.png">
+            <img class="sec4-lf-tag" id="J_sec4_tag" data-src="./images/4/tag.png">
+        </div>
+        <div class="sec4-xc1">
+            <img class="sec4-xc1-i1 J_xc1_i1" data-src="./images/4/bj.png">
+            <img class="sec4-xc1-i2 J_xc1_i2" data-src="./images/4/sh.png">
+            <img class="sec4-xc1-title" data-src="./images/4/title1.png">
+        </div>
+        <div class="sec4-xc2">
+            <img class="sec4-xc1-i1 J_xc1_i1" data-src="./images/4/gz.png">
+            <img class="sec4-xc1-i2 J_xc1_i2" data-src="./images/4/sz.png">
+            <img class="sec4-xc1-title" data-src="./images/4/title1.png">
+        </div>
+        <div class="sec4-rw-list">
+            <img class="sec4-rw-l-t" data-src="./images/4/title2.png">
+            <div class="sec4-rw-l-w">
+                <div class="sec4-rw-l" id="J_sec4_rw">
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/4/jb1.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp1.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/4/jb2.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp2.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/4/jb3.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp3.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/4/jb4.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp4.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/4/jb5.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp5.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec4-xwdc">
+            <img class="sec4-xwdc-i" data-src="./images/4/dongcha.png">
+            <img class="sec4-xwdc-e" data-src="./images/4/eye.png">
+        </div>
+        <div class="sec4-hf">
+            <img class="sec4-hf1" id="J_sec4_hf1" data-src="./images/4/bot_cont1.png">
+            <img class="sec4-hf2" id="J_sec4_hf2" data-src="./images/4/bot_cont2.png">
+            <img class="sec4-hf3" id="J_sec4_hf3" data-src="./images/4/bot_cont3.png">
+        </div>
+    </section>
+
+    <section class="section5">
+        <div class="sec4-title" id="J_sec5_title">
+            <img data-src="./images/5/title.png">
+        </div>
+        <div class="sec4-cont1" id="J_sec5_cont1">
+            <img class="sec4-cont1-i" data-src="./images/5/cont1.png">
+            <img class="sec4-cont1-qp" data-src="./images/5/qipao.png">
+        </div>
+        <img class="sec5-cont2" id="J_sec5_cont2"data-src="./images/5/cont2.png">
+        <img class="sec5-cont3" id="J_sec5_cont3" data-src="./images/5/cont3.png">
+        <div class="sec4-rw-list">
+            <img class="sec4-rw-l-t" data-src="./images/4/title2.png">
+            <div class="sec4-rw-l-w">
+                <div class="sec4-rw-l" id="J_sec5_rw">
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/4/jb1.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp1.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/5/jb1.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp2.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/5/jb2.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp3.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/4/jb5.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp4.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/5/jb3.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp5.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/4/jb4.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp2.png">
+                    </div>
+                    <div class="sec4-rw-jb">
+                        <img class="sec4-rw-jb-i" data-src="./images/5/jb4.png">
+                        <img class="sec4-rw-jb-tip" data-src="./images/4/qp1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec4-xwdc">
+            <img class="sec4-xwdc-i" data-src="./images/4/dongcha.png">
+            <img class="sec4-xwdc-e" data-src="./images/4/eye.png">
+        </div>
+        <div class="sec4-hf">
+            <img class="sec4-hf1" id="J_sec5_hf1" data-src="./images/5/bot_cont1.png">
+            <img class="sec4-hf2" id="J_sec5_hf2" data-src="./images/5/bot_cont2.png">
+            <img class="sec4-hf3" id="J_sec5_hf3" style="bottom:26px;" data-src="./images/5/bot_cont3.png">
+        </div>
+    </section>
+
+    <section class="section6">
+        <img class="sec6-title" id="J_sec6_title" data-src="./images/6/title.png">
+        <div class="sec6-cont1" id="J_sec6_cont1">
+            <img class="sec6-cont1-i" data-src="./images/6/cont1.png">
+            <img class="sec6-cont1-cete" data-src="./images/6/compete.png">
+        </div>
+        <img class="sec6-cont2" id="J_sec6_cont2" data-src="./images/6/cont2.png">
+        <div class="sec6-cont3" id="J_sec6_cont3">
+            <img class="sec6-cont3-i" data-src="./images/6/cont3.png">
+            <div class="sec6-cont3-deng" id="J_sec6_deng"></div>
+            <img class="sec6-cont3-cl" data-src="./images/6/chilun1.png">
+        </div>
+        <div class="sec6-cont4" id="J_sec6_cont4">
+            <img class="sec6-cont4-i" data-src="./images/6/cont4.png">
+            <div class="sec6-cont3-yun" id="J_sec6_yun"></div>
+        </div>
+        <div class="sec6-cont5" id="J_sec6_cont5">
+            <img class="sec6-cont5-i" data-src="./images/6/cont5.png">
+            <img class="sec6-cont3-c2" data-src="./images/6/chilun2.png">
+            <div class="sec6-cont3-wjj" id="J_sec6_wjj"></div>
+        </div>
+        <div class="sec6-cont6" id="J_sec6_cont6">
+            <img class="sec6-cont6-i" data-src="./images/6/cont6.png">
+        </div>
+    </section>
+
+    <section class="section7">
+        <div class="sec7-banner">
+            <img data-src="./images/7/banner.jpg">
+        </div>
+        <div class="sec7-cont">
+            <img data-src="./images/7/title1.png" id="J_sec7_cont">
+            <div class="sec7-cont-main">
+                万博宣伟公关顾问是全球领先的公关顾问之一，在全球81个城市均设有
+办事处。该公司创新的方法及创造性的活动获得无数奖项，被霍姆斯报
+告评为2012年 “年度最佳环球公关公司”，并以位列第一的成绩获评
+“创意最佳环球公关公司”和“年度最佳数字公关公司”。万博宣伟的
+战略和执行应用于包括消费品营销、医疗卫生、高科技产业、公共事务
+以及金融产业和危机公关管理在内的各个业务部门。万博宣伟在社交媒
+体及数字营销方面有着丰富的专业知识。万博宣伟公关顾问是全球领先
+的广告和营销服务机构埃培智集团（NYSE:IPG）的子公司。
+                <p>更多了解请登陆<a href="http://www.webershandwick.com/">www.webershandwick.com</a></p>
+            </div>
+        </div>
+        <div class="sec7-cont">
+            <img data-src="./images/7/title2.png" id="J_sec7_cont1">
+            <div class="sec7-cont-main hide">
+                万博宣伟公关顾问是全球领先的公关顾问之一，在全球81个城市均设有
+办事处。该公司创新的方法及创造性的活动获得无数奖项，被霍姆斯报
+告评为2012年 “年度最佳环球公关公司”，并以位列第一的成绩获评
+“创意最佳环球公关公司”和“年度最佳数字公关公司”。万博宣伟的
+战略和执行应用于包括消费品营销、医疗卫生、高科技产业、公共事务
+以及金融产业和危机公关管理在内的各个业务部门。万博宣伟在社交媒
+体及数字营销方面有着丰富的专业知识。万博宣伟公关顾问是全球领先
+的广告和营销服务机构埃培智集团（NYSE:IPG）的子公司。
+                <p>更多了解请登陆<a href="http://www.webershandwick.com/">www.webershandwick.com</a></p>
+            </div>
+        </div>
+        <div class="idx-bottom">
+            <img data-src="./images/index/bottom_idx.png">
+            <div class="idx-car3">
+                <img class="idx-car-act" data-src="./images/index/car3.png">
+            </div>
+            <div class="idx-car4">
+                <img class="idx-car-act" data-src="./images/index/car4.png">
+            </div>
+            <div class="idx-car5">
+                <img class="idx-car-act" data-src="./images/index/car5.png">
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,479 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>天庭英才招聘</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+<body class="index">
+
+<div class="canvas">
+    <canvas id="J_canvas" width="640" height="542"></canvas>
+</div>
+
+<div class="control" id="J_control">
+    <span><i id="J_eraser"></i><span>
+    <span><i class="zoom" id="J_zoom"></i><span>
+    <span><i class="sml" id="J_sml"></i><span>
+    <span><i class="cancel" id="J_cancel"></i><span>
+</div>
+
+<div class="color" id="J_color">
+    <span><i class="current"></i></span>
+    <span><i class="c1"></i></span>
+    <span><i class="c2"></i></span>
+    <span><i class="c3"></i></span>
+    <span><i class="c4"></i></span>
+    <span><i class="c5"></i></span>
+    <br />
+    <span><i class="c6"></i></span>
+    <span><i class="c7"></i></span>
+    <span><i class="c8"></i></span>
+    <span><i class="c9"></i></span>
+    <span><i class="c10"></i></span>
+    <span><i class="c11"></i></span>
+</div>
+
+<div class="complete">
+    <i id="J_complete"></i>
+    <img src="./images/logo.png" height="36">
+    <i class="again" id="J_again"></i>
+</div>
+
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    ;(function(){
+        var win_width = $(window).width();
+        var win_height = $(window).height();
+
+        var canvas_width = win_width > 700 ? 640 : win_width-30;
+        var canvas_height = canvas_width*542/640;
+
+        var canvas_obj = $("#J_canvas");
+
+        canvas_obj.css({
+            width : canvas_width,
+            height : canvas_height
+        });
+
+        var ctx = canvas_obj[0].getContext("2d");
+
+        //画图坐标配置
+        var config = [
+            [//云1
+                [ [7, 7], [7, 61], [32, 66], [38, 63], [57, 59], [65, 61], [85, 60], [107, 47], [125, 45], [146, 34], [174, 30], [180, 26], [195, 7] ]
+            ],
+            [//陨石坑
+                [ [385, 7], [377, 17], [383, 26], [398, 26], [406, 19], [408, 13], [403, 7] ],
+                [ [494, 15], [486, 21], [487, 28], [493, 34], [504, 35], [513, 29], [514, 20], [506, 14] ],
+                [ [393, 42], [379, 49], [374, 56], [374, 65], [379, 71], [413, 69], [417, 65], [418, 56], [406, 43] ],
+                [ [421, 159], [406, 166], [401, 174], [402, 180], [414, 194], [437, 199], [454, 199], [459, 186], [465, 179], [454, 166], [440, 160] ]
+            ],
+            [//月亮
+                [ [377, 8], [359, 28], [345, 62], [376, 70], [427, 68], [475, 58], [501, 62], [542, 68], [558, 68], [550, 44], [538, 22], [521, 8] ],
+                [ [346, 120], [352, 146], [380, 180], [418, 196], [410, 190], [402, 179], [407, 165], [431, 158], [456, 167], [464, 177], [490, 159], [528, 155], [551, 145], [560, 122], [510, 114], [470, 116], [410, 132] ]
+            ],
+            [//鸟
+                [ [200, 62], [193, 70], [193, 89], [210, 97], [240, 87], [252, 80], [245, 80], [250, 70], [228, 78], [226, 66], [222, 70], [210, 65] ]
+            ],
+            [//横幅
+                [ [259, 58], [259, 120], [303, 111], [402, 131], [500, 115], [609, 128], [580, 96], [597, 68], [533, 68], [481, 57], [394, 73], [287, 51] ]
+            ],
+            [//底部云1
+                [ [7, 243], [6, 353], [18, 360], [40, 346], [76, 346], [84, 348], [111, 344], [127, 351], [152, 347], [167, 350], [172, 334], [169, 317], [151, 308], [138, 286], [126, 281], [106, 286], [93, 274], [70, 269], [60, 269], [54, 258], [40, 251], [25, 242] ]
+            ],
+            [//底部云2
+                [ [7, 376], [7, 482], [29, 498], [48, 504], [66, 534], [136, 534], [140, 520], [155, 510], [150, 490], [169, 466], [182, 464], [193, 450], [213, 443], [236, 443], [229, 422], [209, 410], [203, 378], [196, 368], [163, 348], [134, 351], [98, 345], [83, 347], [50, 345], [24, 352] ]
+            ],
+            [//底部云3
+                [ [135, 534], [286, 535], [306, 518], [296, 506], [279, 510], [260, 502], [267, 474], [260, 460], [245, 446], [217, 441], [200, 445], [185, 462], [164, 470], [153, 483], [150, 498], [153, 511], [138, 520] ]
+            ],
+            [//底部云4
+                [ [267, 414], [267, 434], [273, 448], [262, 461], [264, 474], [266, 484], [259, 502], [277, 510], [293, 505], [311, 519], [338, 518], [368, 524], [386, 521], [404, 504], [426, 517], [433, 517], [432, 490], [444, 467], [400, 442], [369, 410], [347, 398], [347, 389], [338, 380], [331, 380], [317,364], [317, 372], [300, 374], [286, 379], [281, 400] ]
+            ],
+            [//底部云5
+                [ [443, 534], [635, 534], [635, 455], [602, 433], [570, 434], [544, 421], [514, 423], [502, 430], [488, 451], [453, 460], [434, 482], [432, 512] ]
+            ],
+            [//中部云
+                [ [190, 235], [230, 226], [279, 290], [317, 321], [339, 321], [347, 306], [356, 302], [362, 296], [354, 288], [351, 288], [332, 273], [316, 273], [302, 263], [292, 263], [280, 265], [286, 232], [269, 221], [257, 208], [235, 201], [215, 207], [203, 221], [194, 229] ]
+            ],
+            [//右侧中部云
+                [ [424, 232], [451, 230], [490, 238], [533, 258], [536, 270], [516, 282], [478, 290], [457, 308], [454, 317], [500, 300], [516, 289], [523, 294], [532, 294], [534, 298], [542, 298], [552, 305], [545, 308], [572, 316], [586, 310], [595, 311], [600, 310], [607, 319], [613, 320], [633, 312], [633, 144], [606, 141], [583, 153], [571, 154], [550, 146], [528, 155], [498, 157], [468, 174], [451, 206], [430, 216] ],
+                [ [417, 249], [415, 267], [408, 273], [436, 287], [440, 292], [464, 270], [484, 262], [500, 257], [450, 241], [429, 243], [401, 261] ]
+            ],
+            [//offer
+                [ [120, 254], [174, 308], [200, 358], [218, 366], [244, 368], [293, 339], [279, 339], [280, 333], [274, 320], [289, 314], [303, 334], [315, 319], [276, 288], [230, 226] ]
+            ],
+            [//山
+                [ [294, 192], [294, 218], [287, 220], [280, 263], [305, 264], [319, 272], [336, 274], [348, 287], [360, 293], [363, 270], [373, 252], [396, 242], [410, 233], [407, 226], [403, 225], [399, 210], [379, 209], [376, 200], [359, 197], [356, 184], [348, 184], [346, 170], [329, 170], [326, 196], [316, 196], [313, 186], [308, 184] ],
+                [ [395, 269], [408, 271], [416, 266], [413, 252], [404, 258] ]
+            ],
+            [//玉帝皮肤
+                [ [92, 137], [92, 142], [86, 145], [88, 154], [95, 156], [97, 160], [90, 167], [109, 177], [124, 183], [137, 177], [141, 160], [138, 158], [138, 152], [142, 152], [141, 142], [138, 141], [139, 129], [131, 124], [122, 130], [107, 124], [99, 130] ],
+                [ [108, 216], [102, 217], [100, 221], [100, 231], [108, 236], [116, 236], [122, 238], [125, 231], [118, 224], [118, 220], [115, 218], [114, 213] ],
+                [ [193, 173], [193, 189], [214, 186], [214, 172], [205, 172], [204, 166] ]
+            ],
+            [//玉帝帽子
+                [ [64, 102], [64, 115], [91, 120], [92, 142], [102, 125], [112, 125], [122, 130], [132, 124], [139, 127], [139, 120], [161, 109], [176, 92], [173, 84], [142, 78], [124, 98], [107, 106], [90, 100] ]
+            ],
+            [//玉帝衣服
+                [ [90, 166], [78, 176], [75, 213], [85, 233], [85, 254], [98, 276], [108, 287], [126, 281], [143, 290], [151, 308], [165, 315], [175, 312], [155, 284], [121, 254], [178, 240], [178, 230], [158, 220], [146, 199], [149, 191], [187, 209], [195, 195], [193, 175], [152, 164], [142, 160], [135, 178], [125, 182], [106, 176] ]
+            ],
+            [//仙女头发
+                [ [343, 313], [353, 322], [371, 330], [382, 343], [388, 350], [397, 350], [404, 339], [405, 329], [423, 322], [438, 293], [425, 280], [413, 280], [398, 269], [377, 278], [369, 290], [369, 299], [345, 306] ]
+            ],
+            [//仙女皮肤
+                [ [275, 338], [290, 337], [318, 360], [326, 348], [294, 325], [288, 315], [278, 315], [272, 321] ],
+                [ [342, 310], [336, 323], [325, 345], [336, 361], [333, 376], [347, 387], [347, 393], [373, 392], [385, 368], [399, 360], [393, 350], [383, 343], [371, 330], [353, 321] ],
+                [ [434, 361], [427, 376], [468, 366], [478, 368], [484, 360], [481, 350], [456, 357] ]
+            ],
+            [//仙女衣服
+                [ [346, 392], [351, 401], [371, 417], [392, 430], [400, 442], [425, 460], [447, 465], [468, 455], [488, 451], [504, 428], [538, 420], [534, 414], [528, 414], [524, 408], [524, 396], [514, 386], [506, 381], [502, 377], [490, 371], [454, 393], [422, 393], [414, 389], [404, 383], [417, 360], [399, 359], [389, 364], [383, 370], [379, 381], [373, 391] ]
+            ],
+            [
+                [ [506, 381], [514, 386], [524, 396], [524, 408], [528, 414], [534, 414], [538, 420], [554, 425], [569, 434], [599, 434], [635, 456], [635, 387], [611, 369], [590, 371], [575, 360], [559, 366], [546, 359], [502, 377] ]
+            ],
+            [//仙女丝巾
+                [ [324, 348], [317, 361], [333, 383], [333, 367], [337, 361], [329, 353] ],
+                [ [403, 344], [419, 342], [422, 323], [407, 328] ],
+                [ [359, 300], [361, 290], [366, 267], [378, 251], [405, 238], [445, 229], [487, 234], [515, 246], [533, 264], [535, 272], [520, 281], [481, 289], [463, 303], [439, 353], [427, 376], [453, 370], [437, 387], [422, 390], [403, 386], [413, 363], [423, 323], [440, 290], [469, 267], [500, 259], [482, 251], [436, 242], [410, 251], [394, 271], [379, 277], [372, 288], [371, 300] ],
+                [ [453, 318], [496, 302], [517, 289], [524, 295], [530, 295], [535, 300], [544, 299], [550, 306], [543, 307], [572, 318], [586, 311], [595, 312], [599, 310], [606, 320], [613, 320], [615, 328], [601, 330], [574, 335], [529, 329], [508, 331], [486, 337], [466, 353], [454, 359], [435, 360], [441, 353], [468, 328], [446, 335] ]
+            ],
+            [//椅子
+                [ [29, 164], [30, 175], [38, 176], [42, 188], [49, 188], [60, 224], [57, 246], [64, 257], [71, 258], [75, 269], [97, 277], [85, 254], [85, 232], [76, 215], [78, 176], [96, 162], [96, 156], [61, 160], [48, 154], [34, 156] ],
+                [ [138, 151], [138, 158], [161, 166], [161, 160], [171, 160], [172, 148], [164, 140], [152, 142], [148, 150] ],
+                [ [148, 192], [147, 199], [153, 210], [159, 220], [178, 229], [178, 239], [186, 237], [186, 230], [190, 221], [167, 211], [163, 199] ]
+            ],
+            [//背景
+                [ [7, 7], [7, 535], [633, 535], [633, 7] ]
+            ]
+        ];
+
+        var color_config = [
+            "#dadad3",
+            "#e2ff00",
+            "#ea9d54",
+            "#ea9d00",
+            "#ea6371",
+            "#ea3c3e",
+            "#8fff6e",
+            "#9a84d3",
+            "#bb53d3",
+            "#5371d3",
+            "#3b0445",
+            "#130448",
+            "#ffffff"
+        ];
+
+        //画图构造函数
+        Draw = function(){
+            var _this = this;
+            var img_src = "./images/offer.png";
+
+            this.sel_index_arr = [];
+            this.sel_index = 0;
+            this.color_index = 0;
+
+            this.sel_sort = [];
+
+            this.is_ruber = 0;
+
+            this.zoom_num = 1.5;
+
+            this.tmp_img_obj = new Image();
+            this.tmp_img_obj.src = img_src;
+
+            this.tmp_img_obj.onload = function(){
+                ctx.drawImage(_this.tmp_img_obj, 0, 0, 640, 542);
+
+                _this.draw_area([23, 12]);
+            }
+
+            this.listen_event();
+        };
+
+        //画区域图
+        Draw.prototype.draw_area = function(idx){
+            var index = idx[0];
+            var color_index = idx[1];
+
+            for(var i = 0; i < config[index].length; i++){
+                var path = config[index][i];
+
+                ctx.moveTo(path[0][0], path[0][1]);
+                ctx.fillStyle = color_config[color_index];
+                ctx.beginPath();
+
+                for(var k = 1; k < path.length; k++){
+                    ctx.lineTo(path[k][0], path[k][1]);
+                }
+
+                ctx.lineTo(path[0][0], path[0][1]);
+
+                ctx.globalCompositeOperation = "destination-over";
+
+                ctx.fill();
+
+                ctx.closePath();
+            }
+
+        };
+
+        //清除区域并重画
+        Draw.prototype.main = function(){
+            ctx.clearRect(0, 0, 640, 542);
+
+            ctx.drawImage(this.tmp_img_obj, 0, 0, 640, 542);
+
+            for(var i = 0; i < this.sel_index_arr.length; i++){
+                this.draw_area(this.sel_index_arr[i]);
+            }
+
+            this.draw_area([23, 12]);
+        };
+
+        //监听事件，获取点击坐标点imgdata
+        Draw.prototype.listen_event = function(){
+            var _this = this;
+            //获取鼠标坐标
+            canvas_obj.bind("click", function(event){
+                var pos = [event.offsetX, event.offsetY];
+
+                _this.inzone(pos[0], pos[1]);
+            });
+
+            //绑定颜色事件
+            $("#J_color i").bind("click", function(){
+                var index = $("#J_color i").index(this);
+
+                $("#J_color i").removeClass("current");
+
+                $(this).addClass("current");
+
+                if(_this.is_ruber == 1){
+                    $("#J_control i").removeClass("current");
+                    _this.is_ruber = 0;
+                }
+
+                _this.color_index = index;
+            });
+            //橡皮擦
+            $("#J_eraser").bind("click", function(){
+                _this.is_ruber = 1;
+
+                $("#J_control i").removeClass("current");
+                $("#J_color i").removeClass("current");
+
+                $(this).addClass("current");
+            });
+            var zoom = 0;
+            //放大
+            $("#J_zoom").bind("click", function(){
+                if(zoom == 1){
+                    return false;
+                }
+
+                canvas_width = canvas_width*_this.zoom_num;
+                canvas_height = canvas_height*_this.zoom_num;
+
+                canvas_obj.css({
+                    width : canvas_width,
+                    height : canvas_height
+                });
+
+                if(canvas_width+30 > $(window).width()){
+                    $("body").css({
+                        width : canvas_width+30
+                    });
+                }
+
+                zoom = 1;
+            });
+            //缩小
+            $("#J_sml").bind("click", function(){
+                if(zoom == 0){
+                    return false;
+                }
+
+                canvas_width = canvas_width/_this.zoom_num;
+                canvas_height = canvas_height/_this.zoom_num;
+
+                canvas_obj.css({
+                    width : canvas_width,
+                    height : canvas_height
+                });
+
+                $("body").css({
+                    width : "100%"
+                });
+
+                zoom = 0;
+            });
+            //撤销
+            $("#J_cancel").bind("click", function(){
+                _this.is_ruber = 0;
+
+                var tmp = _this.sel_sort.pop();
+
+                var tmp_sel_index_arr = [];
+                for(var i = 0; i < _this.sel_index_arr.length; i++){
+                    if(tmp == _this.sel_index_arr[i][0]){
+                        continue;
+                    }
+                    tmp_sel_index_arr.push(_this.sel_index_arr[i]);
+                }
+                _this.sel_index_arr = tmp_sel_index_arr;
+
+                _this.main();
+
+                $("#J_control i").removeClass("current");
+
+                $(this).addClass("current");
+            });
+            //重涂
+            $("#J_again").bind("click", function(){
+                ctx.clearRect(0, 0, 640, 542);
+
+                ctx.drawImage(_this.tmp_img_obj, 0, 0, 640, 542);
+
+                _this.is_ruber = 0;
+
+                _this.sel_index_arr = [];
+
+                _this.sel_sort = [];
+            });
+        };
+
+        //判断点是否在区域内
+        Draw.prototype.inzone = function(x, y){
+            var is_in = false;
+
+            for(var k = 0; k < config.length; k++){
+                for(var m = 0; m < config[k].length; m++){
+                    var path = config[k][m];
+                    var j = path.length - 1;
+
+                    for(var i = 0; i < path.length; i++){
+                        var _xy = path[i];
+                        var _xy1 = path[j];
+
+                        var _xy_0 = _xy[0]*canvas_width/640;
+                        var _xy_1 = _xy[1]*canvas_height/542;
+                        var _xy1_0 = _xy1[0]*canvas_width/640;
+                        var _xy1_1 = _xy1[1]*canvas_height/542;
+
+                        _xy = [_xy_0, _xy_1];
+                        _xy1 = [_xy1_0, _xy1_1];
+
+                        if((_xy[1] < y && _xy1[1] >= y || _xy1[1] < y && _xy[1] >= y) && (_xy[0] <= x || _xy1[0] <= x)){
+                            if(parseInt(_xy[0]) + (y - _xy[1])/(_xy1[1] - _xy[1])*(_xy1[0] - _xy[0]) < x){
+                                is_in = !is_in;
+                            }
+                        }
+
+                        j = i;
+                    }
+
+                    if(is_in){
+                        break;
+                    }
+                }
+                if(is_in){
+                    break;
+                }
+            }
+
+            if(is_in){
+                this.sel_index = k;
+
+                if(this.is_ruber == 0){
+                    var is_set = 0;
+                    for(var i = 0; i < this.sel_index_arr.length; i++){
+                        if(this.sel_index == this.sel_index_arr[i][0]){
+                            this.sel_index_arr[i][1] = this.color_index;
+
+                            is_set = 1;
+
+                            for(var j = 0; j < this.sel_sort.length; j++){
+                                if(this.sel_sort[j] == this.sel_index){
+                                    var tmp = this.sel_sort[j];
+                                    this.sel_sort[j] = this.sel_sort[this.sel_sort.length - 1];
+                                    this.sel_sort[this.sel_sort.length - 1] = this.sel_sort[j];
+
+                                    break;
+                                }
+                            }
+
+                            break;
+                        }
+                    }
+                    if(is_set === 0){
+                        this.sel_sort.push(this.sel_index);
+
+                        this.sel_index_arr.push([this.sel_index, this.color_index]);
+                    }
+
+                    this.sel_index_arr.sort(function(x, y){
+                        return x[0] - y[0];
+                    });
+
+                }else{
+                    var tmp_sel_index_arr = [];
+                    for(var i = 0; i < this.sel_index_arr.length; i++){
+                        if(this.sel_index == this.sel_index_arr[i][0]){
+                            continue;
+                        }
+                        tmp_sel_index_arr.push(this.sel_index_arr[i]);
+                    }
+                    this.sel_index_arr = tmp_sel_index_arr;
+
+                    var tmp_sel_sort = [];
+                    for(var i = 0; i < this.sel_sort.length; i++){
+                        if(this.sel_index == this.sel_sort[i]){
+                            continue;
+                        }
+                        tmp_sel_sort.push(this.sel_sort[i]);
+                    }
+                    this.sel_sort = tmp_sel_sort;
+                }
+
+                this.main();
+            }
+
+        };
+
+        var dw = new Draw();
+
+        $("#J_complete").bind("click", function(){
+            var canvas_img = canvas_obj[0].toDataURL("image/png", 0.8);
+
+            $.ajax({
+                url: "save.php",
+                type: "POST",
+                dataType: "text",
+                data: {imgdata: canvas_img},
+                success: function(data){
+                    window.location.href = "share.php?type=1&name="+ data;
+                },
+                error: function(){
+
+                }
+            });
+        });
+
+    }());
+</script>
+
+</body>
+</html>

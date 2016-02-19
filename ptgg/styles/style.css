@@ -1,0 +1,752 @@
+body{
+    position:relative;
+    width:100%;
+    padding:0;
+    margin:0;
+    background: #140001;
+    color:#333;
+    font-size:14px;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust:none; 
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,button,input,textarea,blockquote,th,td{margin:0;padding:0}
+img{
+    border:0;
+}
+input, img{
+    vertical-align:middle;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:active {
+    opacity: .8;
+}
+
+*{
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+
+.sion {
+    position: relative;
+    width: 100%;
+}
+
+.bg {
+    display: block;
+    width: 100%;
+}
+.logo {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0);
+}
+.s1-act .logo {
+    -webkit-animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+            animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.logo img {
+    width: 90px;
+}
+.title {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.title1 {
+    top: 80px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s1-act .title1 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title1 img {
+    width: 278px;
+}
+.title2 {
+    top: 138px;
+    opacity: 0;
+}
+.s1-act .title2 {
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title2 img {
+    width: 278px;
+}
+.nav1 {
+    top: 185px;
+}
+.nav1 img {
+    width: 43px;
+    margin: 0 5px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s1-act .nav1 img:nth-of-type(1) {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.s1-act .nav1 img:nth-of-type(2) {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s;
+}
+.s1-act .nav1 img:nth-of-type(3) {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+    -webkit-animation-delay: .4s;
+            animation-delay: .4s;
+}
+.s1-act .nav1 img:nth-of-type(4) {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+    -webkit-animation-delay: .8s;
+            animation-delay: .8s;
+}
+.s2 {
+    padding: 4px 0 60px;
+}
+.title3 {
+    top: 42px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s2-act .title3 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title3 img {
+    width: 170px;
+}
+.bot1 {
+    bottom: 42px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s2-act .bot1 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.bot1 img {
+    width: 125px;
+}
+
+.title4 {
+    top: -8px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s3-act .title4 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title4 img {
+    width: 163px;
+}
+.bot2 {
+    bottom: 2px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s3-act .bot2 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.bot2 img {
+    position: relative;
+    left: 80px;
+    width: 96px;
+}
+
+.s4 {
+    padding: 43px 0 0;
+}
+.title5 {
+    top: 25px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s4-act .title5 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title5 img {
+    width: 232px;
+}
+.bot3 {
+    bottom: -10px;
+    z-index: 10;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s4-act .bot3 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.bot3 img {
+    width: 94px;
+}
+
+.title6 {
+    top: 26px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s5-act .title6 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title6 img {
+    width: 221px;
+}
+.title7 {
+    bottom: 144px;
+    opacity: 0;
+}
+.s1-act .title7 {
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title7 img {
+    width: 221px;
+}
+.title-btn {
+    bottom: 104px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.s1-act .title-btn {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title-phone {
+    top: 94px;
+    opacity: 0;
+}
+.s5-act .title-phone {
+    -webkit-animation: fade 2s;
+            animation: fade 3s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.title-phone img {
+    width: 100px;
+}
+
+.sj1 {
+    position: absolute;
+    left: 0;
+    top: 56px;
+    -webkit-transform: translate3d(-147px, 0, 0);
+            transform: translate3d(-147px, 0, 0);
+}
+.s2-act .sj1 {
+    -webkit-animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+            animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.sj1 img {
+    width: 147px;
+    height: 236px;
+}
+.sj1 .sj1-logo1 {
+    position: absolute;
+    right: 12px;
+    top: 54px;
+    width: 86px;
+    height: 127px;
+    opacity: 0;
+}
+.s2-act .sj1-logo1 {
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.sj2 {
+    position: absolute;
+    right: 0;
+    top: 68px;
+    -webkit-transform: translate3d(53px, 0, 0);
+            transform: translate3d(53px, 0, 0);
+}
+.s2-act .sj2 {
+    -webkit-animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+            animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.sj2 img {
+    width: 53px;
+}
+.sj3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate3d(-148px, 0, 0);
+            transform: translate3d(-148px, 0, 0);
+}
+.s3-act .sj3 {
+    -webkit-animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+            animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.sj3 img {
+    width: 148px;
+}
+.sj3 .sj3-logo2 {
+    position: absolute;
+    top: 38px;
+    left: 12px;
+    width: 68px;
+    opacity: 0;
+}
+.s3-act .sj3-logo2 {
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+    -webkit-animation-delay: .4s;
+            animation-delay: .4s;
+}
+.sj3-nav {
+    position: absolute;
+    left: 0;
+    top: 134px;
+}
+.sj3-nav img {
+    display: block;
+}
+.sj3-nav img:nth-of-type(1) {
+    width: 77px;
+    margin: 0 0 6px 20px;
+    opacity: 0;
+}
+.s3-act .sj3-nav img:nth-of-type(1) {
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+    -webkit-animation-delay: .4s;
+            animation-delay: .4s;
+}
+.sj3-nav img:nth-of-type(2) {
+    width: 77px;
+    margin: 0 0 6px 29px;
+    opacity: 0;
+}
+.s3-act .sj3-nav img:nth-of-type(2) {
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+    -webkit-animation-delay: .6s;
+            animation-delay: .6s;
+}
+.sj3-nav img:nth-of-type(3) {
+    width: 93px;
+    margin: 0 0 6px 23px;
+    opacity: 0;
+}
+.s3-act .sj3-nav img:nth-of-type(3) {
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+    -webkit-animation-delay: .8s;
+            animation-delay: .8s;
+}
+.sj3-nav img:nth-of-type(4) {
+    width: 80px;
+    margin: 0 0 6px 46px;
+    opacity: 0;
+}
+.s3-act .sj3-nav img:nth-of-type(4) {
+    -webkit-animation: fade 2s;
+            animation: fade 2s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
+.sj4 {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    -webkit-transform: translate3d(-47px, 0, 0);
+            transform: translate3d(-47px, 0, 0);
+}
+.s4-act .sj4 {
+    -webkit-animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+            animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.sj4 img {
+    width: 47px;
+}
+.sj5 {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    -webkit-transform: translate3d(47px, 0, 0);
+            transform: translate3d(47px, 0, 0);
+}
+.s4-act .sj5 {
+    -webkit-animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+            animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.sj5 img {
+    width: 48px;
+}
+
+.bg3 {
+    opacity: 0;
+}
+.s3-act .bg3 {
+    -webkit-animation: fade 1s;
+            animation: fade 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+
+.bg4 {
+    opacity: 0;
+}
+.s4-act .bg4 {
+    -webkit-animation: fade 1s;
+            animation: fade 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+
+.s6 {
+    padding-bottom: 50px;
+}
+.title8 {
+    top: -26px;
+    -webkit-transform: -webkit-scale(0, 0);
+            transform: scale(0, 0);
+}
+.title8 img {
+    width: 163px;
+}
+.s6-act .title8 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.bg7 {
+    opacity: 0;
+}
+.s6-act .bg7 {
+    -webkit-animation: fade 1s;
+            animation: fade 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.s6-act .bot1 {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.sj6 img {
+    width: 85px;
+}
+.s6 .bot1 {
+    bottom: 32px;
+}
+.sj6 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate3d(-85px, 0, 0);
+            transform: translate3d(-85px, 0, 0);
+}
+.s6-act .sj6 {
+    -webkit-animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+            animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+.sj7 img {
+    width: 79px;
+}
+.sj7 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: translate3d(79px, 0, 0);
+            transform: translate3d(79px, 0, 0);
+}
+.s6-act .sj7 {
+    -webkit-animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+            animation: pos 1s cubic-bezier(0, 0, 0, 1.0);
+    -webkit-animation-fill-mode : forwards;
+            animation-fill-mode : forwards;
+}
+
+@keyframes fade{
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fade{
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes zoom{
+    0% {
+        transform: scale(0, 0);
+    }
+    80% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+@-webkit-keyframes zoom{
+    0% {
+        -webkit-transform: scale(0, 0);
+    }
+    80% {
+        -webkit-transform: scale(1.1, 1.1);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+@keyframes pos{
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}
+@-webkit-keyframes pos{
+    100% {
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+}
+
+.btn {
+    display: inline-block;
+    width: 104px;
+    height: 32px;
+    line-height: 28px;
+    background: url(../images/btn.png);
+    background-size: 104px 32px;
+    font-size: 14px;
+    color: #130001;
+    font-weight: 700;
+    text-align: center;
+}
+
+.zl-header {
+    background: url(../images/ny_title.jpg) no-repeat;
+    padding-bottom: 10px;
+    background-size: 100% auto;
+    text-align: center;
+}
+.zl-header img {
+    width: 90px;
+    padding: 23px 0 0;
+}
+.zl-tips {
+    position: relative;
+    width: 226px;
+    height: 313px;
+    margin: 0 auto 30px;
+    background: url(../images/zl_tips_bg.jpg);
+    background-size: 226px 313px;
+}
+.zl-tips-title {
+    padding: 8px 0 15px;
+    text-align: center;
+    color: #e9ab32;
+    font-size: 14px;
+    font-weight: 700;
+}
+.rule {
+    padding: 0 25px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+}
+.zl-tips-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.zl-tips-input {
+    margin: 20px 0 0;
+}
+.zl-tips-txt {
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    background: rgba(255, 255, 255, .4);
+    border-bottom: solid 1px #fff;
+    margin: 0 16px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+.zl-tips-txt label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    text-align: center;
+}
+.zl-tips-txt input {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    padding: 2px 0 2px 60px;
+    font-weight: 500;
+    text-align: left;
+    color: #fff;
+    background: none;
+    border: 0;
+    outline: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.zl-title {
+    padding: 0 0 10px;
+    font-size: 18px;
+    color: #e9ab32;
+    font-weight: 700;
+    text-align: center;
+}
+.zl-process {
+    position: relative;
+    width: 155px;
+    height: 110px;
+    margin: 0 auto 10px;
+    background: url(../images/process.png) 0 bottom no-repeat;
+    background-size: 155px 110px;
+}
+.zl-process-step {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 155px;
+    background: url(../images/process_step.png) 0 bottom no-repeat;
+    background-size: 155px 110px;
+}
+.zl-score {
+    width: 185px;
+    min-height: 206px;
+    margin: 0 auto 20px;
+    background: url(../images/score_bg.jpg);
+    background-size: 185px 206px;
+}
+.zl-score-name,
+.zl-score-s {
+    float: left;
+    width: 92px;
+    padding: 30px 0 0;
+    text-align: center;
+}
+.zl-score-s {
+    float: right;
+    color: #fff;
+}
+.zl-score-name p,
+.zl-score-s p {
+    margin: 0 0 4px;
+    font-size: 12px;
+}
+
+.zl-hy {
+    text-align: center;
+}
+.zl-hy .btn {
+    margin: 0 0 5px;
+}
+
+.share {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 76px;
+    height: 50px;
+    z-index: 11;
+    background: url(../images/share.png) no-repeat;
+    background-size: 76px 50px;
+}
+
+.body-bg {
+    background: #140001 url(../images/bot_bg.jpg) 0 bottom no-repeat;
+    background-size: 100% auto;
+}
+
+.hide {
+    display: none;
+}

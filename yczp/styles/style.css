@@ -1,0 +1,179 @@
+body{
+    position:relative;
+    width:100%;
+    padding:0;
+    margin:0;
+    background: #e6e6e6 url(../images/bg.jpg);
+    color:#333;
+    font-size:14px;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust:none; 
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,button,input,textarea,blockquote,th,td{margin:0;padding:0}
+img{
+    border:0;
+}
+input, img{
+    vertical-align:middle;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+*{
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+
+.canvas{
+    position: relative;
+    padding: 20px 15px 10px;
+    text-align: center;
+}
+
+.control{
+    position: relative;
+    text-align: center;
+}
+.control span{
+    position: relative;
+}
+.control i{
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    margin: 0 6px;
+    background: url(../images/eraser.png) no-repeat;
+    background-size: 37px 37px;
+}
+.control i.sml{
+    background: url(../images/sml.png) no-repeat;
+    background-size: 37px 37px;
+}
+.control i.zoom{
+    background: url(../images/zoom.png) no-repeat;
+    background-size: 37px 37px;
+}
+.control i.cancel{
+    background: url(../images/cancel.png) no-repeat;
+    background-size: 37px 37px;
+}
+.control i.current:after{
+    content: ' ';
+    position: absolute;
+    left: -1px;
+    top: -2px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/cur.png);
+    background-size: 40px 40px;
+}
+
+.color{
+    position: relative;
+    padding: 15px 0 0;
+    text-align: center;
+}
+.color span{
+    position: relative;
+}
+.color i{
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 37px;
+    margin: 0 2px 4px 2px;
+    background: url(../images/color.png) no-repeat;
+    background-size: 271px 81px;
+}
+.color i.c1{
+    background-position: -48px 0;
+}
+.color i.c2{
+    background-position: -96px 0;
+}
+.color i.c3{
+    background-position: -142px 0;
+}
+.color i.c4{
+    background-position: -187px 0;
+}
+.color i.c5{
+    background-position: -233px 0;
+}
+.color i.c6{
+    background-position: 0 -44px;
+}
+.color i.c7{
+    background-position: -48px -44px;
+}
+.color i.c8{
+    background-position: -96px -44px;
+}
+.color i.c9{
+    background-position: -142px -44px;
+}
+.color i.c10{
+    background-position: -187px -44px;
+}
+.color i.c11{
+    background-position: -233px -44px;
+}
+.color i.current:after{
+    content: ' ';
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    width: 43px;
+    height: 42px;
+    background: url(../images/cur_x.png) no-repeat;
+    background-size: 43px 42px;
+}
+
+.complete{
+    position: relative;
+    padding: 20px 0 30px 0;
+    text-align: center;
+}
+.complete img{
+    padding: 0 10px;
+    vertical-align: -4px;
+}
+.complete i, .complete a{
+    display: inline-block;
+    width: 46px;
+    height: 25px;
+    margin: 0 6px;
+    background: url(../images/complete.png) no-repeat;
+    background-size: 46px 25px;
+}
+.complete i.again{
+    background-image: url(../images/again.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

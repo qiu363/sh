@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>为青春加FUN - 安利</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+    <script type="text/javascript">
+        (function(){
+            var phoneWidth = parseInt(window.screen.width);
+            var phoneScale = phoneWidth/640;
+
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {
+                document.write('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">');
+            } else {
+                document.write('<meta name="viewport" content="width=320, user-scalable=no, target-densitydpi=device-dpi">');
+            }
+        })();
+    </script>
+    <style type="text/css">
+        body {
+            background: #442a2b url(./images/draw_bg.jpg) 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="J_mark">
+    <div class="draw-canvas">
+        <canvas width="520" height="780" style="width:260px;height:390px;" id="J_canvas"></canvas>
+    </div>
+
+    <div class="draw-list clearfix" id="J_draw_list">
+        <a href="###" class="draw-l current">
+            <img src="./images/draw_s0.png">
+        </a>
+        <a href="###" class="draw-l">
+            <img src="./images/draw_s1.png">
+        </a>
+        <a href="###" class="draw-l">
+            <img src="./images/draw_s2.png">
+        </a>
+        <a href="###" class="draw-l">
+            <img src="./images/draw_s3.png">
+        </a>
+    </div>
+
+    <div class="draw-btn">
+        <a href="###" class="btn draw-file-btn">
+            上传图片
+            <input type="file" id="J_file" name="file" class="draw-file">
+        </a>
+        <a href="###" class="btn" id="J_sub">我要提交</a>
+        <a href="###" class="btn" id="J_reset">重来</a>
+    </div>
+</div>
+
+<div class="hide" id="J_preview_p">
+    <div class="draw-canvas">
+        <img src="" id="J_preview">
+    </div>
+
+    <div class="draw-btn draw-btn-share">
+        <a href="###" class="btn" id="J_share">分享</a>
+        <a href="###" class="btn" id="J_remark">再做一张</a>
+        <a href="###" class="btn" id="J_fh">返回</a>
+    </div>
+</div>
+
+<div class="share hide" id="J_share_mask"></div>
+
+<audio autoplay="autoplay" loop="loop">
+    <source src="./data/bgm.ogg" type="audio/ogg">
+    <source src="./data/bgm.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    var img_name = '';
+    !(function () {
+        var bg_img = [
+            './images/draw0.png',
+            './images/draw1.png',
+            './images/draw2.png',
+            './images/draw3.png'
+        ];
+        var bg_img_i = 0;
+        var upload_img = '';
+
+        var cav = document.querySelector('#J_canvas');
+        var ctx = cav.getContext("2d");
+
+        ctx.fillStyle="#fffcd2";
+        ctx.fillRect(0, 0, 520, 780);
+
+        create_mask();
+
+        $('#J_file').bind('change', function (evt) {
+            if (!window.FileReader) {
+                return false;
+            }
+
+            var files = evt.target.files;
+
+            for (var i = 0, f; f = files[i]; i++) {
+                if (!f.type.match('image.*')) {
+                    continue;
+                }
+
+                var reader_i = new FileReader();
+
+                reader_i.onload = (function (f) {
+                    return function(e) {
+                        clear_ctx();
+
+                        upload_img = new Image();
+                        upload_img.src = e.target.result;
+
+                        upload_img.onload = function () {
+                            ctx.drawImage(upload_img, 0, 0, 520, 780);
+
+                            create_mask();
+                        };
+                    };
+                })(f);
+
+                reader_i.readAsDataURL(f);
+            }
+        });
+
+        $('#J_draw_list').find('a').bind('click', function () {
+            bg_img_i = $('#J_draw_list').find('a').index(this);
+
+            clear_ctx();
+
+            if (upload_img === '') {
+                ctx.fillStyle="#fffcd2";
+                ctx.fillRect(0, 0, 520, 780);
+            } else {
+                ctx.drawImage(upload_img, 0, 0, 520, 780);
+            }
+
+            $(this).addClass('current').siblings().removeClass('current');
+
+            create_mask();
+
+            return false;
+        });
+
+        var sub_s = 0;
+        $('#J_sub').bind('click', function () {
+            if (sub_s === 1) {
+                return false;
+            }
+            sub_s = 0;
+
+            var that = $(this);
+            var canvas_img = cav.toDataURL("image/png", 0.8);
+
+            $(this).html('提交中');
+
+            $.ajax({
+                url: "save.php",
+                type: "POST",
+                dataType: "text",
+                data: {imgdata: canvas_img},
+                success: function(data){
+                    $('#J_mark').hide();
+                    $('#J_preview_p').show();
+
+                    $('#J_preview').attr('src', './upload/'+ data +'.png');
+
+                    img_name = data;
+
+                    that.html('我要提交');
+                },
+                error: function(){
+                    that.html('我要提交');
+                }
+            });
+
+            return false;
+        });
+
+        $('#J_fh').bind('click', function () {
+            $('#J_mark').show();
+            $('#J_preview_p').hide();
+
+            return false;
+        });
+
+        $('#J_share').bind('click', function () {
+            $('#J_share_mask').show();
+
+            return false;
+        });
+
+        $('#J_share_mask').bind('click', function () {
+            $(this).hide();
+        });
+
+        $('#J_remark').bind('click', function () {
+            $('#J_mark').show();
+            $('#J_preview_p').hide();
+
+            clear_ctx();
+
+            ctx.fillStyle="#fffcd2";
+            ctx.fillRect(0, 0, 520, 780);
+
+            create_mask();
+
+            upload_img = '';
+
+            return false;
+        });
+
+        $('#J_reset').bind('click', function () {
+            clear_ctx();
+
+            ctx.fillStyle="#fffcd2";
+            ctx.fillRect(0, 0, 520, 780);
+
+            create_mask();
+
+            upload_img = '';
+
+            return false;
+        });
+
+        function create_mask() {
+            var img = new Image();
+            img.src = bg_img[bg_img_i];
+
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0, 520, 780);
+            };
+        }
+
+        function clear_ctx() {
+            ctx.clearRect(0, 0, 520, 780);
+        }
+
+        for (var i = 1; i < bg_img.length; i++) {
+            (function (k) {
+                var img = new Image();
+                img.src = bg_img[k];
+
+                img.onload = function () {};
+            })(i);
+        }
+
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>蓝色光标实习生计划 -- Blue Magic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="loading">
+    <div class="loading-process" id="J_process"></div>
+</div>
+
+<div class="main" id="J_second">
+    <div class="bg-s"></div>
+    <div class="title-s"></div>
+    <div class="ani-index">
+        <span class="current"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- 精灵动画 -->
+    <div class="genius-list">
+        <div class="genius">
+            <canvas width="275" height="350" class="genius-1" id="J_genius_0">您的浏览器不支持HTML 5</canvas>
+        </div>
+    </div>
+    <!-- 精灵动画 End -->
+</div>
+
+<!-- <div id="J_debug" style="position:absolute;left:0;top:0;z-index:1000;background:rgba(0, 0, 0, 0.4);color:#fff;padding:4px 5px;"></div> -->
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        var start_time = new Date();
+        //图片地址前缀
+        var img_path = "http://123.57.145.94/lsgb/images/";
+        //页码
+        var page_num = 0;
+
+        var img_arr = [
+            img_path +"fire.png",
+            img_path +"bg.jpg",
+            img_path +"bg_forest.png",
+            img_path +"cloud.png",
+            img_path +"cloud1.png",
+            img_path +"hot_air_balloon.png",
+            img_path +"point.png",
+            img_path +"title.png"
+        ];
+
+        //精灵动画图片前缀
+        var genius_img_path = [
+            "./images/genius/cube/魔方loop_00"
+        ];
+        var genius_img_photo = [
+            "./images/genius/cube/a/魔方人照片框--前_00",
+            "./images/genius/cube/b/魔方人照片框-后_00"
+        ];
+        //每个精灵动画的帧数
+        var genius_fps = [61];
+        //精灵动画索引
+        var genius_index = 0;
+        //动画是否执行中
+        var is_ani = 0;
+        //动画时间
+        var genius_timer = "";
+        //动画执行帧数
+        var genius_ani_fps = 0;
+        //动画图片加载个数
+        var genius_img_load_num = 0;
+
+        //加载动画图片
+        function load_ani_img(index){
+            var img = new Image();
+            img.src = './images/genius/cube/cube.png';
+
+            img.onload = function(){
+                genius_animate();
+            };
+
+            /*//预加载图片
+            for(var i = 0; i < genius_fps[index]; i++){
+                (function(k){
+                    var img = new Image();
+
+                    if(k < 10){
+                        var img_url = genius_img_path[index] +"00"+ k +".png";
+                    }else{
+                        var img_url = genius_img_path[index] +"0"+ k +".png";
+                    }
+                    img.src = img_url;
+
+                    img.onload = function(){
+                        if(k == 1){
+                            gnius_canvas = $("#J_genius_0")[0];
+                            genius_canvas_ctx = genius_canvas.getContext("2d");
+
+                            //显示第一帧图像
+                            var _img = new Image();
+                            _img.src = genius_img_path +"001.png";
+
+                            genius_canvas_ctx.drawImage(_img, 0, 0, 275, 350);
+
+                            _img = null;
+                        }
+
+                        genius_img_load_num++;
+
+                        if(genius_img_load_num == 61){
+                            genius_animate();
+                        }
+                    };
+
+                    delete img.onload;
+                    img = null;
+
+                    if(k >= 28 && k <= 44){
+                        var img_a = new Image();
+                        var img_b = new Image();
+
+                        if(k < 10){
+                            var img_url_a = genius_img_photo[0] +"00"+ k +".png";
+                            var img_url_b = genius_img_photo[1] +"00"+ k +".png";
+                        }else{
+                            var img_url_a = genius_img_photo[0] +"0"+ k +".png";
+                            var img_url_b = genius_img_photo[1] +"0"+ k +".png";
+                        }
+                        img_a.src = img_url_a;
+                        img_b.src = img_url_b;
+
+                        img_a.onload = function(){};
+                        img_b.onload = function(){};
+
+                        delete img_a.onload;
+                        img_a = null;
+
+                        delete img_b.onload;
+                        img_b = null;
+                    }
+
+                })(i);
+            }*/
+        }
+
+        load_ani_img(0);
+
+        var genius_canvas = $("#J_genius_0")[0];
+        var genius_canvas_ctx = genius_canvas.getContext("2d");
+
+        //播放动画
+        var _img = new Image();
+        _img.src = './images/genius/cube/cube.png';
+        //第一幅精灵动画
+        function genius_animate(){
+            genius_timer = setTimeout(function(){
+                //清除画布
+                genius_canvas_ctx.clearRect(0, 0, 275, 350);
+
+                //计算位移
+                var x = genius_ani_fps%22*275;
+                var y = Math.floor(genius_ani_fps/22)*350;console.log(x);
+
+                genius_canvas_ctx.drawImage(_img, x, y, 275, 350, 0, 0, 275, 350);
+
+                /*if(genius_ani_fps >= 28 && genius_ani_fps <= 44){
+                    var img_a = new Image();
+                    var img_b = new Image();
+
+                    if(genius_ani_fps < 10){
+                        var img_url_a = genius_img_photo[0] +"00"+ genius_ani_fps +".png";
+                        var img_url_b = genius_img_photo[1] +"00"+ genius_ani_fps +".png";
+                    }else{
+                        var img_url_a = genius_img_photo[0] +"0"+ genius_ani_fps +".png";
+                        var img_url_b = genius_img_photo[1] +"0"+ genius_ani_fps +".png";
+                    }
+                    img_a.src = img_url_a;
+                    img_b.src = img_url_b;
+
+                    genius_canvas_ctx_a.clearRect(0, 0, 275, 350);
+                    genius_canvas_ctx_a.drawImage(img_a, 0, 0, 275, 350);
+
+                    genius_canvas_ctx_b.clearRect(0, 0, 275, 350);
+                    genius_canvas_ctx_b.drawImage(img_b, 0, 0, 275, 350);
+                }
+
+                if(genius_ani_fps < 60){
+                    genius_animate();
+                }else{
+                    setTimeout(function(){
+                        genius_ani_fps = 0;
+                        genius_animate();
+                    }, 2000);
+                }*/
+
+                genius_ani_fps++;
+
+                if(genius_ani_fps < 60){
+                    genius_animate();
+                }
+                
+            }, 40);
+        }
+
+    })();
+</script>
+
+
+</body>
+</html>

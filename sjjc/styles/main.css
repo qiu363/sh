@@ -1,0 +1,3676 @@
+html,body{-webkit-touch-callout:none;width:100%;height:100%;padding:0;margin:0;border:0 none;}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,button,input,textarea,blockquote,th,td{margin:0;padding:0}
+body {
+font : normal 12px arial,tahoma,verdana,helvetica;
+-khtml-user-select:none;
+-moz-user-select:-moz-none;
+-webkit-user-select:ignore;
+-webkit-user-select:none;
+scrollbar-face-color:#D8ECF0;
+scrollbar-3dlight-color:#B7DAE1;
+scrollbar-highlight-color:#E9F1F3;
+scrollbar-shadow-color:#FFFFFF;
+}
+::-webkit-scrollbar {
+	width:11px;
+	height:11px;
+}
+::-webkit-scrollbar-track-piece {
+	background-color:#E9F1F3;
+}
+::-webkit-scrollbar-thumb {
+	border:1px solid #B7DAE1;
+	width:10px;
+    background: #D8ECF0;
+}
+table{border-collapse:collapse;border-spacing:0}
+a{text-decoration:none;outline:0;color:#fff;}
+a:hover{text-decoration:none}
+img{border:0}
+
+.clearfix:after{content:" ";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{zoom:1}
+
+.reportPane{overflow-y:auto!important}
+
+.fr-icon-btn {
+cursor : pointer;
+}
+
+.logo{
+    position: relative;
+    z-index: 1000;
+    width: 400px;
+    padding: 10px 0 0 20px;
+}
+.logo img{
+    width: 400px;
+}
+
+#fs_bg {
+	width:100%;
+	height:100%;
+	background-repeat:repeat;
+    background-image:url(../images/bg.jpg)
+}
+
+/******b: fs layout*****/
+#fs_default_logo{
+    position: absolute;
+    left: 45px;
+    height: 30px;
+    width: 175px;
+    background/*屏蔽IE6*/ : url("../images/logo.png") no-repeat;
+    background:none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/logo.png");
+}
+
+#fs_platform_logo{
+    position: absolute;
+    left: 45px;
+    height: 30px;
+    width: 175px;
+    background/*屏蔽IE6*/ : url("../images/platform_logo.png") no-repeat;
+    background:none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/platform_logo.png");
+}
+
+.fs_userp_normal, .fs_navigation_text{
+color : #FFFFFF;
+}
+
+.fs_userp_withnavigation .fs_userp_username {
+	background : none;
+}
+
+.fs_userp_usericon {
+    background : url('../images/userp.png') no-repeat 0 -16px;
+    _background : url('../images/userp.gif') no-repeat 0 -16px;
+    padding-left : 16px;
+}
+
+.fs_userp_password {
+	background : url('../images/userp.png') no-repeat 0 -117px;
+    _background : url('../images/userp.gif') no-repeat 0 -117px;
+    padding-left : 16px;
+}
+
+li.hover .fs_userp_password {
+	background : url('../images/userp.png') no-repeat 0 -149px;
+    _background : url('../images/userp.gif') no-repeat 0 -149px;
+}
+
+.fs_userp_exit {
+	background : url('../images/userp.png') no-repeat 0 -53px;
+    _background : url('../images/userp.gif') no-repeat 0 -53px;
+    padding-left : 16px;
+}
+
+li.hover .fs_userp_exit {
+	background : url('../images/userp.png') no-repeat 0 -85px;
+    _background : url('../images/userp.gif') no-repeat 0 -85px;
+}
+.fs_userp_sysmsg, .fs_userp_userqr {
+    background : url('../images/userp.png') no-repeat 0 -181px;
+    _background : url('../images/userp.gif') no-repeat 0 -181px;
+    padding-left : 16px;
+}
+
+li.hover .fs_userp_sysmsg, li.hover .fs_userp_userqr {
+    background : url('../images/userp.png') no-repeat 0 -213px;
+    _background : url('../images/userp.gif') no-repeat 0 -213px;
+}
+#fs_userp li.fs_userp_sysmsg, #fs_userp li.fs_userp_userqr{
+    background: #ffffff;
+    padding: 2px;
+    border-top: solid 1px #c9dcdb;
+    border-left: solid 1px #c9dcdb;
+    border-right: solid 1px #c9dcdb;
+    color: #2e9aba;
+}
+li.fs_userp_sysmsg .fs_userp_sysmsg, li.fs_userp_userqr .fs_userp_userqr{
+    background : url('../images/userp.png') no-repeat 0 -245px;
+    _background : url('../images/userp.gif') no-repeat 0 -245px;
+}
+.fs_userp_normal li.hover, .fs_navigation_item_over .fs_navigation_text{
+    color:#C5F6F5;
+}
+
+.fs_nav_north_r{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 87px;
+}
+
+#fs_search {
+position : relative;
+z-index : 999;
+height : 27px;
+left : 23px;
+}
+
+#fs_search_textEditor {
+	float : left;
+	border-radius : 6px;
+	border : 1px solid rgb(51,51,51);
+	position : relative;
+	height : 16px;
+	width : 160px;
+	background : none;
+	outline : none;
+}
+
+#fs_search_button {
+background: url('../images/newsearch.png') no-repeat center;
+width : 16px;
+height : 16px;
+position : absolute;
+right : 38px;
+z-index : 999;
+border : 2px solid transparent;
+}
+
+#fs_search .fs_search_buttonover {
+background: url('../images/newsearchclick.png')  no-repeat center;
+border : 2px solid rgba(51,51,51, 0.8);
+border-top-right-radius : 6px;
+border-bottom-right-radius : 6px;
+}
+
+.fs_newaccordion_right .fr-list-node-el {
+	padding-left:5px;
+	font-family:'arial,tahoma,helvetica,sans-serif';
+	font-size:12px;
+}
+
+.fs_newaccordion_right .fr-list-node-over {
+	background-color: rgba(51,51,51,0.5);
+	filter:alpha(opacity=50);
+	background-color:rgb(51,51,51)\9;
+	color : #ffffff;
+	border-radius : 5px;
+}
+
+.fs_newaccordion_right .fr-list-node-selected {
+	background-color: rgba(51,51,51,0.8);
+	filter:alpha(opacity=80);background-color:rgb(51,51,51)\9;
+	color : #ffffff;
+	border-radius : 5px;
+}
+
+:root .fs_newaccordion_right .fr-list-node-over .fr-list-node-el, :root .fs_newaccordion_right .fr-list-node-selected .fr-list-node-el {
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+#fs_westaccord {
+	position : absolute;
+	left: 15px;
+	top: 0px;
+	width: 227px;
+	overflow : hidden;
+}
+
+/**
+ * wei:fs左侧目录树使用的手风琴控件
+ * 风格：浅蓝色
+ */
+ 
+.fs_navigationtree_topdiv {
+	background : url('../images/accordion/lightblue/lightblue.png') 0px -367px repeat-x;
+    height : 33px;
+    font-size : 16px;
+    font-weight: bold;
+    border-left: solid 1px #1268bb;
+    border-right: solid 1px #1268bb;
+}
+.fs_navigationtree_topdiv_split{
+    float: right;
+    width: 0px;
+    height: 28px;
+    margin-top:1px;
+    border-left: solid 1px #1268bb;
+    border-right: solid 1px #95c4ee;
+}
+.fs_navigationtree_topdiv_tags{
+    position: relative;
+    float: left;
+    margin-top: 1px;
+    border-left: solid 1px #95c4ee;
+    height: 28px;
+    width: 80%;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    color: #FFFFFF;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.fs_navigationtree_topdiv_icon {
+    position: relative;
+    z-index: 1;
+	background : url('../images/accordion/lightblue/lightblue.png') -96px 0px no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/iesixfix/png/favorite_close.png");
+    _background: none;
+    padding-left : 30px;
+	margin-left:18px;
+    _margin-top: 6px;
+    *display: inline-block;
+    cursor: pointer;
+}
+
+.fs_navigationtree_topdiv_open_icon {
+	background : url('../images/accordion/lightblue/lightblue.png') -96px -32px no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/iesixfix/png/favorite_open.png");
+    _background: none;
+    padding-left : 30px;
+	margin-left:18px;
+    *display: inline-block;
+    cursor: pointer;
+}
+
+.fs_navigationtree_topdiv_icon_mask {
+	position : absolute;
+	left : 15px;
+	top : 3px;
+    z-index: 20;
+	width : 35px;
+	height : 28px;
+	cursor : pointer;
+    *display: inline-block;
+}
+
+.fs_navigationtree_topdiv_over {
+	background : url('../images/accordion/lightblue/lightblue.png') -128px -32px no-repeat;
+    *display: inline-block;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/iesixfix/png/favorite_hover.png");
+    background: none\9;
+}
+
+.fs_navigationtree_topdiv_separate {
+	background : url('../images/accordion/lightblue/lightblue.png') -272px 2px no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') -80px -126px no-repeat;
+    padding-left : 12px;
+    margin-left: 5px;
+    _margin-top: 6px;
+    cursor: default;
+    *display: inline-block;
+}
+
+.fs_navigationtree_topdiv_title {
+    cursor: default;
+    font-family: SimSun;
+	color : #FFFFFF;
+	line-height:33px;
+	margin-left : 2px;
+}
+
+#fs_navigationtree_topdiv_collapse {
+    float: right;
+    width: 27px;
+    border-right: solid 1px #95c4ee;
+    margin-top: 1px;
+    height: 28px;
+}
+
+#fs_navigationtree_topdiv_collapseimg {
+	background : url('../images/accordion/lightblue/lightblue.png') -64px -32px no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') -48px -160px no-repeat;
+    padding-left:16px;
+	line-height:33px;
+	margin-left:6px;
+	cursor : pointer;
+    margin-top: 8px;
+    *display: inline-block;
+}
+
+#J_fav_tree, #fs_navigationtree_treerender {
+	background:#FFFFFF;
+	height:100%;
+	padding-top:4px;
+	overflow-x:hidden;
+	overflow-y:auto;
+    border-top: 0px;
+    border-left: solid 1px #228ee9;
+    border-right: solid 1px #228ee9;
+    border-bottom: solid 1px #228ee9;
+}
+
+#fs_navigationtree_expand {
+    display: none;
+	background : url('../images/accordion/lightblue/lightblue.png') -288px 0 no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/iesixfix/png/collapse_btn_lightblue.png");
+    _background: none;
+    cursor : pointer;
+	width:12px;
+	height:32px;
+	position:absolute;
+    top: 1px;
+	left:-12px;
+}
+
+/**
+ * wei : 浅蓝色风格的树控件，目前主要实现了手风琴式树的浅蓝色样式
+ */
+.fs_tree div.fr-tree-node-el-accordion-root {
+	background : url('../images/accordion/lightblue/lightblue.png') 0px -96px repeat-x;
+	height : 27px;
+	cursor : pointer;
+    margin-bottom : 4px;
+}
+
+.fs_tree div.fr-tree-node-el {
+	margin-left : 3px;
+	margin-right : 3px;
+}
+
+.fr-tree-node-el-accordion-root .fs-tree-node-content {
+	line-height : 27px;
+}
+
+.fr-tree-elbow-plus-fsdt {
+	background : url('../images/closetreenode.png') no-repeat center;
+}
+
+.fr-tree-elbow-plus-accordion, .fr-tree-elbow-end-plus-accordion, .fr-tree-elbow-minus-accordion, .fr-tree-elbow-end-minus-accordion {
+	float : left;
+    background : url('../images/accordion/lightblue/lightblue.png') 0px 0px no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') 0px -128px no-repeat;
+}
+
+.fr-tree-node .fr-tree-node-el-accordion span.fr-tree-node-indent {
+	float : left;	
+}
+
+.fs_tree div.fr-tree-node-accordion-over {
+	background : #CCEAF8;
+}
+
+.fs_tree div.fr-tree-node-accordion-over-root {
+	background : url('../images/accordion/lightblue/lightblue.png') 0px -160px repeat-x;
+}
+
+.fs_tree div.fr-tree-accordion-selected {
+	background : url('../images/accordion/lightblue/lightblue.png') 0px -224px repeat-x;
+}
+
+.fr-tree-node .fr-tree-node-el-accordion-root span {
+	font-size : 14px;
+	font-family : 'Microsoft YaHei',SimSun,arial;
+    font-weight: bold;
+}
+
+.fr-tree-node-textwrap {
+	height : 27px;
+	cursor : pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.fr-tree-node-el-accordion-root .fr-tree-node-textwrap{
+    color : #333333;
+}
+
+.fr-tree-node-el-accordion .fr-tree-node-textwrap {
+    color : #16758A;
+}
+
+.fs_tree div.fr-tree-node-el-accordion {
+	height : 28px;
+}
+
+.fr-tree-node-el-accordion .fr-tree-elbow-plus-accordion, .fr-tree-node-el-accordion .fr-tree-elbow-end-plus-accordion {
+	background : url('../images/accordion/lightblue/lightblue.png') -16px 0px no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') -16px -128px no-repeat;
+}
+
+.fr-tree-node-el-accordion .fr-tree-elbow-minus-accordion, .fr-tree-node-el-accordion .fr-tree-elbow-end-minus-accordion {
+	background : url('../images/accordion/lightblue/lightblue.png') -16px -32px no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') -16px -160px no-repeat;
+}
+
+.fr-tree-node .fr-tree-node-el-accordion span {
+	font-size : 14px;
+	font-family : "Microsoft YaHei",SimSun,arial;
+}
+
+.fs-tree-node-even .fr-tree-node-el-accordion {
+	background:#F6F6F6;
+}
+
+.fs-tree-node-odd .fr-tree-node-el-accordion {
+	background:#FFFFFF;
+}
+
+.fr-tree-node .fr-tree-node-el-accordion span.fs-tree-node-content {
+	line-height : 28px;
+}
+
+.fr-tree ul, .fr-tree li{
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.fs-tree-node-el-odd {
+    position: relative;
+	display: block;
+    height: 28px;
+	background : #FFFFFF;
+    border : 1px solid #FFFFFF;
+    text-decoration: none;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.fs-tree-node-el-even {
+    position: relative;
+	display: block;
+    height: 28px;
+	background : #F3F6F9;
+	border : 1px solid #F2F2F2;
+	text-decoration: none;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.fs-tree-node-el-odd:hover, .fs-tree-node-el-even:hover{
+	background: #cceaf8;
+}
+
+.fr-tree-emptyimg {
+	height:27px;
+	float:left;
+}
+
+.fr-core-panel-body{
+    padding: 10px;
+}
+
+.fr-tree-node-left {
+	height:28px;
+	width:7px;
+	float:left;
+}
+
+.fr-tree-node-el-accordion-root .fr-tree-node-left {
+	background : url('../images/accordion/lightblue/lightblue.png') 0px -64px no-repeat;
+}
+
+.fr-tree-node-right {
+	height:28px;
+	width:7px;
+	float:right;
+}
+
+.fr-tree-node-el-accordion-root .fr-tree-node-right {
+	background : url('../images/accordion/lightblue/lightblue.png') -16px -64px no-repeat;
+}
+
+.fs_tree div.fr-tree-node-accordion-over-root .fr-tree-node-left {
+	background : url('../images/accordion/lightblue/lightblue.png') 0px -128px no-repeat;
+}
+
+.fs_tree div.fr-tree-node-accordion-over-root .fr-tree-node-right {
+	background : url('../images/accordion/lightblue/lightblue.png') -16px -128px no-repeat;
+}
+
+.fs_tree div.fr-tree-accordion-selected .fr-tree-node-left {
+	background : url('../images/accordion/lightblue/lightblue.png') 0px -192px no-repeat;
+}
+
+.fs_tree div.fr-tree-accordion-selected .fr-tree-node-right {
+	background : url('../images/accordion/lightblue/lightblue.png') -16px -192px no-repeat;
+}
+
+.fr-tree-leaf-cpticon {
+    background : url('../images/accordion/lightblue/lightblue.png') -32px 0 no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') -32px -128px no-repeat;
+}
+
+.fr-tree-leaf-frmicon {
+    background : url('../images/accordion/lightblue/lightblue.png') -304px 0 no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') -144px -128px no-repeat;
+}
+
+.fr-tree-leaf-urlicon {
+    background : url('../images/accordion/lightblue/lightblue.png') -320px 0 no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') -160px -128px no-repeat;
+}
+
+.fr-tree-leaf-processicon, .fr-tree-leaf-biicon, .fr-tree-leaf-defaulticon {
+    background : url('../images/accordion/lightblue/lightblue.png') -336px 0 no-repeat;
+    _background : url('../images/iesixfix/gif/fs_tab_and_tree.gif') -176px -128px no-repeat;
+}
+
+.fr-core-tab-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 33px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: solid 1px #1268bb;
+    border-right: solid 1px #1268bb;
+    background : url('../images/accordion/lightblue/lightblue.png') 0px -367px repeat-x;
+    overflow: hidden;
+}
+
+.fr-core-tab-body{
+    position: absolute;
+    top: 33px; 
+    left: 0px; 
+    width: 100%; 
+    height: 703px;
+    background: #FFFFFF;
+    border-top: 0px;
+    border-right: solid 1px #228ee9;
+    border-left: solid 1px #228ee9;
+    border-bottom: solid 1px #228ee9;
+}
+.fr-core-panel{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; 
+}
+
+.fr-core-tab-home {
+    width: 50px; 
+    height: 25px; 
+    position: absolute; 
+    top: 5px; 
+    left: 10px; 
+    line-height: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-family: "microsoft yahei",simsun,arial;
+    font-size: 13px;
+    font-weight: bold;
+    color: #2363A0;
+    text-decoration: none;
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat -176px 0;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/iesixfix/png/tab_home_normal.png");
+    _background: none;
+}
+
+.fr-core-tab-home:hover, .fr-core-tab-home-hover {
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat -176px -32px;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/iesixfix/png/tab_home_hover.png");
+    _background: none;
+}
+
+.fr-core-tab-control-more {
+    display: none;
+    width: 25px; 
+    height: 25px; 
+    position: absolute; 
+    top: 6px; 
+    left: 0;
+    cursor: pointer;
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat -240px 0;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/iesixfix/png/tab_more_normal_lightblue.png");
+    _background: none;
+}
+
+.fr-core-tab-control-more.fr-core-tab-control-more-hover {
+    cursor: pointer;
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat -240px -32px;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/iesixfix/png/tab_more_hover_lightblue.png");
+    _background: none;
+}
+
+.fr-core-tab-control {
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat 0 -256px;
+}
+
+.fr-core-tab-control-hover {
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat -144px -256px;
+}
+
+.fr-core-tab-control-select {
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat -288px -256px;
+}
+
+.fr-core-tab-control-text {
+    width: 100px; 
+    height: 28px; 
+    line-height: 28px;
+    margin-left: 7px;
+    display:inline;
+    float: left;
+    font-family: "microsoft yahei",simsun,arial;
+    font-size: 13px;
+    color: #2987BD;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fr-core-tab-control-icon {
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat -80px 0;
+    _background: url('../images/iesixfix/gif/fs_tab_and_tree.gif') no-repeat -64px -128px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.fr-core-tab-control-select div.fr-core-tab-control-icon {
+    background: url('../images/accordion/lightblue/lightblue.png') no-repeat -80px -32px;
+    _background: url('../images/iesixfix/gif/fs_tab_and_tree.gif') no-repeat -64px -160px;
+}
+
+.fr-core-tab-popup {
+    border: 1px solid #CAE9F0;
+    border-radius: 3px;
+    background: #F3F3F3;
+    position: absolute;
+}
+
+.fr-core-tab-control-menu-item {
+    text-align: center;
+    font-family: simsun;
+    font-size: 12px;
+    color: #4B4744;
+}
+
+.fr-core-tab-control-menu-item-hover {
+    background: #D4EEF4;
+}
+
+.fr-core-tab-control-menu-item-mouse-down {
+    background: #B2E795;
+}
+
+.fr-core-tab-control-menu-item-sep {
+    background: #CEE7F2;
+    font-size: 1px;
+}
+
+.fr-core-tab-popup-scroll {
+    background: #D4EEF4;
+}
+.fr-core-tab-popup-scroll-bar {
+    background: #B2E795;
+}
+
+.fr-core-tab {
+
+}
+
+.fr-core-tab-composite{
+    width: 130px; 
+    height: 33px; 
+    position: absolute; 
+    top: 0px; 
+}
+
+.fr-core-tab-control {
+    width: 130px; 
+    height: 28px; 
+    top: 5px; 
+    position: absolute; 
+    left: 0px;
+    cursor: default;
+}
+
+
+.fr-core-tab-control-icon-wrapper {
+    float: right;
+    width: 23px; 
+    height: 28px; 
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.fr-core-tab-control-select div.fr-core-tab-control-text {
+    color: #000000;
+}
+
+.fr-core-tab-control-select div.fr-core-tab-control-text {
+    color: #FFFFFF;
+}
+
+.fr-core-tab-main-page{
+    width: 70px; 
+    height: 33px; 
+    position: absolute; 
+    top: 0px; 
+    left: 0px;
+}
+
+#fs_search_popup {
+position : absolute;
+background : white;
+min-width : 110px;
+font-family : Arial,"微软雅黑", "宋体";
+border : solid 1px #98C0F4;
+border-radius : 6px;
+box-shadow: 3px 3px 4px #999;
+-moz-box-shadow: 3px 3px 4px #999;
+-webkit-box-shadow: 3px 3px 4px #999;
+/* For IE 5.5 - 7 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');
+/* For IE 8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')progid:DXImageTransform.Microsoft.Alpha(opacity=100)";
+}
+
+#fs_search_popupul {
+max-height:190px;
+height: expression( this.scrollHeight > 190 ? "190px" : "auto" );
+list-style:none;
+width:98.5%;
+margin:1px;
+padding:1px;
+overflow-y:auto;
+overflow-x:hidden;
+}
+
+#fs_west {
+	position : absolute;
+	left: 0px;
+	top: 87px;
+	width: 245px;
+	height: 735px;
+	overflow: hidden;
+}
+
+#fs_centertab {
+    position : absolute;
+    left: 245px;
+    top: 87px;
+    width: 1000px; 
+    overflow: visible;
+}
+
+#fs_bpage {
+position : absolute;
+height : 20px;
+text-align : center;
+line-height : 20px;
+border-top : 1px solid #CDDDF4;
+width: 100%;
+bottom: 0px;
+}
+
+/*******fs system password setting********/
+#syspasssetting {
+position : absolute;
+width : 100%;
+height : 337px;
+top : 145px;
+background : url('../images/syspassbg.gif')  repeat-x;
+opacity: 0.7;
+font-family:Microsoft YaHei;
+FILTER:ALPHA(opacity=70,finishopacity=70,style=0);
+text-decoration:none;
+-khtml-user-select:none;
+-moz-user-select:-moz-none; // alex:除了文本框里的元素,其它都不可以被选择
+-webkit-user-select:ignore;
+-webkit-user-select:none;
+-kthml-user-focus:normal;
+-moz-user-focus:normal;
+-moz-outline: 0 none;
+outline:0 none;
+}
+
+.fs_system_manager_name {
+font-size:16px;
+text-align:right;
+}
+
+.fs_system_manager_value {
+font-size:16px;
+text-align:left;
+}
+
+.fs_system_manager_pssetting {
+border-spacing: 10px;
+}
+
+.fs_system_manager_title_fontsize {
+font-size : 20px;
+text-align:center;
+padding-top:20px;
+padding-bottom:30px;
+}
+
+.fs_system_manager_showtitle_fontsize {
+font-size : 20px;
+text-align: left;
+padding-top:30px;
+}
+
+.fs_system_manager_showpw_fontsize {
+font-size:12px;
+}
+
+.fs_system_manager_link_fontsize {
+font-size:16px;
+text-align:left;
+}
+
+.fs_system_pw_manager_ok, .fs_system_pw_manager_ok_hover, .fs_system_pw_manager_ok_click {
+height:50px;
+width:206px;
+border: none;
+cursor: pointer;
+background : url('../images/ok.gif')  0px 0px no-repeat;
+}
+
+.fs_system_pw_manager_ok_hover {
+background : url('../images/ok.gif')  0px -50px no-repeat;
+}
+
+.fs_system_pw_manager_ok_click {
+background : url('../images/ok.gif')  0px -100px no-repeat;
+}
+
+.fs_system_pw_manager_login_fs, .fs_system_pw_manager_login_fs_hover, .fs_system_pw_manager_login_fs_click {
+height:35px;
+width:186px;
+border: none;
+margin-right:10px;
+cursor: pointer;
+background : url('../images/sysbutton.gif')  0px 0px no-repeat;
+}
+
+.fs_system_pw_manager_login_fs_hover {
+background : url('../images/sysbutton.gif')  0px -35px no-repeat;
+}
+
+.fs_system_pw_manager_login_fs_click {
+background : url('../images/sysbutton.gif')  0px -70px no-repeat;
+}
+
+.fs_system_pw_manager_login_fr_platform, .fs_system_pw_manager_login_fr_platform_hover, .fs_system_pw_manager_login_fr_platform_click {
+height:35px;
+width:204px;
+border: none;
+margin-right:10px;
+cursor: pointer;
+background : url('../images/sysbutton.gif')  -186px 0px no-repeat;
+}
+
+.fs_system_pw_manager_login_fr_platform_hover {
+background : url('../images/sysbutton.gif')  -186px -35px no-repeat;
+}
+
+.fs_system_pw_manager_login_fr_platform_click {
+background : url('../images/sysbutton.gif')  -186px -70px no-repeat;
+}
+
+.fs_system_pw_manager_return, .fs_system_pw_manager_return_hover, .fs_system_pw_manager_return_click {
+height:35px;
+width:132px;
+border: none;
+cursor: pointer;
+background : url('../images/sysbutton.gif')  -390px 0px no-repeat;
+}
+
+.fs_system_pw_manager_return_hover {
+background : url('../images/sysbutton.gif')  -390px -35px no-repeat;
+}
+
+.fs_system_pw_manager_return_click {
+background : url('../images/sysbutton.gif')  -390px -70px no-repeat;
+}
+
+
+/*******首次登录平台的配置页面system_manager_set.html********/
+#pcontent_first_sign {
+position : absolute;
+width : 100%;
+height : 100%;
+background : url("../images/oem/signin.png") right top repeat-y;
+right : 0;
+}
+
+/****fs user****/
+#fs_userp{
+    position : absolute;
+    height : 20px;
+    line-height: 20px;
+    z-index:999;
+}
+.fs_userp_normal{
+    right : 50px;
+    top : 15px;
+}
+.fs_userp_withnavigation {
+    left : 440px;
+    right:2px;
+    top:35px;
+}
+#fs_userp ul, #fs_userp li{
+    display: inline;
+    list-style: none;
+    white-space: nowrap;
+    margin: 0;
+    border: 0;
+    padding: 2px;
+}
+a.fs_userp_register{
+    color: #FF0000;
+    margin-right: 8px;
+}
+
+.fs_userp_normal li.click{
+    text-decoration:underline;
+}
+.fs_userp_split{
+    padding-left: 2px;
+    background : url('../images/userp.png') no-repeat -4px -35px;
+    _background : url('../images/userp.gif') no-repeat -4px -35px;
+}
+.fs_userp_qrimg {
+    width: 100px;
+    height: 100px;
+}
+.fs_userp_qrdiv {
+    background: white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #C9C9C9;
+    padding:2px;
+}
+/*****fs accordion*******/
+.fr_accordion {
+overflow-y : auto;
+overflow-x : hidden;
+}
+
+.fr_accordion_item {
+line-height : 28px;
+cursor : pointer;
+background : url('../images/accordion/center.png') repeat-x;
+text-overflow : ellipsis;
+white-space : nowrap;
+overflow : hidden;
+}
+
+.fr_accordion_itemtitle {
+font-size : 14px;
+margin-left : 8px;
+color : #363636;
+}
+
+.fr_accordion_actived .fr_accordion_itemtitle {
+font-weight : bold;
+}
+
+.fs_newaccordion_rooticon {
+width : 20px;
+height : 20px;
+margin-top : 10px;
+padding-bottom : 4px;
+}
+
+.fs_newaccordion_search {
+height : 20px;
+}
+
+.fs_newaccordion_content {
+
+}
+
+.fs_accordion_report {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/report.png");
+background/*屏蔽IE6*/ : url('../images/report.png') no-repeat;
+background:none\9;
+}
+
+.fs_newaccordion_rootitem_over .fs_accordion_report {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/report-hover.png");
+background/*屏蔽IE6*/ : url('../images/report-hover.png') no-repeat;
+background:none\9;
+}
+
+.fs_newaccordion_activeroot .fs_accordion_report {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/report-selected.png");
+background/*屏蔽IE6*/ : url('../images/report-selected.png') no-repeat;
+background:none\9;
+}
+
+:root .fs_accordion_report {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+.fs_accordion_favorite {
+padding-left : 12px;
+background : url('../images/accordion/favorites.gif') no-repeat;
+}
+
+.fs_accordion_bi{
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/bi-normal.png");
+background/*屏蔽IE6*/ : url('../images/bi-normal.png') no-repeat;
+background:none\9;
+}
+
+.fs_newaccordion_rootitem_over .fs_accordion_bi {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/bi-hover.png");
+background/*屏蔽IE6*/ : url('../images/bi-hover.png') no-repeat;
+background:none\9;
+}
+
+.fs_newaccordion_activeroot .fs_accordion_bi {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/bi-click.png");
+background/*屏蔽IE6*/ : url('../images/bi-click.png') no-repeat;
+background:none\9;
+}
+
+:root .fs_accordion_bi {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+.fs_accordion_fsdesign {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/fsmanager.png");
+background/*屏蔽IE6*/ : url('../images/fsmanager.png') no-repeat;
+background:none\9;
+}
+
+.fs_newaccordion_rootitem_over .fs_accordion_fsdesign {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/fsmanager-hover.png");
+background/*屏蔽IE6*/ : url('../images/fsmanager-hover.png') no-repeat;
+background:none\9;
+}
+
+.fs_newaccordion_activeroot .fs_accordion_fsdesign {
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/fsmanager-selected.png");
+background/*屏蔽IE6*/ : url('../images/fsmanager-selected.png') no-repeat;
+background:none\9;
+}
+
+:root .fs_accordion_fsdesign {
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+.fs_newaccordion_collapse {
+background : url('../images/collapse.png') no-repeat;
+width:16px;
+height:16px;
+position:absolute;
+right:0;
+top:2px;
+z-index:999;
+cursor : pointer;
+}
+
+.fs_newaccordion_collapse_hover {
+background:url('../images/collapse-hover.png') no-repeat;
+}
+
+.fs_newaccordion_expand {
+background : url('../images/expand.png') no-repeat;
+width:16px;
+height:16px;
+position:absolute;
+left:0;
+top:7px;
+z-index:999;
+cursor : pointer;
+}
+
+.fs_newaccordion_expand_hover {
+background : url('../images/expand-hover.png') no-repeat;
+}
+
+:root .fs_newaccordion_expand, .fs_newaccordion_expand_hover {
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+div.fr_accordion_over {
+background : url('../images/accordion/hcenter.png') repeat-x;
+}
+
+div.fr_accordion_item.fr_accordion_actived {
+background : url('../images/accordion/pcenter.png') repeat-x;
+}
+
+.fr_accordion_itemson .fs_list, .fr_accordion_itemson .fs_tree {
+background : #E0FBF9;
+}
+
+.fr_accordion_itemson .fs_list .fr-list-node-el {
+padding-left : 30px;
+}
+
+.fr_accordion_itemson div.fs_list li {
+height : 24px;
+}
+
+.fr_accordion_itemson .fs_tree div.fr-tree-node-el {
+height : 24px;
+}
+
+.fs-popup-search-over{
+background-color : #E2EAFF;
+}
+
+.fr_accordion_itemson .fs_list div ul {
+	overflow : hidden !important;
+}
+
+div.fr_accordion_itemson li {
+font-size : 12px;
+}
+
+.fs_newaccordion_left {
+	padding-left : 5px;
+	width : 30px;
+	float : left;
+}
+
+.fs_newaccordion_son .fr-list-node-anchor span {
+	font-family : Arial,"微软雅黑", "宋体";
+	font-size : 12px;
+	margin-left : 6px;
+}
+
+.fs_newaccordion_right {
+	float : left;
+	position : absolute;
+	margin-bottom : 20px;
+	margin-left : 35px;
+	*left : 0;
+}
+
+.fs_newaccordion_right_bg {
+	background-color : rgba(214, 214, 214, 0.4);
+	background-color : rgb(214, 214, 214)\9;
+	FILTER:ALPHA(opacity=40);
+	box-shadow: 3px 3px 5px rgb(214, 214, 214);
+	-moz-box-shadow: 3px 3px 5px rgb(214, 214, 214);
+	-webkit-box-shadow: 3px 3px 5px rgb(214, 214, 214);
+	border-top-right-radius : 5px;
+	border-bottom-left-radius : 5px;
+	border-bottom-right-radius : 5px;
+	position:absolute;
+	top:0;
+}
+
+.fs_newaccordion_activeroot_bg {
+	background-color : rgba(214, 214, 214, 0.4);
+	FILTER:ALPHA(opacity=40);background-color : rgb(214, 214, 214)\9;
+	box-shadow: -1px 3px 4px rgb(214, 214, 214);
+	-moz-box-shadow: -1px 3px 4px rgb(214, 214, 214);
+	-webkit-box-shadow: -1px 3px 4px rgb(214, 214, 214);
+	width : 30px;
+	height : 100px;
+	border-top-left-radius : 5px;
+	border-bottom-left-radius : 5px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.fs_newaccordion_rooteleblank {
+	width :30px;
+	height:5px;
+}
+
+.fs_newaccordion_rootitem {
+	border-top-left-radius : 5px;
+	border-bottom-left-radius : 5px;
+	width : 30px;
+	height : 100px;
+	text-align : center;
+	cursor : pointer;
+	position : relative;
+	margin-bottom : 5px;
+}
+
+.fs_newaccordion_rooteletop {
+	width:20px;
+	height:10px;
+	margin-left : 5px;
+	*left : 0;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+
+	position:absolute;
+}
+
+.fs_newaccordion_rootitem_over .fs_newaccordion_rooteletop {
+	background-color : rgba(51, 51, 51, 0.5);
+	FILTER:ALPHA(opacity=50);background-color : rgb(51, 51, 51)\9;
+	color : #FFFFFF;
+}
+
+.fs_newaccordion_activeroot .fs_newaccordion_rooteletop {
+	background-color : rgba(51, 51, 51, 0.8);
+	FILTER:ALPHA(opacity=80);background-color : rgb(51, 51, 51)\9;
+	color : #FFFFFF;
+	top:5px;
+}
+
+:root .fs_newaccordion_rooteletop{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+.fs_newaccordion_rootelemiddle {
+	width:20px;
+	height:20px;
+	margin-left : 5px;
+	*left : 0;
+	text-align : center;
+	position:absolute;
+	top:15px;
+}
+
+/* .fs_newaccordion_activeroot .fs_newaccordion_rootelemiddle {
+	background-color : rgba(51, 51, 51, 0.8);
+	background-color : rgb(51, 51, 51)\9;
+	FILTER:ALPHA(opacity=80);
+	color : #FFFFFF;
+} */
+
+.fs_newaccordion_rootelebottom{
+	width:20px;
+	height:56px;
+	font-size : 12px;
+	line-height : 12px;
+	font-family : 微软雅黑,宋体;
+	margin-left : 5px;
+	*left : 0;
+	-moz-user-select:-moz-none; // alex:除了文本框里的元素,其它都不可以被选择
+	-webkit-user-select: none;
+	padding-top:5px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	position:absolute;
+	top:35px;
+}
+
+.fs_newaccordion_rootitem_over .fs_newaccordion_rootelebottom {
+	background-color : rgba(51, 51, 51, 0.5);
+	FILTER:ALPHA(opacity=50);background-color : rgb(51, 51, 51)\9;
+	color : #FFFFFF;
+	font-color : rgb(51,51,51);
+}
+
+.fs_newaccordion_activeroot .fs_newaccordion_rootelebottom {
+	background-color : rgba(51, 51, 51, 0.8);
+	FILTER:ALPHA(opacity=80);background-color : rgb(51, 51, 51)\9;
+	color : #FFFFFF;
+	font-color : rgb(51,51,51);
+}
+
+:root .fs_newaccordion_rootelebottom{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+.fs_newaccordion_rootitemelement {
+	font-size : 12px;
+	line-height : 12px;
+	font-family : 微软雅黑,宋体;
+	font-color : rgb(51,51,51);
+	width : 20px;
+	height : 90px;
+	top : 5px;
+	margin-left : 5px;
+	*left : 0;
+	position : absolute;
+	-moz-user-select:-moz-none; // alex:除了文本框里的元素,其它都不可以被选择
+	-webkit-user-select: none;
+	border-radius : 5px;
+}
+
+.fs_newaccordion_rootitemelement_over {
+	background-color : rgba(51, 51, 51, 0.5);
+	background-color : rgb(51, 51, 51)\9;
+	FILTER:ALPHA(opacity=50);
+	color : #FFFFFF;
+}
+
+.fs_newaccordion_activeelement {
+	background-color : rgba(51, 51, 51, 0.8);
+	background-color : rgb(51, 51, 51)\9;
+	FILTER:ALPHA(opacity=80);
+	color : #FFFFFF;
+}
+
+.fs_newaccordion_activeroot {
+	/* background-color : rgba(214, 214, 214, 0.4);
+	FILTER:ALPHA(opacity=40);background-color : rgb(214, 214, 214)\9;
+	box-shadow: -1px 3px 4px rgb(214, 214, 214);
+	-moz-box-shadow: -1px 3px 4px rgb(214, 214, 214);
+	-webkit-box-shadow: -1px 3px 4px rgb(214, 214, 214); */
+	position:relative;
+}
+
+:root .fs_newaccordion_activeroot{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+.fr-tree-elbow-plus-arrow,  .fr-tree-elbow-minus-arrow, .fr-tree-leaf-processicon, .fr-tree-leaf-cpticon, .fr-tree-leaf-frmicon, .fr-tree-leaf-urlicon, .fr-tree-leaf-biicon, .fr-tree-leaf-defaulticon{
+	border: 0 none;
+	height: 18px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	width: 18px;
+    background-repeat: no-repeat;
+}
+
+.ldapText{
+    /*width : 100%;*/
+    text-align : right;
+    display : block;
+    white-space:nowrap;
+    width:88px;
+}
+.authenTitle{
+    font-size: 18px;
+    font-weight:bold;
+}
+.authenDiv{
+    padding-left: 20px;
+    padding-top: 15px;
+}
+/*.ldapTable tr{*/
+    /*padding-bottom: 12px;*/
+    /*height:22px;*/
+/*}*/
+.ldapTable td{
+    /*height:22px;*/
+    padding-bottom: 12px;
+}
+.ldapTable span{
+    display:inline-block;
+}
+.specialTd{
+    padding-bottom: 2px;
+}
+.fr-tree-elbow-plus-arrow {
+	background : url('../images/closetreenode.png') no-repeat center;
+}
+
+.fr-tree-elbow-minus-arrow {
+	background : url('../images/opentreenode.png') no-repeat center;
+}
+
+.fs_accordion_bulletin {
+padding-left : 11px !important;
+background : url('../images/oem/icons.png') no-repeat -160px 0px;
+}
+
+.fs_portal_bulletin {
+background : url('../images/oem/icons.png') no-repeat -160px 0px;
+}
+
+.fs_portal_widgetadd {
+background : url('../images/oem/icons.png') no-repeat -176px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_user {
+background : url('../images/oem/icons.png') no-repeat -128px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_widgetadd {
+background : url('../images/oem/icons.png') no-repeat -176px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_reportmanager {
+background : url('../images/oem/icons.png') no-repeat -112px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_dataset {
+background : url('../images/oem/icons.png') no-repeat -144px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_sysexam {
+background : url('../images/oem/icons.png') no-repeat -96px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_title {
+background : url('../images/titleicon.png') no-repeat center;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_serverconfig {
+background : url('../images/oem/icons.png') no-repeat -192px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_register {
+background : url('../images/oem/icons.png') no-repeat -208px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_monitor {
+background : url('../images/oem/icons.png') no-repeat -224px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_visitor {
+background : url('../images/oem/icons.png') no-repeat -240px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_log {
+background : url('../images/oem/icons.png') no-repeat -256px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_bi_data {
+background : url('../images/oem/icons.png') no-repeat -144px 0px;
+}
+.fr-tree-node-el-accordion #fs_accordion_privilege {
+    background : url('../images/oem/icons.png') no-repeat -272px 0px;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_schedule {
+background : url('../images/platform/platform_scheduletask.png') no-repeat;
+}
+
+.fr-tree-node-el-accordion #fs_accordion_mobiledev {
+background : url('../images/platform/platform_binding_mdev.png') no-repeat;
+}
+
+.fs_accordion_itemicon {
+margin-left : 20px;
+font-size : 14px;
+}
+
+.fs_accordion_il {
+display : inline-block;
+height : 29px;
+line-height : 29px;
+width : 2px;
+float : left;
+background : url('../images/accordion/accordion_left.png') no-repeat;
+}
+
+.fs_accordion_ir {
+display : inline-block;
+height : 29px;
+line-height : 29px;
+width : 2px;
+float : right;
+background : url('../images/accordion/accordion_right.png') no-repeat;
+}
+/******fs list********/
+div.fs_list {
+border : solid 1px #97C5E0;
+}
+
+li.bbit-cp-node-selected{
+background: #B9D1F3;
+}
+
+div.fs_list li {
+height : 20px;
+line-height : 20px;
+font-size : 13px;
+padding-top : 4px;
+}
+
+.fs_list .bbit-cp-node a {
+margin-left : 4px;
+}
+
+
+.fs_listremoveself {
+padding-left :5px !important;
+background : url('../images/portal.gif') no-repeat -10px 0px;
+margin-top : 4px;
+margin-right : 8px;
+}
+
+.fs_list_expand {
+padding-left :10px !important;
+background : url('../images/expand.gif') no-repeat;
+margin-top : 4px;
+margin-right : 8px;
+}
+
+.fs_user_sync_edit {
+background : url('../images/sync_edit.png') no-repeat center;
+}
+
+.fs_user_sync_start {
+background : url('../images/sync_start.png') no-repeat center;
+}
+
+.fs_user_sync_close {
+background : url('../images/sync_close.png') no-repeat center;
+}
+
+.fs_platform_authen {
+    background : url('../images/platform_authen.png') no-repeat center;
+}
+
+
+.fs_listremoveself.fr_hover {
+background : url('../images/pportal.gif') no-repeat -10px 0px;
+}
+
+/*****fs tree******/
+div.fs_tree {
+    width: auto; 
+    height: auto; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    border: none;
+}
+
+.fs_tree .fr-tree-node-cb {
+margin-top : 1px;
+}
+
+li div.fr-tree-selected {
+background : #B9D1F3;
+}
+
+div .fr-tree-node-icon {
+margin-top : 1px !important;
+background-repeat : no-repeat !important;
+}
+
+.fs_tree_favorite {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    z-index: 30;
+    background : url('../images/oem/favorite_choose.png') no-repeat;
+    width:16px;
+    height: 16px;
+    cursor:pointer;
+}
+
+span.fs_tree_favorite_nochoose {
+    background : url('../images/oem/favorite_nochoose.png') no-repeat;
+}
+
+.fs-tree-node-content {
+font-family:'arial,tahoma,helvetica,sans-serif';
+font-size:12px;
+white-space : nowrap;
+overflow: hidden;
+text-overflow:ellipsis;
+-o-text-overflow:ellipsis;
+margin-left : 0;
+padding-left : 6px !important;
+}
+
+/*****fs dialog******/
+.fs_dialog {
+position : absolute;
+box-shadow : 3px 3px 4px #999999;
+}
+
+#fs_dialogheader {
+cursor : move;
+
+position : absolute;
+top : 0;
+}
+
+.fs_dialog_cl {
+position : absolute;
+left : 0;
+width : 8px;
+height : 24px;
+background : url('../images/dialog/dialog_header_left.gif') no-repeat;
+}
+
+.fs_dialog_cr {
+position : absolute;
+right : -1px;
+width : 8px;
+height : 24px;
+background : url('../images/dialog/dialog_header_right.gif') no-repeat;
+}
+
+.fs_dialogheadercontainer {
+position : absolute;
+right : 6px;
+left : 6px;
+height : 24px;
+background : #E0ECFF url('../images/dialog/dialoghc.gif') repeat-x;
+}
+
+.fs_dialogtitle {
+line-height : 20px;
+font-size : 13px;
+color : #416AA3;
+font-weight : 600;
+position : absolute;
+top : 4px;
+left : 10px;
+}
+
+#fs_dialogheaderclose {
+background : url('../images/pportal.gif') no-repeat -9px 0;
+cursor : pointer;
+width : 12px;
+height : 15px;
+position : absolute;
+right : 2px;
+bottom : 2px;
+}
+
+#fs_dialogheaderclose.fs_mousein{
+background : url('../images/portal.gif') no-repeat -9px 0;
+}
+
+#fs_dialogcontent {
+position : absolute;
+border-bottom : none;
+border-left : 1px solid #97C5E0;
+border-right : 1px solid #97C5E0;
+border-top : 1px solid #97C5E0;
+background : white;
+}
+
+.fs_dialog_buttons {
+bottom : 0;
+height : 28px;
+border-top : none;
+border-left : 1px solid #97C5E0;
+border-right : 1px solid #97C5E0;
+border-bottom : 1px solid #97C5E0;
+background : white;
+}
+
+.fs_confirebutton {
+position : absolute;
+right : 98px;
+top : 0px;
+}
+
+.fs_canclebutton {
+position : absolute;
+right : 20px;
+top : 0px;
+}
+
+.fs_confirmdialog {
+text-align : center;
+margin-top : 22px;
+}
+
+#fs_portalsource_content {
+margin-top : 10px;
+margin-left : 40px;
+}
+
+.fs_promotecontent {
+padding-left : 30px;
+margin-top : 20px;
+}
+
+.fs_promotecontent div {
+margin-top : 4px;
+}
+
+/*****fs portal*******/
+.fr_portalcontainer {
+background : #B9E1F9;
+}
+
+.fr_portal {
+
+}
+
+.fr_portalheader {
+height : 20px;
+}
+
+.fs_portalheader_container {
+position : absolute;
+right : 5px;
+left : 5px;
+width : 450px;
+height : 20px;
+background : url('../images/tab/tabc.png') repeat-x;
+}
+
+.fs_portalleftcorner {
+width : 7px;
+left : 0px;
+height : 20px;
+background : url('../images/tab/tab_left_pressed.png') no-repeat;
+}
+
+.fs_portalrightcorner {
+width : 7px;
+right : -1px;
+height : 20px;
+background : url('../images/tab/tab_right_pressed.png') no-repeat;
+}
+
+.fr_portaltitle {
+position : absolute;
+top : 3px;
+left : 10px;
+}
+
+.fr_fsportal_content {
+border : 1px solid #97C5E0;
+}
+
+.fr_fsportal_blankcontent {
+background : white;
+border : 1px solid #97C5E0;
+}
+
+.fs_portal_bulletin, .fs_portal_calendar {
+background : white;
+border : 1px solid #97C5E0;
+}
+
+.fs_portal_calendarel {
+top : 30px;
+left : 110px;
+z-index : 900 !important;
+}
+
+.fr_portalcontainer_bar {
+padding-left : 20px;
+padding-top : 1px;
+background : #E0ECFF;
+}
+
+
+.fr_fsportal_close {
+cursor : pointer;
+margin-left : 15px;
+padding-left : 8px;
+background : url('../images/pportal.gif') no-repeat -10px 0;
+}
+
+.fr_fsportal_close.fr_fsportal_close-hover {
+background : url('../images/portal.gif') no-repeat -10px 0;
+}
+
+.fr_fsportal_changesource {
+background : url('../images/pportal.gif') no-repeat 0 0;
+padding-left : 6px;
+cursor : pointer;
+}
+
+.fr_fsportal_changesource.fr_fsportal_changesource-hover {
+background : url('../images/portal.gif') no-repeat 0 0;
+}
+
+.fr_portal_innerblank {
+position : relative;
+left : 200px;
+top : 90px;
+width : 53px;
+height : 52px;
+cursor : pointer;
+background : url('../images/noIcon.png') no-repeat;
+}
+
+.fs_portalsource_report {
+margin-left : 4px;
+padding-left : 13px !important;
+background : url('../images/oem/icons.png') no-repeat -176px 0;
+}
+
+.fs_portalsource_bulletin {
+margin-left : 4px;
+padding-left : 13px !important;
+background : url('../images/accordion/bulletin.png') no-repeat;
+}
+
+.fs_portalsource_carlendar {
+margin-left : 4px;
+padding-left : 13px !important;
+background : url('../images/accordion/date.png') no-repeat;
+}
+
+.fs_portalcorner {
+background : url("../images/dialog/dialog_bl.gif") no-repeat scroll 0 0 transparent;
+height : 7px;
+width : 100%;
+top : 0px;
+}
+
+.fs_portalcorner div {
+background : url("../images/dialog/dialog_bl.gif") no-repeat scroll 0 0 transparent;
+float : right;
+margin-right : 2px;
+height : 7px;
+width : 7px;
+}
+
+/*******fs user********/
+#fs_user{
+position : absolute;
+background :  #B9E1F9;
+}
+
+#fs_usertoolbar{
+position : absolute;
+top:0px;
+left : 2px;
+border-bottom : solid 1px #4DA3D7;
+}
+
+#fsuserpw {
+position : absolute;
+top : 20px;
+left : 110px;
+}
+
+#fs_userinfo {
+position : absolute;
+top : 20px;
+left : 20px;
+}
+
+#fs_userinfopane {
+position : absolute;
+top : 52px;
+margin-left : 20px;
+margin-top: 10px;
+}
+
+#fs_userpwpane {
+position : absolute;
+top : 52px;
+margin-left : 20px;
+margin-top: 10px;
+}
+
+#fs_userinfosubmit {
+position : absolute;
+bottom : 2px;
+padding-left : 20px;
+}
+
+
+/*******fs button********/
+.fs_button .x-btn-tl{
+	background-position: -6px 0;
+}
+
+.fs_button .x-btn-tr{
+	background-position: -9px 0;
+}
+
+.fs_button .x-btn-tc{
+	background-position: 0 -9px;
+}
+
+.fs_button .x-btn-ml{
+	background-position: -6px -24px;
+}
+
+.fs_button .x-btn-mr{
+	background-position: -9px -24px;
+}
+
+.fs_button .x-btn-mc{
+	background-position: 0 -2168px;
+}
+
+.fs_button .x-btn-bl{
+	background-position: -6px -3px;
+}
+
+.fs_button .x-btn-br{
+	background-position: -9px -3px;
+}
+
+.fs_button .x-btn-bc{
+	background-position: 0 -18px;
+}
+
+.fs_button .x-btn-click .x-btn-tl, .x-btn-click .x-btn-tl, .x-btn-menu-active .x-btn-tl, .x-btn-pressed .x-btn-tl{
+	background-position: -12px 0;
+}
+
+.fs_button .x-btn-click .x-btn-tr, .x-btn-click .x-btn-tr, .x-btn-menu-active .x-btn-tr, .x-btn-pressed .x-btn-tr{
+	background-position: -15px 0;
+}
+
+.fs_button .x-btn-click .x-btn-tc,.x-btn-click .x-btn-tc, .x-btn-menu-active .x-btn-tc, .x-btn-pressed .x-btn-tc{
+	background-position: 0 -12px;
+}
+
+.fs_button .x-btn-click .x-btn-ml,.x-btn-click .x-btn-ml, .x-btn-menu-active .x-btn-ml, .x-btn-pressed .x-btn-ml{
+	background-position: -12px -24px;
+}
+
+.fs_button .x-btn-click .x-btn-mr,.x-btn-click .x-btn-mr, .x-btn-menu-active .x-btn-mr, .x-btn-pressed .x-btn-mr{
+	background-position: -15px -24px;
+}
+
+.fs_button .x-btn-click .x-btn-mc,.x-btn-click .x-btn-mc, .x-btn-menu-active .x-btn-mc, .x-btn-pressed .x-btn-mc{
+	background-position: 0 -3240px;
+}
+
+.fs_button .x-btn-click .x-btn-bl,.x-btn-click .x-btn-bl, .x-btn-menu-active .x-btn-bl, .x-btn-pressed .x-btn-bl{
+	background-position: -12px -3px;
+}
+
+.fs_button .x-btn-click .x-btn-br,.x-btn-click .x-btn-br, .x-btn-menu-active .x-btn-br, .x-btn-pressed .x-btn-br{
+	background-position: -15px -3px;
+}
+
+.fs_button .x-btn-click .x-btn-bc{
+	background-position: 0 -21px;
+}
+
+div.fs_toolbarbutton {
+	border : 1px solid white;
+}
+
+div.fs_toolbarbutton table td {
+	background : #85CDF9 !important;
+}
+
+div.fs_toolbarbutton table td button {
+	color : #4DA3D7;
+}
+
+div.fs_toolbarbutton.fs_button_selected table td {
+	background : #56A8D9 !important;
+}
+
+
+div.fs_toolbarbutton.fs_button_selected table td button{
+	color : white;
+}
+
+div.fs_toolbarbutton.fs_button_hover table td {
+	background : #85AAF9 !important;
+}
+
+div.fs_toolbarbutton.fs_button_hover table td button{
+	color : white;
+}
+
+
+/********fs trigger********/
+.fs_combo .fr-trigger-top-center {
+	background:url('../images/form/button/btn.gif') repeat-x 0 -9px;
+	*width:17px;
+	height:1px;
+}
+
+.fs_combo .fr-trigger-top-right {
+	background:url('../images/form/button/btn.gif') no-repeat -11px 0;
+	width:1px;
+	height:1px;
+}
+
+.fs_combo .fr-trigger-middle-center {
+	background:url('../images/form/button/btn.gif') repeat-x 0 -2168px;
+    vertical-align: middle;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+	*width:17px;
+}
+
+.fs_combo .fr-trigger-middle-right {
+	background:url('../images/form/button/btn.gif') no-repeat -11px -24px;
+    width:1px;
+}
+
+.fs_combo .fr-trigger-bottom-center {
+	height:1px;
+	*width:17px;
+	background:url('../images/form/button/btn.gif') repeat-x 0 -20px;
+}
+
+.fs_combo .fr-trigger-bottom-right {
+	background:url('../images/form/button/btn.gif') no-repeat -11px -3px;
+	width:1px;
+	height:1px;
+}
+
+.fs_combo .fr-trigger-btn-click .fr-trigger-top-center {
+	background:url('../images/form/button/btn.gif') repeat-x 0 -12px;
+	height:1px;
+	*width:17px;
+}
+.fs_combo .fr-trigger-btn-click .fr-trigger-top-right {
+	background:url('../images/form/button/btn.gif') no-repeat -17px 0;
+	width:1px;
+	height:1px;
+}
+.fs-popup-search {
+	font-size : 14px;
+	line-height : 22px;
+	white-space : nowrap;
+	width: 100%; overflow: hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+}
+.fs_combo .fr-trigger-btn-click .fr-trigger-middle-center {
+	background:url('../images/form/button/btn.gif') repeat-x 0 -3240px;
+    vertical-align: middle;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+	*width:17px;
+}
+.fs_combo .fr-trigger-btn-click .fr-trigger-middle-right {
+	background:url('../images/form/button/btn.gif') no-repeat -17px -24px;
+    width:1px;
+}
+.fs_combo .fr-trigger-btn-click .fr-trigger-bottom-center {
+	height:1px;
+	*width:17px;
+	background:url('../images/form/button/btn.gif') repeat-x 0 -23px;
+}
+.fs_combo .fr-trigger-btn-click .fr-trigger-bottom-right {
+	background:url('../images/form/button/btn.gif') no-repeat -17px -3px;
+	width:1px;
+	height:1px;
+}
+
+.search-list-leaf{
+	background:url("../core/js/jquerytree/images/tree/leaf.gif");
+}
+
+.search-list-cpt{
+	background:url("../images/oem/cpt.gif");
+}
+
+.search-list-cpr{
+	background:url("../images/oem/cpr.gif");
+}
+
+.search-list-analy{
+	background:url("../core/js/jquerytree/images/tree/analy.gif");
+}
+
+.search-list-excel{
+	background:url("../core/js/jquerytree/images/tree/excel.gif");
+}
+
+.search-list-word{
+	background:url("../core/js/jquerytree/images/tree/word.gif");
+}
+
+.search-list-pdf{
+	background:url("../core/js/jquerytree/images/tree/pdf.gif");
+}
+
+.search-list-url{
+	background:url("../core/js/jquerytree/images/tree/url.gif");
+}
+.search-result-selected{
+	color:#019fde;
+}
+.search-result-normal{
+	color:#5187b1;
+}
+
+.fr-adanaly-pop-saveas {
+background:url('../images/adhoc/saveas.png')  no-repeat 2px center;
+}
+
+.fr-adanaly-pop-snapshot{
+background:url('../images/adhoc/snapshoot.png')  no-repeat 2px center;
+}
+
+.fr-bi-pop-normal-report {
+background:url('/demo3/ReportServer?op=resource&resource=/com/fr/bi/web/images/bi.png')  no-repeat 2px center;
+}
+
+.fr-bi-pop-model-report {
+background:url('/demo3/ReportServer?op=resource&resource=/com/fr/bi/web/images/bi.png')  no-repeat 2px center;
+}
+
+/*******  process FS.ShowhideTextEditor  ********/
+.fs_showhidetexteditor {
+	position : relative;
+}
+/******** FS.GridList  *********/
+.fs_gridlist {
+	position : relative;
+}
+.fs_gridlist_headcontent {
+	text-align : center;
+}
+.fs_gridlistaddbutton{
+	width : 25px;
+	height : 20px;
+	position : absolute;
+	left : 14px;
+	border : 1px solid #04567F;
+	border-radius : 5px;
+	color : #04567F;
+	text-align : center;
+	z-index : 99;
+	bottom : -12px;
+	background : #ffffff;
+	font : bold 19px arial,tahoma,verdana,helvetica;
+	-khtml-user-select:none;
+	-moz-user-select:-moz-none; // alex:除了文本框里的元素,其它都不可以被选择
+    -webkit-user-select:ignore;
+    -webkit-user-select:none;
+    cursor : pointer;
+}
+.fs_gridlistaddbutton:hover {
+	background : #005885;
+	color : #ffffff;
+}
+.fs_gridlist_separatetd {
+	border : none !important;
+}
+.fs_gridlist_td {
+	padding-left : 4px;
+	border-bottom : 1px dotted #6DA7BB;
+}
+#fs_gridlist_table th{
+	color : #157D7E;
+	font-weight : bold;
+	border-bottom : 1px solid #6CA7BB;
+}
+
+#fs_gridlist_table th, #fs_gridlist_table td {
+	padding-left : 10px;
+}
+#fs_gridlist_tablecontainer {
+	border : 1px solid #6CA7BB;
+	overflow : auto;
+	font-size : 12px;
+	background : white;
+	border-radius : 5px;
+	text-align : center;
+}
+.fs_gridlist_removetd {
+	color : red;
+	font : bold 12px arial,tahoma,verdana,helvetica;
+	cursor : pointer;
+	padding-left : 5px!important;
+	padding-right : 5px!important;
+}
+.fs_gridlist_selectedtr {
+	background : #E6EFF2;
+}
+/*******  通用查询页面  *******/
+.fs_processgeneralquery {
+	width : 100%;
+	height : 20%;
+}
+.fs_processgeneralquerylabel {
+	float : left;
+	width : 80px;
+	text-align : right;
+	color : #0581A4;
+}
+.fs_processgeneralquerycheck {
+	float : left;
+}
+.fs_processkeywordquerypane {
+	margin-top : 4px;
+	height : 18px;
+	width : 100%;
+	text-align : center;
+	float : left;
+}
+.fs_processkeywordwrappane {
+	width : 300px;
+	height : 20px;
+	margin-right : auto;
+	margin-left : auto;
+}
+.fs_processgeneralquerylabelandcheckbox {
+	width : 180px;
+	height : 18px;
+	float : left;
+	padding-right : 16px;
+	padding-bottom : 8px;
+}
+
+
+/********    ProcessQueryPane    ********/
+#fs_process_querytypediv {
+	height : 20px;
+	margin-top : 5px;
+}
+
+.user_menu_item{
+    position:relative;
+    margin:0;
+    padding:0;
+    height:22px;
+    line-height:20px;
+    overflow:hidden;
+    font-size:12px;
+    cursor:pointer;
+}
+
+/*********     FS.SwitchButton     **********/
+#fs_switchbutton_body {
+	width:128px;
+	height:25px;
+}
+
+#fs_switchbutton_left, #fs_switchbutton_right  {
+	width:64px;
+	height:25px;
+	float:left;
+	position:relative;
+	cursor:pointer;
+}
+
+.fs_switchbutton_on #fs_switchbutton_left {
+	background : url("../images/switchbutton/left_on.png") no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/switchbutton/left_on.png");
+    _background: none;
+}
+
+.fs_switchbutton_off #fs_switchbutton_left {
+	background : url("../images/switchbutton/left_off.png") no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/switchbutton/left_off.png");
+    _background: none;
+}
+
+.fs_switchbutton_on #fs_switchbutton_right {
+	background : url("../images/switchbutton/right_off.png") no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/switchbutton/right_off.png");
+    _background: none;
+}
+
+.fs_switchbutton_off #fs_switchbutton_right {
+	background : url("../images/switchbutton/right_on.png") no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/switchbutton/right_on.png");
+    _background: none;
+}
+
+.fs_switchbutton_off .fs_siwthbutton_hover #fs_switchbutton_left {
+	background : url("../images/switchbutton/left_hover.png") no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/switchbutton/left_hover.png");
+    _background: none;
+}
+
+.fs_switchbutton_on .fs_siwthbutton_hover #fs_switchbutton_right {
+	background : url("../images/switchbutton/right_hover.png") no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/switchbutton/right_hover.png");
+    _background: none;
+}
+
+.fs_switchbutton_textarea {
+	width:56px;
+	right:25px;
+	text-align:center;
+	line-height:25px;
+	position:absolute;
+}
+
+#fs_switchbutton_right .fs_switchbutton_textarea {
+	left:0;
+}
+
+#fs_switchbutton_left .fs_switchbutton_textarea {
+	right:0;
+}
+
+.fs_switchbutton_on #fs_switchbutton_left, .fs_switchbutton_off #fs_switchbutton_right {
+	color:#FFFFFF;
+}
+
+.fs_switchbutton_on #fs_switchbutton_right, .fs_switchbutton_off #fs_switchbutton_left {
+	color:#676767;
+}
+
+/*********     Sean: FS.LTabPane Start    **********/
+.fs_ltabpane_content_unselected {
+    display: none;
+}
+
+.fs_ltabpane_content_selected {
+    display: block;
+}
+
+.fs_ltabpane_tabs_general {
+    outline: none;
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+    font-family: "Microsoft YaHei",sans-serif;
+    font-size: 15px;
+    color: #909090;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+.fs_ltabpane_tabs_hover {
+    color: #676767;
+}
+.fs_ltabpane_tabs_selected {
+    color: #1483FF;
+    border-bottom: solid 2px #1483FF;
+}
+
+.fs_ltabpane_tabs {
+    position:relative;
+    top: 0px;
+    left: 0px;
+    height: 17px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 19px;
+    margin-left: 18px;
+    margin-right: 1px;
+}
+/*********     FS.LTabPane End   **********/
+
+/*********     FS.InsideTabPane Start   *********/
+.fs_inside_tabpane {
+}
+
+.fs_inside_tab_header {
+    position:relative;
+    height: 25px;
+    text-align: center;
+}
+
+.fs_inside_tab {
+    outline: none;
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+    font-family: SimSun;
+    font-size: 12px;
+    color: #FFFFFF;
+    background:#2792D7;
+    height: 22px;
+    line-height: 22px;
+    border-bottom: 1px solid RGB(87, 124, 147);
+    -moz-box-shadow: 0 -1px 1px RGB(47, 126, 166) inset;
+    -webkit-box-shadow:0 -1px 1px RGB(47, 126, 166) inset;
+    box-shadow:0 -1px 1px RGB(47, 126, 166) inset;
+}
+
+.fs_inside_tab_selected {
+    font-size: 13px;
+    color: #2792D7;
+    font-weight: bold;
+    background: none;
+    height: 24px;
+    box-shadow: 0 -1px RGB(228,228,228);
+    line-height: 24px;
+    border-top : 1px solid #2c7cae;
+    border-left : 1px solid #BCBBBB;
+    border-right: 1px solid #BCBBBB;
+    border-bottom: none;
+}
+
+.fs_inside_content_selected {
+    border-left : 1px solid RGB(188, 187, 187);
+    border-right : 1px solid RGB(188, 187, 187);
+    border-bottom : 1px solid RGB(188, 187, 187);
+    box-shadow: 0 0 1px RGB(229, 228, 228);
+}
+
+.fs_inside_tab_no_right_border {
+    border-right: none;
+}
+
+.fs_inside_tab_no_left_border {
+    border-left: none;
+}
+/*********     FS.InsideTabPane End   *********/
+
+/*********     FS.LLabel Start   **********/
+.first_level_style{
+    border-bottom:2px solid #DCDDDE;
+    padding-bottom: 5px;
+}
+/*********     FS.LLabel End   **********/
+
+/*********     FS的RadioButton Start   **********/
+.fr-radio-radioon {
+    background: transparent url('../images/singlecheck-selected.png') no-repeat scroll left center;
+    margin-left: 0px;
+}
+.fr-radio-radiooff {
+    background: transparent url('../images/singlecheck.png') no-repeat scroll left center;
+    margin-left: 0px;
+}
+/*********     FS的RadioButton End   **********/
+
+/*********     FS的checkbox Start   **********/
+.fr-checkbox-checkon {
+    background: transparent url('../images/checkbox_click.png') no-repeat scroll left center;
+}
+.fr-checkbox-checkoff {
+    background: transparent url('../images/checkbox.png') no-repeat scroll left center;
+}
+/*********     FS的checkbox End   **********/
+
+/*********     FS的radio/checkbox group Start   **********/
+.fr-group-span{
+    margin-left: 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+/*********     FS的radio/checkbox group End   **********/
+
+.fs_navigation_item {
+	width:64px;
+	height:70px;
+	float:left;
+	cursor:pointer;
+	margin-right:6px;
+    text-align: center;
+    text-decoration: none;
+}
+.fs_navigation_item:hover, .fs_navigation_item_over {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="/sh/sjjc/images/navigation/hover.png");
+    background: url("../images/navigation/hover.png") center no-repeat;
+    background: none\9;
+}
+
+.fs_edit_navigation_item_over {
+	border-radius : 5px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    cursor : pointer;
+    width : 40px;
+    height : 40px;
+    position : absolute;
+    left : 11px;
+    top : 6px;
+    filter:alpha(opacity=40);
+    opacity:0.4;
+    background-color:rgb(20,20,20);
+    border : 1px solid rgb(0, 0, 0);
+}
+
+.fs_edit_navigation_item_click {
+	width : 40px;
+	height : 40px;
+	position : absolute;
+	left : 11px;
+	top : 6px;
+	filter:alpha(opacity=70);
+    opacity:0.7;
+    background-color:rgb(20,20,20);
+	border : 1px solid rgb(0, 0, 0);
+	border-radius : 5px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.fs_navigation_edit_icon {
+	position:absolute;
+	top:19px;
+	left:26px;
+	width:16px;
+	height:16px;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/icons_edit_normal.png");
+    background: url("../images/icons_edit_normal.png") center no-repeat;
+    background: none\9;
+}
+
+.fs_navigation_item_click {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="/sh/sjjc/images/navigation/press.png");
+    background: url("../images/navigation/press.png") center no-repeat;
+    background: none\9;
+}
+
+.fs_navigation_icon {
+	display: block;
+	position:relative;
+	width:42px;
+	height:42px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:6px;
+}
+
+.fs_navigation_text {
+    display: block;
+	width:48px;
+	overflow:hidden;
+	font-size:12px;
+	font-family:"Microsoft YaHei",SimSun,arial;
+	text-align:center;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    position:relative; /*兼容IE6，背景透明，但是字不透明*/
+}
+
+.fs_navigation_itemicon_reportmanager {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple2.png");
+    background/*屏蔽IE6*/ : url("../images/navigation/simple/simple2.png") center no-repeat;
+    background:none\9;
+}
+
+.fs_navigation_itemicon_bi {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple5.png");
+    background/*屏蔽IE6*/ : url("../images/navigation/simple/simple5.png") center no-repeat;
+    background:none\9;
+}
+
+.fs_navigation_itemicon_default {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple1.png");
+    background/*屏蔽IE6*/ : url("../images/navigation/simple/simple1.png") center no-repeat;
+    background:none\9;
+}
+
+#fs_navigation_wrapper {
+position:absolute;
+height:70px;
+top:13px;
+right:20px;
+}
+
+#fs_navigation_north {
+    position: absolute;
+    width: 100%;
+}
+
+.fs_design_container {
+	position:relative;
+	overflow:auto;
+	height:100%;
+	width:100%;
+	background:#F9FAFC;
+}
+
+.fs_togglelist_title {
+	border-bottom : 1px solid black;
+	position : relative;
+	height : 30px;
+	cursor : pointer;
+}
+
+.fs_togglelist_text {
+	position:absolute;
+	left:0;
+	bottom:0;
+	font-size:12px;
+	font-family:SimSun,arial;
+}
+.fs_togglelist_foldicon, .fs_togglelist_unfoldicon {
+	width : 16px;
+	height : 16px;
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+
+.fs_togglelist_foldicon {
+    background/*屏蔽IE6*/ : url("../images/fold.png") center no-repeat;
+}
+
+.fs_togglelist_unfoldicon {
+    background/*屏蔽IE6*/ : url("../images/unfold.png") center no-repeat;
+}
+
+.fs_csview_naviimgs1 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple1.png");
+    background/*屏蔽IE6*/ : url("../images/navigation/simple/simple1.png") center no-repeat;
+    background:none\9;
+	
+}
+.fs_csview_naviimgs2 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple2.png");
+    background/*屏蔽IE6*/ : url("../images/navigation/simple/simple2.png") center no-repeat;
+    background:none\9;
+	
+}
+.fs_csview_naviimgs3 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple3.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/simple/simple3.png") center no-repeat;
+    background:none\9;
+	
+}
+.fs_csview_naviimgs4 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple4.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/simple/simple4.png") center no-repeat;
+    background:none\9;
+	
+}
+.fs_csview_naviimgs5 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple5.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/simple/simple5.png") center no-repeat;
+    background:none\9;
+	
+}
+.fs_csview_naviimgs6 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple6.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/simple/simple6.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgs7 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple7.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/simple/simple7.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgs8 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple8.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/simple/simple8.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgs9 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple9.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/simple/simple9.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgs10 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/simple/simple10.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/simple/simple10.png") center no-repeat;
+    background:none\9;
+}
+
+.fs_csview_naviimgc1 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful1.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful1.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgc2 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful2.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful2.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgc3 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful3.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful3.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgc4 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful4.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful4.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgc5 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful5.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful5.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgc6 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful6.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful6.png") center no-repeat;
+    background:none\9;
+	
+}
+.fs_csview_naviimgc7 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful7.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful7.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgc8 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful8.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful8.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgc9 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful9.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful9.png") center no-repeat;
+    background:none\9;
+}
+.fs_csview_naviimgc10 {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/navigation/colorful/colorful10.png");
+	background/*屏蔽IE6*/ : url("../images/navigation/colorful/colorful10.png") center no-repeat;
+    background:none\9;
+}
+.fs_paragrid_limitlendiv {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+}
+div.fr-tablepane-row{
+    position: relative;
+    overflow: hidden;
+    *zoom: 1;
+}
+div.fr-tablepane-item{
+    float: left;
+    position: relative;
+    display: inline;
+}
+div.fs-accordion-menu{
+    cursor: pointer !important;
+    font-size: 14px;
+    font-family: simsun;
+    color: #656565;
+    padding-bottom: 3px;
+    border-bottom: solid 2px #dcddde;
+    margin-bottom: 5px;
+}
+div.fs-accordion-icon-unfold{
+    width: 16px;
+    height: 16px;
+    float: right;
+    background: url('../images/unfold.png') no-repeat;
+}
+div.fs-accordion-icon-fold{
+    width: 16px;
+    height: 16px;
+    float: right;
+    background: url('../images/fold.png') no-repeat;
+}
+div.fs-accordion-content{
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+    _height: 100%;
+}
+div.fs-floatpane{
+    top: 0;
+    left: 28px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+div.fs-floatpane-content{
+    overflow: hidden;
+    margin: 0 5px 0 5px;
+}
+div.fs-floatpane-btn{
+    height: 30px;
+    top: -1px;
+    cursor: pointer !important;
+}
+div.fs-floatpane-content, div.fs-floatpane-btn{
+    *zoom : 1;
+    position: relative;
+    background: #ffffff;
+    border-width: 0 1px 1px 1px;
+    border-style: dashed solid solid solid;
+    border-color: #bbbbbb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+a.fs-floatpane-icon{
+    padding: 0 12px 0 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: simsun;
+    color: #777;
+    text-shadow: rgba(255,255,255,0.7) 0 1px 0;
+    outline: 0;
+}
+a.fs-floatpane-down{
+    background: url('../images/floatpane_down.png') no-repeat right 5px;
+}
+a.fs-floatpane-up{
+    background: url('../images/floatpane_up.png') no-repeat right 5px;
+}
+
+/******* FS.TableTree  *******/
+.fs_tool_checkoff, .fs_tool_checkon, .fs_tool_checkhalf {
+    width: 20px;
+    height: 20px;
+    margin-right:10px;
+}
+
+.fs_tool_checkoff{
+    background: url('../images/checkbox.png') no-repeat center;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/checkbox.png");
+    _background: none;
+}
+
+.fs_tool_checkon{
+    background: url('../images/checkbox_click.png') no-repeat center;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/checkbox_click.png");
+    _background: none;
+}
+
+.fs_tool_checkhalf{
+    background: url('../images/checkbox_half.png') no-repeat center;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/checkbox_half.png");
+    _background: none;
+}
+
+.fs_tool_disabled {
+    cursor: default !important;
+    opacity: 0.5;
+    filter:Alpha(Opacity=50);
+    -moz-opacity: 0.5;
+}
+/******* FS.TableTree  *******/
+
+/******* 添加用戶的Dialog ********/
+div.fs-usermgr-userpane{
+    width: 515px;
+    height: 310px;
+    border: solid 2px #3197da;
+    overflow: hidden;
+}
+div.fs-usermgr-selpane{
+    position: relative;
+    overflow: auto;
+    width: 515px;
+    height: 90px;
+    border-bottom: solid 1px #3197da;
+}
+div.fs-usermgr-allpane{
+    position: relative;
+    overflow: auto;
+    width: 515px;
+    height: 219px;
+}
+a.fs-usermgr-seluser{
+    display: inline-block;
+    text-decoration: none;
+    *display: inline;
+    *zoom: 1;
+    cursor: pointer !important;
+    background: #3197da;
+    height: 24px;
+    margin: 2px 4px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    text-align: center;
+    line-height: 24px;
+}
+a.fs-usermgr-seluser span{
+    margin: 4px 12px;
+    color: #ffffff;
+    font-size: 12px;
+}
+a.fs-usermgr-alluser{
+    text-decoration: none;
+    cursor: pointer !important;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 120px;
+    height: 24px;
+    margin: 2px 15px;
+    text-align: center;
+    line-height: 24px;
+    background: #f0f0f0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #676767;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+a.fs-usermgr-alluser:hover{
+    color: #ffffff;
+    background: #3197da;
+}
+a.fs-usermgr-disabled, a.fs-usermgr-disabled:hover{
+    text-decoration: none;
+    color: #bababa;
+    background: #f8f8f8;
+}
+
+/********FS标签页内通用的ICON********/
+div.fs-module-add-white{
+    cursor: pointer !important;
+    height: 24px;
+    width: 24px;
+    background: url('../images/fsicons.png') no-repeat -48px -48px;
+    _background: url('../images/fsicons.gif') no-repeat -48px -48px;
+}
+
+div.fs-module-add-white-over, div.fs-module-add-white-hover{
+    height: 24px;
+    width: 24px;
+    background: url('../images/fsicons.png') no-repeat -48px -72px;
+    _background: url('../images/fsicons.gif') no-repeat -48px -72px;
+}
+
+div.fs-module-edit-white{
+    cursor: pointer !important;
+    height: 24px;
+    width: 24px;
+    background: url('../images/fsicons.png') no-repeat -144px 0;
+    _background: url('../images/fsicons.gif') no-repeat -144px 0;
+}
+
+div.fs-module-edit-white-over, div.fs-module-edit-white-hover{
+    height: 24px;
+    width: 24px;
+    background: url('../images/fsicons.png') no-repeat -144px -24px;
+    _background: url('../images/fsicons.gif') no-repeat -144px -24px;
+}
+div.fs-module-delete-white{
+    cursor: pointer !important;
+    height: 24px;
+    width: 24px;
+    background: url('../images/fsicons.png') no-repeat -216px 0;
+    _background: url('../images/fsicons.gif') no-repeat -216px 0;
+}
+div.fs-module-delete-white-over, div.fs-module-delete-white-hover{
+    background: url('../images/fsicons.png') no-repeat -216px -24px;
+    _background: url('../images/fsicons.gif') no-repeat -216px -24px;
+}
+.fr-grid tr div.fs-module-edit-white,.fr-grid tr div.fs-module-delete-white{
+    display: none;
+}
+.fr-grid tr.hover div.fs-module-edit-white,.fr-grid tr.hover div.fs-module-delete-white{
+    display: block;
+}
+/***** platform主页*****/
+div.platform_home_bg{
+    width: 100%;
+    height: 100%;
+    background: url('../images/pf_bg.jpg') no-repeat center;
+
+}
+div.platform_home_fg{
+    width: 100%;
+    height: 100%;
+    background: url('../images/pf_fg.png') no-repeat center;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/pf_fg.png");
+    _background: none;
+}
+/**********/
+/*一些基础css*/
+.fl {
+	float:left;
+}
+
+.mt5 {
+	margin-top:5px;
+}
+
+.bl1d {
+	border-left:1px dashed;
+}
+/****** tabpane to improve ******/
+.fr-tabs-container{
+	overflow:hidden;
+}
+.fr-tabs-header{
+	border-bottom:0px;
+	position:absolute;
+	height:28px;
+	overflow:hidden;
+	padding:0px;
+	padding-top:2px;
+	overflow:hidden;
+}
+
+
+.fr-tabs-header-noborder{
+	border:0px;
+}
+.fr-tabs-header-plain{
+	border:0px;
+	background:transparent;
+}
+
+.fr-tabs-fullscreen{
+	position:absolute;
+	right:61px;
+	top:8px;
+	width:16px;
+	height:20px!important;
+	font-size:1px;
+	cursor:pointer;
+	background: url('../images/tabfullscreen.png') no-repeat 0px 0;
+}
+
+.fr-tabs-exitfullscreen{
+	position:absolute;
+	right:61px;
+	top:8px;
+	width:16px;
+	height:20px!important;
+	font-size:1px;
+	cursor:pointer;
+	background: url('../images/tabexitfullscreen.png') no-repeat 0px 0;
+}
+
+.fr-tabs-scroller-left {
+	position:absolute;
+	right:42px;
+	top:8px;
+	width:15px;
+	height:20px!important;
+	font-size:1px;
+	cursor:pointer;
+	background: url('../images/tabAndClose.png') no-repeat 0px 0;
+}
+
+div.fr-tabs-scroller-left.fr-tabs-scroller-over  {
+	background: url('../images/tabAndClose.png') no-repeat -45px 0;
+}
+
+div.fr-tabs-scroller-left.fr-tabs-scroller-click  {
+	background: url('../images/tabAndClose.png') no-repeat -90px 0;
+}
+
+div.fr-tabs-scroller-left.fr-tabs-scroller-enabled  {
+	background: url('../images/tabAndClose.png') no-repeat -135px 0;
+}
+
+.fr-tabs-scroller-right{
+	position:absolute;
+	right:23px;
+	top:8px;
+	width:15px;
+	height:20px!important;
+	font-size:1px;
+	cursor:pointer;
+	background: url('../images/tabAndClose.png') no-repeat -15px 0;
+}
+
+
+.fr-tabs-scroller-right.fr-tabs-scroller-over {
+	background: url('../images/tabAndClose.png') no-repeat -60px 0;
+}
+
+.fr-tabs-scroller-right.fr-tabs-scroller-click {
+	background: url('../images/tabAndClose.png') no-repeat -105px 0;
+}
+
+.fr-tabs-scroller-right.fr-tabs-scroller-enabled {
+	background: url('../images/tabAndClose.png') no-repeat -150px 0;
+}
+
+
+.fr-tabs-close{
+	position:absolute;
+	right:4px;
+	top:8px;
+	width:15px;
+	height:20px!important;
+	font-size:1px;
+	cursor:pointer;
+	background: url('../images/tabAndClose.png') no-repeat -30px 0;
+}
+
+
+.fr-tabs-close.fr-tabs-scroller-over {
+	background: url('../images/tabAndClose.png') no-repeat -75px 0;
+}
+
+.fr-tabs-close.fr-tabs-scroller-click {
+	background: url('../images/tabAndClose.png') no-repeat -120px 0;
+}
+
+.fr-tabs-close.fr-tabs-scroller-enabled {
+	background: url('../images/tabAndClose.png') no-repeat -165px 0;
+}
+
+.fr-tabs-header-plain .fr-tabs-scroller-left{
+	top:2px;
+	height:25px!important;
+}
+.fr-tabs-header-plain .fr-tabs-scroller-right{
+	top:2px;
+	height:25px!important;
+}
+.fr-tabs-scroller-over{
+	background-color:#ECF9F9;
+}
+.fr-tabs-wrap{
+	position:absolute;
+	left:2px;
+	overflow:hidden;
+	right:57px;
+	margin:0px;
+	padding:0px;
+}
+.fr-tabs-scrolling{
+	margin-left:18px;
+	margin-right:18px;
+}
+.fr-tabs{
+	list-style-type:none;
+	height:23px;
+	margin-top : 2px;
+	padding:0px;
+	padding-left:4px;
+	font-size:12px;
+	width:5000px;
+	font-family : Arial,"微软雅黑", "宋体";
+	*display:inline;
+}
+.fr-tabs li{
+	float:left;
+	display:inline-block;
+	padding:0;
+	position:relative;
+	border-bottom : none;
+}
+
+.fr-tabs li.fr-tabs-selected span.fr_tab_rc {
+	background/*屏蔽IE6*/ : url('../images/newtab/tab-selected-right.png') no-repeat !important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-selected-right.png"); 
+	background:none;
+}
+
+/* .fr-tabs li.fr-tabs-selected.fr-tabs-hover span.fr-tabs-inner{
+	background:#99CCFF url('../images/tab/tabc.png') repeat-x;
+} */
+
+.fr-tabs li span.fr-tabs-inner{
+	display:inline-block;
+	color:#000000;
+	height:25px;
+	line-height:25px;
+	margin-left : 17px;
+	*left : 17px;
+	background : rgba(51, 51, 51, 0.4);
+	filter:alpha(opacity=40);
+	background-color :  rgb(51, 51, 51)\9;
+	border-top : 1px solid rgba(214, 214, 214, 0.4 );
+	position : relative;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+.fr-tabs li.fr-tabs-selected span.fr-tabs-inner{
+	color:#000;
+	font-weight:bold;
+	background:rgba(214,214,214,0.4);
+	filter:alpha(opacity=40);background-color:rgb(214,214,214)\9;
+	outline: none;
+}
+
+.fr-tabs li span.fr-tabs-homepage {
+	display:inline-block;
+	color:rgb(0,88,144);
+	height:22px;
+	padding-left : 34px;
+	line-height:20px;
+	text-align:center;
+	background/*屏蔽IE6*/ : url('../images/homepage-normal.png');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/homepage-normal.png"); 
+	background:none\9;
+	margin-left : 5px;
+	margin-top : 0px;
+	width : 66px;
+	letter-spacing : 19px;
+	border-radius : 5px;
+	cursor : pointer;
+}
+
+.fr-tabs li.fr-tabs-hover span.fr-tabs-homepage {
+	background/*屏蔽IE6*/ : url('../images/homepage-hover.png');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/homepage-hover.png"); 
+	background:none\9;
+}
+
+.fr-tabs li.fr-tabs-selected span.fr-tabs-homepage {
+	background/*屏蔽IE6*/ : url('../images/homepage-click.png');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/homepage-click.png"); 
+	background:none\9;
+}
+
+.fr-tabs li span.fr-tabs-homepageimage{
+	background/*屏蔽IE6*/ : url('../images/homepage.png');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/homepage.png"); 
+	background:none\9;
+	background-position:10px; 
+	background-repeat:no-repeat;
+	width:30px;
+	height:20px;
+}
+
+.fr-tabs li span.fr-tabs-cpt{
+	background-image : url('../images/cpticon.png');
+	background-position:center; 
+	background-repeat:no-repeat;
+}
+
+.fr-tabs li span.fr-tabs-frm{
+	background-image : url('../images/frmicon.png');
+	background-position:center; 
+	background-repeat:no-repeat;
+}
+
+.fr-tabs li span.fr-tabs-bi{
+	background-image : url('../images/biicon.png');
+	background-position:center; 
+	background-repeat:no-repeat;
+}
+
+.fr-tabs li.fr-tabs-hover span.fr-tabs-inner{
+	background : rgba(160, 140, 140, 0.5);
+	filter:alpha(opacity=50);
+	background-color:rgb(160, 140, 140)\9;
+	cursor : pointer;
+}
+
+.fr-tabs li.fr-tabs-selected span.fr-tabs-inner{
+	height:25px;
+	line-height:25px;
+}
+
+.fr-tabs li.fr-tabs-selected span:hover{
+	cursor:default;
+	pointer:default;
+}
+.fr-tabs-with-icon{
+	padding-left:20px;
+	position : relative;
+}
+.fr-tabs-icon{
+	position:absolute;
+	width:25px;
+	height:25px;
+	left:0;
+	top:0;
+}
+.fr-tabs-closable{
+}
+.fr-tabs li a.fr-tabs-close{
+	position:absolute;
+	font-size:1px;
+	display:block;
+	padding:0px;
+	width:8px;
+	height:8px;
+	top:5px;
+	right:0;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	background:url('../images/close-tab-icon.png') no-repeat;
+}
+
+.fr-tabs li.fr-tabs-selected a.fr-tabs-close {
+	background:url('../images/close-tab-icon.png') no-repeat;
+}
+
+.fr-tabs li a:hover.fr-tabs-close{
+	opacity:1;
+	filter:alpha(opacity=100);
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+.fr-tabs-panels{
+	margin:0px;
+	padding:0px;
+	border-bottom-width:5px; 
+	border-left-width:5px;
+	border-right-width:10px;
+	border-top-width:5px;
+	border-color:rgba(214, 214, 214, 0.4);
+	border-color:rgb(214, 214, 214)\9;
+	border-style:solid;
+	border-radius : 5px;
+	overflow:auto;
+	position:absolute;
+	top:29px;
+	background:rgb(255,255,255);
+}
+.fr-tabs-panels-noborder{
+	border:0px;
+}
+.fr-tabs-northborder {
+	height:5px;
+	width:100%;
+	background : red;
+	position : absolute;
+	top:0;
+	background-color :  rgb(214,214,214);
+	filter:alpha(opacity=40);
+}
+.fr-tabs-eastborder {
+	height:100%;
+	width:10px;
+	background : red;
+	position : absolute;
+	top:5px;
+	bottom:5px;
+	right:0;
+	background-color :  rgb(214,214,214);
+	filter:alpha(opacity=40);
+}
+.fr-tabs-westborder {
+	height:100%;
+	width:5px;
+	background : red;
+	position : absolute;
+	top:5;
+	bottom:5px;
+	background-color :  rgb(214,214,214);
+	filter:alpha(opacity=40);
+}
+.fr-tabs-southborder {
+	height:5px;
+	width:100%;
+	background : red;
+	position : absolute;
+	bottom:0;
+	background-color :  rgb(214,214,214);
+	filter:alpha(opacity=40);
+}
+
+li .fr_tab_lc {
+position : absolute;
+display : inline-block;
+width : 17px;
+height : 25px;
+line-height : 25px;
+background/*屏蔽IE6*/ : url('../images/newtab/tab-right-left.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-right-left.png"); 
+background:none\9;
+}
+
+li .fr_single_tab_lc {
+position : absolute;
+display : inline-block;
+width : 17px;
+height : 25px;
+line-height : 25px;
+background/*屏蔽IE6*/ : url('../images/newtab/tab-single-left.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-single-left.png"); 
+background:none\9;
+}
+
+li .fr_single_tab_rc {
+display : inline-block;
+position : absolute;
+width : 17px;
+height : 25px;
+line-height : 25px;
+background/*屏蔽IE6*/ : url('../images/newtab/tab-single-right.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-single-right.png"); 
+background:none\9;
+}
+
+li.fr-tabs-hover .fr_single_tab_lc {
+background/*屏蔽IE6*/ : url('../images/newtab/tab-hover-single-left.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-hover-single-left.png"); 
+background:none\9;
+}
+
+li.fr-tabs-hover .fr_single_tab_rc {
+background/*屏蔽IE6*/ : url('../images/newtab/tab-hover-single-right.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-hover-single-right.png"); 
+background:none\9;
+}
+
+li.fr-tabs-selected .fr_single_tab_rc {
+background/*屏蔽IE6*/ : url('../images/newtab/tab-selected-single-right.png') no-repeat; 
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-selected-single-right.png"); 
+background:none\9;
+
+}
+
+li.fr-tabs-selected .fr_single_tab_lc {
+background/*屏蔽IE6*/ : url('../images/newtab/tab-selected-single-left.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-selected-single-left.png"); 
+background:none\9;
+}
+
+li .fr_tab_rc {
+display : inline-block;
+width : 17px;
+height : 23px;
+line-height : 23px;
+background : url('../images/tab/tab_right_normal.png') no-repeat;
+}
+
+li.fr-tabs-hover .fr_tab_lc{
+background/*屏蔽IE6*/ : url('../images/newtab/tab-hover-left.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-hover-left.png"); 
+background:none\9;
+}
+
+li.fr-tabs-hover .fr_tab_rc{
+background : url('../images/tab/tab_right_hover.png') no-repeat;
+}
+
+li.fr-tabs-hover-next .fr_tab_lc{
+background/*屏蔽IE6*/ : url('../images/newtab/tab-hover-right.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-hover-right.png"); 
+background:none\9;
+}
+
+li.fr-tabs-selected-next .fr_tab_lc {
+background/*屏蔽IE6*/ : url('../images/newtab/tab-selected-right.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-selected-right.png"); 
+background:none\9;
+}
+
+li.fr-tabs-selected .fr_tab_lc {
+	background/*屏蔽IE6*/ : url('../images/newtab/tab-selected-left.png') no-repeat;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-selected-left.png"); 
+	background:none\9;
+}
+
+li.fr-tabs-selected-hover-right .fr_tab_lc {
+	background/*屏蔽IE6*/ : url('../images/newtab/tab-selected-hover-right.png') no-repeat;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-selected-hover-right.png"); 
+	background:none\9;
+}
+
+li.fr-tabs-selected-hover-next .fr_tab_lc {
+background/*屏蔽IE6*/ : url('../images/newtab/tab-selected-hover-left.png') no-repeat;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="/sh/sjjc/images/newtab/tab-selected-hover-left.png"); 
+background:none\9;
+}
+
+li.fr-tabs-selected  .fr_tab_rc {
+height : 25px;
+line-height : 25px;
+background : url('../images/tab/tab_right_pressed.png') no-repeat;
+}
+
+:root .fr_tab_lc, :root .fr_single_tab_lc, :root li.fr-tabs-selected-hover-next .fr_tab_lc, :root li.fr-tabs-selected-hover-right .fr_tab_lc, :root li.fr-tabs-selected .fr_tab_lc,
+:root li.fr-tabs-selected-next .fr_tab_lc, :root li.fr-tabs-hover-next .fr_tab_lc, :root li.fr-tabs-hover .fr_tab_lc, :root li.fr-tabs-selected .fr_single_tab_lc,
+:root li.fr-tabs-hover .fr_single_tab_lc {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+:root .fr_single_tab_rc, :root li.fr-tabs-selected .fr_tab_rc, :root li.fr-tabs-hover .fr_tab_rc, :root li.fr-tabs-selected .fr_single_tab_rc,
+:root li.fr-tabs-hover .fr_single_tab_rc {
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+:root .fr-tabs li span.fr-tabs-inner, :root .fr-tabs li.fr-tabs-hover span.fr-tabs-inner, :root .fr-tabs li.fr-tabs-selected span.fr-tabs-inner, 
+:root .fr-tabs li.fr-tabs-selected span.fr-tabs-inner, :root .fr-tabs li.fr-tabs-selected.fr-tabs-hover span.fr-tabs-inner {
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+
+.fs_tree .fr-tree-node-el-accordion-selected-leaf {
+    background : #AEE4F1;
+    border-left : 1px solid #AEE4F1;
+    border-right : 1px solid #AEE4F1;
+    border-radius : 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+
+.fr-tree-elbow-plus-accordion, .fr-tree-elbow-end-plus-accordion, .fr-tree-elbow-minus-accordion, .fr-tree-elbow, .fr-tree-elbow-end, .fr-tree-elbow-end-minus-accordion{
+	width : 16px;
+	height : 16px;
+	margin-left : 0px;
+	margin-top : 5px;
+}
+
+.hide{
+    display: none;
+}
+
+.form-title{position:relative;width: 100%;height:31px;line-height: 30px;border-radius:5px 5px 0 0;background: url(../images/accordion/lightblue/lightblue.png) 0px -367px repeat-x;}
+.form-title-cont{height:31px;line-height: 30px;background:url(../images/icon_card.gif) 10px 6px no-repeat;padding:0 0 0 30px;font-size:14px;font-weight:700;color:#fff;}
+.control{position: absolute;right:10px;top:0;height:31px;line-height:30px;}
+.control a{display: inline-block;margin:0 15px 0 0;padding:0 0 0 20px;color:#fff;}
+.control-new{background:url(../images/add.png) 0 7px no-repeat;}
+.control-back{background:url(../images/btn_left.gif) 0 7px no-repeat;}
+.control-next{background:url(../images/btn_right.gif) 0 7px no-repeat;}
+.control-referer{background:url(../images/btn_refresh.gif) 0 7px no-repeat;}
+
+.main{}
+.main-table{margin:4px 0 0 0;background:#f5fbfd}
+.main-table th{height:28px;border:solid 1px #a5bfd5;}
+.main-table td{border:solid 1px #a5bfd5;padding:3px 5px;}
+.td-bg{background:#b7e4fe;color:#333;font-size:14px;font-weight:700;text-align:center;}
+.f-txt{width:170px;height:16px;line-height:16px;border:solid 1px #a9a9a9;padding:2px 4px;color:#666;}
+input.bt-txt{background:#fff url(../images/xhicon.gif) right center no-repeat;}
+.even{background:#fff;}
+.even td, .odd td{height:24px;text-align:center;font-size:14px;}
+.even:hover, .odd:hover{background:#f5f5f5;}
+
+.form-btn{margin:15px 0 0 0;text-align: center;}
+.form-btn button{display:inline-block;width: 64px;height: 23px;line-height: 22px;background:url(../images/btn_bg.gif) repeat-x;border-radius:2px;border:solid 1px #9a9a9a;*display:inline;*zoom:1;}
+.form-btn button span{display: inline-block;width:16px;height:16px;margin:0 4px 0 0;background:url(../images/save.png) no-repeat;vertical-align:-3px;}
+
+.search-table{padding:4px;background:#bddbff;}
+.search-table .main-table{margin:0;}
+.search-btn{display:inline-block;width: 64px;height: 23px;line-height: 22px;background:url(../images/btn_bg.gif) repeat-x;border-radius:2px;border:solid 1px #9a9a9a;font-size:14px;*display:inline;*zoom:1;}
+
+.main-img{margin:10px 0 0 0;}
+.img-item{float:left;width:49%;}
+.img-item img{width:100%;}
+.img-item-inner{overflow-y: auto;overflow-x:hidden;}
+
+
+#fs-login-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#fs-login, #fs-login-glass, #fs-login-scalebg{
+    position: absolute;
+    margin-top: -140px;
+    margin-left: -200px;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 280px;
+}
+#fs-login-content{
+    position: relative;
+    padding: 0 45px 15px;
+}
+
+#fs-login-title{
+    text-align: center;
+    height: 60px;
+    line-height: 75px;
+    font-size: 20px;
+}
+
+#fs-login-glass{
+    filter:Alpha(opacity=60);
+    opacity: 0.7;
+    background: #ffffff;
+    border: solid 1px #e0e2e7;
+    border-radius : 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+#fs-login-scalebg{
+    overflow: hidden;
+}
+
+#fs-login-scalebg img.fs-login-scalebg-img{
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=7, MakeShadow=false);
+}
+
+div.fs-login-input{
+    position: relative;
+    border-radius : 2px;
+    margin: 8px 0;
+    padding: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border: solid 1px #c0c0c0;
+}
+
+.fs-login-txt{
+    margin: 0;
+    border: 0;
+    border-radius : 1px;
+    vertical-align:middle;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    font-size: 16px;
+    height: 42px;
+}
+.fs-login-txt{
+    position: relative;
+    margin: 0 0 0 55px;
+    padding: 0;
+    outline: none;
+    width: 253px;
+    line-height: 42px\9;
+}
+div.fs-login-errmask{
+    filter: Alpha(opacity=80);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 44px;
+    color: #ffffff;
+    width: 308px;
+    line-height: 42px;
+    text-align: center;
+    background: #333;
+    z-index: 1;
+}
+div.fs-login-input-focus{
+    border-color: #9b9b9b;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12) ;
+}
+
+div.fs-login-input-username{
+    background: #ffffff url('../images/fslogin_input.png') no-repeat 20px 10px;
+}
+div.fs-login-input-password{
+    background: #ffffff url('../images/fslogin_input.png') no-repeat 20px -50px;
+}
+
+#fs-login-btn{
+    display: block;
+    height: 42px;
+    margin-top: 26px;
+    background: #007aff;
+    color: #ffffff;
+    text-align: center;
+    line-height: 42px;
+    font-size: 18px;
+    border-radius : 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    cursor: pointer !important;
+    text-decoration: none;
+    outline: none;
+}
+#fs-login-btn:hover{
+    background: #0662c7;
+}
+div.fs-login-check{
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+

@@ -1,0 +1,814 @@
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    position:relative;
+    width:100%;
+    padding:0;
+    margin:0;
+    color:#333;
+    font-size:14px;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust:none; 
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+p{
+    margin:0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+input, img{
+    vertical-align:middle;
+}
+
+a, img {
+    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+*{
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+
+/* 明星气泡 */
+.star-bubble{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 161px;
+	height: 161px;
+	background: url(../images/bubble.png) no-repeat;
+	background-size: 161px 161px;
+}
+.star1-b-i{
+	position: relative;
+	width: 161px;
+	height: 161px;
+	background: url(../images/star_1.png) no-repeat;
+	background-size: 161px 161px;
+}
+.star2-b-i{
+	position: relative;
+	width: 161px;
+	height: 161px;
+	background: url(../images/star_2.png) no-repeat;
+	background-size: 161px 161px;
+}
+.star3-b-i{
+	position: relative;
+	width: 161px;
+	height: 161px;
+	background: url(../images/star_3.png) no-repeat;
+	background-size: 161px 161px;
+}
+/* 敌人气泡 */
+.enemy-bubble{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 80px;
+	background: url(../images/bubble.png) no-repeat;
+	background-size: 80px 80px;
+}
+.enemy-bubble-bom .enemy-bubble{
+	left: -5px;
+	top: -5px;
+	width: 90px;
+	height: 90px;
+	background: url(../images/bubble_bom1.png) no-repeat;
+	background-size: 90px 90px;
+}
+.enemy-bubble-bom1 .enemy-bubble{
+	left: -10px;
+	top: -10px;
+	width: 100px;
+	height: 100px;
+	background: url(../images/bubble_bom2.png) no-repeat;
+	background-size: 100px 100px;
+}
+.enemy1-b-i{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: url(../images/enemy1.png) no-repeat;
+	background-size: 80px 80px;
+}
+.enemy2-b-i{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: url(../images/enemy2.png) no-repeat;
+	background-size: 80px 80px;
+}
+.enemy3-b-i{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: url(../images/enemy3.png) no-repeat;
+	background-size: 80px 80px;
+}
+.enemy4-b-i{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: url(../images/enemy4.png) no-repeat;
+	background-size: 80px 80px;
+}
+.enemy-bubble-bom, .enemy-bubble-bom1{
+	background: none;
+}
+/* 白云 */
+.cloud{
+	position: absolute;
+	width: 850px;
+	height: 310px;
+	background: url(../images/cloud.png) no-repeat;
+	background-size: 850px 310px;
+}
+/* 樱花 */
+.yh{
+	position: absolute;
+	width: 100%;
+	height: 130px;
+	background: url(../images/yh.png) center 0 no-repeat;
+	background-size: 320px 130px;
+}
+
+
+/* 首屏气泡 */
+.index-bubble{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	z-index: 99;
+	width: 161px;
+	height: 161px;
+	margin: 0 0 0 -80px;
+	background: url(../images/bub_start_bg.png) no-repeat;
+	background-size: 161px 161px;
+}
+.index-bubble i{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 161px;
+	height: 161px;
+	background: url(../images/bubble.png) no-repeat;
+	background-size: 161px 161px;
+}
+.index-bubble-info{
+	position: absolute;
+	right: 10px;
+	top: 30%;
+	width: 93px;
+	height: 93px;
+	background: url(../images/bub_info_bg.png) no-repeat;
+	background-size: 93px 93px;
+}
+.index-bubble-info i{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 93px;
+	height: 93px;
+	background: url(../images/bubble.png) no-repeat;
+	background-size: 93px 93px;
+}
+
+.index-page{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/index_bg.jpg) right 0 no-repeat;
+	background-size: 800px 1000px;
+}
+
+.index-logo{
+	position: absolute;
+	left: 0;
+	top: 4%;
+	z-index: 100;
+	width: 100%;
+	text-align: center;
+}
+.index-logo img{
+	width: 250px;
+	height: 160px;
+}
+.index-next{
+	position: absolute;
+	bottom: 8%;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+.index-next img{
+	width: 201px;
+	height: 51px;
+	-moz-transition: -moz-all .2s;
+    -o-transition: -o-all .2s;
+    -webkit-transition: -webkit-all .2s;
+    transition: all .2s;
+}
+.index-next img:active{
+	transform:scale(0.8, 0.8);
+	-moz-transform:scale(0.8, 0.8);
+	-webkit-transform:scale(0.8, 0.8);
+	-o-transform:scale(0.8, 0.8);
+}
+
+.index-e-b-1{
+	position: absolute;
+	left: 4%;
+	top: 28%;
+	transform:scale(0.8, 0.8);
+	-moz-transform:scale(0.8, 0.8);
+	-webkit-transform:scale(0.8, 0.8);
+	-o-transform:scale(0.8, 0.8);
+	animation: index_e_b_a 2s infinite linear;
+    -webkit-animation: index_e_b_a 2s infinite linear;
+}
+@keyframes index_e_b_a{
+    0% {transform: translate3d(0, 0, 0) scale(0.8, 0.8) rotate(0)}
+    50% {transform: translate3d(-6px, 2px, 0) scale(0.8, 0.8) rotate(6deg)}
+    100% {transform: translate3d(0, 0, 0) scale(0.8, 0.8) rotate(0)}
+}
+@-webkit-keyframes index_e_b_a{
+    0% {-webkit-transform: translate3d(0, 0, 0) scale(0.8, 0.8) rotate(0)}
+    50% {-webkit-transform: translate3d(-6px, 2px, 0) scale(0.8, 0.8) rotate(6deg)}
+    100% {-webkit-transform: translate3d(0, 0, 0) scale(0.8, 0.8) rotate(0)}
+}
+.index-e-b-2{
+	position: absolute;
+	bottom: -20px;
+	left: 10%;
+	z-index: 90;
+	opacity: 0.6;
+	transform:scale(0.8, 0.8);
+	-moz-transform:scale(0.8, 0.8);
+	-webkit-transform:scale(0.8, 0.8);
+	-o-transform:scale(0.8, 0.8);
+}
+.index-e-b-3{
+	position: absolute;
+	top: 62%;
+	right: 2%;
+	transform:scale(0.8, 0.8);
+	-moz-transform:scale(0.8, 0.8);
+	-webkit-transform:scale(0.8, 0.8);
+	-o-transform:scale(0.8, 0.8);
+	animation: index_e_b_b 6s infinite linear;
+    -webkit-animation: index_e_b_b 6s infinite linear;
+}
+@keyframes index_e_b_b{
+    0% {transform: translate3d(0, 0, 0) scale(0.8, 0.8)}
+    25% {transform: translate3d(-10px, 10px, 0) scale(0.8, 0.8)}
+    50% {transform: translate3d(-20px, 0px, 0) scale(0.8, 0.8)}
+    75% {transform: translate3d(-10px, 10px, 0) scale(0.8, 0.8)}
+    100% {transform: translate3d(0, 0, 0) scale(0.8, 0.8)}
+}
+@-webkit-keyframes index_e_b_b{
+    0% {-webkit-transform: translate3d(0, 0, 0) scale(0.8, 0.8)}
+    25% {-webkit-transform: translate3d(-10px, 10px, 0) scale(0.8, 0.8)}
+    50% {-webkit-transform: translate3d(-20px, 0px, 0) scale(0.8, 0.8)}
+    75% {-webkit-transform: translate3d(-10px, 10px, 0) scale(0.8, 0.8)}
+    100% {-webkit-transform: translate3d(0, 0, 0) scale(0.8, 0.8)}
+}
+.index-cloud1{
+	top: -126px;
+	left: -600px;
+}
+.index-cloud2{
+	z-index: 10;
+	bottom: -60px;
+	left: -100px;
+}
+.index-yh{
+	left: 0;
+	bottom: 0;
+	z-index: 80;
+}
+
+/* 选择 */
+.select-page{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/index_bg.jpg) right 0 no-repeat;
+	background-size: 800px 1000px;
+}
+.select-s-b-1{
+	position: absolute;
+	z-index: 101;
+	top: 1%;
+	left: 50%;
+	margin: 0 0 0 -70px;
+	transform:scale(0.9, 0.9);
+	-moz-transform:scale(0.9, 0.9);
+	-webkit-transform:scale(0.9, 0.9);
+	-o-transform:scale(0.9, 0.9);
+	animation: star_sel_a 2s infinite linear;
+    -webkit-animation: star_sel_a 2s infinite linear;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+}
+@keyframes star_sel_a{
+    0% {transform: translate3d(0, 0, 0) scale(0.9, 0.9) rotate(0deg)}
+    10% {transform: translate3d(0, 1px, 0) scale(0.9, 0.9) rotate(1deg)}
+    20% {transform: translate3d(0, 2px, 0) scale(0.9, 0.9) rotate(2deg)}
+    30% {transform: translate3d(0, 3px, 0) scale(0.9, 0.9) rotate(3deg)}
+    40% {transform: translate3d(0, 2px, 0) scale(0.9, 0.9) rotate(2deg)}
+    50% {transform: translate3d(0, 1px, 0) scale(0.9, 0.9) rotate(1deg)}
+    60% {transform: translate3d(0, 0px, 0) scale(0.9, 0.9) rotate(0deg)}
+    70% {transform: translate3d(0, 1px, 0) scale(0.9, 0.9) rotate(-1deg)}
+    80% {transform: translate3d(0, 2px, 0) scale(0.9, 0.9) rotate(-2deg)}
+    90% {transform: translate3d(0, 1px, 0) scale(0.9, 0.9) rotate(-1deg)}
+    100% {transform: translate3d(0, 0px, 0) scale(0.9, 0.9) rotate(0deg)}
+}
+@-webkit-keyframes star_sel_a{
+    0% {-webkit-transform: translate3d(0, 0, 0) scale(0.9, 0.9) rotate(0deg)}
+    10% {-webkit-transform: translate3d(0, 1px, 0) scale(0.9, 0.9) rotate(1deg)}
+    20% {-webkit-transform: translate3d(0, 2px, 0) scale(0.9, 0.9) rotate(2deg)}
+    30% {-webkit-transform: translate3d(0, 3px, 0) scale(0.9, 0.9) rotate(3deg)}
+    40% {-webkit-transform: translate3d(0, 2px, 0) scale(0.9, 0.9) rotate(2deg)}
+    50% {-webkit-transform: translate3d(0, 1px, 0) scale(0.9, 0.9) rotate(1deg)}
+    60% {-webkit-transform: translate3d(0, 0px, 0) scale(0.9, 0.9) rotate(0deg)}
+    70% {-webkit-transform: translate3d(0, 1px, 0) scale(0.9, 0.9) rotate(-1deg)}
+    80% {-webkit-transform: translate3d(0, 2px, 0) scale(0.9, 0.9) rotate(-2deg)}
+    90% {-webkit-transform: translate3d(0, 1px, 0) scale(0.9, 0.9) rotate(-1deg)}
+    100% {-webkit-transform: translate3d(0, 0px, 0) scale(0.9, 0.9) rotate(0deg)}
+}
+.select-s-b-2{
+	position: absolute;
+	z-index: 101;
+	top: 30%;
+	left: 2%;
+	transform:scale(1.1, 1.1);
+	-moz-transform:scale(1.1, 1.1);
+	-webkit-transform:scale(1.1, 1.1);
+	-o-transform:scale(1.1, 1.1);
+	animation: star_sel_b 2s infinite linear;
+    -webkit-animation: star_sel_b 2s infinite linear;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+}
+@keyframes star_sel_b{
+    0% {transform: translate3d(0, 0, 0) scale(1.1, 1.1) rotate(0deg)}
+    10% {transform: translate3d(0, 1px, 0) scale(1.1, 1.1) rotate(1deg)}
+    20% {transform: translate3d(0, 2px, 0) scale(1.1, 1.1) rotate(2deg)}
+    30% {transform: translate3d(0, 3px, 0) scale(1.1, 1.1) rotate(3deg)}
+    40% {transform: translate3d(0, 2px, 0) scale(1.1, 1.1) rotate(2deg)}
+    50% {transform: translate3d(0, 1px, 0) scale(1.1, 1.1) rotate(1deg)}
+    60% {transform: translate3d(0, 0px, 0) scale(1.1, 1.1) rotate(0deg)}
+    70% {transform: translate3d(0, 1px, 0) scale(1.1, 1.1) rotate(-1deg)}
+    80% {transform: translate3d(0, 2px, 0) scale(1.1, 1.1) rotate(-2deg)}
+    90% {transform: translate3d(0, 1px, 0) scale(1.1, 1.1) rotate(-1deg)}
+    100% {transform: translate3d(0, 0px, 0) scale(1.1, 1.1) rotate(0deg)}
+}
+@-webkit-keyframes star_sel_b{
+    0% {-webkit-transform: translate3d(0, 0, 0) scale(1.1, 1.1) rotate(0deg)}
+    10% {-webkit-transform: translate3d(0, 1px, 0) scale(1.1, 1.1) rotate(1deg)}
+    20% {-webkit-transform: translate3d(0, 2px, 0) scale(1.1, 1.1) rotate(2deg)}
+    30% {-webkit-transform: translate3d(0, 3px, 0) scale(1.1, 1.1) rotate(3deg)}
+    40% {-webkit-transform: translate3d(0, 2px, 0) scale(1.1, 1.1) rotate(2deg)}
+    50% {-webkit-transform: translate3d(0, 1px, 0) scale(1.1, 1.1) rotate(1deg)}
+    60% {-webkit-transform: translate3d(0, 0px, 0) scale(1.1, 1.1) rotate(0deg)}
+    70% {-webkit-transform: translate3d(0, 1px, 0) scale(1.1, 1.1) rotate(-1deg)}
+    80% {-webkit-transform: translate3d(0, 2px, 0) scale(1.1, 1.1) rotate(-2deg)}
+    90% {-webkit-transform: translate3d(0, 1px, 0) scale(1.1, 1.1) rotate(-1deg)}
+    100% {-webkit-transform: translate3d(0, 0px, 0) scale(1.1, 1.1) rotate(0deg)}
+}
+.select-s-b-3{
+	position: absolute;
+	z-index: 101;
+	top: 45%;
+	right: -2%;
+	transform:scale(0.8, 0.8);
+	-moz-transform:scale(0.8, 0.8);
+	-webkit-transform:scale(0.8, 0.8);
+	-o-transform:scale(0.8, 0.8);
+	animation: star_sel_c 2s infinite linear;
+    -webkit-animation: star_sel_c 2s infinite linear;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+}
+@keyframes star_sel_c{
+    0% {transform: translate3d(0, 0, 0) scale(0.8, 0.8) rotate(0deg)}
+    10% {transform: translate3d(0, 1px, 0) scale(0.8, 0.8) rotate(1deg)}
+    20% {transform: translate3d(0, 2px, 0) scale(0.8, 0.8) rotate(2deg)}
+    30% {transform: translate3d(0, 3px, 0) scale(0.8, 0.8) rotate(3deg)}
+    40% {transform: translate3d(0, 2px, 0) scale(0.8, 0.8) rotate(2deg)}
+    50% {transform: translate3d(0, 1px, 0) scale(0.8, 0.8) rotate(1deg)}
+    60% {transform: translate3d(0, 0px, 0) scale(0.8, 0.8) rotate(0deg)}
+    70% {transform: translate3d(0, 1px, 0) scale(0.8, 0.8) rotate(-1deg)}
+    80% {transform: translate3d(0, 2px, 0) scale(0.8, 0.8) rotate(-2deg)}
+    90% {transform: translate3d(0, 1px, 0) scale(0.8, 0.8) rotate(-1deg)}
+    100% {transform: translate3d(0, 0px, 0) scale(0.8, 0.8) rotate(0deg)}
+}
+@-webkit-keyframes star_sel_c{
+    0% {-webkit-transform: translate3d(0, 0, 0) scale(0.8, 0.8) rotate(0deg)}
+    10% {-webkit-transform: translate3d(0, 1px, 0) scale(0.8, 0.8) rotate(1deg)}
+    20% {-webkit-transform: translate3d(0, 2px, 0) scale(0.8, 0.8) rotate(2deg)}
+    30% {-webkit-transform: translate3d(0, 3px, 0) scale(0.8, 0.8) rotate(3deg)}
+    40% {-webkit-transform: translate3d(0, 2px, 0) scale(0.8, 0.8) rotate(2deg)}
+    50% {-webkit-transform: translate3d(0, 1px, 0) scale(0.8, 0.8) rotate(1deg)}
+    60% {-webkit-transform: translate3d(0, 0px, 0) scale(0.8, 0.8) rotate(0deg)}
+    70% {-webkit-transform: translate3d(0, 1px, 0) scale(0.8, 0.8) rotate(-1deg)}
+    80% {-webkit-transform: translate3d(0, 2px, 0) scale(0.8, 0.8) rotate(-2deg)}
+    90% {-webkit-transform: translate3d(0, 1px, 0) scale(0.8, 0.8) rotate(-1deg)}
+    100% {-webkit-transform: translate3d(0, 0px, 0) scale(0.8, 0.8) rotate(0deg)}
+}
+.select-start{
+	position: absolute;
+	bottom: 10px;
+	left: -20px;
+	width: 201px;
+	height: 54px;
+	background: url(../images/start_btn1.png) no-repeat;
+	background-size: 201px 54px;
+	transform:scale(0.9, 0.9);
+	-moz-transform:scale(0.9, 0.9);
+	-webkit-transform:scale(0.9, 0.9);
+	-o-transform:scale(0.9, 0.9);
+}
+.select-cloud{
+	position: absolute;
+	bottom: -160px;
+	left: -100px;
+}
+.logo-bubble{
+	position: absolute;
+	left: 50%;
+	bottom: -40px;
+	width: 160px;
+	height: 160px;
+	margin: 0 0 0 -80px;
+	background: url(../images/logo.png) center 10px no-repeat;
+	background-size: 160px 102px;
+}
+.logo-bubble i{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 160px;
+	height: 160px;
+	background: url(../images/bubble.png) no-repeat;
+	background-size: 160px 160px;
+}
+.select-e-b-1{
+	position: absolute;
+	top: 4%;
+	left: 6%;
+	opacity: 0.8;
+	transform:scale(0.6, 0.6);
+	-webkit-transform:scale(0.6, 0.6);
+}
+.select-e-b-2{
+	position: absolute;
+	top: -40px;
+	left: 10%;
+	opacity: 0.4;
+	transform:scale(0.4, 0.4);
+	-webkit-transform:scale(0.4, 0.4);
+}
+.select-e-b-3{
+	position: absolute;
+	top: 28%;
+	right: 10%;
+	opacity: 0.8;
+	transform:scale(0.7, 0.7);
+	-webkit-transform:scale(0.7, 0.7);
+}
+.select-e-b-4{
+	position: absolute;
+	bottom: 20%;
+	left: 5%;
+	opacity: 0.7;
+	transform:scale(0.5, 0.5);
+	-webkit-transform:scale(0.5, 0.5);
+}
+.select-e-b-5{
+	position: absolute;
+	top: 15%;
+	left: 0;
+	opacity: 0.5;
+	transform:scale(0.4, 0.4);
+	-webkit-transform:scale(0.4, 0.4);
+}
+.select-e-b-6{
+	position: absolute;
+	bottom: -10px;
+	left: 2%;
+	opacity: 0.5;
+	transform:scale(0.4, 0.4);
+	-webkit-transform:scale(0.4, 0.4);
+}
+.select-e-b-7{
+	position: absolute;
+	top: 36%;
+	right: 20%;
+	opacity: 0.5;
+	transform:scale(0.4, 0.4);
+	-webkit-transform:scale(0.4, 0.4);
+}
+.select-e-b-8{
+	position: absolute;
+	top: 32%;
+	right: -14px;
+	opacity: 0.4;
+	transform:scale(0.3, 0.3);
+	-webkit-transform:scale(0.3, 0.3);
+}
+.select-e-b-9{
+	position: absolute;
+	bottom: 2%;
+	right: 0;
+	opacity: 0.3;
+	transform:scale(0.4, 0.4);
+	-webkit-transform:scale(0.4, 0.4);
+}
+
+
+.game-page{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/game_bg.jpg) 0 0 no-repeat;
+	background-size: 800px 1000px;
+}
+.game-time{
+	position: absolute;
+	left: 50%;
+	top: 6%;
+	width: 217px;
+	height: 54px;
+	line-height: 38px;
+	margin: 0 0 0 -108px;
+	background: url(../images/time_bg.png) no-repeat;
+	background-size: 217px 54px;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+}
+.game-star{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -80px 0 0 -80px;
+	animation: game_star 10s infinite linear;
+    -webkit-animation: game_star 10s infinite linear;
+}
+@keyframes game_star{
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+@-webkit-keyframes game_star{
+    0% {-webkit-transform: rotate(0deg)}
+    100% {-webkit-transform: rotate(360deg)}
+}
+.game-prve, .game-help{
+	position: absolute;
+	bottom: 20px;
+	width: 50px;
+	height: 49px;
+	background: url(../images/game_icon.png);
+	background-size: 100px 49px;
+}
+.game-prve{
+	left: 20px;
+}
+.game-help{
+	right: 20px;
+	background-position: -50px 0;
+}
+.game-pop{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 101;
+	width: 250px;
+	height: 380px;
+	margin: -190px 0 0 -125px;
+	border-radius: 8px;
+	background: url(../images/game_bg.jpg) -30px -65px no-repeat;
+	background-size: 800px 1000px;
+}
+.game-time-res{
+	padding: 15px 0 0 0;
+	text-align: center;
+}
+.game-pop-guide .game-time-res{
+	display: none;
+}
+.game-star-res{
+	position: relative;
+	left: 45px;
+	top: 15px;
+}
+.game-pop-guide .game-star-res{
+	top: 70px;
+}
+.game-res-good{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	z-index: 10;
+	width: 100%;
+	margin: -100px 0 0 0;
+	text-align: center;
+}
+.game-res-good img{
+	width: 222px;
+}
+.game-pop-guide .game-flower, .game-pop-fail .game-flower{
+	display: none;
+}
+.game-res-cont{
+	position: relative;
+	top: 25px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+.game-pop-suc .game-res-cont{
+	background: url(../images/success_cont.png) center 0 no-repeat;
+	background-size: 215px 50px;
+}
+.game-pop-fail .game-res-cont{
+	/*background: url(../images/fail_cont.png) center 0 no-repeat;
+	background-size: 215px 50px;*/
+	top: 20px;
+	width: 90%;
+	margin: 0 auto;
+	line-height: 20px;
+	font-size: 14px;
+	color: #e95984;
+}
+.game-pop-guide .game-res-cont{
+	top: 80px;
+	height: 63px;
+	background: url(../images/guide_cont.png) center 0 no-repeat;
+	background-size: 211px 63px;
+}
+.game-guide-position{
+	display: none;
+	position: absolute;
+	left: 25px;
+	top: 25px;
+	width: 89px;
+	height: 80px;
+	background: url(../images/guide.png) no-repeat;
+	background-size: 89px 80px;
+}
+.game-pop-guide .game-guide-position{
+	display: block;
+}
+.time-t{
+	display: inline-block;
+	width: 33px;
+	height: 58px;
+	line-height: 58px;
+	background: url(../images/time_num_bg.png) no-repeat;
+	background-size: 33px 58px;
+	font-size: 54px;
+	color: #e95984;
+	text-align: center;
+}
+.time-pip{
+	display: inline-block;
+	width: 14px;
+	height: 58px;
+	line-height: 58px;
+	font-size: 54px;
+	color: #e95984;
+	text-align: center;
+}
+.game-btn-res{
+	position: absolute;
+	left: 0;
+	bottom: 16px;
+	width: 100%;
+	text-align: center;
+}
+.game-btn-res a{
+	display: inline-block;
+	width: 90px;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 5px;
+	background: #e95984;
+	border: solid 2px #ffaec8;
+	border-radius: 20px;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.game-btn-res a.game-btn-res-s{
+	display: none;
+	width: 150px;
+}
+.game-pop-guide .game-btn-res a{
+	display: none;
+}
+.game-pop-guide .game-btn-res a.game-btn-res-s{
+	display: inline-block;
+}
+.game-guide-bg{
+	display: none;
+}
+.game-pop-guide .game-guide-bg{
+	display: block;
+}
+.game-guide-e-1{
+	position: absolute;
+	left: 150px;
+	top: 10px;
+	transform:scale(0.6, 0.6);
+	-moz-transform:scale(0.6, 0.6);
+	-webkit-transform:scale(0.6, 0.6);
+	-o-transform:scale(0.6, 0.6);
+}
+.game-guide-e-2{
+	position: absolute;
+	left: -10px;
+	top: 280px;
+	transform:scale(0.4, 0.4);
+	-moz-transform:scale(0.4, 0.4);
+	-webkit-transform:scale(0.4, 0.4);
+	-o-transform:scale(0.4, 0.4);
+	opacity: 0.6;
+}
+.game-star-i-1 .game-star, .game-star-i-1 .game-star-res{
+	background-image: url(../images/star_1.png);
+}
+.game-star-i-2 .game-star, .game-star-i-2 .game-star-res{
+	background-image: url(../images/star_2.png);
+}
+.game-star-i-3 .game-star, .game-star-i-3 .game-star-res{
+	background-image: url(../images/star_3.png);
+}
+.game-enemy{
+	position: absolute;
+	z-index: 20;
+}
+
+
+.mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+}
+.share-mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8) url(../images/share.png) right 0 no-repeat;
+	background-size: 180px 187px;
+	font-size: 20px;
+	color: #fff;
+}
+.share-mask-cont{
+	position: absolute;
+	left: 0;
+	top: 200px;
+	width: 100%;
+	text-align: center;
+}
+.share-mask-logo{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 150px;
+	height: 96px;
+	margin: 0 0 0 -75px;
+}
+
+.hide{
+	display: none;
+}

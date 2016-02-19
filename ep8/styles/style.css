@@ -1,0 +1,319 @@
+header,
+body,
+section,
+header,
+footer,
+nav,
+div,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+span,
+b,
+i,
+p,
+em,
+a,
+input,
+button {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", helvetica, arial;
+    font-size: 13px;
+    line-height: 1.5;
+    background: #f7f7f7;
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+}
+a,
+a:visited {
+    text-decoration: none;
+    color: #222;
+}
+ul,
+li {
+    list-style: none;
+}
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    font-size: 15px;
+}
+b,
+i,
+em {
+    font-style: normal;
+    font-weight: 500;
+}
+img {
+    border: none;
+}
+input,
+textarea {
+    -webkit-appearance: none;
+}
+
+.clearfix:after{content:" ";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{zoom:1}
+
+.hide {
+    display: none;
+}
+
+header {
+
+}
+header img {
+    width: 100px;
+    padding: 5px;
+}
+
+.nav {
+    width: 100%;
+    overflow: hidden;
+}
+.nav ul {
+    position: relative;
+    width: 10000px;
+}
+.nav li {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+}
+.nav li a {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 6px;
+}
+.nav li .current {
+    color: #bd276d;
+    border-bottom: solid 2px #bd276d;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 197px;
+    overflow: hidden;
+}
+.banner img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0 0 0 -350px;
+    width: 700px;
+}
+.title {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    background: rgba(41, 52, 72, 1);
+    border-bottom: solid 4px rgba(189, 39, 108, 1);
+}
+.time,
+.site {
+    background: url(http://ep8.com/100/images/ictime.png) no-repeat;
+    height: 24px;
+    margin: 20px 10px 0 10px;
+    padding: 6px 0 0 40px;
+    background-size: 30px 30px;
+}
+.site {
+    background: url(http://ep8.com/100/images/icaddr.png) no-repeat;
+    background-size: 30px 30px;
+    margin: 10px 10px 0 10px;
+}
+.meetingDetail {
+    margin: 10px 5px 15px;
+    padding: 10px 10px 10px 50px;
+    border: solid 1px #ccc;
+    background: #fff;
+    border-radius: 5px;
+    line-height: 16px;
+    background: url(http://ep8.com/100/images/icdetail.png) 10px 10px no-repeat;
+    background-size: 30px 30px;
+}
+.ycdetail {
+    padding: 10px 0;
+}
+.meetingDetail p {
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px dotted #ccc;
+}
+a.download {
+    display: inline-block;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #bd276d;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+}
+.vipintro {
+    margin-top: 10px;
+    padding: 0 5px;
+}
+.vipintro ul {
+    display: inline-block;
+    width: 50%;
+    padding: 0 5px;
+    margin: 0 -1px 15px -2px;
+    text-align: center;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.vipintro ul img {
+    display: block;
+    width: 100%;
+}
+.notice {
+    margin: 0 0 15px;
+    text-align: center;
+}
+.notice-cont {
+    padding: 10px;
+    text-align: left;
+}
+.notice-img {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.notice-t {
+    padding: 5px 0 10px;
+}
+.registerInput {
+    margin: 10px;
+}
+.registertips {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+.registerInput label {
+    font-size: 16px;
+    color: #333;
+    width: 60px;
+    display: inline-block;
+}
+.registerInput input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin: 5px 0;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+}
+.sponsorList {
+
+}
+.sponsorList h4 {
+    margin: 0;
+    padding: 5px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+.sponsorListimg {
+    margin: 0 15px 10px;
+}
+.sponsorList img {
+    float: left;
+    border: 1px solid #ccc;
+    width: 45%;
+    margin: 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.media {
+    margin: 10px 0;
+}
+.media img {
+    float: left;
+    width: 33.333%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+.grid {
+    padding: 0 5px;
+}
+.grid li {
+    display: inline-block;
+    width: 50%;
+    padding: 5px;
+    margin: 0 -1px 10px -2px;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+figcaption {
+    background: #e4e4e4;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+figcaption h3 {
+    font-size: 12px;
+}
+.grid li img {
+    display: block;
+    width: 100%;
+}
+.intro-cont {
+    color: #5b83cb;
+    font-size: 24px;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.intro-cont h2 {
+    margin: 0 0 5px;
+}
+.intro-cont p {
+    line-height: 18px;
+    color: #666;
+    font-size: 14px;
+    background-color: #fff;
+    padding: 5px 10px 10px;
+    border-left: 4px solid #5b83cb;
+}
+footer {
+    padding: 10px 0;
+    background: #293448;
+    text-align: center;
+    color: #fff;
+}
+.contact {
+    font-size: 16px;
+}
+footer p {
+    line-height: 20px;
+    text-align: left;
+    padding: 0 5%;
+}
+.copyrigth {
+    margin: 20px 0 0 0;
+    color: #9eacc6;
+}

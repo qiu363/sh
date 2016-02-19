@@ -1,0 +1,529 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>如果爱</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+<body class="index">
+
+<section class="index-page" id="J_page1">
+    <div class="index-logo">
+        <img src="./images/logo.png" />
+    </div>
+    <div class="enemy1-b-i index-e-b-1"><i class="enemy-bubble"></i></div>
+    <div class="enemy3-b-i index-e-b-2"><i class="enemy-bubble"></i></div>
+    <div class="enemy2-b-i index-e-b-3"><i class="enemy-bubble"></i></div>
+    <div class="index-bubble"><i></i></div>
+    <div class="index-bubble-info"><i></i></div>
+    <div class="index-next">
+        <img src="./images/start_btn.png" id="J_step1" />
+    </div>
+    <div class="cloud index-cloud1"></div>
+    <div class="cloud index-cloud2"></div>
+
+    <div class="yh index-yh"></div>
+</section>
+
+<section class="select-page hide" id="J_page2">
+    <div class="star1-b-i select-s-b-3 J_sel_star" data-index="1">
+        <i class="star-bubble"></i>
+        <i class="select-start"></i>
+    </div>
+    <div class="star2-b-i select-s-b-1 J_sel_star" data-index="2">
+        <i class="star-bubble"></i>
+        <i class="select-start"></i>
+    </div>
+    <div class="star3-b-i select-s-b-2 J_sel_star" data-index="3">
+        <i class="star-bubble"></i>
+        <i class="select-start"></i>
+    </div>
+    <div class="cloud select-cloud"></div>
+
+    <div class="logo-bubble"><i></i></div>
+
+    <div class="enemy1-b-i select-e-b-1"><i class="enemy-bubble"></i></div>
+    <div class="enemy4-b-i select-e-b-2"><i class="enemy-bubble"></i></div>
+    <div class="enemy2-b-i select-e-b-3"><i class="enemy-bubble"></i></div>
+    <div class="enemy1-b-i select-e-b-4"><i class="enemy-bubble"></i></div>
+    <div class="enemy3-b-i select-e-b-5"><i class="enemy-bubble"></i></div>
+    <div class="enemy3-b-i select-e-b-6"><i class="enemy-bubble"></i></div>
+    <div class="enemy4-b-i select-e-b-7"><i class="enemy-bubble"></i></div>
+    <div class="enemy3-b-i select-e-b-8"><i class="enemy-bubble"></i></div>
+    <div class="enemy3-b-i select-e-b-9"><i class="enemy-bubble"></i></div>
+</section>
+
+<section class="game-page hide" id="J_game">
+    <div class="game-time" id="J_time">
+        0:00
+    </div>
+    <div class="star1-b-i game-star">
+        <i class="star-bubble"></i>
+    </div>
+    <div class="game-prve" id="J_game_prev"></div>
+    <div class="game-help" id="J_game_help"></div>
+
+    <div class="game-res-good hide" id="J_game_res_good">
+        <img src="./images/good_tips_1.png">
+    </div>
+
+    <div class="game-pop hide" id="J_game_pop">
+        <div class="game-time-res" id="J_game_res_time">
+            <span class="time-t">0</span>
+            <span class="time-t">0</span>
+            <span class="time-pip">:</span>
+            <span class="time-t">0</span>
+            <span class="time-t">0</span>
+        </div>
+        <div class="star1-b-i game-star-res" id="J_game_star">
+            <i class="star-bubble"></i>
+        </div>
+        <div class="game-res-cont" id="J_game_res_cont"></div>
+        <div class="game-btn-res">
+            <a href="javascript:void(0);" id="J_paly_agent">再 玩</a>
+            <a href="javascript:void(0);" id="J_share">分 享</a>
+
+            <a href="javascript:void(0);" class="game-btn-res-s" id="J_game_guide_paly">开始</a>
+        </div>
+        <div class="game-guide-position"></div>
+        <div class="game-flower"></div>
+        <div class="game-guide-bg">
+            <div class="enemy1-b-i game-guide-e-1"><i class="enemy-bubble"></i></div>
+            <div class="enemy3-b-i game-guide-e-2"><i class="enemy-bubble"></i></div>
+        </div>
+    </div>
+
+    <div class="mask hide" id="J_mask"></div>
+</section>
+
+
+<audio autoplay="autoplay" loop="loop">
+    <source src="./data/music.ogg" type="audio/ogg">
+    <source src="./data/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<audio id="J_active">
+    <source src="./data/active.ogg" type="audio/ogg">
+    <source src="./data/active.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    ;(function(){
+        if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            var user_agent = "IOS";
+        } else if (/(Android)/i.test(navigator.userAgent)) {
+            var user_agent = "Android";
+        } else {
+            var user_agent = "PC";
+        };
+
+        var width = $(window).width();
+        var height = $(window).height();
+        //分享图片地址
+        window.share_img = "http://123.57.145.94/sh/rga/images/logo.png";
+
+        //明星索引
+        var star_index = 0;
+        //速度
+        var speed = 1000;
+        //敌人生成速度
+        var enemy_speed = 1000;
+        //游戏时间
+        var times = 0;
+        //敌人数量限制
+        var enemy_num_limit = 5;
+        //游戏分数
+        window.game_score = 0;
+
+        $("#J_step1").bind("tap", function(){
+            $("#J_page1").hide();
+            $("#J_page2").show();
+        });
+
+        $("#J_share").bind("tap", function(){
+            var share_html = '<div class="share-mask" id="J_share_mask"><div class="share-mask-cont">邀请你的好友一起来 <br />挑战吧!</div><img src="./images/logo.png" class="share-mask-logo" /></div>';
+
+            $("body").append(share_html);
+        });
+
+        $(".J_sel_star").bind("tap", function(){
+            star_index = $(this).attr("data-index");
+
+            $("#J_page2").hide();
+            $("#J_game").show().addClass("game-star-i-"+ star_index);
+
+            $("#J_game_pop").show().addClass("game-pop-guide");
+            $("#J_mask").show();
+
+            share_img = "http://123.57.145.94/sh/rga/images/star_"+ star_index +".png";
+        });
+
+        $(document).on("tap", "#J_share_mask", function(){
+            $(this).remove();
+        });
+
+        $("body").bind("touchmove", function(e){
+            e.preventDefault();
+        });
+
+        $(window).bind("resize", function(){
+            width = $(window).width();
+            height = $(window).height();
+        });
+
+        //游戏开始
+        $("#J_game_guide_paly").bind("tap", function(){
+            _game.init();
+        });
+
+        $("#J_game_prev").bind("tap", function(){
+            _game.exit();
+
+            $("#J_game").hide();
+            $("#J_page2").show();
+        });
+
+        $("#J_paly_agent").bind("tap", function(){
+            _game.init();
+        });
+
+        $("#J_game_help").bind("tap", function(){
+            $("#J_game_pop").show().addClass("game-pop-guide");
+            $("#J_mask").show();
+
+            _game.paus();
+        });
+
+        var game = function(){
+            this.enemy_dis = 0;
+            this.times = times;
+            this.enemy_num_limit = enemy_num_limit;
+            this.speed = speed;
+            this.enemy_speed = enemy_speed;
+            this.min_enemy_speed = 500;
+            this.is_paus = 0;
+
+            this.timer = "";
+            this.enemy_timer = "";
+
+            this.star_obj = $("#J_game_star");
+
+            //敌人html
+            this.enemy_html = [
+                '<div class="enemy1-b-i game-enemy J_game_enemy"><i class="enemy-bubble"></i></div>',
+                '<div class="enemy2-b-i game-enemy J_game_enemy"><i class="enemy-bubble"></i></div>',
+                '<div class="enemy3-b-i game-enemy J_game_enemy"><i class="enemy-bubble"></i></div>',
+                '<div class="enemy4-b-i game-enemy J_game_enemy"><i class="enemy-bubble"></i></div>'
+            ];
+
+            $(document).on("tap", ".J_game_enemy", function(){
+                var _this = $(this);
+
+                $(this).addClass("enemy-bubble-bom").attr("data-die", 1);
+
+                setTimeout(function(){
+                    _this.removeClass("enemy-bubble-bom").addClass("enemy-bubble-bom1");
+                }, 40);
+
+                setTimeout(function(){
+                    _this.remove();
+                }, 80);
+
+                $("#J_active")[0].play();
+
+                this.enemy_dis++;
+                game_score = this.enemy_dis;
+            });
+        };
+
+        game.prototype.start = function(){
+            var _this = this;
+
+            this.timer = setInterval(function(){
+                _this.times++;
+
+                var sc = _this.times%60;
+                sc = sc < 10 ? '0'+ sc : sc;
+                var mu = Math.floor(_this.times/60);
+
+                $("#J_time").html(mu +":"+ sc);
+
+                //不同时间段，不同提示
+                if(_this.times <= 80 && _this.times%20 == 0){
+                    $("#J_game_res_good").fadeIn().find("img").attr("src", "./images/good_tips_"+ (_this.times/20) +".png");
+
+                    setTimeout(function(){
+                        $("#J_game_res_good").fadeOut();
+                    }, 2000);
+                }
+
+                //每隔10秒提升一次难度，最高难度5级
+                if(_this.times%20 == 0 && _this.times/20 <= 5){
+                    _this.enemy_num_limit += 2;//敌人数量加1
+                    _this.speed -= 150;
+                    _this.enemy_speed -= 300;
+                    if(_this.enemy_speed < 0){
+                         _this.enemy_speed = 100;
+                    }
+                    _this.min_enemy_speed -= 200;
+                    if(_this.min_enemy_speed < 0){
+                        _this.min_enemy_speed = 100;
+                    }
+                }
+            }, 1000);
+
+            //50~200毫秒随机检测敌人数量
+            this.enemy_timer = setInterval(function(){
+                var enemy_obj = $(".J_game_enemy");
+
+                if(enemy_obj.length < _this.enemy_num_limit){
+                    var html = _this.enemy_html[Math.floor(Math.random()*4)];
+
+                    var type = Math.floor(Math.random()*4);
+
+                    $("#J_game").append(html);
+
+                    var _obj = $(".J_game_enemy").eq($(".J_game_enemy").length - 1);
+
+                    if(type == 0){
+                        var top = Math.random()*height;
+                        var left = -Math.random()*80-40;
+
+                        _obj.css({
+                            left : left,
+                            top : top,
+                        });
+
+                        _obj.animate({
+                            left : width/2,
+                            top : height/2
+                            //"transform" : "translate3d("+ (width/2-left) +"px, "+ (height/2-top) +"px, 0)"
+                        }, (Math.random()*5 + 5)*_this.speed);
+                    }else if(type == 1){
+                        var left = Math.random()*width;
+                        var top = -Math.random()*80;
+
+                        _obj.css({
+                            left : left,
+                            top : top,
+                        });
+
+                        _obj.animate({
+                            left : width/2,
+                            top : height/2
+                            //"transform" : "translate3d("+ (width/2-left) +"px, "+ (height/2-top) +"px, 0)"
+                        }, (Math.random()*5 + 5)*_this.speed);
+                    }else if(type == 2){
+                        var top = Math.random()*height;
+                        var right = -Math.random()*80-40;
+
+                        _obj.css({
+                            right : right,
+                            top : top,
+                        });
+
+                        _obj.animate({
+                            right : width/2,
+                            top : height/2
+                            //"transform" : "translate3d("+ -(width/2-right) +"px, "+ (height/2-top) +"px, 0)"
+                        }, (Math.random()*5 + 5)*_this.speed);
+                    }else if(type == 3){
+                        var left = Math.random()*width;
+                        var bottom = -Math.random()*80;
+
+                        _obj.css({
+                            left : left,
+                            bottom : bottom,
+                        });
+
+                        _obj.animate({
+                            left : width/2,
+                            bottom : height/2
+                            //"transform" : "translate3d("+ (width/2-left) +"px, "+ -(height/2-bottom) +"px, 0)"
+                        }, (Math.random()*5 + 5)*_this.speed);
+                    }
+
+                    
+                }
+            }, Math.random()*_this.enemy_speed+_this.min_enemy_speed);
+
+            this.bounds();
+        };
+
+        //边界碰撞检测
+        game.prototype.bounds = function(){
+            var _this = this;
+            this.bounds_timer = setInterval(function(){
+                $(".J_game_enemy").each(function(){
+                    var _position = $(this).offset();
+                    var is_die = $(this).attr("data-die");
+                    if(is_die != 1){
+                        //通过判断两个圆形圆心的距离，如果小于半径之和，说明发生碰撞
+                        var distance = Math.sqrt(Math.pow(width/2-(_position.left+40), 2) + Math.pow(height/2-(_position.top+40), 2));
+                        if(distance < 120){
+                            _this.over();
+                        }
+                    }
+                });
+            }, 50);
+        };
+
+        game.prototype.init =function(){
+            if(this.is_paus == 0){
+                this.enemy_dis = 0;
+                this.times = times;
+                this.enemy_num_limit = enemy_num_limit;
+                this.speed = speed;
+                this.enemy_speed = enemy_speed;
+                this.min_enemy_speed = 500;
+
+                $("#J_time").html("0:00");
+            }else{
+                this.is_paus = 0;
+
+                $("#J_game_guide_paly").html("开始");
+            }
+
+            this.timer = "";
+            this.enemy_timer = "";
+
+            $("#J_game_pop").hide();
+            $("#J_mask").hide();
+
+            this.start();
+        };
+
+        //暂停游戏
+        game.prototype.paus = function(){
+            $(".J_game_enemy").remove();
+
+            this.is_paus = 1;
+
+            $("#J_game_guide_paly").html("继续");
+
+            clearInterval(this.enemy_timer);
+            clearInterval(this.timer);
+        };
+
+        //退出游戏
+        game.prototype.exit = function(){
+            $(".J_game_enemy").remove();
+            $("#J_game").removeClass("game-star-i-"+ star_index);
+
+            $("#J_time").html("0:00");
+
+            star_index = 0;
+
+            $("#J_game_res_cont").html("");
+
+            clearInterval(this.enemy_timer);
+            clearInterval(this.timer);
+        };
+
+        //游戏结束
+        game.prototype.over = function(){
+            $(".J_game_enemy").remove();
+
+            $("#J_game_pop").show().addClass("game-pop-fail").removeClass("game-pop-guide");
+            $("#J_mask").show();
+
+            var sc = this.times%60 +"";
+            sc = sc < 10 ? [0, sc] : sc.split("");
+            var mu = Math.floor(this.times/60) +"";
+            mu = mu < 10 ? [0, mu] : mu.split("");
+
+            var _html = '<span class="time-t">'+ mu[0] +'</span> <span class="time-t">'+ mu[1] +'</span> <span class="time-pip">:</span> <span class="time-t">'+ sc[0] +'</span> <span class="time-t">'+ sc[1] +'</span>';
+
+            $("#J_game_res_time").html(_html);
+
+            var fail_cont = [
+                '人间有真情人间有真爱，单身的年轻人，请使用正确有爱的方式打开游戏！',
+                '不懂得祝福也就不懂得珍惜，也就不要怪爱情来得太快像龙卷风',
+                '爱情，只有三分钟热度，而现在还不到1分钟，看来你一定是射手座',
+                '有时候爱情就是这样，默默守候了半辈子，但为他人做嫁衣同样也是早已注定的'
+            ];
+
+            var res_cont_index = Math.ceil(this.times%20);
+            if(res_cont_index > 3){
+                res_cont_index = 3;
+            }
+
+            $("#J_game_res_cont").html(fail_cont[res_cont_index]);
+
+            clearInterval(this.enemy_timer);
+            clearInterval(this.timer);
+        };
+
+        var _game = new game();
+    }());
+</script>
+
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    /*wx.config({
+        debug: false,
+        appId: appid,
+        timestamp: timestamp,
+        nonceStr: nonceStr,
+        signature: signature,
+        jsApiList: [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage'
+        ]
+    });
+
+    wx.ready(function(){
+        wx.onMenuShareAppMessage({
+          title: '如果爱，就快来守护你的爱情',
+          desc: '',
+          link: 'http://123.57.145.94/sh/rga/',
+          imgUrl: share_img,
+          trigger: function (res) {
+
+          },
+          success: function (res) {
+
+          },
+          cancel: function (res) {
+
+          },
+          fail: function (res) {
+            
+          }
+        });
+
+        wx.onMenuShareTimeline({
+          title: '如果爱，就快来守护你的爱情',
+          link: 'http://123.57.145.94/sh/rga/',
+          imgUrl: share_img,
+          trigger: function (res) {
+
+          },
+          success: function (res) {
+
+          },
+          cancel: function (res) {
+
+          },
+          fail: function (res) {
+            
+          }
+        });
+    });*/
+</script>
+
+</body>
+</html>

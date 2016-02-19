@@ -1,0 +1,417 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>E代驾</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="telephone=no" name="format-detection"/>
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+
+<header>
+    <div class="menu-icon" id="J_menu"></div>
+    <div class="logo">
+        <a href="###">
+            <img src="./images/logo.gif" width="158" />
+        </a>
+    </div>
+</header>
+
+<section class="banner touchslider swiper-container swiper-container-horizontal">
+    <div class="touchslider-viewport swiper-wrapper">
+        <div class="touchslider-item swiper-slide">
+            <a href="###">
+                <img src="./images/ADs01.jpg" />
+            </a>
+        </div>
+        <div class="touchslider-item swiper-slide">
+            <a href="###">
+                <img src="./images/ADs02.jpg" />
+            </a>
+        </div>
+        <div class="touchslider-item swiper-slide">
+            <a href="###">
+                <img src="./images/ADs03.jpg" />
+            </a>
+        </div>
+    </div>
+    <div class="touchslider-nav swiper-pagination swiper-pagination-clickable">
+        <span class="swiper-pagination-bullet touchslider-nav-item-current"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+    </div>
+</section>
+
+<section class="main">
+    <div class="xydj">
+        <img src="./images/xydj.gif" />
+    </div>
+    <form id="J_form" action="/wx/v1/orderData" method="post">
+        <div class="form-input">
+            <div class="form-input-txt">
+                <input type="text" name="address" value="" placeholder="请输入地址" id="J_address" />
+            </div>
+            <div class="form-input-txt">
+                <input type="text" class="phone" name="" value="" placeholder="请输入手机号" id="J_phone" />
+            </div>
+            <div class="form-yzm">
+                <input type="text" name="" value="" placeholder="请输入验证码" id="J_yzm" />
+                <span id="J_get_yzm" data-disable="0">获取验证码</span>
+            </div>
+        </div>
+        <label class="form-label">
+            <img src="./images/checked.png" />
+            已阅读并同意《使用规则与代驾服务协议》
+        </label>
+        <div class="form-btn">
+            <span id="J_form_btn">一键下单</span>
+        </div>
+    </form>
+    <div class="hot-line">24小时服务电话：400-001-2743</div>
+</section>
+
+<footer>
+    <p>&copy; 2015-北京全城亿时代网络科技有限公司.</p>
+    All Right Reserved
+</footer>
+
+<ul class="menu-list" id="J_menu_list">
+    <li>
+        <a href="###">我要代驾</a>
+    </li>
+    <li>
+        <a href="###">服务价格</a>
+    </li>
+    <li>
+        <a href="###">精彩活动</a>
+    </li>
+    <li>
+        <a href="###">司机招聘</a>
+    </li>
+    <li>
+        <a href="###">扫码下载</a>
+    </li>
+    <li>
+        <a class="last" href="###">关于我们</a>
+    </li>
+</ul>
+
+<div class="mask" id="J_mask"></div>
+
+<div class="position-popup" id="J_pos_popup">
+    <div class="position-p-loading">
+        <img src="./images/loading.gif" />
+    </div>
+    <p>正在定位，请稍后...</p>
+    <span class="position-popup-c" id="J_close_pos"></span>
+</div>
+
+<div class="position-popup" id="J_sub_popup">
+    <div class="position-p-loading">
+        <img src="./images/loading.gif" />
+    </div>
+    <p>正在提交数据，请稍后...</p>
+</div>
+
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/swiper.min.js"></script>
+<script type="text/javascript" src="./js/jquery.autocomplete.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        var is_munu = 0, lat = "", lng = "";
+        $("#J_menu").click(function(){
+            var height = $("body").height();
+
+            if(is_munu == 1){
+                $("#J_mask").hide();
+                $("#J_menu_list").hide();
+
+                is_munu = 0;
+            }else{
+                $("#J_mask").css({
+                    height : height,
+                    display : "block"
+                });
+
+                $("#J_menu_list").css({
+                    height : height - 51,
+                    display : "block"
+                });
+
+                is_munu = 1;
+            }
+        });
+
+        $("#J_mask").click(function(){
+            if(is_munu == 1){
+                $(this).hide();
+                $("#J_menu_list").hide();
+
+                is_munu = 0;
+            }
+        });
+
+        var regex_phone = /^(1)[0-9]{10}$/;
+        var yzm_djs_timer = 60, djs_timer = "";
+        //验证码
+        $("#J_get_yzm").click(function(){
+            var phone = $("#J_phone").val();
+            var disable = $(this).attr("data-disable");
+
+            if(disable == 1){
+                return false;
+            }
+            
+            if(regex_phone.test(phone)){
+                $(this).attr("data-disable", 1);
+
+                $(this).addClass("disable");
+
+                yzm_djs_timer = 60;
+                clearInterval(djs_timer);
+                $("#J_get_yzm").html("获取验证码");
+
+                $.ajax({
+                    url : '/wx/v1/sendVcode',
+                    type : "GET",
+                    dataType : 'json',
+                    data : {'phone' : phone}, 
+                    success : function(data){
+                        if(data.success){
+                            alert("验证码已发送到您的手机，请注意查收");
+                        }else{
+                            if(data.errorcode == "0"){
+                                djs_timer = setInterval(function(){
+                                    $("#J_get_yzm").html((yzm_djs_timer-1) + "s");
+                                    if(yzm_djs_timer == 0){
+                                        yzm_djs_timer = 60;
+                                        clearInterval(djs_timer);
+                                        $("#J_get_yzm").removeClass("disable").attr("data-disable", 0).html("获取验证码");
+                                    }
+                                }, 1000);
+                            }else if(data.errorcode == "1"){
+                                alert("短信发送失败，请稍后再试");
+
+                                $("#J_get_yzm").removeClass("disable").attr("data-disable", 0);
+                            }
+                        }
+                    },
+                    error : function(jqXHR, textStatus, errorThrown){
+                        alert(textStatus);
+                        $("#J_get_yzm").removeClass("disable").attr("data-disable", 0);
+                    }
+                }); 
+            }else{
+                alert("手机号码格式输入错误，请重新输入！");
+            }
+        });
+    
+        var is_sub = 0;
+        //提交
+        $("#J_form_btn").click(function(){
+            if(is_sub == 1){
+                return false;
+            }
+
+            var address =$("#J_address").val();
+            if(address == ""){
+                alert("请输入你要预约的位置！");
+                return;
+            }
+
+            var phone = $("#J_phone").val();
+            if(!regex_phone.test(phone)){
+                alert("请正确填写电话号码！");
+                return;
+            }
+            
+            var yzm = $("#J_yzm").val();
+            if($("#J_yzm").val() == "" || $("#J_yzm").val().length != 4){
+                alert("请正确输入验证码！");
+                return;
+            }
+            
+            if(lat == "" || lng == ""){
+                alert("请先选择您要预约的位置。");
+                return;
+            }
+
+            $("#J_mask").css({
+                height : height,
+                display : "block"
+            });
+
+            $("#J_sub_popup").css({
+                display : "block",
+                left : (width - 250)/2,
+                top : (height - 125)/2
+            });
+
+            var params = {
+                clientPhone : phone,
+                place : address,
+                latitude : lat, 
+                longitude : lng,
+                vcode : yzm,
+                wxuser : "",
+                OrderType : 'daijia'
+            };
+
+            is_sub = 1;
+                        
+            $.ajax({
+                url : '/wx/v1/orderData', 
+                data : params,
+                type : "POST",
+                dataType : 'json',
+                success : function(data){
+                    if(data.errorcode=='outTime'){
+                        alert(data.message);
+                    }else if(data.errorcode=='error'){
+                        alert(data.message);
+                    }else if(data.errorcode=='help'){
+                        alert(data.message);
+                    }else{
+                        if(data.success){
+                            window.location.href='/wx/v1/successes';
+                        }else{
+                            alert("系统繁忙，稍后重试");
+
+                            is_sub = 0;
+                        }
+                    }
+
+                    $("#J_mask").hide();
+                    $("#J_sub_popup").hide();
+                },
+                error : function(jqXHR, textStatus, errorThrown){
+                    alert(textStatus);
+
+                    $("#J_mask").hide();
+                    $("#J_sub_popup").hide();
+
+                    is_sub = 0;
+                }
+            });
+        });
+
+        $("#J_close_pos").click(function(){
+            $("#J_mask").hide();
+            $("#J_pos_popup").hide();
+        });
+
+        $('#J_address').AutoComplete({
+            'data': '/wx/v1/getAddress',
+            ajaxDataType: 'json',
+            ajaxParams:function(keyword){
+                return {'city' : $("#J_address").val()};
+            },
+            'width': 'auto',
+            'async': true,
+            'listStyle': 'custom',
+            'emphasis': false,
+            'matchHandler': function(keyword, data){
+                return true;
+            },
+            'createItemHandler': function(index, data){
+                return "<span>"+ data.name +"</span>";
+            },
+            'afterSelectedHandler': function(data){
+                $('#J_address').val(data.name);
+                lng = data.lng;
+                lat = data.lat;
+            }
+        }).AutoComplete('show');
+
+        //GPS定位
+        if(navigator && navigator.geolocation){
+            var width = $("body").width();
+            var height = $("body").height();
+
+            $("#J_mask").css({
+                height : height,
+                display : "block"
+            });
+
+            $("#J_pos_popup").css({
+                display : "block",
+                left : (width - 250)/2,
+                top : (height - 125)/2
+            });
+
+            navigator.geolocation.getCurrentPosition(function(position){
+                var coords = position.coords;
+
+                geocoder(coords);
+
+                $("#J_mask").hide();
+                $("#J_pos_popup").hide();
+            }, function(error){
+                switch(error.code) {
+                    case error.TIMEOUT:
+                        alert("定位超时，请刷新重试。");
+                        $("#J_address").attr('placeholder', '定位失败，请输入地址');
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        alert("未能获取到位置信息，请更换浏览器。");
+                        break;
+                    case error.PERMISSION_DENIED:
+                        alert("定位失败，请先允许定位。");
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        alert("定位失败，请重新刷新页面重试。");
+                        break;
+                }
+
+                $("#J_mask").hide();
+                $("#J_pos_popup").hide();
+
+            }, {enableHighAccuracy : true, timeout : 5000, maximumAge : 30000} );
+            
+        }else{
+            alert("您的浏览器不支持GPS定位，请更换浏览器。");
+        }
+
+        function geocoder(coords){
+            lat = coords.latitude;
+            lng = coords.longitude;
+            var loc = coords.latitude +','+ coords.longitude;
+            
+            var param = {ak:'0Bf0928e769210fd88e064cd0cdf84d8', location : loc, output : 'json', pois : 0, coordtype : 'wgs84ll'};
+                
+            $.ajax({
+                url : "http://api.map.baidu.com/geocoder/v2/",
+                type : "GET",
+                dataType : 'jsonp',
+                jsonp : 'callback',
+                data : param,
+                success : function(res){
+                    if(typeof res.status != "undefined" && res.status == 0){
+                        var addressComponent = res.result.addressComponent;
+                        var address =addressComponent.district + addressComponent.street +  addressComponent.street_number;
+
+                        $("#J_address").val(address);
+
+                    }
+                },
+                error : function(jqXHR, textStatus, errorThrown){
+                    alert(textStatus);
+                }
+            });
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            autoplay: 2500,
+        });
+
+    }());
+</script>
+
+</body>
+</html>

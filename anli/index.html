@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>为青春加FUN - 安利</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+    <script type="text/javascript">
+        (function(){
+            var phoneWidth = parseInt(window.screen.width);
+            var phoneScale = phoneWidth/640;
+
+            var ua = navigator.userAgent;
+            if (/Android (\d+\.\d+)/.test(ua)) {                
+                document.write('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">');
+            } else {
+                document.write('<meta name="viewport" content="width=320, user-scalable=no, target-densitydpi=device-dpi">');
+            }
+        })();
+    </script>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page page1 J_page">
+    <img src="./images/page1.jpg">
+    <div class="page-cont">
+        <p>我会告诉他</p> <br>
+        <p class="f19">青春 就是活在当下的快乐</p> <br>
+        <p class="f16">曾经十八岁的青春</p> <br>
+        <p class="f16">过去了又怎样</p> <br>
+        <p class="f16">当下二十岁的我</p> <br>
+        <p>就要为青春加FUN</p>
+    </div>
+</div>
+
+<div class="page page2 J_page">
+    <img src="./images/page2.jpg">
+    <div class="page-cont">
+        <p class="f16">每天坚持跑3.5公里</p> <br>
+        <p class="f16">每天都在阳光中掠过</p> <br>
+        <p class="f16">每天都用力追上的光</p> <br>
+        <p class="f16">这样，青春就不会过去</p> <br>
+        <p class="f19">我健康青春加FUN</p>
+    </div>
+</div>
+
+<div class="page page3 J_page">
+    <img src="./images/page3.jpg">
+    <div class="page-cont">
+        <p class="f16">有的人告诉我</p> <br>
+        <p class="f19">青春是用来回忆的</p> <br>
+        <p class="f16">或美好过 或失落过</p> <br>
+        <p class="f16">也都过去了</p>
+    </div>
+</div>
+
+<div class="page page4 J_page">
+    <img src="./images/page4.jpg">
+    <div class="page-cont">
+        <p class="f16">有的人告诉我</p> <br>
+        <p class="f19">青春是曾经放过的错</p> <br>
+        <p class="f16">冲动了 颓废了</p> <br>
+        <p class="f16">也不再了</p>
+    </div>
+</div>
+
+<div class="page page5 J_page">
+    <img src="./images/page5.jpg">
+    <div class="page-cont">
+        <p class="f16">为内在，</p> <br>
+        <p class="f16">我愿发掘自我</p> <br>
+        <p class="f16">为外在，</p> <br>
+        <p class="f16">我愿抹唇画眉</p> <br>
+        <div class="page-btn" id="J_page_btn">安利一下</div>
+    </div>
+</div>
+
+<div class="page page6 J_page">
+    <img src="./images/page6.jpg">
+    <div class="page-cont">
+        <div><p style="margin:0 0 17px;padding:0 14px;" class="f19"><a href="draw.html">我要参加</a></p></div>
+        <div><p style="margin:0 0 17px;padding:0 14px;font-size:14px;" id="J_rule">查看规则</p></div>
+        <div><p style="margin:0 0 17px;padding:0 35px;font-size:12px;" class="f16"><a href="my.php">我的作品</a></p></div>
+        <div><p style="margin:0 0 17px;padding:0 14px 0 35px;font-size:14px;" class="f16"><a href="list.php">优秀作品</a></p></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    !(function () {
+        var page = 0;
+        var action = 0;
+        /**
+         * 向下翻页
+         */
+        var start_time = 0;
+        var end_time = 0;
+        var start_pos_x = 0;
+        var start_pos_y = 0;
+        var end_pos_x = 0;
+        var end_pos_y = 0;
+        $("body").bind("touchstart", function(e){
+            start_time = new Date().getTime();
+
+            var touch = e.targetTouches[0];
+            start_pos_x = touch.pageX;
+            start_pos_y = touch.pageY;
+
+            end_pos_x = 0;
+            end_pos_y = 0;
+        });
+        $("body").bind("touchmove", function(e){
+            var touch = e.targetTouches[0];
+            end_pos_x = touch.pageX;
+            end_pos_y = touch.pageY;
+
+            e.preventDefault();
+        });
+        $("body").bind("touchend", function(e){
+            if (action === 1) {
+                return false;
+            }
+            if (page > 6) {
+                return false;
+            }
+
+            end_time = new Date().getTime();
+
+            //向下翻页
+            if(end_time - start_time < 200 && end_pos_y - start_pos_y < -80 && end_pos_y > 0){
+                page++;
+
+                $('.J_page').eq(page).css({
+                    '-webkit-transform': 'translate3d(0, 0, 0)',
+                    'transform': 'translate3d(0, 0, 0)'
+                });
+                $('.J_page').eq(page - 1).css({
+                    '-webkit-transform': 'translate3d(0, -100%, 0)',
+                    'transform': 'translate3d(0, -100%, 0)'
+                });
+
+                action = 1;
+                setTimeout(function () {
+                    action = 0;
+                }, 1000);
+            }
+        });
+
+        $('#J_page_btn').bind('click', function () {
+            page++;
+
+            $('.J_page').eq(page).css({
+                '-webkit-transform': 'translate3d(0, 0, 0)',
+                'transform': 'translate3d(0, 0, 0)'
+            });
+            $('.J_page').eq(page - 1).css({
+                '-webkit-transform': 'translate3d(0, -100%, 0)',
+                'transform': 'translate3d(0, -100%, 0)'
+            });
+
+            action = 1;
+            setTimeout(function () {
+                action = 0;
+            }, 1000);
+        });
+    })();
+</script>
+
+</body>
+</html>

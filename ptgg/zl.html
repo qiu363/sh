@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>璞缇公馆</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <style type="text/css">
+        html,
+        body {
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body class="body-bg">
+
+<section class="zl-header">
+    <img src="./images/logo.png">
+</section>
+
+<section class="zl-title">
+    好友已为您助力0%
+</section>
+
+<section class="zl-process">
+    <div class="zl-process-step"></div>
+</section>
+
+<section class="zl-hy">
+    <a class="btn" href="###" id="J_zl">助力</a>
+</section>
+<section class="zl-hy">
+    <a class="btn" href="index.php">我也要玩</a>
+</section>
+
+<div class="zl-score">
+    <div class="zl-score-name">
+        <p>1111111</p>
+        <p>1111111</p>
+        <p>1111111</p>
+        <p>1111111</p>
+    </div>
+    <div class="zl-score-s">
+        <p>10%</p>
+        <p>10%</p>
+        <p>10%</p>
+        <p>10%</p>
+    </div>
+</div>
+
+<div class="share"></div>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        var load = 0;
+
+        $('#J_zl').click(function () {
+            if (load === 1) {
+                return false;
+            }
+            load = 1;
+
+            $.ajax({
+                url: '',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    load = 0;
+
+                    if (data.code === 0) {
+                        
+                    } else {
+
+                    }
+                }
+            });
+
+            return false;
+        });
+    })();
+</script>
+
+</body>
+</html>

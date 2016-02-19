@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>图书管理统计系统</title>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css"/>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+</head>
+<body style="overflow: hidden;">
+
+<div id="fs_bg">
+	<div class="logo">
+		<a href="###">
+			<img src="./images/logo.png" />
+		</a>
+	</div>
+	<div id="fs_userp" class="fs_userp_normal ui-state-enabled fs_userp_withnavigation" style="width: 268px;">
+		<ul>
+			<li class="fs_userp_item">&nbsp;</li>
+			<li class="fs_userp_item">欢迎，demo&nbsp;</li>
+			<li class="fs_userp_item"><a href="http://121.31.122.57:8071/pages/system/changpassword.aspx" class="fs_userp_password J_mul_tab" style="padding-left: 16px;">账号设置&nbsp;</a></li>
+			<li class="fs_userp_item"><a href="http://121.31.122.57:8071/LoginOut.aspx" class="fs_userp_exit" style="padding-left: 16px;">退出&nbsp;</a></li>
+			<li class="fs_userp_item"><a href="javascript:void(0);" class="fs_userp_sysmsg" style="padding-left: 16px;background: url(./images/help.png) no-repeat;">帮助</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="fs_navigation_north" class="fs_nav_north_r">
+	<div id="fs_navigation_wrapper" class="ui-state-enabled" style="width: 420px;">
+		<div class="ui-state-enabled">
+			<a href="javascript:;" class="fs_navigation_item fs_navigation_item_click J_nav_c">
+				<img class="fs_navigation_icon" src="./images/right_nav_icon/nav1.png" />
+				<div class="fs_navigation_text">系统管理</div>
+			</a>
+		</div>
+		<div class="ui-state-enabled">
+			<a href="javascript:;" class="fs_navigation_item J_nav_c">
+				<img class="fs_navigation_icon" src="./images/right_nav_icon/nav2.png" />
+				<div class="fs_navigation_text">读者统计</div>
+			</a>
+		</div>
+		<div class="ui-state-enabled">
+			<a href="javascript:;" class="fs_navigation_item J_nav_c">
+				<img class="fs_navigation_icon" src="./images/right_nav_icon/nav3.png" />
+				<div class="fs_navigation_text">藏书统计</div>
+			</a>
+		</div>
+		<div class="ui-state-enabled">
+			<a href="javascript:;" class="fs_navigation_item J_nav_c">
+				<img class="fs_navigation_icon" src="./images/right_nav_icon/nav4.png" />
+				<div class="fs_navigation_text">流通统计</div>
+			</a>
+		</div>
+		<div class="ui-state-enabled">
+			<a href="javascript:;" class="fs_navigation_item J_nav_c">
+				<img class="fs_navigation_icon" src="./images/right_nav_icon/nav5.png" />
+				<div class="fs_navigation_text">流通排行榜</div>
+			</a>
+		</div>
+		<div class="ui-state-enabled">
+			<a href="javascript:;" class="fs_navigation_item J_nav_c">
+				<img class="fs_navigation_icon" src="./images/right_nav_icon/nav6.png" />
+				<div class="fs_navigation_text">配置查询</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div id="fs_west" class="fr-quick-border-layout ui-state-enabled">
+	<div id="fs_westaccord" class="ui-state-enabled">
+		<div class="fs_navigationtree_topdiv">
+			<div class="fs_navigationtree_topdiv_tags">
+				<span class="fs_navigationtree_topdiv_icon_mask"></span>
+				<span class="fs_navigationtree_topdiv_icon"></span>
+				<span class="fs_navigationtree_topdiv_separate"></span>
+				<span class="fs_navigationtree_topdiv_title" title="系统管理" id="J_menu_title">系统管理</span>
+			</div>
+			<div id="fs_navigationtree_topdiv_collapse">
+				<span id="fs_navigationtree_topdiv_collapseimg"></span>
+			</div>
+			<div class="fs_navigationtree_topdiv_split"></div>
+		</div>
+		<div id="fs_navigationtree_treerender">
+			<ul class="fr-tree-root fs_tree fr-tree">
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/system/mymsg.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="我的信息">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="我的信息">我的信息</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/system/deptp.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="单位用户管理">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="单位用户管理">单位用户管理</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/system/DEPTSearch.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="单位查询">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="单位查询">单位查询</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/system/USERSearch.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="用户查询">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="用户查询">用户查询</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/system/LibrarySearch.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="图书馆查询">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="图书馆查询">图书馆查询</span>
+						</div>
+					</a>
+				</li>
+
+				<li class="fr-tree-node">
+					<a href="table.html" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="表格">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="表格">表格</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="form.html" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="表单">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="表单">表单</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="img.html" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="四张图">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="四张图">四张图</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="fr-tree-root fs_tree fr-tree hide">
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/dz/SSRS.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="师生人数统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="师生人数统计">师生人数统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/dz/DZRS.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="读者人数统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="读者人数统计">读者人数统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/dz/DZXZ.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="读者新增统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="读者新增统计">读者新增统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/dz/DZZX.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="读者注销统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="读者注销统计">读者注销统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/dz/DZDG.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="读者到馆统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="读者到馆统计">读者到馆统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/dz/DZHZ.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="读者汇总统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="读者汇总统计">读者汇总统计</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="fr-tree-root fs_tree fr-tree hide">
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/CSZS.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="藏书种数统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="藏书种数统计">藏书种数统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/CSCS.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="藏书册数统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="藏书册数统计">藏书册数统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/CSJE.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="藏书金额统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="藏书金额统计">藏书金额统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/XZCS.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="新增册数统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="新增册数统计">新增册数统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/XZJE.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="新增金额统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="新增金额统计">新增金额统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/TJCS.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="剔旧册数统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="剔旧册数统计">剔旧册数统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/TJJE.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="剔旧金额统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="剔旧金额统计">剔旧金额统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/CSHZ.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="藏书汇总统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="藏书汇总统计">藏书汇总统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/ts/TSMX.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="图书明细查询">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="图书明细查询">图书明细查询</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="fr-tree-root fs_tree fr-tree hide">
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/lt/TSLT.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="图书流通统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="图书流通统计">图书流通统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/lt/LTHZ.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="流通汇总统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="流通汇总统计">流通汇总统计</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/lt/LTMX.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="流通明细统计">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="流通明细统计">流通明细统计</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="fr-tree-root fs_tree fr-tree hide">
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/phb/TSLTPHB.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="图书流通排行榜">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="图书流通排行榜">图书流通排行榜</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/phb/DZLTPHB.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-odd J_mul_tab" title="读者流通排行榜">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="读者流通排行榜">读者流通排行榜</span>
+						</div>
+					</a>
+				</li>
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/phb/XXLTPHB.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="学校流通排行榜">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="学校流通排行榜">学校流通排行榜</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="fr-tree-root fs_tree fr-tree hide">
+				<li class="fr-tree-node">
+					<a href="http://121.31.122.57:8071/pages/pz/TSGPZ.aspx" class="fr-tree-node-el fr-tree-node-bi fr-tree-node-el-accordion fs-tree-node-el-even J_mul_tab" title="图书馆配置查询">
+						<span class="fr-tree-node-right"></span>
+						<span title="收藏" class="fs_tree_favorite fs_tree_favorite_nochoose">&nbsp;</span>
+						<span class="fr-tree-node-left"></span>
+						<span class="fr-tree-node-indent"></span>
+						<span class="fr-tree-elbow fr-tree-leaf-biicon" style="float: left;"></span>
+						<div class="fr-tree-node-textwrap">
+							<span class="fs-tree-node-content" unselectable="on" title="图书馆配置查询">图书馆配置查询</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<ul class="fr-tree-root fs_tree fr-tree hide" id="J_fav_tree"></ul>
+	</div>
+</div>
+
+<div id="fs_centertab" class="fr-core-tab ui-state-enabled">
+	<div class="fr-core-tab-header" id="J_fr_c_h">
+		<div class="fr-core-tab-main-page ui-state-enabled">
+			<a href="http://121.31.122.57:8071/pages/system/mymsg.aspx" class="fr-core-tab-home" id="J_index_tab">首页</a>
+		</div>
+
+		<div class="fr-core-tab-control-more" id="J_close_all"></div>
+	</div>
+	<div class="fr-core-tab-body" id="J_fr_core_body">
+		<div class="fr-core-panel" id="J_index_tab_cont">
+			<div class="fr-core-panel-body fr-core-panel-body-noheader fr-core-panel-body-noborder" id="J_panel_body_index" style="position: absolute; top: 0px; left: 0px; width: 100%; height:1000px;">
+				<iframe name="main-frame" frameborder="0" src="http://121.31.122.57:8071/pages/system/mymsg.aspx" style="height: 100%; width: 100%; display: inline;"></iframe>
+			</div>
+		</div>
+	</div>
+
+	<div id="fs_navigationtree_expand"></div>
+</div>
+
+<div class="footer">
+	底部预留底部预留底部预留底部预留底部预留底部预留底部预留底部预留底部预留
+</div>
+
+<script type="text/javascript" src="./js/main.js"></script>
+
+</body>
+</html>

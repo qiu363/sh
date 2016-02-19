@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>图书管理统计系统</title>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css"/>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+</head>
+<body>
+
+<div id="fs-login-background">
+    <img class="fs-login-img" src="./images/login_bg.jpg" alt="" galleryimg="no" border="0">
+</div>
+
+<form action="index.html" method="get" id="J_form">
+<div id="fs-login">
+    <div id="fs-login-scalebg">
+        <img class="fs-login-scalebg-img" src="./images/signin.png" alt="" galleryimg="no" border="0">
+    </div>
+    <div id="fs-login-glass"></div>
+    <div id="fs-login-content">
+        <div id="fs-login-title">图书管理统计系统</div>
+        <div class="fs-login-input fs-login-input-username">
+            <input tabindex="1" class="fs-login-username fs-login-txt" value="demo" type="text"/>
+        </div>
+        <div class="fs-login-input fs-login-input-password">
+            <input tabindex="2" class="fs-login-password fs-login-txt" value="demo" type="password"/>
+        </div>
+        <a tabindex="3" href="#" id="fs-login-btn">登录</a>
+    </div>
+</div>
+</form>
+
+<script type="text/javascript">
+	(function(){
+		var width = $(window).width();
+    	var height = $(window).height();
+
+		$("#fs-login-btn").click(function(){
+			$("#J_form").submit();
+		});
+
+		$(".fs-login-img").css({
+			width : width,
+			height : width*1080/1920
+		});
+
+		$(window).bind("resize", function(){
+	        width = $(window).width();
+	        height = $(window).height();
+
+	        $(".fs-login-img").css({
+				width : width,
+				height : width*1080/1920
+			});
+	    });
+	}());
+</script>
+
+</body>
+</html>
