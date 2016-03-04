@@ -1,6 +1,6 @@
 ﻿;<?php return; ?>
 [SQL]
-host = 10.51.52.140
+host = 127.0.0.1 
 user = root
-password = 'tf&2dtang98_6'
+password = ''
 dbname = h5
