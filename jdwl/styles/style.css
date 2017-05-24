@@ -1,0 +1,501 @@
+html {
+  font-size: 50px;
+}
+@media (min-width: 240px) {
+  html {
+    font-size: 42.66666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+@media (min-width: 500px) {
+  html {
+    font-size: 66.66666667px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 85.33333333px;
+  }
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  color: #333;
+  font-size: 0.28rem;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+img {
+  border: 0;
+}
+input,
+img {
+  vertical-align: middle;
+}
+ul,
+li {
+  list-style: none;
+}
+a,
+img {
+  -webkit-touch-callout: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+b,
+i,
+em {
+  font-style: normal;
+  font-weight: 500;
+}
+img {
+  border: none;
+}
+input,
+textarea {
+  -webkit-appearance: none;
+}
+body {
+  max-width: 16.96rem;
+  margin: 0 auto;
+  background: #4e010b url(../images/bg.jpg) no-repeat;
+  background-size: 100% auto;
+}
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.i-title {
+  position: absolute;
+  left: 50%;
+  top: 1.8rem;
+  width: 5.02rem;
+  height: 2.72rem;
+  margin: 0 0 0 -2.5rem;
+  background: url(../images/i_title.png) no-repeat;
+  background-size: 100%;
+}
+.i-content {
+  position: absolute;
+  left: 50%;
+  top: 5.52rem;
+  width: 5.02rem;
+  height: 2.66rem;
+  margin: 0 0 0 -2.5rem;
+  background: url(../images/i_content.png) no-repeat;
+  background-size: 100%;
+}
+.i-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 1.8rem;
+  width: 4.42rem;
+  height: 1.46rem;
+  margin: 0 0 0 -2.22rem;
+  background: url(../images/i_btn.png) no-repeat;
+  background-size: 100%;
+}
+.i-btn i {
+  position: absolute;
+  left: 50%;
+  top: 1.04rem;
+  width: 0.74rem;
+  height: 1rem;
+  margin: 0 0 0 -0.36rem;
+  background: url(../images/i_hand.png) no-repeat;
+  background-size: 100%;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.title {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  width: 6.2rem;
+  height: 1.02rem;
+  margin: 0 0 0 -3.1rem;
+  background: url(../images/title.png) no-repeat;
+  background-size: 100%;
+}
+.title span {
+  position: absolute;
+  left: 4.2rem;
+  top: 0.12rem;
+  width: 0.4rem;
+  text-align: center;
+  font-size: 0.3rem;
+  color: #fff;
+}
+.title i {
+  position: absolute;
+  left: 3.44rem;
+  top: 0.5rem;
+  width: 0.48rem;
+  text-align: center;
+  font-size: 0.4rem;
+  color: #fff;
+}
+.sun {
+  position: absolute;
+  left: 0;
+  top: 1.9rem;
+  width: 0.96rem;
+  height: 0.96rem;
+  background: url(../images/sun.png) no-repeat;
+  background-size: 100%;
+  -webkit-animation: sun 3s infinite linear;
+  animation: sun 3s infinite linear;
+}
+@keyframes sun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes sun {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.cloud {
+  position: absolute;
+  right: -1.5rem;
+  top: 2.4rem;
+  width: 100%;
+  height: 0.54rem;
+  background: url(../images/cloud.png) right 0 no-repeat;
+  background-size: 1.22rem auto;
+  -webkit-animation: cloud 10s infinite linear;
+  animation: cloud 10s infinite linear;
+}
+.cloud1 {
+  position: absolute;
+  right: -1.5rem;
+  top: 5.2rem;
+  width: 100%;
+  height: 0.54rem;
+  background: url(../images/cloud1.png) right 0 no-repeat;
+  background-size: 1.5rem auto;
+  -webkit-animation: cloud 8s infinite linear;
+  animation: cloud 8s infinite linear;
+}
+@keyframes cloud {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-120%, 0, 0);
+  }
+}
+@-webkit-keyframes cloud {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-120%, 0, 0);
+  }
+}
+.tree {
+  position: absolute;
+  right: -0.2rem;
+  bottom: 0;
+  width: 2.24rem;
+  height: 2.12rem;
+  background: url(../images/tree.png) no-repeat;
+  background-size: 100%;
+}
+.airplan {
+  position: absolute;
+  left: -2.22rem;
+  top: 2.8rem;
+  width: 100%;
+  height: 1.32rem;
+  background: url(../images/airplan.png) no-repeat;
+  background-size: 2.22rem auto;
+  -webkit-animation: airplan 8s infinite linear;
+  animation: airplan 8s infinite linear;
+}
+@keyframes airplan {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(120%, 500%, 0);
+  }
+}
+@-webkit-keyframes airplan {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(120%, 500%, 0);
+  }
+}
+.fjzx1 {
+  position: absolute;
+  left: 50%;
+  top: 2.2rem;
+  width: 2.98rem;
+  height: 3.6rem;
+  margin: 0 0 0 -1.5rem;
+  background: url(../images/fjzx.png) no-repeat;
+  background-size: 100%;
+}
+.sxbg {
+  position: absolute;
+  left: 50%;
+  top: 8rem;
+  width: 6.7rem;
+  height: 1.84rem;
+  margin: 0 0 0 -3.28rem;
+  background: url(../images/sx.png) no-repeat;
+  background-size: 100%;
+}
+.play1 {
+  position: absolute;
+  left: 50%;
+  top: 5.8rem;
+  width: 1.28rem;
+  height: 2.2rem;
+  margin: 0 0 0 -0.64rem;
+}
+.play1 em {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1.28rem;
+  height: 50%;
+  background: url(../images/dot.png) center 0 repeat-y;
+  background-size: 0.04rem 0.12rem;
+}
+.play1 em i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.28rem;
+  height: 1.08rem;
+  background: url(../images/hj.png) 0 top no-repeat;
+  background-size: 1.28rem 1.08rem;
+}
+.play2 {
+  position: absolute;
+  left: 50%;
+  top: 2.62rem;
+  width: 5.14rem;
+  height: 7.4rem;
+  margin: 0 0 0 -2.56rem;
+  background: url(../images/play2_bg.png) no-repeat;
+  background-size: 100%;
+}
+.car {
+  position: absolute;
+  left: 3.3rem;
+  bottom: 0.6rem;
+  width: 2.2rem;
+  height: 1.12rem;
+  background: url(../images/car.png) no-repeat;
+  background-size: 100%;
+}
+.play3 {
+  position: absolute;
+  left: 0;
+  top: 2.32rem;
+  width: 100%;
+  height: 7.6rem;
+  background: url(../images/play3_bg.png) no-repeat;
+  background-size: 100%;
+}
+.car1 {
+  position: absolute;
+  left: 4.2rem;
+  bottom: 0.9rem;
+  width: 1.3rem;
+  height: 0.6rem;
+  background: url(../images/car1.png) no-repeat;
+  background-size: 100%;
+}
+.play-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0.2rem;
+  width: 1.86rem;
+  height: 2rem;
+  margin: 0 0 0 -0.92rem;
+  background: url(../images/game_btn.png) no-repeat;
+  background-size: 100%;
+}
+.play-btn:active {
+  transform: scale(0.9, 0.9);
+}
+.page-fail {
+  background: url(../images/fail_bg.jpg) 0 bottom no-repeat;
+  background-size: 100% auto;
+}
+.page-fail .sun {
+  top: 0.34rem;
+  left: 0.9rem;
+}
+.fail-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 1.12rem;
+  width: 2.62rem;
+  height: 0.96rem;
+  margin: 0 0 0 -1.3rem;
+  background: url(../images/restart.png) no-repeat;
+  background-size: 100%;
+}
+.fail-cloud,
+.fail-cloud1,
+.fail-cloud2,
+.fail-cloud3 {
+  position: absolute;
+  left: -0.6rem;
+  top: 2rem;
+  width: 2rem;
+  height: 1.2rem;
+  background: url(../images/cloud.png) right 0 no-repeat;
+  background-size: 100% auto;
+}
+.fail-cloud1 {
+  left: auto;
+  right: 0.4rem;
+  top: 1.5rem;
+  width: 0.8rem;
+}
+.fail-cloud2 {
+  left: 0.4rem;
+  top: 3.6rem;
+  width: 1rem;
+}
+.fail-cloud3 {
+  left: auto;
+  right: -0.2rem;
+  top: 4.24rem;
+  width: 1.6rem;
+}
+.page-success {
+  background-image: url(../images/success_bg.jpg);
+}
+.page-success .fail-btn {
+  background-image: url(../images/next.png);
+}
+.page-success .lj-btn {
+  width: 3.82rem;
+  margin: 0 0 0 -1.9rem;
+  background-image: url(../images/lj_btn.png);
+}
+.page-fail1 {
+  background-image: url(../images/fail_bg1.jpg);
+}
+.page-success1 {
+  background-image: url(../images/success_bg1.jpg);
+}
+.page-lj {
+  background: url(../images/lj4.png) right bottom no-repeat;
+  background-size: 4.2rem auto;
+}
+.lj1 {
+  position: absolute;
+  left: 50%;
+  top: 1.3rem;
+  width: 5.1rem;
+  height: 1.94rem;
+  margin: 0 0 0 -2.54rem;
+  background: url(../images/lj1.png);
+  background-size: 100%;
+}
+.lj2 {
+  position: absolute;
+  left: 50%;
+  top: 3.58rem;
+  z-index: 1000;
+  width: 4.38rem;
+  height: 3.4rem;
+  margin: 0 0 0 -2.2rem;
+  background: url(../images/lj2.png);
+  background-size: 100%;
+}
+.lj2 img {
+  position: absolute;
+  left: 50%;
+  top: 1.16rem;
+  width: 1.7rem;
+  height: 1.42rem;
+  margin: 0 0 0 -0.84rem;
+}
+.lj3 {
+  position: absolute;
+  left: 50%;
+  top: 7.2rem;
+  width: 3.48rem;
+  height: 1.4rem;
+  margin: 0 0 0 -1.74rem;
+  background: url(../images/lj3.png);
+  background-size: 100%;
+}
+.result1 {
+  position: absolute;
+  left: 0;
+  top: 1.54rem;
+  width: 100%;
+  height: 3.6rem;
+  background: url(../images/result1.png) no-repeat;
+  background-size: 100%;
+}
+.result2 {
+  position: absolute;
+  left: 0;
+  top: 1.54rem;
+  width: 100%;
+  height: 3.6rem;
+  background: url(../images/result2.png) no-repeat;
+  background-size: 100%;
+}
+.result3 {
+  position: absolute;
+  left: 0;
+  top: 1.34rem;
+  width: 100%;
+  height: 3.72rem;
+  background: url(../images/result3.png) no-repeat;
+  background-size: 100%;
+}
+.hide {
+  display: none;
+}

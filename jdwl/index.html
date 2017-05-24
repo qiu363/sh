@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>鲜天下之优 - 京东物流</title>
+    <meta name="keywords" content="鲜天下之优,京东,物流,京东物流">
+    <meta name="description" content="京东物流，鲜天下之优，京东物流冷链原产地直发">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/animate.css" rel="stylesheet">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+
+<body>
+
+<div class="page page1" id="J_page">
+    <div class="i-title animated hide" id="J_i_title"></div>
+    <div class="i-content animated hide" id="J_i_content"></div>
+    <a href="###" class="i-btn animated hide" id="J_i_btn">
+        <i class="rubberBand"></i>
+    </a>
+</div>
+
+<div class="page page2 animated hide" id="J_page1">
+    <div class="title">
+        <span class="J_times">30</span>
+        <i class="J_time">10</i>
+    </div>
+    <div class="sun"></div>
+
+    <div class="fjzx1"></div>
+    <div class="play1" id="J_airplan">
+        <em><i></i></em>
+    </div>
+    <div class="sxbg"></div>
+
+    <div class="cloud"></div>
+    <div class="cloud1"></div>
+    <div class="airplan"></div>
+    <a href="###" class="play-btn" id="J_play_1"></a>
+    <div class="tree"></div>
+</div>
+
+<div class="page page3 animated hide" id="J_page2">
+    <div class="title">
+        <span class="J_times">30</span>
+        <i class="J_time">10</i>
+    </div>
+    <div class="sun"></div>
+
+    <div class="play2">
+        <div class="car" id="J_car"></div>
+    </div>
+
+    <div class="cloud"></div>
+    <div class="cloud1"></div>
+    <div class="airplan"></div>
+    <a href="###" class="play-btn" id="J_play_2"></a>
+    <div class="tree"></div>
+</div>
+
+<div class="page page4 animated hide" id="J_page3">
+    <div class="title">
+        <span class="J_times">30</span>
+        <i class="J_time">10</i>
+    </div>
+    <div class="sun"></div>
+
+    <div class="play3">
+        <div class="car1" id="J_car1"></div>
+    </div>
+
+    <div class="cloud"></div>
+    <div class="cloud1"></div>
+    <div class="airplan"></div>
+    <a href="###" class="play-btn" id="J_play_3"></a>
+    <div class="tree"></div>
+</div>
+
+<div class="page page-fail animated hide" id="J_result">
+    <div class="sun"></div>
+
+    <div class="result1 J_result_title hide" id="J_result_1"></div>
+    <div class="result2 J_result_title hide" id="J_result_2"></div>
+    <div class="result3 J_result_title hide" id="J_result_3"></div>
+
+    <div class="fail-cloud"></div>
+    <div class="fail-cloud1"></div>
+    <div class="fail-cloud2"></div>
+    <div class="fail-cloud3"></div>
+
+    <a href="###" class="fail-btn" id="J_result_btn"></a>
+</div>
+
+<div class="page page-lj animated hide" id="J_lj">
+    <div class="lj1"></div>
+    <div class="lj2">
+        <img src="./images/code.png">
+    </div>
+    <div class="lj3"></div>
+</div>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    var shareTitle = '惊喜礼品任性送？酷爆了！京东物流挑战来袭！';
+
+    (function () {
+        $('body').bind('touchmove', function () {
+            $('body').bind('touchmove', function (ev) {
+                ev.preventDefault();
+            });
+        });
+
+        var levelArr = [
+            0,
+            30,
+            40,
+            50
+        ];
+        var playTime = 10;
+        var level = 1;
+        var gameStatus = 0;
+        var gameResult = false;
+        var timer;
+
+        var imgArr = [
+            './images/i_title.png',
+            './images/i_content.png',
+            './images/i_btn.png',
+            './images/i_hand.png',
+        ];
+
+        var loadingImgNum = 0;
+        for (var i = 0; i < imgArr.length; i++){
+            var img = new Image();
+            img.src = imgArr[i];
+
+            img.onload = function(){
+                loadingImgNum++;
+                if (loadingImgNum === imgArr.length) {
+                    ani('J_i_title', 'rollIn');
+
+                    setTimeout(function () {
+                        ani('J_i_content', 'rollIn', 201);
+                    }, 200);
+
+                    setTimeout(function () {
+                        ani('J_i_btn', 'rollIn', 501);
+                    }, 500);
+                }
+            };
+        }
+
+        $("#J_i_btn").click(function () {
+            $('#J_page').hide();
+
+            ani('J_page1', 'flipInY');
+
+            $('.J_times').html(levelArr[level]);
+            $('.J_time').html(playTime);
+
+            return false;
+        });
+
+        $('#J_play_1').bind('touchend', function () {
+            if (gameStatus === 0) {
+                timer = setInterval(function () {
+                    playTime--;
+                    $('.J_time').html(playTime);
+                    if (playTime === 0) {
+                        $('#J_page1').hide();
+                        ani('J_result', 'flipInY');
+                        $('#J_result').removeClass('page-success');
+
+                        gameStatus = 0;
+                        gameResult = false;
+                        levelArr[level] = 30;
+
+                        clearInterval(timer);
+
+                        $('#J_airplan em').css({
+                            height: '50%'
+                        });
+
+                        $('.J_result_title').hide();
+                        $('#J_result_1').show();
+                    }
+                }, 1000);
+            }
+            gameStatus = 1;
+
+            levelArr[level]--;
+            $('.J_times').html(levelArr[level]);
+
+            $('#J_airplan em').css({
+                height: 50 + 50 / 30 * (30-levelArr[level]) + '%'
+            });
+
+            if (levelArr[level] === 0) {
+                levelArr[level] = 30;
+
+                $('#J_page1').hide();
+                $('#J_result').addClass('page-success');
+                ani('J_result', 'flipInY');
+
+                gameStatus = 0;
+                gameResult = true;
+
+                clearInterval(timer);
+
+                $('.J_result_title').hide();
+                $('#J_result_1').show();
+            }
+
+            return false;
+        });
+
+        var play2Arr = [
+            ['5%', '0'],
+            ['10%', '0'],
+            ['10%', '-29%'],
+            ['10%', '-58%'],
+            ['10%', '-87%'],
+            ['10%', '-106%'],
+            ['10%', '-135%'],
+            ['10%', '-164%'],
+            ['10%', '-193%'],
+            ['10%', '-232%'],
+            ['10%', '-261%'],
+            ['10%', '-290%'],
+            ['0%', '-290%'],
+            ['-15%', '-290%'],
+            ['-25%', '-290%'],
+            ['-35%', '-290%'],
+            ['-45%', '-290%'],
+            ['-55%', '-290%'],
+            ['-65%', '-290%'],
+            ['-75%', '-290%'],
+            ['-85%', '-290%'],
+            ['-95%', '-290%'],
+            ['-105%', '-290%'],
+            ['-115%', '-290%'],
+            ['-125%', '-290%'],
+            ['-148%', '-290%'],
+            ['-150%', '-290%'],
+            ['-160%', '-290%'],
+            ['-170%', '-290%'],
+            ['-180%', '-290%'],
+            ['-180%', '-311%'],
+            ['-180%', '-332%'],
+            ['-180%', '-353%'],
+            ['-180%', '-374%'],
+            ['-180%', '-395%'],
+            ['-180%', '-416%'],
+            ['-180%', '-437%'],
+            ['-180%', '-458%'],
+            ['-180%', '-479%'],
+            ['-180%', '-500%'],
+        ].reverse();
+        $('#J_play_2').bind('touchend', function () {
+            if (gameStatus === 0) {
+                timer = setInterval(function () {
+                    playTime--;
+                    $('.J_time').html(playTime);
+                    if (playTime === 0) {
+                        $('#J_page2').hide();
+                        ani('J_result', 'flipInY');
+                        $('#J_result').removeClass('page-success');
+
+                        gameStatus = 0;
+                        gameResult = false;
+                        levelArr[level] = 40;
+
+                        clearInterval(timer);
+
+                        $('#J_car').css({
+                            '-webkit-transform': 'translate3d(0, 0, 0)',
+                            'transform': 'translate3d(0, 0, 0)'
+                        });
+
+                        $('.J_result_title').hide();
+                        $('#J_result_2').show();
+                    }
+                }, 1000);
+            }
+            gameStatus = 1;
+
+            levelArr[level]--;
+            $('.J_times').html(levelArr[level]);
+
+            $('#J_car').css({
+                '-webkit-transform': 'translate3d('+ play2Arr[levelArr[level]][0] +', '+ play2Arr[levelArr[level]][1] +', 0)',
+                'transform': 'translate3d('+ play2Arr[levelArr[level]][0] +', '+ play2Arr[levelArr[level]][1] +', 0)'
+            });
+
+            if (levelArr[level] === 0) {
+                levelArr[level] = 40;
+
+                $('#J_page2').hide();
+                $('#J_result').addClass('page-success');
+                ani('J_result', 'flipInY');
+
+                gameStatus = 0;
+                gameResult = true;
+
+                clearInterval(timer);
+
+                $('.J_result_title').hide();
+                $('#J_result_2').show();
+            }
+
+            return false;
+        });
+
+        var play3Arr = [
+            ['20%', '0'],
+            ['40%', '0'],
+            ['60%', '0'],
+            ['60%', '-30%'],
+            ['60%', '-60%'],
+            ['60%', '-90%'],
+            ['60%', '-120%'],
+            ['60%', '-150%'],
+            ['60%', '-180%'],
+            ['60%', '-210%'],
+            ['60%', '-240%'],
+            ['60%', '-270%'],
+            ['60%', '-300%'],
+            ['49%', '-300%'],
+            ['38%', '-300%'],
+            ['27%', '-300%'],
+            ['16%', '-300%'],
+            ['5%', '-300%'],
+            ['-6%', '-300%'],
+            ['-17%', '-300%'],
+            ['-28%', '-300%'],
+            ['-39%', '-300%'],
+            ['-50%', '-300%'],
+            ['-61%', '-300%'],
+            ['-72%', '-300%'],
+            ['-83%', '-300%'],
+            ['-94%', '-300%'],
+            ['-105%', '-300%'],
+            ['-116%', '-300%'],
+            ['-127%', '-300%'],
+            ['-138%', '-300%'],
+            ['-149%', '-300%'],
+            ['-160%', '-300%'],
+            ['-160%', '-318%'],
+            ['-160%', '-336%'],
+            ['-160%', '-354%'],
+            ['-160%', '-372%'],
+            ['-160%', '-390%'],
+            ['-160%', '-408%'],
+            ['-160%', '-426%'],
+            ['-160%', '-444%'],
+            ['-160%', '-462%'],
+            ['-160%', '-480%'],
+            ['-160%', '-498%'],
+            ['-160%', '-516%'],
+            ['-160%', '-534%'],
+            ['-160%', '-552%'],
+            ['-160%', '-570%'],
+            ['-160%', '-588%'],
+            ['-160%', '-600%'],
+        ].reverse();
+        $('#J_play_3').bind('touchend', function () {
+            if (gameStatus === 0) {
+                timer = setInterval(function () {
+                    playTime--;
+                    $('.J_time').html(playTime);
+                    if (playTime === 0) {
+                        $('#J_page3').hide();
+                        ani('J_result', 'flipInY');
+                        $('#J_result').removeClass('page-success').removeClass('page-success1').addClass('page-fail1');
+
+                        gameStatus = 0;
+                        gameResult = false;
+                        levelArr[level] = 50;
+
+                        clearInterval(timer);
+
+                        $('#J_car1').css({
+                            '-webkit-transform': 'translate3d(0, 0, 0)',
+                            'transform': 'translate3d(0, 0, 0)'
+                        });
+
+                        $('.J_result_title').hide();
+                        $('#J_result_3').show();
+                        $('.fail-cloud2').hide();
+                    }
+                }, 1000);
+            }
+            gameStatus = 1;
+
+            levelArr[level]--;
+            $('.J_times').html(levelArr[level]);
+
+            $('#J_car1').css({
+                '-webkit-transform': 'translate3d('+ play3Arr[levelArr[level]][0] +', '+ play3Arr[levelArr[level]][1] +', 0)',
+                'transform': 'translate3d('+ play3Arr[levelArr[level]][0] +', '+ play3Arr[levelArr[level]][1] +', 0)'
+            });
+
+            if (levelArr[level] === 0) {
+                levelArr[level] = 50;
+
+                $('#J_page3').hide();
+                $('#J_result').addClass('page-success1');
+                ani('J_result', 'flipInY');
+
+                gameStatus = 0;
+                gameResult = true;
+
+                $('#J_result_btn').addClass('lj-btn');
+
+                clearInterval(timer);
+
+                $('.J_result_title').hide();
+                $('#J_result_3').show();
+                $('.fail-cloud2').hide();
+
+                shareTitle = '领好礼，赢大奖！我完成了京东物流的挑战，成功获得惊喜礼品！';
+            }
+
+            return false;
+        });
+
+        $('#J_result_btn').click(function () {
+            playTime = 10;
+
+            if (gameResult) {
+                level++;
+            }
+
+            if (level <= 3) {
+                $('#J_result').hide();
+
+                ani('J_page' + level, 'zoomInDown');
+
+                $('.J_times').html(levelArr[level]);
+                $('.J_time').html(playTime);
+            } else {
+                $('#J_result').hide();
+
+                ani('J_lj', 'zoomInDown');
+
+                shareTitle = '领好礼，赢大奖！我完成了京东物流的挑战，成功获得惊喜礼品！';
+            }
+
+            return false;
+        });
+    })();
+
+    function ani(id, aniName, time) {
+        var time = time || 0;
+        $('#' + id).css({
+            display: 'block'
+        });
+        setTimeout(function () {
+            $("#" + id).addClass(aniName);
+        }, 0);
+    }
+
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    // 获取当前的页面链接
+    var current_share_url = location.href.split('#')[0];
+    var wechat_share_url = encodeURIComponent(current_share_url);
+    var tmp = "http://h5best.com/wechat_php/wechat_api.php?url=" + wechat_share_url;
+    document.write("<script type='text/javascript' src='" + tmp + "'><\/script>");
+</script>
+<script type="text/javascript">
+    wx.config({
+        // debug: true,
+        appId: appid,
+        timestamp: timestamp,
+        nonceStr: nonceStr,
+        signature: signature,
+        jsApiList: [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo'
+        ]
+    });
+    wx.ready(function() {
+        wx.onMenuShareAppMessage({
+            title: shareTitle,
+            desc: shareTitle,
+            link: current_share_url,
+            imgUrl: "http://h5best.com/h5/jdwl/images/share.jpg",
+            success: function() {},
+            cancel: function() {}
+        });
+        wx.onMenuShareTimeline({
+            title: shareTitle,
+            desc: shareTitle,
+            link: current_share_url,
+            imgUrl: "http://h5best.com/h5/jdwl/images/share.jpg",
+            success: function() {},
+            cancel: function() {}
+        });
+    });
+</script>
+<style type="text/css">#cnzz_stat_icon_1261941079{display: none;}</style>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261941079'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261941079%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+@charset "utf-8";
+.FrontMembers_login01_info-d1_c1{
+   text-align: left;
+    margin: 0px auto;
+    width: 90%;
+    clear: both;
+}
+.FrontMembers_login01_info-d1_c1 A{
+}
+.FrontMembers_login01_info-d1_c1 A:hover{
+}
+.FrontMembers_login01_info-d1_c1 .focustext{
+   font-style: normal;
+    color: #f39800;
+}
+.FrontMembers_login01_info-d1_c1 .input{
+   border-bottom: #0068b7 1px solid;
+    border-left: #0068b7 1px solid;
+    margin-top: 3px;
+    width: 140px;
+    height: 18px;
+    color: #000;
+    font-size: 12px;
+    border-top: #0068b7 1px solid;
+    border-right: #0068b7 1px solid;
+}
+.FrontMembers_login01_info-d1_c1 .input-verify{
+   width: 55px;
+}
+.FrontMembers_login01_info-d1_c1 .before-login UL{
+   padding-bottom: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    list-style-image: none;
+    padding-top: 0px;
+}
+.FrontMembers_login01_info-d1_c1 .after-login UL{
+   padding-bottom: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    list-style-image: none;
+    padding-top: 0px;
+}
+.FrontMembers_login01_info-d1_c1 .before-login LI{
+   padding-bottom: 0px;
+    line-height: 30px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    overflow: hidden;
+    list-style-image: none;
+    padding-top: 0px;
+}
+.FrontMembers_login01_info-d1_c1 .after-login LI{
+   padding-bottom: 0px;
+    line-height: 30px;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    overflow: hidden;
+    list-style-image: none;
+    padding-top: 0px;
+}
+.FrontMembers_login01_info-d1_c1 .before-login LI SPAN{
+   text-align: right;
+    width: 55px;
+    float: left;
+}
+.FrontMembers_login01_info-d1_c1 .before-login .forgot{
+   margin-left: 8px;
+}
+.FrontMembers_login01_info-d1_c1 .verify SPAN{
+   vertical-align: middle;
+}
+.FrontMembers_login01_info-d1_c1 .verify IMG{
+   vertical-align: middle;
+}
+.FrontMembers_login01_info-d1_c1 .verify A{
+   vertical-align: middle;
+}
+.FrontMembers_login01_info-d1_c1 .verify INPUT{
+   vertical-align: middle;
+}
+.FrontMembers_login01_info-d1_c1 .before-login .verify .verify-pic{
+   margin: 0px 8px;
+}
+.FrontMembers_login01_info-d1_c1 .before-login .btnarea{
+   padding-bottom: 15px;
+    padding-left: 70px;
+    padding-right: 0px;
+    float: left;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.FrontMembers_login01_info-d1_c1 .before-login .non-member{
+   text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+.FrontMembers_login01_info-d1_c1 .after-login LI{
+   line-height: 22px;
+}
+.FrontMembers_login01_info-d1_c1 .after-login .name SPAN{
+   color: #0b9958;
+    font-weight: bold;
+}
+.FrontMembers_login01_info-d1_c1 .after-login .nickname SPAN{
+   color: #06c;
+    font-weight: bold;
+}
+.FrontMembers_login01_info-d1_c1 .after-login .level SPAN{
+   color: #f60;
+}
+.FrontMembers_login01_info-d1_c1 .after-login .btnarea{
+   padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+}
+.FrontMembers_login01_info-d1_c1 .after-login .btnarea A{
+   padding-bottom: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0px;
+}
+.FrontMembers_login01_info-d1_c1 .after-login .btnarea A.btna{
+   padding-bottom: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+.FrontMembers_login01_info-d1_c1 .after-login .btnarea A.btna SPAN{
+   padding-right: 10px;
+}
+.FrontMembers_login01_info-d1_c1 .text-tip SPAN{
+   line-height: 20px;
+    height: 20px;
+}

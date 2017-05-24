@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>多得</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sign-main J_sign">
+    <div class="sign-logo">
+        <img src="./images/logo-blue.png">
+    </div>
+    <form action="" method="get">
+        <div class="sign-form">
+            <p>
+                <input name="" type="text" class="sign-txt J_company" placeholder="输入企业名">
+                <span class="sign-error-tips">请输入企业名</span>
+            </p>
+            <p>
+                <input name="" type="text" class="sign-txt J_phone_txt" placeholder="输入手机号">
+                <span class="sign-error-tips">手机号格式错误</span>
+            </p>
+            <div class="sign-phone">
+                <input name="" type="text" class="sign-txt J_yzm_txt" placeholder="输入验证码">
+                <span class="sign-yzm-btn J_get_yzm" data-disable="0">获取验证码</span>
+                <span class="sign-error-tips">验证码错误</span>
+            </div>
+            <p>
+                <button class="sign-btn sign-btn-up" id="J_sign_up_com">注册</button>
+            </p>
+            <div class="sign-in-link">
+                <a href="sign.html">登录</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="sign-main sign-main-sml J_sign_suc hide">
+    <div class="sign-logo">
+        <img src="./images/logo-blue.png">
+    </div>
+    <div class="sign-msg">
+        <div class="sign-msg-icon">
+            <img src="./images/success.png">
+        </div>
+        <p>注册成功，即将进入主页...</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/sign.js"></script>
+
+</body>
+</html>

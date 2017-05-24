@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/** 全局样式 **/
+.FrontPublic_totalSearch01-d1_c1 {
+	width:100%;
+	margin:0 auto;
+	text-align:left;
+	clear:both;
+	margin-top:20px;
+}
+/** 下拉列表 样式 **/
+.FrontPublic_totalSearch01-d1_c1 select {
+	vertical-align:middle;
+}
+/** 输入框 样式 **/
+.FrontPublic_totalSearch01-d1_c1 .input {
+	width:157px;
+	border:1px solid #00b9ef;
+	height:18px;
+	line-height:18px;
+}
+/**内容样式**/
+.FrontPublic_totalSearch01-d1_c1 li{
+	width:100%;
+	overflow:hidden;
+	padding-bottom:5px;
+}
+.FrontPublic_totalSearch01-d1_c1 li span{
+	float:left;
+	width:65px;
+	line-height:22px;
+	text-align:right;
+}
+.FrontPublic_totalSearch01-d1_c1 .btnarea {
+	vertical-align:middle;
+}

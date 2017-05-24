@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>接蛋蛋</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app">
+    <meta name="imagemode" content="force">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="browsermode" content="application">
+</head>
+<body class="index">
+
+<div class="hp" id="J_hp">
+    <i></i>
+    <i></i>
+    <i></i>
+</div>
+<div class="music" id="J_music" data-play="1"></div>
+<div class="score" id="J_score">0</div>
+
+<div class="main" id="J_main">
+    <div id="J_egg" class="egg"></div>
+    <div class="start" id="J_start">
+        <i></i>
+        <i></i>
+    </div>
+</div>
+
+<div class="gameover-w" id="J_gameover">
+    <div class="gameover">
+        <div class="score-go" id="J_score_go">
+            <p></p>
+        </div>
+        <a href="###" class="bm"></a>
+    </div>
+</div>
+
+<audio autoplay="autoplay" loop="loop" id="J_audio">
+    <source src="" type="audio/ogg">
+    <source src="" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    ;(function () {
+        $('body').bind('touchmove', function (ev) {
+            ev.preventDefault();
+        });
+
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+
+        $(window).resize(function () {
+            winWidth = $(window).width();
+            winHeight = $(window).height();
+        });
+
+        var game = {
+            playTimes: 0,  // 游玩次数
+            bowlIndex : 1, // 篮子索引
+            bowlTimer: [], // 篮子动画定时器
+            bowlAni: false, // 篮子动画
+            bowlPos: 1, // 篮子位置
+            bowlPosArr: ['bowl-left', '', 'bowl-right'],
+            eggTimer: '', // 蛋动画定时器
+            eggAni: false,
+            eggLeft: winWidth / 2 - 20,
+            isEggAni: false,
+            score: 0, // 分数
+            helth: 3, // 血量
+            isCast: false, // 是否正在抛蛋中
+            isFirst: true, // 是否第一次玩
+            isFail: false,
+            init: function () {
+                var that = this;
+
+                $('#J_main').append(this.getBowlHtml());
+                $('.J_bowl').css({
+                    bottom: 1000 - winHeight
+                }).attr('data-cur', 1).bind('click', function () {
+                    var isCur = $(this).attr('data-cur');
+                    var index = parseInt($(this).attr('data-index'));
+
+                    if (isCur === '1' && !that.isCast) {
+                        if (that.isFirst) {
+                            $("#J_start").hide();
+                            that.isFirst = false;
+                        }
+
+                        that.cast(index);
+                    }
+                });
+
+                this.addBowl();
+                this.addBowl();
+
+                $('#J_egg').css({
+                    bottom: 1000 - winHeight + 30,
+                    left: this.eggLeft
+                });
+
+                $('#J_start').css({
+                    bottom: 1000 - winHeight + 20
+                });
+
+                // 第一次玩添加事件
+                /*if (this.playTimes === 0) {
+                    $(document).on('click', '.J_bowl', function () {
+                        var isCur = $(this).attr('data-cur');
+                        var index = parseInt($(this).attr('data-index'));
+
+                        if (isCur === '1' && !that.isCast) {
+                            if (that.isFirst) {
+                                $("#J_start").hide();
+                                that.isFirst = false;
+                            }
+
+                            that.cast(index);
+                        }
+                    });
+                }*/
+                this.playTimes++;
+            },
+            getBowlHtml : function () {
+                var html = '<div class="bowl J_bowl J_bowl_' + this.bowlIndex + '" data-index="' + this.bowlIndex + '"></div>';
+                this.bowlIndex++;
+                return html;
+            },
+            // 重新开始
+            restart: function () {
+                $('.J_bowl').remove();
+
+                this.score = 0;
+                this.helth = 3;
+                this.isCast = false;
+                this.isFirst = true;
+
+                $('#J_hp i').removeClass('h-n');
+                $('#J_score').html(this.score);
+                $("#J_start").show();
+                $('#J_main').css({
+                    '-webkit-transform': 'translate3d(0, -10000px, 0)',
+                    transform: 'translate3d(0, -10000px, 0)'
+                });
+
+                this.init();
+            },
+            // 添加篮子
+            addBowl: function () {
+                var that = this;
+                var tmpIndex = this.bowlIndex;
+                var bowlHtml = this.getBowlHtml();
+
+                $('#J_main').append(bowlHtml);
+
+                // 设置篮子坐标
+                $('.J_bowl_' + tmpIndex).css({
+                    bottom: 1000 - winHeight + tmpIndex * winHeight / 3 - winHeight / 3
+                }).bind('click', function () {
+                    var isCur = $(this).attr('data-cur');
+                    var index = parseInt($(this).attr('data-index'));
+
+                    if (isCur === '1' && !that.isCast) {
+                        if (that.isFirst) {
+                            $("#J_start").hide();
+                            that.isFirst = false;
+                        }
+
+                        if ($(this).attr('data-ani') === '1') {
+                            that.eggAni = false;
+                            that.eggLeft = parseInt($('#J_egg').offset().left);
+                        }
+
+                        that.cast(index);
+                    }
+                });
+
+                if (this.bowlAni) {
+                    $('.J_bowl_' + tmpIndex).addClass(this.bowlPosArr[this.bowlPos]);
+                }
+
+                if (this.bowlIndex > 3 && !this.bowlAni) {
+                    this.animate(tmpIndex);
+                    this.bowlAni = true;
+                    this.bowlPos = Math.floor(Math.random() * 3);
+                }
+            },
+            // 抛蛋
+            cast: function (idx) {
+                var that = this;
+                this.isCast = true;
+
+                var sBottom = parseInt($('#J_egg').css('bottom'));
+                var sRotate = 0;
+                var isDown = false;
+                var zIndex = 10;
+                this.eggTimer = setInterval(function () {
+                    if (isDown) {
+                        sBottom -= 3;
+                        that.collide(idx);
+                    } else {
+                        sBottom += 4;
+                        sRotate += 10;
+                    }                    
+
+                    if (sRotate >= 360) {
+                        sRotate = 0;
+                        zIndex = 30;
+                    }
+                    if (sBottom > parseInt($('.J_bowl_' + (idx + 1)).css('bottom')) + 100) {
+                        isDown = true;
+                    }
+
+                    // 未接到
+                    if (isDown && sBottom < parseInt($('.J_bowl_' + (idx + 1)).css('bottom'))) {
+                        sBottom -= 3;
+                        sRotate += 20;
+
+                        if (!that.isFail) {
+                            that.helth--;
+                            $('#J_hp i').eq(that.helth).addClass('h-n');
+                            that.isFail = true;
+                        }
+
+                        if (sBottom < parseInt($('.J_bowl_' + idx).css('bottom')) - 100) {
+                            // gameover
+                            if (that.helth === 0) {
+                                that.gameover();
+                            } else {
+                                that.isCast = false;
+                                that.isFail = false;
+                                setTimeout(function () {
+                                    $('#J_egg').css({
+                                        bottom: 1000 - winHeight + idx * winHeight / 3 - winHeight / 3 + 30,
+                                        left: that.eggLeft,
+                                        transform: '',
+                                        '-webkit-transform': '',
+                                        'z-index': 20
+                                    });
+                                }, 0);
+                                clearInterval(that.eggTimer);
+
+                                if (that.isEggAni) {
+                                    that.eggLeft = winWidth / 2 - 20;
+                                    that.eggAni = true;
+                                }
+                            }
+
+                            return false;
+                        }
+                    }
+
+                    $('#J_egg').css({
+                        bottom: sBottom,
+                        left: that.eggLeft,
+                        transform: 'rotate(' + sRotate+ 'deg)',
+                        '-webkit-transform': 'rotate(' + sRotate+ 'deg)',
+                        'z-index': zIndex
+                    });
+                }, 16);
+            },
+            // 篮子动画
+            animate: function (idx) {
+                var that = this;
+                var sLeft = 0;
+                var turn = 'right';
+                var speed = Math.random()*2 + 0.5;
+                $('.J_bowl_' + idx).attr('data-ani', 1);
+
+                this.bowlTimer[idx] = setInterval(function () {
+                    if (turn === 'right') {
+                        sLeft += speed;
+                        if (sLeft > winWidth / 2 - 50) {
+                            turn = 'left';
+                        }
+                    } else {
+                        sLeft -= speed;
+                        if (sLeft < 0 && sLeft < -winWidth / 2 + 50) {
+                            turn = 'right';
+                        }
+                    }
+
+                    $('.J_bowl_' + idx).css({
+                        transform: 'translate3d(' + sLeft + 'px, 0, 0)',
+                        '-webkit-transform': 'translate3d(' + sLeft + 'px, 0, 0)'
+                    });
+
+                    if (that.eggAni) {
+                        $('#J_egg').css({
+                            transform: 'translate3d(' + sLeft + 'px, 0, 0)',
+                            '-webkit-transform': 'translate3d(' + sLeft + 'px, 0, 0)'
+                        });
+                    }
+                }, 16);
+            },
+            // 检测是否接到
+            collide: function (idx) {
+                var that = this;
+                var tmpIdx = idx + 1;
+                var eggOffset = $('#J_egg').offset();
+                var bowlOffset = $('.J_bowl_' + tmpIdx).offset();
+
+                if (eggOffset.top < bowlOffset.top) {
+                    if (bowlOffset.top - eggOffset.top < 40 && (eggOffset.left - bowlOffset.left > 0 && eggOffset.left - bowlOffset.left < 60)) {
+                        clearInterval(this.eggTimer);
+                        setTimeout(function () {
+                            $('#J_egg').css({
+                                bottom: 1000 - winHeight + tmpIdx * winHeight / 3 - winHeight / 3 + 30,
+                                left: that.eggLeft,
+                                transform: '',
+                                '-webkit-transform': '',
+                                'z-index': 20
+                            });
+                        }, 0);
+
+                        this.score++;
+                        $('#J_score').html(this.score);
+
+                        $('#J_main').css({
+                            transform: 'translate3d(0, ' + (-10000 + tmpIdx * winHeight / 3 - winHeight / 3) + 'px, 0)',
+                            '-webkit-transform': 'translate3d(0, ' + (-10000 + tmpIdx * winHeight / 3 - winHeight / 3) + 'px, 0)'
+                        });
+
+                        $('.J_bowl_' + tmpIdx).attr('data-cur', 1);
+                        setTimeout(function () {
+                            $('.J_bowl_' + idx).unbind('click').remove();
+                        }, 400);
+
+                        this.isCast = false;
+
+                        if (this.isEggAni) {
+                            this.isEggAni = false;
+                            this.eggAni = false;
+                            this.bowlAni = false;
+                            clearInterval(this.bowlTimer[idx]);
+
+                            if (this.bowlPos === 0) {
+                                this.eggLeft = 30;
+                            } else if (this.bowlPos === 2) {
+                                this.eggLeft = winWidth - 70;
+                            } else {
+                                this.eggLeft = winWidth / 2 - 20;
+                            }
+                        }
+
+                        if ($('.J_bowl_' + tmpIdx).attr('data-ani') === '1') {
+                            this.eggAni = true;
+                            this.isEggAni = true;
+                            this.eggLeft = winWidth / 2 - 20;
+                        }
+
+                        this.addBowl();
+                    }
+                }
+            },
+            // 游戏结束
+            gameover: function () {
+                clearInterval(this.eggTimer);
+                $('#J_gameover').addClass('gameover-w-h');
+                $('#J_score_go p').html(this.score);
+            }
+        };
+
+        game.init();
+
+        $('#J_music').click(function () {
+            var isPlay = $(this).attr('data-play');
+
+            if (isPlay === '1') {
+                $(this).addClass('music-c').attr('data-play', 0);
+                $('#J_audio')[0].play();
+            } else {
+                $(this).removeClass('music-c').attr('data-play', 1);
+                $('#J_audio')[0].pause();
+            }
+        });
+    }());
+</script>
+
+</body>
+</html>

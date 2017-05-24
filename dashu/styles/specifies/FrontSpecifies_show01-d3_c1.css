@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/** 全局样式 **/
+.FrontSpecifies_show01-d3_c1 {
+	width:90%;
+	margin:0 auto;
+}
+.FrontSpecifies_show01-d3_c1 .membernavlist{
+	width:100%;
+	background:#fff;
+}
+.FrontSpecifies_show01-d3_c1 .membernavlist li{
+	height:25px;
+}
+.FrontSpecifies_show01-d3_c1 .membernavlist li a{
+	float:left;
+	width:100%;
+	height:24px;
+	line-height:24px;
+	background:#EBF7FE;
+	text-decoration:none;
+}
+.FrontSpecifies_show01-d3_c1 .membernavlist li a:hover{
+	background:#ABE7FA;
+	border:1px solid ##7ECEF4;
+}
+/*html编辑器缺样式*/
+.FrontSpecifies_show01-d3_c1 .htmledit {
+	font-family:Times New Roman;
+	font-size:medium;
+	font-style:normal;
+	line-height:normal;
+	font-weight:normal;
+	font-variant:normal;
+	font-stretch:normal; 
+	text-transform:none;
+	text-indent:0;
+	text-align:left;
+	vertical-align:baseline;
+	letter-spacing: normal; 
+	word-spacing: normal; 
+	color: #000;
+	text-decoration:none;
+	letter-spacing:normal;
+	word-spacing:normal;
+	white-space:normal;
+	word-break:normal; 
+	word-wrap:normal; 
+	border:medium none;
+	background:transparent none repeat scroll 0% 0%;
+	list-style:disc outside none;
+	float:none;
+	width:auto;
+	height:auto;
+	clear:none;
+	z-index:auto;
+	text-justify:auto;
+	overflow:visible;
+	display:inline;
+	visibility:inherit;
+	margin:auto;
+	border-collapse:separate;  
+}
+.FrontSpecifies_show01-d3_c1 .htmledit ul{
+	background:transparent none repeat scroll 0% 0%;
+	width:auto;
+	display:inline-block;
+	height:auto;
+	float:none;
+	padding-left:25px;
+}
+.FrontSpecifies_show01-d3_c1 .htmledit ul li{
+	background:transparent none repeat scroll 0% 0%;
+	width:auto;
+	float:none;
+	height:auto;
+	list-style:disc outside none;
+	text-align:left;
+	line-height:normal;
+}
+.FrontSpecifies_show01-d3_c1 .htmledit ol{
+	background:transparent none repeat scroll 0% 0%;
+	width:auto;
+	display:inline-block;
+	height:auto;
+	float:none;
+	padding-left:25px;
+}
+.FrontSpecifies_show01-d3_c1 .htmledit ol li{
+	background:transparent none repeat scroll 0% 0%;
+	width:auto;
+	float:none;
+	height:auto;
+	list-style:decimal outside none;
+	text-align:left;
+	line-height:normal;
+}
+.FrontSpecifies_show01-d3_c1 .htmledit p{
+	line-height:normal;
+}
+.FrontSpecifies_show01-d3_c1 .htmledit h1 {font-size: 2em; margin: .67em 0;font-weight: bolder;} 
+.FrontSpecifies_show01-d3_c1 .htmledit h2 {font-size: 1.5em; margin: .83em 0;font-weight: bolder;}
+.FrontSpecifies_show01-d3_c1 .htmledit h3 {font-size: 1.17em; margin: 1em 0;font-weight: bolder;} 
+.FrontSpecifies_show01-d3_c1 .htmledit h4 {font-size: 1em; margin: 1.33em 0;font-weight: bolder;}
+.FrontSpecifies_show01-d3_c1 .htmledit h5 {font-size: .83em; line-height: 1.17em; margin: 1.67em 0;font-weight: bolder;} 
+.FrontSpecifies_show01-d3_c1 .htmledit h6 {font-size: .67em; margin: 2.33em 0;font-weight: bolder;} 
+
+

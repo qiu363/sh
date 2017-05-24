@@ -1,0 +1,23 @@
+@charset "utf-8";
+.FrontSpecifies_show01-d1_c1{
+   margin: 0px auto;
+    width: 100%;
+}
+.FrontSpecifies_show01-d1_c1 .membernavlist{
+   width: 100%;
+    background: #fff;
+}
+.FrontSpecifies_show01-d1_c1 .membernavlist LI{
+   height: 25px;
+}
+.FrontSpecifies_show01-d1_c1 .membernavlist LI A{
+   line-height: 24px;
+    width: 100%;
+    background: #ebf7fe;
+    float: left;
+    height: 24px;
+    text-decoration: none;
+}
+.FrontSpecifies_show01-d1_c1 .membernavlist LI A:hover{
+   background: #abe7fa;
+}

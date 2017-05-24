@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>多得</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="frame clearfix">
+    <div class="frame-right">
+        <div class="frame-cont">
+            <div class="frame-c-title">
+                申请列表
+                <span>4个未处理申请</span>
+                <span>2个未匹配申请</span>
+            </div>
+            <div class="staff-list apply-list">
+                <table width="100%">
+                    <tr>
+                        <th widht="10%">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th widht="13%"><span>姓名</span></th>
+                        <th widht="10%"><span>电话</span></th>
+                        <th widht="12%"><span>附言</span></th>
+                        <th widht="12%"><span>申请日期</span></th>
+                        <th widht="12%"><span></span></th>
+                    </tr>
+                    <tr>
+                        <td class="staff-l-apply">
+                            <img src="./images/transfer.png">
+                        </td>
+                        <td>yangmu373</td>
+                        <td>11111111111</td>
+                        <td>技术组</td>
+                        <td>2015-05-10</td>
+                        <td class="apply-handle">
+                            <a href='###' data-name="yangmu373" class="J_add_staff">匹配已有档案</a>
+                            <a href='###' data-name="yangmu373" class="J_add_staff">通过</a>
+                            <a href='###' class="apply-handle-reject" data-name="yangmu373">拒绝</a>
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="staff-l-apply">
+                            <img src="./images/transfer.png">
+                        </td>
+                        <td>yangmu373</td>
+                        <td>11111111111</td>
+                        <td>技术组</td>
+                        <td>2015-05-10</td>
+                        <td class="apply-handle">
+                            <a href='###' data-name="yangmu373" class="J_add_staff">匹配已有档案</a>
+                            <a href='###' data-name="yangmu373" class="J_add_staff">通过</a>
+                            <a href='###' class="apply-handle-reject" data-name="yangmu373">拒绝</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="staff-l-apply">
+                            <img src="./images/pending.png">
+                        </td>
+                        <td>yangmu373</td>
+                        <td>11111111111</td>
+                        <td>技术组</td>
+                        <td>2015-05-10</td>
+                        <td class="apply-handle">
+                            <a href='###' data-name="yangmu373" class="J_add_staff">分配部门</a>
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="staff-l-apply">
+                            <img src="./images/deleted.png">
+                        </td>
+                        <td>yangmu373</td>
+                        <td>11111111111</td>
+                        <td>技术组</td>
+                        <td>2015-05-10</td>
+                        <td class="apply-handle">
+                            已拒绝
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="staff-l-apply">
+                            <img src="./images/approved.png">
+                        </td>
+                        <td>yangmu373</td>
+                        <td>11111111111</td>
+                        <td>技术组</td>
+                        <td>2015-05-10</td>
+                        <td class="apply-handle">
+                            已分配
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="guide-info">
+                申请处理指导内容
+            </div>
+        </div>
+    </div>
+    <div class="frame-left">
+        <h1 class="frame-title">演示公司名称</h1>
+        <ul class="frame-menu">
+            <li class="frame-menu-staff">
+                <a href="###">员工</a>
+            </li>
+            <li class="frame-menu-organ">
+                <a href="###">组织</a>
+            </li>
+            <li class="frame-menu-apply">
+                <a href="###" class="sel">申请</a>
+            </li>
+            <li class="frame-menu-permission">
+                <a href="###">权限</a>
+            </li>
+        </ul>
+        <div class="frame-account">
+            <p>账号名称</p>
+            <a href="###">退出</a>
+        </div>
+    </div>
+</div>
+
+<div class="sign-main hide J_popup">
+    <div class="apply-staff-b-t">给<span>刘德华</span>分配已有档案</div>
+    <div class="apply-staff-sel-f">
+        <select>
+            <option>选择或者输入员工姓名</option>
+        </select>
+        <div class="apply-staff-sel-btn">
+            <a href="###" class="apply-staff-sel-b-a">添加</a>
+            <a href="###">取消</a>
+        </div>
+    </div>
+    <i class="sign-pop-close J_close"></i>
+</div>
+
+<div class="mask hide" id="J_mask"></div>
+
+<script type="text/javascript">
+    $('.J_close').click(function () {
+        $('.J_popup').hide();
+        $('#J_mask').hide();
+    });
+    $('.J_add_staff').click(function () {
+        $('.J_popup').show();
+        $('#J_mask').show();
+    });
+</script>
+
+</body>
+</html>

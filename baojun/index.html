@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>五菱宝骏亿元红包大派送</title>
+    <meta name="keywords" content="红包,五菱,宝骏,亿元红包">
+    <meta name="description" content="五菱宝骏亿元红包大派送">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+
+<body class="index">
+
+<div class="loading" id="J_loading">
+    <span><i id="J_pro"></i></span>
+    <p id="J_pre">0%</p>
+</div>
+
+<div class="main" id="J_main">
+    <a href="javascript:;" class="logo">
+        <img src="./images/logo.png">
+    </a>
+
+    <div class="banner1"></div>
+    <div class="banner2"></div>
+    <div class="banner3"></div>
+    <!-- <img class="banner-mask" src="./images/lv2.png"> -->
+
+    <div class="car1"></div>
+    <div class="car2"></div>
+    <div class="car3"></div>
+    <div class="car4"></div>
+    <div class="car5"></div>
+
+    <div class="car-bg"></div>
+    <div class="car-hb-arrow"></div>
+
+    <div class="car-hb"></div>
+    <a href="###" class="car-hb-link" id="J_zj_btn"></a>
+
+    <div class="qianbao1"></div>
+    <div class="qianbao2"></div>
+    <div class="qianbao3"></div>
+    <div class="qianbao4"></div>
+    <div class="qianbao5"></div>
+
+    <div class="caidai"></div>
+    <div class="caidai caidai1"></div>
+
+    <div class="links-bot">
+        <a href="###" id="J_rule"></a>
+        <a href="###" id="J_md"></a>
+    </div>
+
+    <div class="bot-times">
+        <img src="./images/txt.png">
+    </div>
+</div>
+
+<!-- 规则 -->
+<div class="i-rule" id="J_rule_pop">
+    <div class="i-rule-title"><span>活动介绍</span></div>
+    <div class="i-rule-cont">
+        五菱宝骏疯狂购车月，亿元红包大派送！即日起至12月31日全天红包大派送，参与即有机会抽取4999、2999、1999、888、688、588元购车红包，每人有三次抢红包机会
+    </div>
+    <div class="i-rule-title"><span>抢红包攻略</span></div>
+    <div class="i-rule-cont">
+        <p>1、每个用户有3次抢红包机会，选择一个红包金额领取，完整填写个人信息获取核销码（请使用本人手机号）</p>
+        <p>2、红包有效期：2016年12月31日前提车使用，凭核销码抵扣购车款，逾期无效</p>
+        <p>3、红包仅限本人使用，用于购买活动指定车型，不可转让或折现</p>
+        <p>4、红包仅限购车前使用，不可叠加使用</p>
+    </div>
+    <div class="i-rule-ex">
+        <p>※ 本活动在法律允许范围内最终解释权归上汽通用五菱所有。</p>
+    </div>
+    <i class="pop-close" id="J_rule_close"></i>
+</div>
+
+<!-- 领取提示 -->
+<div class="i-zj" id="J_hb_over">
+    <div class="i-zj-detail">
+        <div class="i-zj-d" id="J_over_info">
+            <p class="i-zj-t">您已经领取过</p>
+            <p class="i-zj-t" style="padding:0;">红包啦！</p>
+        </div>
+    </div>
+    <div class="i-zj-mask i-zj-mask-o"></div>
+    <i class="pop-close pop-close-h J_over_close"></i>
+</div>
+
+<!-- 领取成功 -->
+<div class="i-rule i-hb-suc" id="J_hb_suc">
+    <div class="i-hb-suc-c">
+        <p>红包兑换码：<span>jshdsjhdohbi</span></p>
+        <p class="i-hb-suc-c-p">请凭借以上红包兑换码到4S店购车使用<br>红包有效期：2016.12.31</p>
+    </div>
+    <a href="###" class="J_suc_close"></a>
+    <i class="pop-close J_suc_close"></i>
+</div>
+
+<!-- 名单 -->
+<div class="i-rule i-hb-md" id="J_hb_md">
+    <div class="i-md-sea">
+        <input type="text" id="J_sea" placeholder="请输入姓名">
+        <i id="J_sea_btn"></i>
+    </div>
+    <ul class="i-md-list">
+        <li>
+            <span>张三</span>
+            <span>123****1211</span>
+            <span>抢得4000元红包</span>
+        </li>
+        <li>
+            <span>张三</span>
+            <span>123****1211</span>
+            <span>抢得4000元红包</span>
+        </li>
+        <li>
+            <span>张三</span>
+            <span>123****1211</span>
+            <span>抢得4000元红包</span>
+        </li>
+        <li>
+            <span>张三</span>
+            <span>123****1211</span>
+            <span>抢得4000元红包</span>
+        </li>
+        <li>
+            <span>张三</span>
+            <span>123****1211</span>
+            <span>抢得4000元红包</span>
+        </li>
+        <li>
+            <span>张三</span>
+            <span>123****1211</span>
+            <span>抢得4000元红包</span>
+        </li>
+        <li>
+            <span>张三</span>
+            <span>123****1211</span>
+            <span>抢得4000元红包</span>
+        </li>
+        <li>
+            <span>张三</span>
+            <span>123****1211</span>
+            <span>抢得4000元红包</span>
+        </li>
+    </ul>
+    <div class="i-md-page">
+        <a href="###" class="i-md-p-pre"></a>
+        <a href="###">1</a>
+        <a href="###">2</a>
+        <span>3</span>
+        <i>...</i>
+        <a href="###">20</a>
+        <a href="###">21</a>
+        <a href="###">22</a>
+        <a href="###" class="i-md-p-next"></a>
+    </div>
+    <i class="pop-close" id="J_md_close"></i>
+</div>
+
+<!-- 红包 -->
+<div class="i-zj" id="J_zj">
+    <div class="i-zj-detail">
+        <div class="i-zj-d" id="J_zj_info">
+            <p class="i-zj-t">恭喜您获得</p>
+            <p class="i-zj-t1">4999<i>元</i></p>
+            <p class="i-zj-t2">五菱宝骏购车红包</p>
+        </div>
+    </div>
+    <div class="i-zj-tips">
+        <div class="i-zj-btn">
+            <a href="###" id="J_lq"></a>
+            <a href="###" class="J_zj_close"></a>
+        </div>
+    </div>
+    <div class="i-zj-mask"></div>
+    <i class="pop-close pop-close-h J_zj_close"></i>
+</div>
+
+<div class="mask" id="J_mask"></div>
+<div class="share" id="J_mask_share"></div>
+
+<div class="form" id="J_form">
+    <ul class="f-hb-list" id="J_sel">
+        <li>
+            <div class="f-hb">
+                <p>688</p>
+                元红包
+            </div>
+            <span class="f-hb-chk"></span>
+        </li>
+        <li>
+            <div class="f-hb">
+                <p>888</p>
+                元红包
+            </div>
+            <span class="f-hb-chk"></span>
+        </li>
+        <li class="cur">
+            <div class="f-hb">
+                <p>4999</p>
+                元红包
+            </div>
+            <span class="f-hb-chk"></span>
+        </li>
+    </ul>
+
+    <div class="f-form">
+        <div class="f-form-txt"><input type="text" placeholder="请输入姓名" id="J_name"></div>
+        <div class="f-form-txt"><input type="text" placeholder="请输入手机号" id="J_phone"></div>
+        <div class="f-form-yzm">
+            <input type="text" placeholder="请输入验证码" id="J_yzm_txt">
+            <span id="J_yzm">验证码</span>
+        </div>
+        <div class="f-sel-1">
+            选择意向车型
+            <div class="f-select-w">
+                <select class="f-select" id="J_car">
+                    <option>宝骏560</option>
+                    <option>宝骏560</option>
+                    <option>宝骏560</option>
+                    <option>宝骏560</option>
+                </select>
+            </div>
+        </div>
+        <div class="f-sel-2">
+            <p>选择经销商</p>
+            <div class="f-sel-2-1">
+                <div class="f-select-w">
+                    <select class="f-select" id="J_add1">
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                    </select>
+                </div>
+                <div class="f-select-w f-select-w-2" id="J_add2">
+                    <select class="f-select">
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                    </select>
+                </div>
+            </div>
+            <div class="f-sel-2-2">
+                <div class="f-select-w">
+                    <select class="f-select" id="J_add3">
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                        <option>宝骏560</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <a href="###" class="f-btn" id="J_lq_btn">领取</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript">
+    !(function () {
+        var imgList = [
+            "images/b1.png",
+            "images/b2.png",
+            "images/b3.png",
+            "images/b4.png",
+            "images/b5.png",
+            "images/ban.png",
+            "images/bao.png",
+            "images/bg.jpg",
+            "images/bg2.jpg",
+            "images/bt1.png",
+            "images/bt2.png",
+            "images/bt3.png",
+            "images/btn1.png",
+            "images/btn2.png",
+            "images/car1.png",
+            "images/car2.png",
+            "images/car3.png",
+            "images/car4.png",
+            "images/car5.png",
+            "images/hb.png",
+            "images/logo.png",
+            "images/lv1.png",
+            "images/lv2.png",
+            "images/re.png",
+            "images/txt.png",
+            'images/hb3.png'
+        ];
+
+        var imgNum = 0;
+        for (var i = 0; i < imgList.length; i++) {
+            (function(k){
+                var img = new Image();
+                img.src = imgList[k];
+
+                img.onload = function(){
+                    imgNum++;
+
+                    $('#J_pre').html(Math.ceil(imgNum/imgList.length*100) + '%');
+                    $('#J_pro').css({
+                        width: Math.ceil(imgNum/imgList.length*100) + '%'
+                    });
+
+                    if (imgNum === imgList.length) {
+                        $('#J_pre').html('100%');
+                        $('#J_pro').css({
+                            width: '100%'
+                        });
+
+                        setTimeout(function () {
+                            $('#J_loading').hide();
+                            $('#J_main').show().addClass('main-s');
+                        }, 500);
+                    }
+                };
+            })(i);
+        }
+
+        $('#J_rule').click(function () {
+            $('#J_mask').show();
+            $('#J_rule_pop').show();
+
+            return false;
+        });
+        $('#J_rule_close').click(function () {
+            $('#J_mask').hide();
+            $('#J_rule_pop').hide();
+        });
+        $('#J_md').click(function () {
+            $('#J_mask').show();
+            $('#J_hb_md').show();
+
+            return false;
+        });
+        $('#J_md_close').click(function () {
+            $('#J_mask').hide();
+            $('#J_hb_md').hide();
+        });
+        $('#J_over_close').click(function () {
+            $('#J_mask').hide();
+            $('#J_hb_over').hide();
+        });
+        $('.J_suc_close').click(function () {
+            $('#J_mask').hide();
+            $('#J_hb_suc').hide();
+
+            return false;
+        });
+
+        $('#J_zj_btn').click(function () {
+            $('#J_mask').show();
+            $('#J_zj').show();
+
+            $('#J_zj_info').css({
+                '-webkit-transform': 'translate3d(0, 0, 0)',
+                'transform': 'translate3d(0, 0, 0)'
+            });
+
+            $.ajax({
+                url: '',
+                data: {},
+                dataType: 'json',
+                type: 'GET',
+                success: function () {},
+                error: function () {}
+            });
+
+            return false;
+        });
+        $('.J_zj_close').click(function () {
+            $('#J_mask').hide();
+            $('#J_zj').hide();
+
+            $('#J_zj_info').css({
+                '-webkit-transform': 'translate3d(0, 100%, 0)',
+                'transform': 'translate3d(0, 100%, 0)'
+            });
+
+            return false;
+        });
+
+        $('#J_lq').click(function () {
+            $('#J_main').hide();
+            $('#J_form').show().css({
+                'min-height': $(window).height()
+            });
+
+            $('#J_mask').hide();
+            $('#J_zj').hide();
+
+            $('html').css({
+                'height': '100%'
+            });
+
+            $('#J_zj_info').css({
+                '-webkit-transform': 'translate3d(0, 100%, 0)',
+                'transform': 'translate3d(0, 100%, 0)'
+            });
+
+            return false;
+        });
+
+        // 领取表单
+        var hb = 2;
+        $('#J_sel li').click(function () {
+            var hb = $('#J_sel li').index(this);
+            $(this).addClass('cur').siblings().removeClass('cur');
+        });
+        $('#J_lq_btn').click(function () {
+            var name = $('#J_name').val();
+            var phone = $('#J_phone').val();
+            var yzm = $('#J_yzm_txt').val();
+            var add1 = $('#J_add1').val();
+            var add2 = $('#J_add2').val();
+            var add3 = $('#J_add3').val();
+            var car = $('#J_car').val();
+
+            if (name === '') {
+                alert('请输入姓名');
+                return false;
+            } else if (phone === '' || !/\d{13}/.test(phone)) {
+                alert('请输入正确的手机号码');
+                return false;
+            } else if (yzm === '') {
+                alert('请输入验证码');
+                return false;
+            }
+
+            $.ajax({
+                url: '',
+                type: 'GET',
+                data: {},
+                dataType: 'json',
+                success: function () {},
+                error: function () {}
+            });
+
+            return false;
+        })
+    })();
+</script>
+
+</body>
+</html>

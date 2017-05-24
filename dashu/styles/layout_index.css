@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+#box_left_sub1{width:100%; margin-bottom:10px;}
+
+#box_left_sub2{width:100%; margin-bottom:10px;}
+
+#box_left_sub1_sub1{float:left;width:33.3%;}
+
+#box_left_sub1_sub2{float:left;width:31.3%; margin:0 1%;}
+
+#box_left_sub1_sub3{float:left;width:33.3%;}
+
+#box_left_sub2_sub1{float:left;width:33.3%;}
+
+#box_left_sub2_sub2{float:left;width:31.3%; margin:0 1%;}
+
+#box_left_sub2_sub3{float:left;width:33.3%;}
+
+#box_left_sub1 .border_45 .borderContent{height:180px;}
+
+#box_left_sub2 .border_45 .borderContent{min-height:300px;_height:300px;}

@@ -1,0 +1,198 @@
+@charset "utf-8";
+/** 全局样式 **/
+.FrontAdv_picture01-d1_c1 {
+	width:100%;
+	overflow:hidden;
+	color:#000;
+	clear:both;
+	text-align:left;
+}
+/** 图片列表 **/
+.FrontAdv_picture01-d1_c1 .content {
+	float:left;
+	height:100%;
+	overflow:hidden;
+	margin:10px 0;
+}
+/** 图片列表 图片 **/
+.FrontAdv_picture01-d1_c1 .content .pic a {
+	/*border:1px solid #ccc;  */
+	margin:0 3px;
+	/*display:block; */
+}
+.FrontAdv_picture01-d1_c1 .content .pic img {
+	width:120px;
+	height:60px;
+}
+.FrontAdv_picture01-d1_c1 .content p a:hover {
+	/*border:1px solid #0666cc;  */
+}
+/** 图片列表 标题 **/
+.FrontAdv_picture01-d1_c1 .content h4 {
+	margin-top:5px;
+}
+.FrontAdv_picture01-d1_c1 .content h4 a {
+	/*font-size:12px;
+	color:#000;
+	text-decoration:none;*/
+}
+.FrontAdv_picture01-d1_c1 .content h4 a:hover {
+	/*font-size:12px;
+	color:#000;
+	text-decoration:underline;*/
+}
+/** 更多 **/
+.FrontAdv_picture01-d1_c1 .skip-more {
+	margin-top:10px;
+	text-align:right;
+}
+.FrontAdv_picture01-d1_c1 .skip-more a {
+}
+.FrontAdv_picture01-d1_c1 .skip-more a:hover {
+	/* color:#0066cc;
+	text-decoration:underline; */
+}
+/*logo样式*/
+#FrontAdv_picture01-logo .content h4 {
+	display:none;
+}
+#FrontAdv_picture01-logo .content{
+	margin:0;
+}
+#FrontAdv_picture01-logo {
+	text-align:right;
+}
+#FrontAdv_picture01-001 .content h4{
+	width:120px;
+	overflow:hidden;
+}
+
+/* -----滚动样式----------------------------------------------------------------------- */
+	/* navigation */
+.FrontAdv_picture01-d1_c1 .scrollnavi {
+	width: 200px;
+	height: 20px;
+}
+
+.FrontAdv_picture01-d1_c1 .scrollnavi a {
+	width: 8px;
+	height: 8px;
+	float: left;
+	margin: 3px;
+	background: url(/images/adv/navigator.png) 0 0 no-repeat;
+	display: block;
+	font-size: 1px;
+}
+
+.FrontAdv_picture01-d1_c1 .scrollnavi a:hover {
+	background-position: 0 -8px;
+}
+
+.FrontAdv_picture01-d1_c1 .scrollnavi a.active {
+	background-position: 0 -16px;
+}
+
+/* buttons */
+.FrontAdv_picture01-d1_c1 a.scrollbrowse {
+	background: url(/images/adv/hori_large.png) no-repeat;
+	display: block;
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin: 40px 10px;
+	cursor: pointer;
+	font-size: 1px;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollright {
+	background-position: 0 -30px;
+	clear: right;
+	margin-right: 0px;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollright:hover {
+	background-position: -30px -30px;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollright:active {
+	background-position: -60px -30px;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollleft {
+	margin-left: 0px;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollleft:hover {
+	background-position: -30px 0;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollleft:active {
+	background-position: -60px 0;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollup,.FrontAdv_picture01-d1_c1 a.scrolldown {
+	background: url(/images/adv/vert_large.png) no-repeat;
+	float: none;
+	margin: 10px 50px;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollup:hover {
+	background-position: -30px 0;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrollup:active {
+	background-position: -60px 0;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrolldown {
+	background-position: 0 -30px;
+	clear:both;
+	float:left;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrolldown:hover {
+	background-position: -30px -30px;
+}
+
+.FrontAdv_picture01-d1_c1 a.scrolldown:active {
+	background-position: -60px -30px;
+}
+
+.FrontAdv_picture01-d1_c1 .scrollable {
+	position: relative;
+	overflow: hidden;
+	/**width: 410px;**/
+	height: 60px;
+	width:840px;
+	float:left;
+}
+
+.FrontAdv_picture01-d1_c1 .scrollitems {
+	width: 20000px;
+	position: absolute;
+	clear: both;
+}
+
+.FrontAdv_picture01-d1_c1 .scrollable_vertical {
+	position: relative;
+	overflow: hidden;
+	width:840px;
+	height: 60px;
+}
+
+.FrontAdv_picture01-d1_c1 .scrollitems_vertical {
+	height: 20000px;
+	position: absolute;
+	clear: both;
+}
+
+.FrontAdv_picture01-d1_c1 .content1{
+	width:150px;
+}
+
+.FrontAdv_picture01-d1_c1 .scrollliner {
+	position:Static;
+}
+.FrontAdv_picture01-d1_c1 .scrollliner .scrollitems{
+	position:Static;
+}

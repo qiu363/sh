@@ -1,0 +1,111 @@
+@charset "utf-8";
+/*************************************
+* 文件名称：cetop.css
+* 作   者：界面设计制作部
+* 创建日期：2010-1-28
+* 最后修改：name/ 第X行 / yyyy-mm-dd
+* 文件版本：UI CSS Frameworks Beta
+* 内容概要: 商品列表动态显示大图样式文件
+*************************************/
+.fc {
+	position:absolute;
+	width:250px;
+	height:220px;
+	background-color:#e6eaf3;
+	font-size:12px;
+	color:#999999;
+	border: 1px solid #777777;
+	z-index:9;
+}
+.fc .jJ {
+	margin:0;
+	padding:8px 8px 8px 8px;
+	height:200px;
+}
+.fc .jJ img {
+	border:1px solid #FFFFFF;
+}
+.fc .sd {
+	font-size:14px;
+	color:#333333;
+	margin:0px 10px 0 10px;
+	padding:0;
+	font-weight:bold;
+	text-align:center;
+	line-height:18px;
+}
+.ico {
+	height:25px;
+	position:absolute;
+	z-index:9999;
+	width:12px;
+	float:left;
+	top:20px;
+	wmode:transparent;
+	background-image:url(/images/common/jt.gif);
+}
+.fc01 {
+	width:230px;
+	height:260px;
+	position:absolute;
+	background-color:#e6eaf3;
+	font-size:12px;
+	color:#999999;
+	border: 1px solid #777777;
+	z-index:9999;
+}
+.fc01 .jJ {
+	margin:0;
+	padding:8px 8px 8px 8px;
+	height:240px;
+}
+.fc01 .jJ img {
+	border:1px solid #FFFFFF;
+}
+.fc01 .sd {
+	font-size:14px;
+	color:#333333;
+	margin:0px 10px 0 10px;
+	padding:0;
+	font-weight:bold;
+	text-align:center;
+	line-height:18px;
+}
+.fc02 {
+	position:absolute;
+	width:170px;
+	height:180px;
+	background-color:#e6eaf3;
+	font-size:12px;
+	color:#999999;
+	border: 1px solid #777777;
+	z-index:9999;
+}
+.fc02 .jJ {
+	margin:0;
+	padding:8px 8px 8px 8px;
+	height:160px;
+}
+.fc02 .jJ img {
+	border:1px solid #FFFFFF;
+}
+.fc02 .sd {
+	font-size:14px;
+	color:#333333;
+	margin:0px 10px 0 10px;
+	padding:0;
+	font-weight:bold;
+	text-align:center;
+	line-height:18px;
+}
+.fc03 {
+	position:absolute;
+	width:200px;
+	height:80px;
+	background-color:#e6eaf3;
+	font-size:12px;
+	color:#999999;
+	border: 1px solid #777777;
+	z-index:9999;
+	padding-top:25px;
+}

@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/** 全局样式 **/
+.FrontPublic_counter01-d1_c1 {
+	width:90%;
+	margin:0 auto;
+	text-align:center;
+	height:100%;
+	overflow:hidden;
+	clear:both;
+}
+.FrontPublic_counter01-d1_c1 p {
+	margin:10px;
+	text-align:center;
+}
+.FrontPublic_counter01-d1_c1 p span {
+	line-height:25px;
+	display:inline-block;
+	color:#a9a9a9;
+}
+.FrontPublic_counter01-d1_c1 .num{
+	border:1px solid #bcbcbc;
+	width:70px;
+	height:20px;
+	line-height:20px;
+	color:#0066cc;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+.FrontPublic_counter01-d1_c1 .input {
+	border:1px solid #bcbcbc;
+	width:70px;
+	height:20px;
+	line-height:20px;
+	color:#0066cc;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}

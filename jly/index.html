@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>北京聚菱燕塑料有限公司</title>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<link rel="stylesheet" type="text/css" href="./styles/main.css"/>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/swfobject.js"></script>
+	<script src="./js/action.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+	<div class="topbar">
+		<div class="main">
+			010 8888 8888
+			<span>北京聚菱燕塑料有限公司</span>
+		</div>
+	</div>
+
+	<div class="header">
+		<div class="main">
+			<div class="logo">
+				<a href="###">
+					<img src="./images/logo.png">
+				</a>
+			</div>
+			<ul class="nav" id="J_nav">
+				<li>
+					<a href="###">关于我们</a>
+				</li>
+				<li>
+					<a href="###">产品服务</a>
+				</li>
+				<li>
+					<a href="###">我们的工厂</a>
+				</li>
+				<li>
+					<a href="###">技术中心</a>
+				</li>
+				<li>
+					<a href="###">营销网络</a>
+				</li>
+				<li>
+					<a href="###">新闻资讯</a>
+				</li>
+				<li>
+					<a href="###">招聘公示</a>
+				</li>
+				<li>
+					<a href="###">联系我们</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="banner" id="slides">
+		<ul class="banner-ul clearfix">
+			<li class="first">
+				<a href="###" style="background:url(./images/banner1.jpg) center no-repeat;"></a>
+			</li>
+			<li>
+				<a href="###" style="background:url(./images/banner1.jpg) center no-repeat;"></a>
+			</li>
+		</ul>
+		<div class="banner-ul-index" id="slides-index">
+			<span class="cur"></span>
+			<span></span>
+		</div>
+	</div>
+
+	<div class="player" id="J_player_w">
+		<div class="player-main" id="J_player"></div>
+		<div class="player-mask"></div>
+	</div>
+	<div class="mask" id="J_mask"></div>
+	<script>
+		var arr;
+		var reg = new RegExp("(^| )isPlay=([^;]*)(;|$)");
+		var isPlay = false;
+
+		if(arr = document.cookie.match(reg)) {
+			isPlay = arr[2];
+		}
+
+		function flashChecker() {
+		    var hasFlash = 0;
+		    var flashVersion = 0;
+		    if (document.all) {
+		      var swf = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+		      if (swf) {
+		        hasFlash = 1;
+		        VSwf = swf.GetVariable("$version");
+		        flashVersion = parseInt(VSwf.split(" ")[1].split(",")[0]);
+		      }
+		    } else {
+		      if (navigator.plugins && navigator.plugins.length > 0) {
+		        var swf = navigator.plugins["Shockwave Flash"];
+		        if (swf) {
+		          hasFlash = 1;
+		          var words = swf.description.split(" ");
+		          for (var i = 0; i < words.length; ++i) {
+		            if (isNaN(parseInt(words[i]))) continue;
+		            flashVersion = parseInt(words[i]);
+		          }
+		        }
+		      }
+		    }
+		    return { f: hasFlash, v: flashVersion };
+		}
+		var fls = flashChecker();
+
+		if (fls.f) {
+			/*$('#J_player_w').show();
+			$('#J_player').show();
+			$('#J_mask').show();*/
+			$('body').css({
+				height: $(window).height(),
+				overflow: 'hidden'
+			});
+
+			var so = new SWFObject("./data/player.swf","myCuPlayer","1280","560","9","#ffffff");
+			so.addParam("allowfullscreen","true");
+			so.addParam("allowscriptaccess","always");
+			so.addParam("wmode","opaque");
+			so.addParam("quality","high");
+			so.addParam("salign","lt");
+			//播放器配置文件-----------------------------
+			so.addVariable("JcScpFile","./js/CuSunV4set.xml"); //配置文件地址
+			//视频文件及略缩图--------------------------
+			so.addVariable("JcScpVideoPath","logo.flv");
+			so.addVariable("JcScpImg",""); //视频图片
+			so.addVariable("JcScpAutoPlay","yes"); //是否自动播放
+			so.addVariable("JcScpStarTime","0"); //起始时间点(暂未启用)
+			so.addVariable("JcScpEndTime","0"); //结束时间点
+			so.addVariable("JcScpCuePointInfo",""); //提示点信息
+			so.addVariable("JcScpCuePointTime",""); //提示点秒数值
+			//-前置Flash广告-----------------------------
+			so.addVariable("ShowJcScpAFront","no");
+			//-视频广告参数-----------------------------
+			so.addVariable("ShowJcScpAVideo","no");
+			//-暂停广告参数-----------------------------
+			so.addVariable("ShowJcScpAPause","no");
+			//-角标广告参数-----------------------------
+			so.addVariable("ShowJcScpACorner","no");
+			//-后置广告参数-----------------------------
+			so.addVariable("ShowJcScpAEnd","no");
+			so.addVariable("ShowJcScpAMoveText","no");
+			so.addVariable("JcScpSharetitle","");
+			so.write("J_player");
+
+			function getNext() {
+				$('#J_player_w').hide();
+				$('#J_mask').hide();
+
+				$('body').css({
+					height: 'auto',
+					overflow: ''
+				});
+
+				// document.cookie = "isPlay=1";
+			}
+		} else {
+			$('#J_player_w').hide();
+			$('#J_mask').hide();
+
+			$('body').css({
+				height: 'auto',
+				overflow: ''
+			});
+		}
+	</script>
+
+	<div class="main">
+		<h2 class="title title-cpfw J_fade">产品服务</h2>
+		<div class="cpfw clearfix J_fade">
+			<a href="###">
+				<img src="./images/1.jpg">
+				<div class="cpfw-title">
+					北京聚菱燕塑料有限公司
+					<span>北京聚菱燕塑料有限公司</span>
+				</div>
+			</a>
+			<a href="###" class="cpfw-r">
+				<img src="./images/2.jpg">
+				<div class="cpfw-title">
+					北京聚菱燕塑料有限公司
+					<span>北京聚菱燕塑料有限公司</span>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="gszz J_fade">
+		<h2 class="title title-cpfw">公司资质</h2>
+		<p>北京聚菱燕塑料有限公司，是生产和销售汽车用聚丙烯共混合金材料的合资企业。</p>
+		<p>1998 年由日本三菱化学株式会社、</p>
+		<p>日本丰田通商株式会社以及中国石化集团北京燕山石油化工有限公司共同出资建立。</p>
+		<p>日本三菱化学株式会社，</p>
+		<p>在日本国内汽车用聚丙烯共混合金材料领域以43%的市场占有率而闻名遐迩，</p>
+		<p>拥有汽车专用共混合金材料全球供给体制。</p>
+	</div>
+
+	<div class="main">
+		<div class="wlyx clearfix J_fade">
+			<a href="###">
+				<h2 class="title title-cpfw">我们的工厂</h2>
+				<div class="wlyx-img">
+					<img src="./images/3.jpg">
+					<div class="cpfw-title">
+						北京聚菱燕塑料有限公司
+						<span>北京聚菱燕塑料有限公司</span>
+					</div>
+				</div>
+			</a>
+			<a href="###" class="wlyx-r">
+				<h2 class="title title-cpfw">营销网络</h2>
+				<div class="wlyx-img">
+					<img src="./images/4.jpg">
+					<div class="cpfw-title">
+						北京聚菱燕塑料有限公司
+						<span>北京聚菱燕塑料有限公司</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<a href="###" class="shzr J_fade"></a>
+
+	<div class="main">
+		<h2 class="title title-link J_fade">友情链接</h2>
+		<div class="fri-link J_fade">
+			<a href="###">
+				<img src="./images/link1.jpg">
+			</a>
+			<a href="###">
+				<img src="./images/link2.jpg">
+			</a>
+			<a href="###">
+				<img src="./images/link3.jpg">
+			</a>
+			<a href="###">
+				<img src="./images/link4.jpg">
+			</a>
+		</div>
+	</div>
+</div>
+
+<div style="height: 361px"></div>
+
+<div class="footer-wrap">
+	<div class="footer">
+		<div class="main">
+			电话
+			<p>010-8866 8877</p>
+			邮箱
+			<p><a href="mailto:8866 8877@julingyan.com">8866 8877@julingyan.com</a></p>
+			地址
+			<p>北京市朝阳区——————</p>
+			<div class="footer-ewm">
+				<img src="./images/code1.jpg">
+				<img src="./images/code2.jpg">
+			</div>
+		</div>
+	</div>
+	<div class="footer-nav">
+		<div class="main">
+			<a href="###" class="first">产品服务</a>
+			|
+			<a href="###">联系我们</a>
+			|
+			<a href="###">网站地图</a>
+			|
+			<a href="###">信息查询</a>
+			<div class="copyright"><span>北京聚菱燕塑料有限公司</span>   京ICP备06005602号-1</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	!(function () {
+		$('#J_nav li').mouseenter(function () {
+			$(this).addClass('cur').siblings().stop().animate({
+				opacity: 0.6
+			}, 500)
+		}).mouseleave(function () {
+			$(this).removeClass('cur').siblings().stop().animate({
+				opacity: 1
+			}, 500)
+		});
+
+		var scrollTop = $(window).scrollTop();
+		var winHeight = $(window).height();
+		$(window).scroll(function () {
+			scrollTop = $(window).scrollTop();
+
+			fade();
+		});
+
+		function fade() {
+			$('.J_fade').each(function () {
+				var fade = $(this).attr('data-fade');
+
+				if (fade !== 'fade') {
+					var top = $(this).offset().top;
+					var height = $(this).height();
+
+					if (
+						top < scrollTop + winHeight
+						&& scrollTop + winHeight > top + height
+					) {
+						$(this).animate({
+							opacity: 1
+						}, 500);
+						$(this).attr('data-fade', 'fade');
+					}
+				}
+			});
+		}
+		fade();
+
+		var obj = $('#slides li');
+
+		$('#slides').css({
+			width: $(window).width()
+		});
+		$('#slides li').css({
+			width: $(window).width()
+		});
+
+		$(window).resize(function () {
+			$('#slides').css({
+				width: $(window).width()
+			});
+			$('#slides li').css({
+				width: $(window).width()
+			});
+
+			winHeight = $(window).height();
+		});
+
+		var index = 0;
+		var timer = '';
+		function ani() {
+			timer = setInterval(function () {
+				var tmpIndex = index;
+				index++;
+				if (index >= $('#slides li').length) {
+					index = 0;
+				}
+				$('#slides li').eq(tmpIndex).animate({
+					opacity: 0
+				}, 800);
+				$('#slides li').eq(index).animate({
+					opacity: 1
+				}, 800);
+
+				$('#slides-index span').eq(index).addClass('cur').siblings().removeClass('cur');
+			}, 5000);
+		}
+		ani();
+
+		$('#slides-index span').mouseenter(function () {
+			$(this).addClass('cur').siblings().removeClass('cur');
+
+			var tmpIndex = index;
+			index = $('#slides-index span').index(this);
+
+			$('#slides li').eq(tmpIndex).animate({
+				opacity: 0
+			}, 800);
+			$('#slides li').eq(index).animate({
+				opacity: 1
+			}, 800);
+		})
+
+		$('#slides').mouseenter(function () {
+			clearInterval(timer);
+		}).mouseleave(function () {
+			ani();
+		});
+
+	})();
+</script>
+
+</body>
+</html>

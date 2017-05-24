@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*************************************
+* 文件名称：border.css
+* 作   者：界面设计制作部
+* 创建日期：2009-07-03
+* 最后修改：name/ 第X行 / yyyy-mm-dd
+* 文件版本：UI CSS Frameworks Beta
+* 内容概要:装饰器样式
+*************************************/
+/*装饰器共用设置*/
+.border_00{text-align:left;padding:0;position:relative; width:100%;}
+/*顶部*/   
+.border_00 .border_00-topr {
+	height:27px;
+	line-height:27px;
+}
+.border_00 .border_00-topl {
+	height:27px;
+	line-height:27px;
+}
+/*中部*/
+.border_00 .border_00-mid {
+	border-top:none;
+	width:100%;
+	
+}
+.border_00 .borderContent {
+	padding:10px;
+}
+/*顶部*/   
+
+/*装饰器的标题*/  
+.border_00 .comptitle_00 {
+	height:25px;
+	position: absolute;
+	left: 7px;
+	top: 7px;
+	width:98%;
+}
+.border_00 .comptitle_00 strong{
+	font-weight:bold;
+	float:left;
+	margin-left:5px;
+	font-style:normal;
+	text-decoration:none;
+	
+	width:45%;
+	word-break:break-all;
+	text-align:left;
+}
+.border_00 .comptitle_00 .titlestyle_00{color:#000;font-weight:bold;font-style:normal;text-decoration:none;}
+.border_00 .comptitle_00 strong img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.border_00 .comptitle_00 em {
+	font-style: normal;
+	float: right;
+	font-weight: normal;
+	margin-right: 10px;
+}
+/* 扩展链接 */
+.border_00 .comptitle_00 em span.extendLink{
+	text-align: right;
+	font-size:12px;
+	margin-right: 8px;
+}
+.border_00 .comptitle_00 em span.moreLink{
+	font-style: normal;
+	font-weight: normal;
+}
+/* 更多 */
+.border_00 .compmore_00 {
+	clear: both;
+	text-align: right;
+	font-size:12px;
+	margin-right: 10px;/*text-align: left;*/
+}
+/* 扩展链接 */
+.border_00 .compmore_00 .extendLink{
+	text-align: right;
+	font-size:12px;
+	margin-right: 10px;
+}
+.border_00 .compmore_00 .moreLink{
+	font-style: normal;
+	font-weight: normal;
+}
+

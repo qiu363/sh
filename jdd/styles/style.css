@@ -1,0 +1,329 @@
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    position:relative;
+    width:100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+    color:#333;
+    font-size:14px;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust:none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+p{
+    margin:0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+input, img{
+    vertical-align:middle;
+}
+
+a, img {
+    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+*{
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+
+.main {
+    position: relative;
+    min-width: 320px;
+    max-width: 720px;
+    height: 11000px;
+    margin: 0 auto;
+    background: url(../images/p3.jpg) repeat-y;
+    background-size: 100% auto;
+    -webkit-transition: all .8s ease-in;
+            transition: all .8s ease-in;
+    -webkit-transform: translate3d(0, -10000px, 0);
+            transform: translate3d(0, -10000px, 0);
+}
+.egg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 40px;
+    height: 54px;
+    background: url(../images/bomb.png) no-repeat;
+    background-size: 40px 54px;
+}
+.bowl {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 20;
+    width: 100px;
+    height: 57px;
+    margin-left: -50px;
+    background: url(../images/bowl2.png) no-repeat;
+    background-size: 100px 57px;
+}
+.bowl-left {
+    left: 0;
+    margin-left: 0;
+}
+.bowl-right {
+    left: auto;
+    right: 0;
+    margin-left: 0;
+}
+.start {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 5;
+    width: 270px;
+    height: 27px;
+    margin-left: -135px;
+}
+.start i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 69px;
+    height: 27px;
+    background: url(../images/btn1.png) no-repeat;
+    background-size: 69px 27px;
+    -webkit-animation: game_arrow .4s infinite ease-in;
+            animation: game_arrow .4s infinite ease-in;
+}
+.start i:nth-child(2) {
+    left: auto;
+    right: 0;
+    background-image: url(../images/btn2.png);
+    -webkit-animation: game_arrow_r .4s infinite ease-in;
+            animation: game_arrow_r .4s infinite ease-in;
+}
+@keyframes game_arrow {
+    0% {
+        transform: translate3d(0, 0, 0)
+    }
+    25% {
+        transform: translate3d(-2px, 0, 0)
+    }
+    50% {
+        transform: translate3d(0, 0, 0)
+    }
+    75% {
+        transform: translate3d(2px, 0, 0)
+    }
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}
+@-webkit-keyframes game_arrow {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+    25% {
+        -webkit-transform: translate3d(-2px, 0, 0)
+    }
+    50% {
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+    75% {
+        -webkit-transform: translate3d(2px, 0, 0)
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+}
+@keyframes game_arrow_r {
+    0% {
+        transform: translate3d(0, 0, 0)
+    }
+    25% {
+        transform: translate3d(2px, 0, 0)
+    }
+    50% {
+        transform: translate3d(0, 0, 0)
+    }
+    75% {
+        transform: translate3d(-2px, 0, 0)
+    }
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}
+@-webkit-keyframes game_arrow_r {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+    25% {
+        -webkit-transform: translate3d(2px, 0, 0)
+    }
+    50% {
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+    75% {
+        -webkit-transform: translate3d(-2px, 0, 0)
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+}
+
+.hp {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    z-index: 100;
+}
+.hp i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/h_f.png) no-repeat;
+    background-size: 30px 30px;
+}
+.hp .h-n {
+    background-image: url(../images/h.png);
+}
+
+.score {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.music {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 102;
+    width: 22px;
+    height: 22px;
+    background: url(../images/music.png) no-repeat;
+    background-size: 22px;
+}
+.music-c {
+    background-image: url(../images/music_c.png);
+}
+
+.gameover-w {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+.gameover-w-h {
+    display: block;
+}
+.gameover {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    width: 300px;
+    margin-left: -150px;
+    text-align: center;
+}
+.score-go {
+    width: 300px;
+    height: 190px;
+    background: url(../images/end_bg.png) no-repeat;
+    background-size: 300px 190px;
+    opacity: 0;
+    transform: translate3d(0, -200px, 0);
+}
+.score-go p {
+    padding-top: 75px;
+    font-size: 30px;
+    color: #555;
+    text-align: center;
+}
+.gameover-w-h .score-go {
+    -webkit-animation: game_over .6s;
+            animation: game_over .6s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+@keyframes game_over {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -200px, 0)
+    }
+    25% {
+        opacity: 0.4;
+        transform: translate3d(0, -120px, 0)
+    }
+    50% {
+        opacity: 0.8;
+        transform: translate3d(0, -40px, 0)
+    }
+    75% {
+        opacity: 0.9;
+        transform: translate3d(0, 10px, 0)
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+@-webkit-keyframes game_over {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -200px, 0)
+    }
+    25% {
+        opacity: 0.4;
+        -webkit-transform: translate3d(0, -120px, 0)
+    }
+    50% {
+        opacity: 0.8;
+        -webkit-transform: translate3d(0, -40px, 0)
+    }
+    75% {
+        opacity: 0.9;
+        -webkit-transform: translate3d(0, 10px, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+}
+.bm {
+    display: inline-block;
+    width: 132px;
+    height: 30px;
+    margin-top: 20px;
+    background: url(../images/btn.png) no-repeat;
+    background-size: 132px 30px;
+}
+
+.hide{
+	display: none;
+}

@@ -1,0 +1,120 @@
+@charset "utf-8";
+/*************************************
+
+* 文件名称：border.css
+
+* 作   者：界面设计制作部
+
+* 创建日期：2009-4-1
+
+* 最后修改：name/ 第X行 / yyyy-mm-dd
+
+* 文件版本：UI CSS Frameworks Beta
+
+* 内容概要:装饰器样式
+
+*************************************/
+
+/** 全局样式 **/
+
+.border_45{padding:0;position:relative;text-align:left;width:100%;}
+/** 头部 **/
+
+.border_45 .border_45-topr {
+	height:25px;
+	line-height:25px;
+	background-image: url(/borders/border_45/images/border-topr.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.border_45 .border_45-topl {
+	background:url(/borders/border_45/images/border-topl.gif) left top no-repeat;
+	height:25px;
+	line-height:25px;
+}
+/** 中部 **/
+
+.border_45 .border_45-midr {
+	background:url(/borders/border_45/images/border-midr.gif) right top repeat-y;
+}
+.border_45 .border_45-midl {
+	background:url(/borders/border_45/images/border-midl.gif) left top repeat-y;
+	width:100%;
+	
+}
+.border_45 .borderContent {
+	padding:10px;
+}
+/** 底部 **/
+
+.border_45 .border_45-footerr {
+	background:url(/borders/border_45/images/border-footerr.gif) right bottom no-repeat;
+	height:9px;
+	font-size:0;
+}
+.border_45 .border_45-footerl {
+	background:url(/borders/border_45/images/border-footerl.gif) left bottom no-repeat;
+	height:9px;
+	font-size:0;
+}
+/*装饰器的标题*/  
+.border_45 .comptitle_45 {
+	height:25px;
+	position: absolute;
+	left: 7px;
+	top: 3px;
+	width:98%;
+}
+.border_45 .comptitle_45 strong{
+	font-weight:bold;
+	float:left;
+	margin-left:5px;
+	font-style:normal;
+	text-decoration:none;
+	width:45%;
+	word-break:break-all;
+	text-align:left;
+}
+.border_45 .comptitle_45 .titlestyle_45{color:#000;font-style:normal;font-weight:bold;text-decoration:none;}
+.border_45 .comptitle_45 strong img {
+	vertical-align: middle;
+	margin-right: 5px;
+	width:20px;
+	height:20px;
+}
+.border_45 .comptitle_45 em {
+	font-style: normal;
+	float: right;
+	font-weight: normal;
+	margin-right: 10px;
+}
+/* 扩展链接 */
+.border_45 .comptitle_45 em span.extendLink{
+	text-align: right;
+	font-size:12px;
+	margin-right: 8px;
+}
+.border_45 .comptitle_45 em span.moreLink{
+	font-style: normal;
+	font-weight: normal;
+}
+/* 更多 */
+.border_45 .compmore_45 {
+	clear: both;
+	text-align: right;
+	font-size:12px;
+	margin-right: 10px;/*text-align: left;*/
+}
+/* 扩展链接 */
+.border_45 .compmore_45 .extendLink{
+	text-align: right;
+	font-size:12px;
+	margin-right: 10px;
+}
+.border_45 .compmore_45 .moreLink{
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
