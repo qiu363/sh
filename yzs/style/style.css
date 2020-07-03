@@ -1,0 +1,96 @@
+/* -------------------- Reset Start --------------------*/
+body{font:12px/1.5 \5b8b\4f53,Microsoft Yahei,tahoma,arial;color:#666;background:#ededed}
+button,input,select,textarea{font:12px/1.5 Microsoft Yahei,tahoma,arial,\5b8b\4f53}
+input,select,textarea{font-size:100%}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,button,input,textarea,blockquote,th,td{margin:0;padding:0}
+img,fieldset,abbr,acronym{border:0}
+ol,ul{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}
+table{border-collapse:collapse;border-spacing:0}
+th{text-align:inherit}
+br{height:0;overflow:hidden;line-height:0}
+a{text-decoration:none;outline:none}
+a:hover{text-decoration:none}
+input,textarea{outline:none}
+
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+.clearfix{*zoom:1}
+
+.rom-down{width:395px;height:367px;background:#daecda}
+.rom-d-title{position:relative;height:36px;line-height:34px;background:#53a040;color:#fff;}
+.rom-d-title a{margin:0 18px 0 10px;color:#fff;}
+.rom-d-search{position:absolute;top:1px;right:10px;}
+.rom-d-s-txt{width:90px;height:16px;line-height:16px;padding:2px;border:0 none;}
+.rom-d-s-btn{position:relative;top:-1px;border:0 none;background:#53a040;color:#fff;}
+.rom-d-content{height:298px;margin:20px 8px 0 0;overflow:hidden;}
+.rom-d-list{margin:0 0 0 12px;color:#687d78}
+.rom-d-list li{margin:0 0 20px 0;overflow:hidden;}
+.rom-d-lift{position:relative;float:left;width:48px;}
+.rom-d-right{float:left;width:290px;display:inline-block;margin:-3px 0 0 15px;}
+.rom-d-right h4{height:18px;overflow:hidden;font-weight:700;font-size:14px}
+.rom-d-right h4 a{color:#000;}
+.rom-d-info{font-size:10px;-webkit-text-size-adjust:none}
+.rom-d-info span{margin:0 8px 0 0}
+.rom-d-info .star{top:1px;}
+.rom-d-sj{color:#5c5c5c}
+.rom-d-desc{height:36px;padding:2px 0;overflow:hidden;}
+.install-rom{display:inline-block;width:48px;height:16px;line-height:16px;color:#5c5c5c;font-size:9px;text-align:center;background:url(../images/btn.gif) no-repeat}
+
+.rom-list{width:630px;height:402px;background:#daecda}
+.rom-l-title{position:relative;height:62px;padding:8px 140px 6px 15px;background:#53a040;overflow:hidden;}
+.rom-l-title a{display:inline-block;margin:0 12px 2px 0;color:#fff;}
+.rom-list .rom-d-search{top:14px;*top:10px;}
+.rom-list .rom-d-s-txt{width:115px;}
+.rom-l-t{padding:10px 0 0 35px;background:url(../images/title_icon.gif) 9px 14px no-repeat;font-size:18px;color:#000;}
+.rom-list-u{margin:10px 0 0 20px;}
+.rom-list-u li{float:left;width:68px;margin:0 6px 14px 0;display:inline;text-align:center;}
+.rom-list-u li a{color:#000;}
+.rom-list-u li p{height:16px;overflow:hidden;}
+
+.rom-desc{width:630px;height:402px;background:#daecda;border:solid 1px #c5dcc4}
+.rom-desc-left{float:left;height:380px;width:426px;margin:0 4px 0 0;overflow:hidden;}
+.rom-desc-right{float:left;width:190px;margin:8px 0 0 0;}
+.rom-desc-r-t{position:relative;width:183px;height:24px;line-height:24px;text-align:center;color:#fff;font-size:13px;background:url(../images/bgSel.png) no-repeat}
+.rom-desc-r-t a{position:absolute;top:0px;right:10px;font-size:10px;color:#fff;text-decoration:underline;-webkit-text-size-adjust:none}
+.rom-desc-tj{height:330px;margin:20px 0 0 0;overflow:hidden;}
+.rom-desc-tjlist{}
+.rom-desc-tjlist li{position:relative;margin:0 0 15px 0;overflow:hidden;}
+.rom-desc-tjlist li .install-rom{position:absolute;top:10px;right:8px;width:38px;height:17px;background:url(../images/btn1.gif) no-repeat;font-size:10px;-webkit-text-size-adjust:none}
+.rom-desc-tjlist li .install-updata{background:url(../images/btn2.gif) no-repeat;}
+.rom-d-t-icon{float:left;width:38px;margin:0 8px 0 0;}
+.rom-d-t-info{float:left;width:70px;color:#9ea39e;}
+.rom-d-t-info a{color:#444;}
+.rom-desc-return{padding:3px 0;border-bottom:solid 1px #fff}
+.rom-desc-return a{display:inline-block;background:url(../images/return.gif) 2px 3px no-repeat;padding:0 0 0 20px;color:#404040;}
+.rom-desc-icon{padding:12px 0;border-bottom:solid 1px #fff;}
+.rom-desc-icon-l{float:left;width:75px;text-align:center;}
+.rom-desc-icon-l a{display:block;width:75px;height:19px;background:url(../images/install_bg.gif) no-repeat;color:#fff}
+.rom-desc-icon-r{float:left;margin:0 0 0 14px;display:inline;}
+.rom-desc-i-title{font-size:14px;color:#000}
+.rom-desc-i-p{padding:8px 0}
+.rom-desc-app-info{margin:10px 0 0 10px;}
+.rom-desc-app-info span{display:inline-block;width:120px;margin:0 0 5px 0;}
+.rom-d-a-d-zk{padding:0 10px 0 0;text-align:right;}
+.rom-d-a-d-zk a{color:#5abdd3;}
+.rom-desc-app-desc{height:40px;overflow:hidden;padding:10px 0 0 10px;}
+.rom-desc-shotcut{margin:0 0 0 10px;}
+.rom-desc-shotcut img{margin:0 10px 10px 0}
+.rom-desc-tab{position:relative;margin:20px 0 0 10px}
+.rom-desc-tab li{float:left;display:inline;width:67px;height:21px;line-height:21px;margin:0 10px 0 0;color:#707070;text-align:center;}
+.rom-desc-tab li.rom-desc-t{background:url(../images/tabbg.gif) no-repeat;color:#fff;}
+.rom-desc-tp{position:absolute;top:3px;right:10px}
+.rom-desc-tp .install-rom{width:38px;height:17px;background:url(../images/btn1.gif);}
+.rom-desc-rzpic img{margin:0 10px 0 0}
+
+.star{position:relative;display:inline-block;width:60px;height:10px;background:url(../images/start.gif) no-repeat;font-size:0;line-height:0}
+.star i{position:absolute;top:0;left:0;height:10px;background:url(../images/start_hover.gif) no-repeat}
+
+.page{text-align:center;-webkit-text-size-adjust:none;font-size:10px}
+.page a{display:inline-block;min-width:12px;border:solid 1px #639852;margin:0 2px;padding:2px 4px;color:#639852;}
+.page span{display:inline-block;min-width:12px;padding:2px;}
+
+
+
+
+
+

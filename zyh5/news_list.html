@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>中云</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+<body>
+
+<header class="header">
+    <img src="./images/header_bg.jpg" class="header-bg">
+    <nav class="nav">
+        <a href="###"><span>首页</span></a>
+        <a href="###" class="cur"><span>项目介绍</span></a>
+        <a href="###"><span>公司介绍</span></a>
+        <a href="###"><span>联系我们</span></a>
+        <a href="###"><span>加入我们</span></a>
+    </nav>
+</header>
+
+<div class="silder" id="J_silder">
+    <div class="silder-main">
+        <a href="###">
+            <img src="./images/banner.jpg">
+        </a>
+        <a href="###">
+            <img src="./images/banner.jpg">
+        </a>
+    </div>
+    <div class="silder-index" id="J_silder_index">
+        <span class="cur"></span>
+        <span></span>
+    </div>
+</div>
+
+<div class="title1">
+    <h2>公司新闻</h2>
+</div>
+
+<div class="news-list">
+  <a href="###" class="news-list-l">
+    <div class="news-list-title">500余部优质IP云交易即将亮相文博会</div>
+    <div class="news-list-date">
+      <span>2017-07-09 10:00:00</span>
+    </div>
+  </a>
+  <a href="###" class="news-list-l">
+    <div class="news-list-title">500余部优质IP云交易即将亮相文博会</div>
+    <div class="news-list-date">
+      <span>2017-07-09 10:00:00</span>
+    </div>
+  </a>
+  <a href="###" class="news-list-l">
+    <div class="news-list-title">500余部优质IP云交易即将亮相文博会</div>
+    <div class="news-list-date">
+      <span>2017-07-09 10:00:00</span>
+    </div>
+  </a>
+  <a href="###" class="news-list-l">
+    <div class="news-list-title">500余部优质IP云交易即将亮相文博会</div>
+    <div class="news-list-date">
+      <span>2017-07-09 10:00:00</span>
+    </div>
+  </a>
+  <a href="###" class="news-list-l">
+    <div class="news-list-title">500余部优质IP云交易即将亮相文博会500余部优质IP云交易即将亮相文博会</div>
+    <div class="news-list-date">
+      <span>2017-07-09 10:00:00</span>
+    </div>
+  </a>
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="footer-l">
+            <p>指导单位</p>
+            <p>中宣部</p>
+            <p>国家新闻出版广电总局</p>
+            <p>贵州省人民政府</p>
+        </div>
+        <div class="footer-r">
+            <img src="./images/code.gif">
+            <p>官方微信</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="copyright-inner">
+            京ICP备11017824号-4
+            <span>北京市公安局朝阳分局备案编号:110105000501</span>
+            Copyright &copy; 2017 CDO-CHINA
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript" src="./js/swipe.js"></script>
+<script type="text/javascript">
+    var swipe = Swipe(document.getElementById("J_silder"), {
+    startSlide: 0,
+    speed: 500,
+    auto: 4e3,
+    callback: function (t) {
+        2 === $("#J_silder_index span").length && t>=2 && (t-=2), $("#J_silder_index span").removeClass("cur").eq(t).addClass("cur")
+    }
+});
+</script>
+
+</body>
+</html>

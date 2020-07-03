@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>中云</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+<body>
+
+<header class="header">
+    <img src="./images/header_bg.jpg" class="header-bg">
+    <nav class="nav">
+        <a href="###"><span>首页</span></a>
+        <a href="###"><span>项目介绍</span></a>
+        <a href="###" class="cur"><span>公司介绍</span></a>
+        <a href="###"><span>联系我们</span></a>
+        <a href="###"><span>加入我们</span></a>
+    </nav>
+</header>
+
+<div class="silder" id="J_silder">
+    <div class="silder-main">
+        <a href="###">
+            <img src="./images/banner.jpg">
+        </a>
+        <a href="###">
+            <img src="./images/banner.jpg">
+        </a>
+    </div>
+    <div class="silder-index" id="J_silder_index">
+        <span class="cur"></span>
+        <span></span>
+    </div>
+</div>
+
+<div class="title1">
+    <h2>公司介绍</h2>
+</div>
+
+<div class="content">
+    <p>中云文化大数据科技有限公司于2015年2月16日正式注册成立，是专门针对“国家数字音像传播服务平台”暨“CCDI版权云”项目的建设、开发和运营主体。</p>
+    <p>公司是按照现代企业制度，分别由国有资本、民营资本组建的跨行业、跨区域、跨所有制的混合所有制企业，注册资本金5.2亿元。</p>
+
+    <div class="content-t">宗旨和目标</div>
+    <p>公司旨在通过建设“CCDI版权云”项目，解决目前国内网络文化领域存在盗版问题突出、版权保护压力巨大，盈利模式单一、高投入低产出，体制机制束缚、创新能力不足，市场竞争激烈、行业秩序混乱等诸多问题，达到：</p>
+    <ul class="content-l">
+        <li>1、版权传播方式的改变；</li>
+        <li>2、健康生态的建立；</li>
+        <li>3、对国家文化创新、网络安全的支撑；</li>
+        <li>4、对国家文化产业产值提升。</li>
+    </ul>
+    <img class="content-img" src="./images/tmp/test3.jpg">
+    <img class="content-img" src="./images/tmp/test3.jpg">
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="footer-l">
+            <p>指导单位</p>
+            <p>中宣部</p>
+            <p>国家新闻出版广电总局</p>
+            <p>贵州省人民政府</p>
+        </div>
+        <div class="footer-r">
+            <img src="./images/code.gif">
+            <p>官方微信</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="copyright-inner">
+            京ICP备11017824号-4
+            <span>北京市公安局朝阳分局备案编号:110105000501</span>
+            Copyright &copy; 2017 CDO-CHINA
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript" src="./js/swipe.js"></script>
+<script type="text/javascript">
+    var swipe = Swipe(document.getElementById("J_silder"), {
+    startSlide: 0,
+    speed: 500,
+    auto: 4e3,
+    callback: function (t) {
+        2 === $("#J_silder_index span").length && t>=2 && (t-=2), $("#J_silder_index span").removeClass("cur").eq(t).addClass("cur")
+    }
+});
+</script>
+
+</body>
+</html>
