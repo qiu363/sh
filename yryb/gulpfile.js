@@ -17,7 +17,7 @@ var gulp = require('gulp'),
     revReplace = require("gulp-rev-replace");
 
 var config = {
-  cdn: '/static' // CDN地址
+  cdn: './static' // CDN地址
 };
 
 gulp.task('cleanCss', function () {
