@@ -501,6 +501,44 @@ h6 {
   padding-top: 10px;
   font-size: 14px;
 }
+.i-news-arrow-l {
+  position: absolute;
+  left: 40px;
+  top: 220px;
+  width: 40px;
+  height: 40px;
+  background: url(../img/index/icon_arrow_l.png) center no-repeat;
+  cursor: pointer;
+}
+.i-news-arrow-r {
+  position: absolute;
+  right: 40px;
+  top: 220px;
+  width: 40px;
+  height: 40px;
+  background: url(../img/index/icon_arrow_r.png) center no-repeat;
+  cursor: pointer;
+}
+.i-banner-arrow-l {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -650px;
+  background: url(../img/index/icon_arrow_b_l.png) center no-repeat;
+}
+.i-banner-arrow-r {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  margin: -50px -650px 0 0;
+  background: url(../img/index/icon_arrow_b_r.png) center no-repeat;
+}
 
 /* 联系我们 */
 .contact-cont {
@@ -1162,6 +1200,271 @@ h6 {
 .solut-hy-list a:hover .solut-dz-l-title:after,
 .solut-hy-list a:hover .solut-dz-l-title:before {
   background: #fff;
+}
+/* 移动会议 */
+.solut-meeting-w {
+  width: 1400px;
+  margin: 0 auto 100px;
+}
+.solut-meeting {
+  margin-top: 80px;
+}
+.solut-meeting img {
+  float: right;
+}
+.solut-meeting-cont {
+  float: left;
+  width: 530px;
+}
+.solut-meeting-cont h4 {
+  margin-bottom: 35px;
+  font-size: 48px;
+  color: #1e50ae;
+}
+.solut-meeting-c {
+  line-height: 34px;
+  font-size: 22px;
+  color: #666;
+}
+.solut-meeting-r img {
+  float: left;
+}
+.solut-meeting-r .solut-meeting-cont {
+  float: right;
+}
+/* 移动执法 */
+.solut-meeting-enfor {
+  margin: 80px 60px 0;
+}
+.solut-enfor-info {
+  margin: 0 90px;
+  padding-top: 100px;
+}
+.solut-enfor-info li {
+  height: 380px;
+  margin: 0 50px;
+}
+.solut-enfor-info .solut-soft-l-t {
+  display: flex;
+  line-height: 46px;
+  align-items: center;
+  justify-content: center;
+}
+.solut-enfor-info .solut-soft-l-c p {
+  line-height: 50px;
+  padding: 0;
+  margin-bottom: 0;
+}
+.solut-enfor-info .solut-soft-l-c p::before {
+  display: none;
+}
+.solut-enfor-unit {
+  padding: 0 180px;
+  font-size: 24px;
+  color: #666;
+}
+.solut-enfor-unit a {
+  display: inline-block;
+  margin: 0 5px 10px;
+  color: #666;
+}
+.solut-enfor-case {
+  padding: 120px 0 40px 60px;
+}
+.solut-enfor-case li {
+  height: 560px;
+  background: #efefef;
+}
+.solut-enfor-c-t {
+  margin: 10px -20px;
+  font-size: 36px;
+  text-align: center;
+}
+.solut-enfor-case .solut-soft-l-t {
+  left: 54px;
+  top: -85px;
+  width: 190px;
+  height: 180px;
+  background: transparent url(../img/solution/hy/icon_enfor_1.png) no-repeat;
+}
+.solut-enfor-case li:nth-child(2) .solut-soft-l-t {
+  background-image: url(../img/solution/hy/icon_enfor_2.png);
+}
+.solut-enfor-case li:nth-child(3) .solut-soft-l-t {
+  background-image: url(../img/solution/hy/icon_enfor_3.png);
+}
+.solut-enfor-case li:nth-child(4) .solut-soft-l-t {
+  background-image: url(../img/solution/hy/icon_enfor_4.png);
+}
+.solut-enfor-case .solut-soft-l-c p {
+  line-height: 50px;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+.solut-enfor-case .solut-soft-l-c p::before {
+  display: none;
+}
+/* 移动政务 */
+.solut-gov-cont {
+  padding: 0 40px 30px;
+}
+.solut-gov-cont p {
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+.solut-gov-info {
+  margin: 0 0 0 64px;
+  padding-bottom: 40px;
+}
+.solut-gov-info li {
+  margin: 0 10px;
+}
+.solut-gov-info li:nth-child(2n-1) {
+  background: #efefef;
+}
+.solut-meeting-gov-case {
+  padding-bottom: 30px;
+}
+.solut-meeting-gov-case .solut-meeting-cont {
+  width: 480px;
+  margin-left: 100px;
+}
+/* 移动学习 */
+.solut-study-cont {
+  width: 1444px;
+  margin: 120px auto 40px;
+}
+.solut-study-cont-l {
+  float: left;
+  width: 720px;
+  height: 633px;
+  background: url(../img/solution/hy/study_1.jpg) no-repeat;
+  color: #fff;
+}
+.solut-study-cont-l h4 {
+  padding: 50px 0 30px 80px;
+  font-size: 48px;
+}
+.solut-study-cont-l-c {
+  line-height: 40px;
+  padding: 0 76px 0 80px;
+  font-size: 22px;
+}
+.solut-study-cont img {
+  float: right;
+  width: 724px;
+}
+.solut-study-r {
+  width: 1440px;
+  margin: 20px auto 80px;
+}
+.solut-study-r .solut-meeting-cont {
+  width: 530px;
+}
+.solut-study-case {
+  position: relative;
+  width: 1440px;
+  height: 570px;
+  margin: 50px auto 80px;
+  background: #e8e8e8;
+}
+.solut-study-case img {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+.solut-study-case-cont {
+  padding: 100px 0 0 90px;
+  font-size: 24px;
+  color: #666;
+}
+.solut-study-case-cont p {
+  margin-bottom: 20px;
+}
+.solut-study-case-cont span {
+  color: #ed3b08;
+}
+/* 移动医疗 */
+.solut-medic {
+  margin-bottom: 50px;
+}
+.solut-medic .solut-meeting-cont {
+  width: 580px;
+}
+.solut-medic .solut-meeting-c {
+  line-height: 40px;
+  font-size: 18px;
+}
+.solut-study-cont {
+  width: 1440px;
+  margin: 0 auto;
+}
+.solut-study-cont li {
+  float: left;
+  width: 478px;
+  height: 380px;
+  border-right: solid 1px #fff;
+  background: #1e50ae;
+}
+.solut-study-cont-t {
+  padding: 46px 0 0 40px;
+  color: #fff;
+  font-size: 24px;
+}
+.solut-study-cont-t p {
+  color: #5a88df;
+}
+.solut-study-cont-c {
+  height: 120px;
+  line-height: 30px;
+  padding: 26px 120px 0 40px;
+  color: #fff;
+  font-size: 18px;
+  overflow: hidden;
+}
+.solut-study-cont-tag {
+  margin-top: 20px;
+  padding: 10px 0 0 40px;
+}
+.solut-study-cont-tag span {
+  display: inline-block;
+  width: 170px;
+  height: 42px;
+  line-height: 42px;
+  background: #a5b9df;
+  color: #1e50ae;
+  font-size: 24px;
+  text-align: center;
+}
+.solut-study-list {
+  width: 1400px;
+  margin: 0 auto 70px;
+}
+.solut-study-list li {
+  float: left;
+  width: 260px;
+  margin: 0 40px;
+  text-align: center;
+}
+.solut-study-l-t {
+  padding: 25px 0 0;
+  font-size: 30px;
+  color: #1e50ae;
+}
+.solut-study-l-t p {
+  margin: 5px 0 0;
+  font-size: 26px;
+  color: #999;
+}
+.solut-study-l-cont {
+  line-height: 28px;
+  padding: 20px 0 0;
+  font-size: 18px;
+  color: #666;
+}
+.solut-study-l-cont p {
+  padding-bottom: 10px;
 }
 
 .mask {

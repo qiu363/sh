@@ -63,6 +63,9 @@
         </a>
       </div>
     </div>
+
+    <span class="i-banner-arrow-l" id="J_pre_banner"></span>
+    <span class="i-banner-arrow-r" id="J_next_banner"></span>
   </div>
 
   <div class="i-safe-prod">
@@ -218,6 +221,9 @@
         </div>
       </div>
 
+      <span class="i-news-arrow-l" id="J_pre_news"></span>
+      <span class="i-news-arrow-r" id="J_next_news"></span>
+
       <div class="i-news-list">
         <a href="###">
           <div class="i-news-l-time">
@@ -291,10 +297,23 @@
       loop: true,
       autoplay: 3000
     })
+    $('#J_pre_banner').click(function () {
+      bannerSwiper.slidePrev()
+    })
+    $('#J_next_banner').click(function () {
+      bannerSwiper.slideNext()
+    })
+
     var newsSwiper = new Swiper('#J_news_swiper', {
       direction: 'horizontal',
       loop: true,
       autoplay: 3000
+    })
+    $('#J_pre_news').click(function () {
+      newsSwiper.slidePrev()
+    })
+    $('#J_next_news').click(function () {
+      newsSwiper.slideNext()
     })
   </script>
 </body>
