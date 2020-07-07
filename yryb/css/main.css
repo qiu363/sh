@@ -836,6 +836,31 @@ h6 {
   font-size: 14px;
 }
 
+/* 解决方案 */
+.solut-i-gray {
+  background: #eee;
+}
+.solut-w1 {
+  width: 1440px;
+  margin: 90px auto;
+}
+.solut-banner {
+  min-width: 1440px;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.solut-banner img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.solut-banner-w {
+  margin: 20px auto 50px;
+}
+.solut-banner-bot {
+  margin-bottom: 80px;
+}
 /* 解决方案 定制 */
 .banner-sol-dz {
   border-bottom: solid 5px #adadad;
@@ -1465,6 +1490,162 @@ h6 {
 }
 .solut-study-l-cont p {
   padding-bottom: 10px;
+}
+/* 解决方案 核心技术 */
+.solut-core-idx-cont {
+  margin: 20px 50px 0;
+}
+.solut-core-idx-cont h4 {
+  padding: 50px 0 20px;
+  font-size: 28px;
+  color: #666;
+}
+.solut-core-idx-cont .solut-meeting-c {
+  width: 480px;
+}
+.solut-core-idx-cont .solut-meeting-c p {
+  line-height: 50px;
+}
+.solut-core-idx-cont .solut-meeting-c p strong {
+  color: #1e50ae;
+  font-weight: 500;
+}
+.solut-core-btn {
+  display: block;
+  width: 290px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 50px;
+  background: #1e50ae;
+  border-radius: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+.solut-core-idx {
+  width: 1200px;
+  margin: 0 auto;
+}
+.solut-core-idx-l {
+  float: left;
+  width: 818px;
+}
+.solut-core-idx-l a {
+  float: left;
+  width: 381px;
+  margin: 0 20px 20px 0;
+}
+.solut-core-idx-r {
+  float: right;
+  width: 381px;
+}
+.solut-core-idx-r a {
+  display: block;
+  margin: 0 0 25px 0;
+}
+.solut-core-tag {
+  position: relative;
+  width: 1440px;
+  height: 500px;
+  margin: 120px auto 100px;
+}
+.solut-core-t-c-w {
+  margin: 0 0 0 150px;
+}
+.solut-core-tag img {
+  position: absolute;
+  right: 0;
+  top: -190px;
+}
+.solut-core-t-title {
+  margin-bottom: 40px;
+  font-size: 34px;
+  color: #c3c3c3;
+}
+.solut-core-t-title p {
+  font-size: 48px;
+  color: #333;
+}
+.solut-core-t-cont {
+  width: 450px;
+}
+.solut-core-t-cont p {
+  position: relative;
+  line-height: 40px;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  font-size: 22px;
+  color: #666;
+}
+.solut-core-t-cont p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 7px;
+  height: 7px;
+  background: #333;
+  border-radius: 50%;
+}
+.solut-core-mail {
+  margin: 80px auto 100px
+}
+.solut-core-mail img {
+  position: absolute;
+  left: 0;
+  top: -150px;
+}
+.solut-core-mail .solut-core-t-c-w {
+  margin: 0 0 0 750px;
+}
+.solut-core-word {
+  background: #fff;
+  height: 547px;
+  margin-top: -223px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.solut-core-word img {
+  float: left;
+}
+.solut-core-word-c {
+  float: right;
+  width: 500px;
+  line-height: 80px;
+  padding: 80px 60px 0 60px;
+  font-size: 22px;
+  color: #666;
+}
+.solut-core-word-c strong {
+  color: #1e50ae;
+  font-weight: 500;
+}
+.solut-core-word-list {
+  width: 1258px;
+  margin: 65px auto;
+}
+.solut-core-word-list li {
+  float: left;
+  width: 369px;
+  margin: 0 25px 40px;
+}
+.solut-core-word-l-t {
+  display: inline-block;
+  margin-bottom: 25px;
+  border-bottom: solid 3px #1e50ae;
+}
+.solut-core-word-l-t span {
+  display: block;
+  height: 56px;
+  margin-bottom: 20px;
+  font-size: 70px;
+  color: #333;
+  overflow: hidden;
+}
+.solut-core-word-list li p {
+  height: 90px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #666;
 }
 
 .mask {
