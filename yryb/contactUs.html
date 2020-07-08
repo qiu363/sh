@@ -65,7 +65,7 @@
           商务合作
           <p>xingpeiying@eben.cn</p>
         </div>
-        <div class="contact-cont-i contact-cont-i-2">
+        <div class="contact-cont-i contact-cont-i-3">
           公司地址
           <p>北京市海淀区王庄路1号清华同方科技大厦A座</p>
         </div>
@@ -78,9 +78,7 @@
         </div>
       </div>
 
-      <div class="contact-cont-l-m">
-        <img src="./img/map.jpg" />
-      </div>
+      <div class="contact-cont-l-m" id="J_map"></div>
     </div>
     <div class="contact-cont-r">
       <div class="contact-cont-r-t">公司介绍</div>
@@ -164,5 +162,18 @@
       </div>
     </div>
   </div>
+
+  <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=6ccee8dda4a483d113a09ac300d8b7b5"></script>
+  <script>
+    var map = new AMap.Map('J_map', {
+      center: [116.339287, 39.999766],
+      zoom: 16
+    })
+    var marker = new AMap.Marker({
+        position: new AMap.LngLat(116.339287, 39.999766),
+        title: '北京市海淀区王庄路1号清华同方科技大厦A座'
+    })
+    map.add(marker)
+  </script>
 </body>
 </html>
