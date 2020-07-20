@@ -1990,3 +1990,28 @@ h6 {
   right: 0;
   top: 60px;
 }
+
+.footer {
+  width: 1100px;
+}
+.footer-wrap {
+  height: auto;
+}
+.footer-l {
+  padding: 110px 0 0 60px;
+}
+.footer-copy {
+  padding: 40px 0 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+.footer-copy-cont {
+  padding: 20px 0 30px;
+}
+.footer-copy-cont a {
+  color: #fff;
+}
+.footer-copy-ser img {
+  display: inline-block;
+}
