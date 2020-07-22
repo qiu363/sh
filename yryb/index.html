@@ -23,20 +23,10 @@
           <a href="./">首页</a>
         </li>
         <li>
-          <a href="product/index.html">安全产品</a>
-          <div class="nav-more">
-            <a href="product/seriesT.html">T系列</a>
-            <a href="product/s1.html">S系列</a>
-            <a href="product/seriesM.html">M系列</a>
-          </div>
+          <a href="product/index.html" class="nav-i-more" id="J_prod_link">安全产品</a>
         </li>
         <li>
-          <a href="solution.html">解决方案</a>
-          <div class="nav-more">
-            <a href="hx/index.html">核心技术</a>
-            <a href="dz/index.html">定制能力</a>
-            <a href="hy/index.html">行业方案</a>
-          </div>
+          <a href="solution.html" class="nav-i-more" id="J_solu_link">解决方案</a>
         </li>
         <li>
           <a href="customer.html">客户服务</a>
@@ -48,6 +38,66 @@
           <a href="contactUs.html">联系我们</a>
         </li>
       </ul>
+    </div>
+
+    <div class="nav-l2" id="J_prod">
+      <div class="nav-l2-item">
+        <div class="nav-l2-i-t"><i></i>T系列</div>
+        <div class="nav-l2-i-l">
+          <a href="###">T12m</a>
+          <a href="###">T11</a>
+          <a href="###">T10\T10m</a>
+          <a href="###">K9</a>
+        </div>
+      </div>
+      <div class="nav-l2-item">
+        <div class="nav-l2-i-t"><i></i>S系列</div>
+        <div class="nav-l2-i-l">
+          <a href="###">S1</a>
+        </div>
+      </div>
+      <div class="nav-l2-item">
+        <div class="nav-l2-i-t"><i></i>M系列</div>
+        <div class="nav-l2-i-l">
+          <a href="###">M11</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-l2" id="J_solu">
+      <div class="nav-l2-item">
+        <div class="nav-l2-i-t"><i></i>核心技术</div>
+        <div class="nav-l2-i-l">
+          <a href="###">原笔迹手写技术</a>
+          <a href="###">手写办公应用</a>
+        </div>
+      </div>
+      <div class="nav-l2-item">
+        <div class="nav-l2-i-t"><i></i>定制能力</div>
+        <div class="nav-l2-i-l">
+          <a href="###">安全定制</a>
+          <a href="###">软件定制</a>
+          <a href="###">硬件定制</a>
+          <a href="###">包材定制</a>
+        </div>
+      </div>
+      <div class="nav-l2-item">
+        <div class="nav-l2-i-t"><i></i>行业方案</div>
+        <div class="nav-l2-i-l">
+          <a href="###">移动政务</a>
+          <a href="###">移动会议</a>
+          <a href="###">移动执法</a>
+          <a href="###">移动学习</a>
+          <a href="###">移动医疗</a>
+          <a href="###">移动网络</a>
+        </div>
+      </div>
+      <div class="nav-l2-item">
+        <div class="nav-l2-i-t"><i></i>个人使用</div>
+        <div class="nav-l2-i-l">
+          <a href="###">手写移动办公</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -312,6 +362,42 @@
     })
     $('#J_next_news').click(function () {
       newsSwiper.slideNext()
+    })
+
+    var prodTimer = ''
+    $('#J_prod_link').mouseenter(function () {
+      clearTimeout(prodTimer)
+      $('#J_prod').show()
+    }).mouseleave(function () {
+      prodTimer = setTimeout(function () {
+        $('#J_prod').hide()
+      }, 200)
+    })
+    $('#J_prod').mouseenter(function () {
+      clearTimeout(prodTimer)
+      $('#J_prod').show()
+    }).mouseleave(function () {
+      prodTimer = setTimeout(function () {
+        $('#J_prod').hide()
+      }, 200)
+    })
+
+    var soluTimer = ''
+    $('#J_solu_link').mouseenter(function () {
+      clearTimeout(soluTimer)
+      $('#J_solu').show()
+    }).mouseleave(function () {
+      soluTimer = setTimeout(function () {
+        $('#J_solu').hide()
+      }, 200)
+    })
+    $('#J_solu').mouseenter(function () {
+      clearTimeout(soluTimer)
+      $('#J_solu').show()
+    }).mouseleave(function () {
+      soluTimer = setTimeout(function () {
+        $('#J_solu').hide()
+      }, 200)
     })
   </script>
 </body>

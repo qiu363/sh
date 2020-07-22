@@ -2015,3 +2015,79 @@ h6 {
 .footer-copy-ser img {
   display: inline-block;
 }
+
+.nav li a.nav-i-more {
+  background-image: url(../img/index/arrow_nav_d.png);
+  background-position: right 13px top 67px;
+  background-repeat: no-repeat;
+}
+.nav li.cur a.nav-i-more,
+.nav li a:hover.nav-i-more {
+  background-image: url(../img/index/arrow_nav_u.png);
+}
+.nav-l2 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 120px;
+  z-index: 10;
+  width: 100%;
+  padding: 60px 0;
+  background: #fff;
+  text-align: center;
+}
+.nav-l2-item {
+  display: inline-block;
+  min-width: 320px;
+  max-width: 340px;
+  vertical-align: top;
+}
+.nav-l2-i-t {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #666;
+}
+.nav-l2-i-t i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #666;
+  vertical-align: 5px;
+}
+.nav-l2-i-l a {
+  display: inline-block;
+  height: 34px;
+  line-height: 34px;
+  margin: 0 10px 10px 0;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #9a9a9a;
+}
+.nav-l2-i-l a:hover {
+  background: #f3f1f1;
+  border-radius: 3px;
+}
+.solut-safe-cont-w {
+  width: 575px;
+}
+.solut-safe-cont-w-t {
+  margin-top: 20px;
+}
+.solut-safe-cont-w-t1 {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 30px;
+  font-size: 35px;
+}
+.solut-safe-cont-w-t1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+}
