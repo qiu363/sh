@@ -1,0 +1,136 @@
+html {
+    font-size: 50px;
+}
+
+@media (min-width: 240px) {
+    html {
+        font-size: 42.66666667px;
+    }
+}
+
+@media (min-width: 360px) {
+    html {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 375px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 414px) {
+    html {
+        font-size: 55.2px;
+    }
+}
+
+@media (min-width: 500px) {
+    html {
+        font-size: 66.66666667px;
+    }
+}
+
+@media (min-width: 640px) {
+    html {
+        font-size: 85.33333333px;
+    }
+}
+
+html,
+header,
+body,
+section,
+header,
+footer,
+nav,
+div,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+b,
+i,
+p,
+em,
+a,
+input,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    min-width: 6.4rem;
+    max-width: 8.28rem;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.5;
+    background: #FFF;
+    word-break: break-all;
+    color: #333;
+    font-size: 0.28rem;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", helvetica, arial;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: auto;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+input,
+img {
+    vertical-align: middle;
+}
+
+a,
+img {
+    -webkit-touch-callout: none;
+}
+
+a {
+    color: #03031A;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    font-size: 0.3rem;
+}
+
+b,
+i,
+em {
+    font-style: normal;
+    font-weight: 500;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input {
+    -webkit-appearance: none;
+}
