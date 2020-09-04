@@ -281,10 +281,87 @@
 
   <div class="content">
     <h6>趋势(Tendency)</h6>
-    <div class="cont-chart">
-
-    </div>
+    <div id="J_chat" class="cont-chart"></div>
   </div>
+
+  <script src="./js/echarts.min.js"></script>
+  <script>
+    var dataPow = [120, 132, 101, 134, 90, 230, 210]; //力量
+    var dataDef = [220, 182, 191, 234, 290, 330, 310]; //耐力
+    var dataSpeed = [150, 232, 201, 154, 190, 330, 410]; //速度
+
+    var option = {
+      tooltip: {
+        trigger: 'axis'
+      },
+      color: [
+        '#2267fe', '#fe676f', '#ffb242'
+      ],
+      legend: {
+        left: 0,
+        top: 20,
+        icon: 'circle',
+        textStyle: {
+          fontSize: 14,
+          fontWeight: 600
+        },
+        data: [{
+          name: '力量',
+          icon: 'circle',
+          textStyle: {
+            color: '#2267fe'
+          }
+        },
+        {
+          name: '耐力',
+          icon: 'circle',
+          textStyle: {
+            color: '#fe676f'
+          }
+        },
+        {
+          name: '速度',
+          icon: 'circle',
+          textStyle: {
+            color: '#ffb242'
+          }
+        }]
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          name: '力量',
+          type: 'line',
+          data: dataPow
+        },
+        {
+          name: '耐力',
+          type: 'line',
+          data: dataDef
+        },
+        {
+          name: '速度',
+          type: 'line',
+          data: dataSpeed
+        }
+      ]
+    };
+
+    var chart = echarts.init(document.getElementById('J_chat'));
+    chart.setOption(option);
+  </script>
 
 </body>
 </html>

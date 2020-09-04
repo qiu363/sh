@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <title>骨骼肌运动损伤风险报告 - 运动康复</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link type="text/css" href="./css/style.css" rel="stylesheet">
   <meta name="x5-page-mode" content="app" />
@@ -14,6 +16,7 @@
   <meta content="black" name="apple-mobile-web-app-status-bar-style" />
   <meta name="browsermode" content="application" />
 </head>
+
 <body>
   <div class="header-table-w">
     <table class="header-table">
@@ -68,28 +71,56 @@
 
   <h6 class="cont-title cont-title-mt">评估分析(Analysis)</h6>
   <div class="content">
-    <table class="result-table">
-      <tr>
-        <th>运动控制</th>
-        <th>柔软性</th>
-        <th>稳定性</th>
-        <th>左右平衡</th>
-        <th>膝关节疼痛</th>
-        <th>腰部疼痛</th>
-        <th>颈肩疼痛</th>
-        <th>分数</th>
-      </tr>
-      <tr>
-        <td>Bad</td>
-        <td>Bad</td>
-        <td>Bad</td>
-        <td>348</td>
-        <td>No</td>
-        <td>Yes</td>
-        <td>No</td>
-        <td>11/24</td>
-      </tr>
-    </table>
+    <div class="bones-data">
+      <div class="bones-data-1">
+        <img src="./img/bones/bones1.png" />
+        <div class="bones-data-cont bones-data-1-cont">
+          肩部 14%
+          <p>Bad</p>
+        </div>
+      </div>
+      <div class="bones-data-2">
+        <img src="./img/bones/bones2.png" />
+        <div class="bones-data-cont bones-data-2-cont">
+          颈部 14%
+          <p>Bad</p>
+        </div>
+      </div>
+      <div class="bones-data-3">
+        <div class="bones-data-cont bones-data-3-cont">
+          运动控制
+          <p>14%</p>
+          <p>Bad</p>
+        </div>
+        <img src="./img/bones/bones3.png" />
+      </div>
+      <div class="bones-data-4">
+        <div class="bones-data-cont bones-data-4-cont">
+          胸椎活动度
+          <p>14%</p>
+          <p>Bad</p>
+        </div>
+        <img src="./img/bones/bones4.png" />
+      </div>
+      <div class="bones-data-5">
+        <div class="bones-data-cont bones-data-5-cont">
+          核心
+          <p>14%</p>
+          <p>Bad</p>
+        </div>
+        <img src="./img/bones/bones5.png" />
+      </div>
+      <div class="bones-data-6">
+        <div class="bones-data-cont bones-data-6-cont">
+          髋关节/下肢
+          <p>14%</p>
+          <p>Bad</p>
+        </div>
+        <img src="./img/bones/bones6.png" />
+      </div>
+
+      <div id="J_chat" class="bones-data-chat"></div>
+    </div>
 
     <div class="result-tips">
       <div class="result-tips-l">
@@ -102,5 +133,90 @@
     </div>
   </div>
 
+  <script src="./js/echarts.min.js"></script>
+  <script>
+    var data = [84, 25, 56, 90, 34, 100]; // 颈部 肩部 胸椎活动度 核心 髋关节/下肢 运动控制
+
+    var option = {
+      color: [
+        '#867afe', '#2267fe', '#ffb242', '#d33cfe', '#22e271', '#fe676f'
+      ],
+      radar: {
+        shape: 'circle',
+        name: {
+          show: false
+        },
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: '#ecf4fe',
+            width: 1,
+            type: 'solid'
+          }
+        },
+        splitLine : {
+          show : true,
+          lineStyle : {
+            width : 1,
+            color : '#ecf4fe'
+          }
+        },
+        splitArea : {
+          show : false
+        },
+        indicator: [
+          {
+            name: '颈部',
+            color: '#867afe',
+            max: 100
+          },
+          {
+            name: '肩部',
+            color: '#2267fe',
+            max: 100
+          },
+          {
+            name: '胸椎活动度',
+            color: '#d33cfe',
+            max: 100
+          },
+          {
+            name: '核心',
+            color: '#22e271',
+            max: 100
+          },
+          {
+            name: '髋关节/下肢',
+            color: '#fe676f',
+            max: 100
+          },
+          {
+            name: '运动控制',
+            color: '#ffb242',
+            max: 100
+          }
+        ]
+      },
+      series: [{
+        type: 'radar',
+        itemStyle: {
+          normal: {
+            areaStyle: {
+              color: 'rgba(145, 169, 255)'
+            }
+          }
+        },
+        data: [
+          {
+            value: data
+          }
+        ]
+      }]
+    };
+
+    var chart = echarts.init(document.getElementById('J_chat'));
+    chart.setOption(option);
+  </script>
 </body>
+
 </html>
