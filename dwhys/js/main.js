@@ -1,19 +1,44 @@
 ~(function () {
     // 加载资源
     var resources = [
-        './img/bg.png',
-        './img/zebra_s.png',
-        './img/success.png',
+        './img/logo.png',
         './img/bear.png',
         './img/monkey.png',
+        './img/success.png',
         './img/question.png',
-        './img/giraffe_s.png',
-        './img/logo.png',
-        './img/bg.png',
         './file/success.mp3',
-        './file/answer.mp3',
         './file/again.mp3'
     ]
+    var resourcesMap = [
+        [
+            './img/first/bg.png',
+            './img/first/zebra_s.png',
+            './img/first/giraffe_s.png',
+            './file/answer.mp3',
+        ],
+        [
+            './img/second/bg.png',
+            './img/second/fk.png',
+            './img/second/zebra_s.png',
+            './img/second/cow_s.png',
+            './file/second/answer.mp3',
+        ],
+        [
+            './img/third/bg.png',
+            './img/third/fk.png',
+            './img/third/elephant_s.png',
+            './img/third/rhinoceros_s.png',
+            './file/third/answer.mp3',
+        ],
+        [
+            './img/fourth/bg.png',
+            './img/fourth/fk.png',
+            './img/fourth/lion_s.png',
+            './img/fourth/tiger_s.png',
+            './file/fourth/answer.mp3',
+        ]
+    ]
+    resources = resources.concat(resourcesMap[config.map])
     var resourcesNum = 0
     for (var i = 0; i < resources.length; i++) {
         var img = new Image()
@@ -56,9 +81,10 @@
     }
 
     var isStart = false
+    // 防止音频播放失败无法触发答题
     setTimeout(function () {
         isStart = true
-    }, 1000 * ($('.J_shadow').length + 5))
+    }, 1000 * 12)
     // 开场白结束
     $('#J_answer').bind('ended', function () {
         $('#J_toy').removeClass('toy-ani')
@@ -74,6 +100,10 @@
                 }, 1000)
             }, 1000 * idx)
         })
+
+        setTimeout(function () {
+            isStart = true
+        }, 1000 * $('.J_shadow').length)
     })
 
     $('#J_shadow_m').on('click', '.J_shadow', function () {

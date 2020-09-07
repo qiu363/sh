@@ -51,7 +51,7 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.png) no-repeat;
+    background: url(../img/first/bg.png) no-repeat;
     background-size: 100% 100%;
     -webkit-transition: all .5s;
     transition: all .5s;
@@ -70,6 +70,7 @@ a {
 .toy {
     position: absolute;
     left: 2%;
+    z-index: 10;
     bottom: 3%;
     width: 32%;
 }
@@ -170,6 +171,84 @@ a {
     background: rgba(0, 0, 0, .6);
     font-size: 20px;
     color: #fff;
+}
+
+/* 第二个 */
+.second .main {
+    background-image: url(../img/second/bg.png);
+}
+.second .question {
+    left: 29.5%;
+    top: 38%;
+}
+.second .shadow {
+    right: 15%;
+    bottom: 15%;
+}
+.second .shadow .zebra {
+    width: 40%;
+}
+.second .shadow .giraffe {
+    width: 43%;
+    margin-left: 8%;
+}
+.second .fk {
+    position: absolute;
+    left: 29%;
+    top: 52%;
+    width: 12%;
+}
+
+/* 第三个 */
+.third .main {
+    background-image: url(../img/third/bg.png);
+}
+.third .question {
+    left: 66.5%;
+    top: 25%;
+}
+.third .shadow {
+    right: 38%;
+    bottom: 34%;
+}
+.third .shadow .zebra {
+    width: 50%;
+}
+.third .shadow .giraffe {
+    width: 43%;
+    margin-left: 3%;
+}
+.third .fk {
+    position: absolute;
+    left: 63.5%;
+    top: 39%;
+    width: 16%;
+}
+
+/* 第四个 */
+.fourth .main {
+    background-image: url(../img/fourth/bg.png);
+}
+.fourth .question {
+    left: 14.5%;
+    top: 24%;
+}
+.fourth .shadow {
+    right: 24%;
+    bottom: 28%;
+}
+.fourth .shadow .zebra {
+    width: 45%;
+}
+.fourth .shadow .giraffe {
+    width: 40%;
+    margin-left: 8%;
+}
+.fourth .fk {
+    position: absolute;
+    left: 10%;
+    top: 37%;
+    width: 20%;
 }
 
 @keyframes question {
