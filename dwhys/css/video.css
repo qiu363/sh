@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    background: #fff;
+    padding: 0;
+    margin: 0 auto;
+    color: #333;
+    font-size: 14px;
+    font-family: "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", helvetica, arial;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+input,
+img {
+    vertical-align: middle;
+}
+
+a,
+img {
+    -webkit-touch-callout: none;
+    /* 禁止长按链接与图片弹出菜单 */
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+}
+
+.index {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+.index h1 {
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 18px;
+}
+.index a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #49ae3d;
+    border-radius: 4px;
+    color: #fff;
+}
+.index-tips {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: #f00;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+}
+.video video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.hide {
+    display: none;
+}

@@ -38,7 +38,7 @@
             './file/fourth/answer.mp3',
         ]
     ]
-    resources = resources.concat(resourcesMap[config.map])
+    resources = resources.concat(resourcesMap[config.index])
     var resourcesNum = 0
     for (var i = 0; i < resources.length; i++) {
         var img = new Image()
@@ -125,6 +125,10 @@
 
             // TODO 调用客户端
             // bridge('next', '111')
+            // 测试流程
+            setTimeout(function () {
+                window.location.href = './video/video'+ (config.index + 2) +'.html'
+            }, 4000)
 
             $('#J_right')[0].play()
         } else {

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>动物的花衣裳</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="../css/video.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="video" id="J_container">
+    <video id="J_video" autoplay controls webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-orientation="h5" x5-video-player-fullscreen="true" src="http://sucai.weizaojiao.cn/v/v-1.mp4"></video>
+</div>
+
+<script>
+    var videoObj = document.getElementById('J_video')
+
+    videoObj.addEventListener('play', function () {
+        console.log('播放')
+    })
+    videoObj.addEventListener('ended', function () {
+        setTimeout(function () {
+            var con = window.confirm('看看你能答对吗？')
+
+            if (con) {
+                window.location.href = '../index.html'
+            }
+        }, 1000)
+    })
+</script>
+
+<script src="../js/zepto.min.js"></script>
+<script>
+    var winWidth = $(window).width()
+    var winHeight = $(window).height()
+    function fitScreen() {
+        if (winWidth < winHeight) {
+            var m = (winHeight - winWidth) / 2
+            $('#J_container').css({
+                width: winHeight,
+                height: winWidth,
+                margin: m + 'px 0 0 -' + m + 'px',
+                transform: 'rotate(90deg)',
+                '-webkit-transform': 'rotate(90deg)'
+            })
+        } else {
+            $('#J_container').css({
+                width: winWidth,
+                height: winHeight,
+                margin: 0,
+                transform: 'rotate(0)',
+                '-webkit-transform': 'rotate(0)'
+            })
+        }
+    }
+    fitScreen()
+</script>
+
+</body>
+</html>
