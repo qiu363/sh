@@ -254,54 +254,6 @@ table td {
   transform: rotateZ(90deg);
   transform-origin: 50% 50%;
 }
-.cont-pre-com li:nth-child(1) .cont-pre-svg span {
-  color: #ffb242;
-}
-.cont-pre-com li:nth-child(1) .cont-svg-path {
-  stroke: #ffb242;
-}
-.cont-pre-com li:nth-child(2) .cont-pre-svg span {
-  color: #3070ff;
-}
-.cont-pre-com li:nth-child(2) .cont-svg-path {
-  stroke: #3070ff;
-}
-.cont-pre-com li:nth-child(3) .cont-pre-svg span {
-  color: #3070ff;
-}
-.cont-pre-com li:nth-child(3) .cont-svg-path {
-  stroke: #3070ff;
-}
-.cont-pre-com li:nth-child(4) .cont-pre-svg span {
-  color: #fe676f;
-}
-.cont-pre-com li:nth-child(4) .cont-svg-path {
-  stroke: #fe676f;
-}
-.cont-pre-com li:nth-child(5) .cont-pre-svg span {
-  color: #3070ff;
-}
-.cont-pre-com li:nth-child(5) .cont-svg-path {
-  stroke: #3070ff;
-}
-.cont-pre-com li:nth-child(6) .cont-pre-svg span {
-  color: #ffb242;
-}
-.cont-pre-com li:nth-child(6) .cont-svg-path {
-  stroke: #ffb242;
-}
-.cont-pre-com li:nth-child(7) .cont-pre-svg span {
-  color: #3070ff;
-}
-.cont-pre-com li:nth-child(7) .cont-svg-path {
-  stroke: #3070ff;
-}
-.cont-pre-com li:nth-child(8) .cont-pre-svg span {
-  color: #fe676f;
-}
-.cont-pre-com li:nth-child(8) .cont-svg-path {
-  stroke: #fe676f;
-}
 
 .result-tips {
   display: flex;
