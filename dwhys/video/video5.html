@@ -67,6 +67,13 @@
         }
     }
     fitScreen()
+
+    $(window).resize(function () {
+        winWidth = $(window).width()
+        winHeight = $(window).height()
+
+        fitScreen()
+    })
 </script>
 
 </body>
