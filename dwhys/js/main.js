@@ -120,7 +120,7 @@
             $('#J_question').hide()
 
             setTimeout(function () {
-                $('#J_success img').addClass('animate-animated animate-bounceInDown')
+                $('#J_success .success-cont').addClass('animate-animated animate-bounceInDown')
             }, 20)
 
             // TODO 调用客户端
@@ -128,7 +128,7 @@
             // 测试流程
             setTimeout(function () {
                 window.location.href = './video/video'+ (config.index + 2) +'.html'
-            }, 4000)
+            }, 3000)
 
             $('#J_right')[0].play()
         } else {
@@ -140,6 +140,10 @@
 
             $('#J_error')[0].play()
         }
+    })
+
+    $('#J_return').click(function () {
+        window.location.href = './video/video'+ (config.index + 2) +'.html'
     })
 
     var winWidth = $(window).width()

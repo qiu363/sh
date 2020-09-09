@@ -77,6 +77,7 @@ a {
 }
 
 .video {
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -85,6 +86,49 @@ a {
     width: 100%;
     height: 100%;
     background: #000;
+}
+
+.success {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+}
+.success img {
+    display: none;
+    width: 20%;
+}
+.success-cont {
+    width: 40%;
+    height: 150px;
+    padding-top: 30px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.success-cont p {
+    margin: 10px 0 20px;
+    font-size: 12px;
+    color: #999;
+}
+.success-cont span {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #49ae3d;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
 }
 
 .hide {
