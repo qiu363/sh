@@ -43,7 +43,7 @@
   <div class="content">
     <h6>测试结果(Result)</h6>
     <div class="result-table-w">
-      <table class="result-table">
+      <table class="result-table result-table-mb">
         <tr>
           <th>上肢力量</th>
           <th>下肢力量</th>
@@ -57,12 +57,7 @@
           <td>11</td>
         </tr>
       </table>
-    </div>
-  </div>
 
-  <div class="content">
-    <h6>测试结果(Result)</h6>
-    <div class="result-table-w">
       <table class="result-table">
         <tr>
           <th>上肢力量</th>
@@ -128,7 +123,7 @@
             </path>
           </svg>
 
-          <span>40%</span>
+          <span style="color: #f00">40%</span>
         </div>
         下肢力量
       </li>
@@ -152,7 +147,7 @@
             </path>
           </svg>
 
-          <span>40%</span>
+          <span style="color: #f00">40%</span>
         </div>
         核心耐力1
       </li>
@@ -176,7 +171,7 @@
             </path>
           </svg>
 
-          <span>40%</span>
+          <span style="color: #f00">40%</span>
         </div>
         核心耐力2
       </li>
@@ -200,7 +195,7 @@
             </path>
           </svg>
 
-          <span>40%</span>
+          <span style="color: #f00">40%</span>
         </div>
         柔软性
       </li>
@@ -224,7 +219,7 @@
             </path>
           </svg>
 
-          <span>40%</span>
+          <span style="color: #f00">40%</span>
         </div>
         心肺耐力
       </li>
@@ -248,7 +243,7 @@
             </path>
           </svg>
 
-          <span>40%</span>
+          <span style="color: #f00">40%</span>
         </div>
         爆发力
       </li>
@@ -272,7 +267,7 @@
             </path>
           </svg>
 
-          <span>40%</span>
+          <span style="color: #f00">40%</span>
         </div>
         敏捷性
       </li>
@@ -289,17 +284,17 @@
     var dataPow = [120, 132, 101, 134, 90, 230, 210]; //力量
     var dataDef = [220, 182, 191, 234, 290, 330, 310]; //耐力
     var dataSpeed = [150, 232, 201, 154, 190, 330, 410]; //速度
+    var dataCore = [120, 212, 201, 154, 190, 330, 330]; //核心
 
     var option = {
       tooltip: {
         trigger: 'axis'
       },
       color: [
-        '#2267fe', '#fe676f', '#ffb242'
+        '#2267fe', '#fe676f', '#ffb242', '#943882'
       ],
       legend: {
-        left: 0,
-        top: 20,
+        bottom: 0,
         icon: 'circle',
         textStyle: {
           fontSize: 14,
@@ -325,12 +320,20 @@
           textStyle: {
             color: '#ffb242'
           }
+        },
+        {
+          name: '核心',
+          icon: 'circle',
+          textStyle: {
+            color: '#943882'
+          }
         }]
       },
       grid: {
+        top: '10%',
         left: '3%',
         right: '4%',
-        bottom: '3%',
+        bottom: '20%',
         containLabel: true
       },
       xAxis: {
@@ -355,6 +358,11 @@
           name: '速度',
           type: 'line',
           data: dataSpeed
+        },
+        {
+          name: '核心',
+          type: 'line',
+          data: dataCore
         }
       ]
     };
