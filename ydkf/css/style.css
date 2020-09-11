@@ -882,10 +882,7 @@ table td {
 }
 
 .data-wrap {
-  height: 100%;
   padding: 0.1rem 0 0;
-  background: #f5f5f5 url(../img/data_bg.jpg) 0 bottom no-repeat;
-  background-size: 100% auto;
   box-sizing: border-box;
 }
 .data-list {
