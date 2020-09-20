@@ -11,7 +11,7 @@
   <link href="./css/main.css" rel="stylesheet" />
   <script src="./js/jquery.min.js" type="text/javascript"></script>
 </head>
-<body style="min-width: 1440px;">
+<body style="min-width: 1140px;">
   <div class="header-wrap">
     <div class="header">
       <a href="/" class="logo">
@@ -40,7 +40,7 @@
       </ul>
     </div>
 
-    <div class="nav-l2" id="J_prod">
+    <div class="nav-l2 nav-l2-prod" id="J_prod">
       <div class="nav-l2-item">
         <div class="nav-l2-i-t">
           <a href="###">
@@ -48,58 +48,56 @@
           </a>
         </div>
         <div class="nav-l2-i-l">
-          <a href="###">T12m</a>
-          <a href="###">T11</a>
-          <a href="###">T10\T10m</a>
-          <a href="###">K9</a>
+          <a href="###">> T12m</a>
+          <a href="###">> T11</a>
+          <a href="###">> T10\T10m</a>
+          <a href="###">> K9</a>
         </div>
       </div>
-      <!-- <div class="nav-l2-item">
-        <div class="nav-l2-i-t"><a href="###"><i></i>S系列</a></div>
-        <div class="nav-l2-i-l">
-          <a href="###">S1</a>
-        </div>
-      </div> -->
       <div class="nav-l2-item">
-        <div class="nav-l2-i-t"><a href="###"><i></i>M系列</a></div>
+        <div class="nav-l2-i-t">
+          <a href="###">
+            <i></i>M系列
+          </a>
+        </div>
         <div class="nav-l2-i-l">
-          <a href="###">M11</a>
+          <a href="###">> M11</a>
         </div>
       </div>
     </div>
 
-    <div class="nav-l2" id="J_solu">
-      <div class="nav-l2-item nav-l2-item-hxjs">
+    <div class="nav-l2 nav-l2-solu" id="J_solu">
+      <div class="nav-l2-item">
         <div class="nav-l2-i-t"><a href="###"><i></i>核心技术</a></div>
         <div class="nav-l2-i-l">
-          <a href="###">原笔迹手写技术</a>
-          <a href="###">手写办公应用</a>
+          <a href="###">> 原笔迹手写技术</a>
+          <a href="###">> 手写办公应用</a>
         </div>
       </div>
-      <div class="nav-l2-item nav-l2-item-dznl">
+      <div class="nav-l2-item">
         <div class="nav-l2-i-t"><a href="###"><i></i>定制能力</a></div>
         <div class="nav-l2-i-l">
-          <a href="###">安全定制</a>
-          <a href="###">软件定制</a>
-          <a href="###">硬件定制</a>
-          <a href="###">包材定制</a>
+          <a href="###">> 安全定制</a>
+          <a href="###">> 软件定制</a>
+          <a href="###">> 硬件定制</a>
+          <a href="###">> 包材定制</a>
         </div>
       </div>
-      <div class="nav-l2-item nav-l2-item-hyfa">
+      <div class="nav-l2-item">
         <div class="nav-l2-i-t"><a href="###"><i></i>行业方案</a></div>
         <div class="nav-l2-i-l">
-          <a href="###">移动政务</a>
-          <a href="###">移动会议</a>
-          <a href="###">移动执法</a>
-          <a href="###">移动学习</a>
-          <a href="###">移动医疗</a>
-          <a href="###">移动网络</a>
+          <a href="###">> 移动政务</a>
+          <a href="###">> 移动会议</a>
+          <a href="###">> 移动执法</a>
+          <a href="###">> 移动学习</a>
+          <a href="###">> 移动医疗</a>
+          <a href="###">> 移动网络</a>
         </div>
       </div>
       <div class="nav-l2-item">
         <div class="nav-l2-i-t"><a href="###"><i></i>个人使用场景</a></div>
         <div class="nav-l2-i-l">
-          <a href="###">手写移动办公</a>
+          <a href="###">> 手写移动办公</a>
         </div>
       </div>
     </div>
@@ -123,8 +121,7 @@
       </div>
     </div>
 
-    <span class="i-banner-arrow-l" id="J_pre_banner"></span>
-    <span class="i-banner-arrow-r" id="J_next_banner"></span>
+    <div class="swiper-pagination i-banner-dot"></div>
   </div>
 
   <div class="i-safe-prod">
@@ -347,13 +344,9 @@
     var bannerSwiper = new Swiper('#J_i_swiper', {
       direction: 'horizontal',
       loop: true,
-      autoplay: 3000
-    })
-    $('#J_pre_banner').click(function () {
-      bannerSwiper.slidePrev()
-    })
-    $('#J_next_banner').click(function () {
-      bannerSwiper.slideNext()
+      autoplay: 3000,
+      pagination: '.swiper-pagination',
+      paginationClickable: true
     })
 
     var newsSwiper = new Swiper('#J_news_swiper', {
