@@ -244,7 +244,7 @@ h6 {
 .title h3 {
   margin-top: 10px;
   background: url(../img/title_bg.png) center no-repeat;
-  font-size: 40px;
+  font-size: 34px;
   color: #333;
 }
 .title-w .title-en {
@@ -538,6 +538,7 @@ h6 {
   border-radius: 50%;
   opacity: 1;
   cursor: pointer;
+  transition: all .5s;
 }
 .i-banner-dot .swiper-pagination-bullet-active {
   background: #fff;
@@ -575,7 +576,7 @@ h6 {
 }
 .contact-cont-l {
   float: left;
-  width: 1140px;
+  width: 540px;
 }
 .contact-cont-l .title-info {
   margin-left: 80px;
@@ -635,7 +636,7 @@ h6 {
 }
 .contact-cont-r-t {
   padding: 10px 5px;
-  font-size: 30px;
+  font-size: 24px;
 }
 .contact-news-list {
   padding-top: 20px;
@@ -681,7 +682,7 @@ h6 {
 }
 .customer-service-t {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   padding: 60px 0 15px 60px;
   border-bottom: solid 1px #d6d6d6;
   color: #000;
@@ -929,19 +930,25 @@ h6 {
   z-index: 10;
   width: 1140px;
   margin: 0 auto -160px;
-  overflow: hidden;
 }
 .solut-dz-list a {
   float: left;
-  width: 555px;
-  margin: 0 10px 30px 10px;
+  width: 510px;
+  margin: 0 20px 30px 0;
   padding: 25px;
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.solut-dz-list a:nth-child(2n) {
+  margin-right: 0;
+}
+.solut-dz-l-img img {
+  display: block;
+  width: 100%;
+}
 .solut-dz-l-title {
   padding: 35px 0 30px;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
 }
 .solut-dz-l-title::before {
@@ -964,13 +971,13 @@ h6 {
 }
 .solut-dz-l-more {
   width: 180px;
-  height: 50px;
-  line-height: 50px;
+  height: 36px;
+  line-height: 36px;
   background: #999;
   margin: 0 auto 8px;
   border-radius: 50px;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
   transition: all .3s;
 }
@@ -1246,27 +1253,43 @@ h6 {
 
 /* 行业方案 */
 .solut-hy-sml-list {
-  width: 1320px;
+  z-index: 20;
+  margin: 0 -20px -160px 0;
 }
 .solut-hy-sml-list a {
-  width: 420px;
+  width: 366px;
   padding: 20px 0 0;
+  margin: 0 20px 20px 0;
+}
+.solut-hy-sml-list a:nth-child(2n) {
+  margin-right: 20px;
+}
+.solut-hy-sml-list a:last-child {
+  margin-right: 0;
 }
 .solut-hy-sml-list a img {
+  display: block;
+  width: 100%;
   padding: 0 18px;
+  box-sizing: border-box;
 }
 .solut-hy-list {
-  top: -80px;
-  width: 1320px;
+  width: 1140px;
   padding-top: 10px;
   margin-bottom: 0;
 }
 .solut-hy-list a {
-  width: 640px;
+  width: 559px;
   padding: 20px 0 0;
 }
+.solut-hy-list a:last-child {
+  margin-right: 0;
+}
 .solut-hy-list a img {
-  padding: 0 26px;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .solut-hy-sml-list .solut-dz-l-title,
 .solut-hy-list .solut-dz-l-title {
@@ -1286,27 +1309,40 @@ h6 {
 }
 /* 移动会议 */
 .solut-meeting-w {
-  width: 1400px;
+  width: 1140px;
   margin: 0 auto 100px;
 }
 .solut-meeting {
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .solut-meeting img {
   float: right;
 }
+.solut-meeting-img-1 {
+  width: 640px;
+}
+.solut-medic img {
+  width: 600px;
+}
 .solut-meeting-cont {
   float: left;
-  width: 530px;
+  width: 480px;
+}
+.solut-meeting-cont-1 {
+  width: 440px;
 }
 .solut-meeting-cont h4 {
+  margin-top: 30px;
   margin-bottom: 22px;
-  font-size: 40px;
+  font-size: 34px;
   color: #1e50ae;
 }
+.solut-meeting-cont p {
+  margin-bottom: 15px;
+}
 .solut-meeting-c {
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 34px;
+  font-size: 14px;
   color: #666;
 }
 .solut-meeting-r img {
@@ -1314,38 +1350,55 @@ h6 {
 }
 .solut-meeting-r .solut-meeting-cont {
   float: right;
+  margin-top: 60px;
+}
+.solut-study-r .solut-meeting-cont {
+  margin-top: 120px;
 }
 /* 移动执法 */
 .solut-meeting-enfor {
-  margin: 80px 60px 0;
+  margin: 60px 0 0;
+}
+.solut-meeting-enfor img {
+  width: 610px;
+}
+.solut-meeting-enfor .solut-meeting-cont {
+  margin: 0;
 }
 .solut-enfor-info {
-  margin: 0 90px;
+  margin: 0 -90px 0 24px;
   padding-top: 100px;
 }
 .solut-enfor-info li {
-  height: 380px;
-  margin: 0 50px;
+  width: 230px;
+  height: 200px;
+  margin: 0 90px 0 0;
+  padding: 108px 36px 0;
 }
 .solut-enfor-info .solut-soft-l-t {
+  left: 80px;
   display: flex;
+  width: 146px;
+  height: 146px;
   line-height: 46px;
   align-items: center;
   justify-content: center;
+  font-size: 28px;
+}
+.solut-gov-info .solut-soft-l-t {
+  left: 62px;
 }
 .solut-enfor-info .solut-soft-l-c p {
-  line-height: 40px;
+  line-height: 24px;
   padding: 0;
-  margin-bottom: 0;
-  font-size: 20px;
-  text-indent: 2em;
+  margin-bottom: 14px;
+  font-size: 14px;
 }
 .solut-enfor-info .solut-soft-l-c p::before {
   display: none;
 }
 .solut-enfor-unit {
-  padding: 0 180px;
-  font-size: 24px;
+  font-size: 14px;
   color: #666;
 }
 .solut-enfor-unit a {
@@ -1354,10 +1407,13 @@ h6 {
   color: #666;
 }
 .solut-enfor-case {
-  padding: 120px 0 40px 60px;
+  padding: 120px 0 40px 0;
 }
 .solut-enfor-case li {
-  height: 560px;
+  width: 200px;
+  height: 350px;
+  margin-right: 30px;
+  padding: 108px 30px 0;
   background: #efefef;
 }
 .solut-enfor-c-t {
@@ -1366,75 +1422,81 @@ h6 {
   text-align: center;
 }
 .solut-enfor-case .solut-soft-l-t {
-  left: 54px;
+  left: 44px;
   top: -85px;
-  width: 190px;
-  height: 180px;
+  width: 164px;
   background: transparent url(../img/solution/hy/icon_enfor_1.png) no-repeat;
+  background-size: cover;
 }
 .solut-enfor-case li:nth-child(2) .solut-soft-l-t {
-  background-image: url(../img/solution/hy/icon_enfor_2.png);
-}
-.solut-enfor-case li:nth-child(3) .solut-soft-l-t {
   background-image: url(../img/solution/hy/icon_enfor_3.png);
 }
-.solut-enfor-case li:nth-child(4) .solut-soft-l-t {
+.solut-enfor-case li:nth-child(3) .solut-soft-l-t {
   background-image: url(../img/solution/hy/icon_enfor_4.png);
 }
+.solut-enfor-case li:nth-child(4) .solut-soft-l-t {
+  background-image: url(../img/solution/hy/icon_enfor_2.png);
+}
 .solut-enfor-case .solut-soft-l-c p {
-  line-height: 50px;
+  line-height: 34px;
   padding: 0;
   margin-bottom: 0;
-  font-size: 22px;
+  font-size: 14px;
 }
 .solut-enfor-case .solut-soft-l-c p::before {
   display: none;
+}
+.solut-enfor-case .solut-enfor-c-t {
+  font-size: 18px;
+  font-weight: 600;
 }
 /* 移动政务 */
 .solut-gov-cont {
   padding: 0 40px 30px;
 }
 .solut-gov-cont p {
-  line-height: 40px;
   margin-bottom: 10px;
 }
 .solut-gov-info {
-  margin: 0 0 0 64px;
+  margin: 0 -20px 0 0;
   padding-bottom: 40px;
 }
 .solut-gov-info li {
-  margin: 0 10px;
+  width: 202px;
+  height: 220px;
+  margin: 0 18px 0 0;
+  padding: 108px 35px 0;
 }
 .solut-gov-info li:nth-child(2n-1) {
   background: #efefef;
 }
 .solut-meeting-gov-case {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 .solut-meeting-gov-case .solut-meeting-cont {
   width: 480px;
-  margin-left: 100px;
+  margin-left: 58px;
 }
 /* 移动学习 */
 .solut-study-cont-ss {
-  width: 1444px;
-  margin: 120px auto 40px;
+  width: 1140px;
+  margin: 75px auto 0;
 }
 .solut-study-cont-l {
   float: left;
-  width: 716px;
-  height: 633px;
+  width: 570px;
+  height: 536px;
   background: url(../img/solution/hy/study_1.jpg) no-repeat;
   color: #fff;
 }
 .solut-study-cont-l h4 {
-  padding: 50px 0 30px 80px;
-  font-size: 48px;
+  padding: 70px 0 30px 50px;
+  font-size: 34px;
 }
 .solut-study-cont-l-c {
   line-height: 40px;
-  padding: 0 76px 0 80px;
-  font-size: 22px;
+  padding: 0 76px 0 50px;
+  font-size: 14px;
 }
 .solut-study-cont img {
   float: right;
@@ -1445,24 +1507,24 @@ h6 {
   margin: 20px auto 80px;
 }
 .solut-study-r .solut-meeting-cont {
-  width: 530px;
+  width: 328px;
 }
 .solut-study-case {
   position: relative;
   width: 1140px;
-  height: 570px;
-  margin: 50px auto 80px;
-  background: #e8e8e8;
+  margin: 0 auto 80px;
 }
 .solut-study-case img {
-  position: absolute;
-  right: 0;
-  top: -50px;
+  display: block;
+  padding: 20px 0 0;
 }
 .solut-study-case-cont {
   padding: 100px 0 0 90px;
   font-size: 24px;
   color: #666;
+}
+.solut-study-cont-app p {
+  font-size: 22px;
 }
 .solut-study-case-cont p {
   margin-bottom: 20px;
@@ -1474,12 +1536,15 @@ h6 {
 .solut-medic {
   margin-bottom: 50px;
 }
+.solut-medic h4 {
+  margin: 30px 0 40px;
+}
 .solut-medic .solut-meeting-cont {
-  width: 580px;
+  width: 480px;
 }
 .solut-medic .solut-meeting-c {
   line-height: 40px;
-  font-size: 18px;
+  font-size: 14px;
 }
 .solut-study-cont {
   width: 1140px;
@@ -1487,15 +1552,25 @@ h6 {
 }
 .solut-study-cont li {
   float: left;
-  width: 478px;
-  height: 380px;
+  width: 379px;
+  height: 320px;
   border-right: solid 1px #fff;
   background: #1e50ae;
 }
 .solut-study-cont-t {
-  padding: 46px 0 0 40px;
+  padding: 30px 0 0 38px;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
+}
+.solut-study-cont-t:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: 10px;
+  border-width: 10px 8px 0 8px;
+  border-color: rgba(255, 255, 255, .5) transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
 }
 .solut-study-cont-t p {
   color: #5a88df;
@@ -1503,38 +1578,37 @@ h6 {
 .solut-study-cont-c {
   height: 120px;
   line-height: 30px;
-  padding: 26px 120px 0 40px;
+  padding: 26px 38px 0;
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   overflow: hidden;
 }
 .solut-study-cont-tag {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px 0 0 40px;
 }
 .solut-study-cont-tag span {
   display: inline-block;
   width: 170px;
-  height: 42px;
-  line-height: 42px;
+  height: 36px;
+  line-height: 36px;
   background: #a5b9df;
   color: #1e50ae;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 }
 .solut-study-list {
-  width: 1400px;
-  margin: 0 auto 70px;
+  margin: 0 -70px 70px 0;
 }
 .solut-study-list li {
   float: left;
-  width: 260px;
-  margin: 0 40px;
+  width: 232px;
+  margin: 0 70px 0 0;
   text-align: center;
 }
 .solut-study-l-t {
   padding: 25px 0 0;
-  font-size: 30px;
+  font-size: 22px;
   color: #1e50ae;
 }
 .solut-study-l-t p {
@@ -1545,8 +1619,9 @@ h6 {
 .solut-study-l-cont {
   line-height: 28px;
   padding: 20px 0 0;
-  font-size: 18px;
+  font-size: 14px;
   color: #666;
+  text-align: left;
 }
 .solut-study-l-cont p {
   padding-bottom: 10px;
@@ -1758,27 +1833,28 @@ h6 {
 }
 .prod-idx-l {
   float: left;
-  width: 336px;
+  width: 300px;
 }
 .prod-idx-l-t {
+  height: 260px;
+  line-height: 260px;
   background: #1e50ae;
-  padding: 50px 0;
   text-align: center;
   color: #fff;
-  font-size: 34px;
+  font-size: 28px;
 }
 .prod-idx-l-t p {
   font-size: 22px;
 }
 .prod-idx-l a {
   display: block;
-  height: 168px;
-  line-height: 168px;
+  height: 260px;
+  line-height: 260px;
   background: #f3f3f3;
   border: solid 2px transparent;
   border-bottom: solid 1px #bebebe;
   text-align: center;
-  font-size: 28px;
+  font-size: 22px;
   box-sizing: border-box;
   transition: none;
 }
@@ -1791,31 +1867,30 @@ h6 {
 }
 .prod-idx-r {
   float: right;
-  width: 886px;
+  width: 790px;
 }
 .prod-idx-list {
   margin-right: -20px;
 }
 .prod-idx-list a {
   float: left;
-  width: 284px;
+  width: 250px;
   margin: 0 18px 18px 0;
 }
 .prod-idx-list a:hover .prod-idx-list-i {
   border-color: #1e50ae;
 }
 .prod-idx-list-i {
-  border: solid 2px #d8d8d8;
+  border: solid 2px #dbdbdb;
 }
 .prod-idx-list-i img {
-  width: 280px;
-  height: 312px;
+  width: 246px;
   object-fit: cover;
 }
 .prod-idx-list-t {
   height: 60px;
   line-height: 60px;
-  font-size: 28px;
+  font-size: 20px;
   text-align: center;
 }
 .prod-idx-list-t i {
@@ -2006,21 +2081,21 @@ h6 {
   margin: 40px auto;
 }
 .news-detail-title {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-bottom: solid 1px #c9c9c9;
 }
 .news-detail-title h1 {
   margin-bottom: 15px;
-  font-size: 36px;
+  font-size: 30px;
 }
 .news-list-time {
-  font-size: 18px;
+  font-size: 14px;
   color: #b1b1b1;
 }
 .news-detail-cont {
   line-height: 34px;
   margin: 40px 0;
-  font-size: 18px;
+  font-size: 14px;
   color: #666;
 }
 .news-detail-cont img {
@@ -2033,7 +2108,7 @@ h6 {
   border-top: solid 1px #c9c9c9;
   margin-top: 50px;
   padding: 20px 0;
-  font-size: 20px;
+  font-size: 14px;
 }
 .news-detail-footer p {
   padding: 10px 0;
