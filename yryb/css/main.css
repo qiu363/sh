@@ -987,24 +987,27 @@ h6 {
 }
 /* 解决方案 安全定制 */
 .solut-safe-cont {
-  padding: 32px 0 40px;
+  padding: 60px 0 90px;
 }
 .solut-safe-cont-i1 {
   float: left;
-  width: 640px;
+  width: 490px;
 }
 .solut-safe-cont-w {
   float: right;
-  width: 540px;
+  width: 500px;
 }
 .solut-safe-cont-w-t {
   margin: 50px 0 30px;
-  font-size: 48px;
+  font-size: 34px;
+}
+.solut-safe-cont-w-t-2 {
+  margin-top: 40px !important;
 }
 .solut-safe-cont-w-c {
-  line-height: 50px;
+  line-height: 40px;
   color: #666;
-  font-size: 22px;
+  font-size: 14px;
 }
 .solut-safe-gray {
   padding-bottom: 50px;
@@ -1017,51 +1020,54 @@ h6 {
 .solut-safe-cont-peo {
   position: absolute;
   right: 0;
-  top: -100px;
+  top: -200px;
+  width: 470px;
 }
 .solut-safe-i3-w {
   padding: 80px 0;
 }
 .solut-safe-i3 {
   float: left;
-  width: 636px;
+  width: 570px;
 }
 .solut-safe-cont-i3 {
   float: right;
-  width: 540px;
+  width: 470px;
 }
 .solut-safe-i4-w {
   padding: 0 0 80px;
 }
 .solut-safe-i4 {
   float: right;
-  width: 634px;
+  width: 570px;
 }
 .solut-safe-cont-i4 {
   float: left;
-  width: 615px;
+  width: 560px;
 }
 .solut-safe-cont-i4 .solut-safe-cont-w-t {
   margin: 30px 0 30px;
 }
 .solut-safe-cont-w-app li {
   float: left;
+  width: 144px;
+  margin-right: 30px;
   text-align: center;
-  font-size: 22px;
+  font-size: 16px;
   color: #666;
+}
+.solut-safe-cont-w-a-i {
+  font-size: 14px;
 }
 .solut-safe-cont-w-app li a {
   display: block;
   margin: 20px 0;
 }
-.solut-safe-cont-w-app li:nth-child(1) {
-  width: 144px;
+.solut-safe-cont-w-app li img {
+  width: 125px;
 }
-.solut-safe-cont-w-app li:nth-child(2) {
-  width: 246px;
-}
-.solut-safe-cont-w-app li:nth-child(3) {
-  width: 224px;
+.solut-safe-cont-w-app li a img {
+  width: 30px;
 }
 .solut-safe-cont-w-a-t {
   font-weight: 600;
@@ -1069,10 +1075,13 @@ h6 {
 .solut-safe-cont-w-a-i p {
   margin-top: 20px;
 }
+.solut-safe-cont-i4 .solut-safe-cont-w-t1 {
+  margin-top: 30px;
+}
 /* 硬件定制 */
 .solut-hard {
   min-height: 673px;
-  padding: 84px 0 84px 120px;
+  padding: 84px 0 40px 0;
 }
 .solut-hard-list {
   width: 820px;
@@ -1080,30 +1089,31 @@ h6 {
 }
 .solut-hard-list li {
   float: left;
-  width: 293px;
-  height: 293px;
+  width: 238px;
+  height: 238px;
   margin: 0 110px 54px 0;
   background: url(../img/solution/hard_bg.png) no-repeat;
+  background-size: cover;
   text-align: center;
 }
 .solut-hard-t {
-  padding: 70px 0 20px;
-  font-size: 50px;
+  padding: 70px 0 30px;
+  font-size: 20px;
 }
 .solut-hard-list li p {
-  width: 234px;
-  height: 56px;
-  line-height: 56px;
+  width: 212px;
+  height: 46px;
+  line-height: 46px;
   margin: 0 auto;
   background: #1e50ae;
   border-radius: 5px;
   color: #fff;
-  font-size: 30px;
+  font-size: 26px;
 }
 .solut-hard-img {
   position: absolute;
-  left: 870px;
-  top: 84px;
+  right: -40px;
+  top: 50px;
 }
 /* 软件定制 */
 .solut-soft-list {
@@ -1113,28 +1123,28 @@ h6 {
 .solut-soft-list li {
   position: relative;
   float: left;
-  width: 266px;
-  height: 580px;
+  width: 210px;
+  height: 400px;
   margin-right: 20px;
-  padding: 108px 20px 0;
+  padding: 108px 30px 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .solut-soft-l-t {
   position: absolute;
-  left: 70px;
-  top: -81px;
-  width: 162px;
-  height: 162px;
-  line-height: 162px;
+  left: 60px;
+  top: -80px;
+  width: 148px;
+  height: 148px;
+  line-height: 148px;
   background: #1e50ae;
   border-radius: 50%;
   text-align: center;
   color: #fff;
-  font-size: 38px;
+  font-size: 28px;
   overflow: hidden;
 }
 .solut-soft-l-c {
-  font-size: 22px;
+  font-size: 14px;
   color: #666;
 }
 .solut-soft-l-c p {
@@ -1146,7 +1156,7 @@ h6 {
   content: "";
   position: absolute;
   left: 5px;
-  top: 13px;
+  top: 8px;
   width: 5px;
   height: 5px;
   background: #999;
@@ -1155,17 +1165,17 @@ h6 {
 .solut-soft-title {
   position: relative;
   margin-bottom: 30px;
-  padding-left: 45px;
-  font-size: 48px;
+  font-size: 34px;
+  color: #1e50ae;
 }
 .solut-soft-title::after {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 30px;
+  left: -35px;
+  top: 20px;
   width: 10px;
   height: 10px;
-  background: #333;
+  background: #1e50ae;
   border-radius: 50%;
 }
 .solut-soft-rj {
@@ -1173,17 +1183,17 @@ h6 {
 }
 .solut-soft-rj-1 {
   float: left;
-  width: 319px;
+  width: 290px;
   margin-right: 40px;
 }
 .solut-soft-rj-2 {
   float: left;
-  width: 391px;
+  width: 350px;
   margin-right: 40px;
 }
 .solut-soft-rj-3 {
   float: left;
-  width: 472px;
+  width: 420px;
 }
 .solut-soft-rj-1 img,
 .solut-soft-rj-2 img,
@@ -1198,23 +1208,26 @@ h6 {
 }
 .solut-soft-op-img {
   float: left;
-  margin: 0 100px 50px 0;
+  width: 240px;
+  margin: 0 100px 42px 0;
 }
 .solut-soft-op-big-i {
   position: absolute;
   right: 0;
   top: 0;
+  width: 510px;
 }
 /* 包件定制 */
 .solut-pack {
+  width: 1280px;
   padding: 100px 0;
 }
 .solut-pack-l {
   float: left;
-  width: 418px;
+  width: 415px;
   margin-right: 16px;
   padding: 20px 0 0 0;
-  font-size: 22px;
+  font-size: 20px;
   color: #666;
 }
 .solut-pack-l p {
@@ -1227,7 +1240,7 @@ h6 {
 }
 .solut-pack-m {
   float: left;
-  width: 408px;
+  width: 400px;
   margin-right: 16px;
 }
 .solut-pack-r {
@@ -1235,7 +1248,7 @@ h6 {
   width: 417px;
 }
 .solut-pack-r-cont {
-  font-size: 22px;
+  font-size: 20px;
   color: #666;
 }
 .solut-pack-r-cont p {
@@ -1248,7 +1261,7 @@ h6 {
 }
 .solut-pack-r-c {
   float: left;
-  padding: 30px 0 0 40px;
+  padding: 40px 0 0 59px;
 }
 
 /* 行业方案 */
@@ -2215,25 +2228,19 @@ h6 {
 .nav-l2-solu .nav-l2-item {
   margin: 0 35px;
 }
-.solut-safe-cont-w {
-  width: 575px;
-}
-.solut-safe-cont-w-t {
-  margin-top: 20px;
-}
 .solut-safe-cont-w-t1 {
   position: relative;
   margin-bottom: 25px;
   padding-left: 30px;
-  font-size: 35px;
+  font-size: 24px;
 }
 .solut-safe-cont-w-t1::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 20px;
-  width: 10px;
-  height: 10px;
+  top: 12px;
+  width: 8px;
+  height: 8px;
   background: #333;
   border-radius: 50%;
 }
