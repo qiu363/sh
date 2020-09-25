@@ -324,13 +324,14 @@ h6 {
 .i-safe-prod-l {
   width: 1230px;
   margin: 30px auto 80px;
-  padding-left: 120px;
+  padding-left: 130px;
 }
 .i-safe-prod-i {
   float: left;
-  width: 503px;
+  width: 386px;
   margin: 0 112px 0 0;
   padding-bottom: 20px;
+  background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   color: #333;
@@ -338,8 +339,7 @@ h6 {
 }
 .i-safe-prod-i img {
   display: block;
-  width: 503px;
-  height: 367px;
+  width: 100%;
 }
 .i-safe-prod-t {
   padding: 14px 0 0;
@@ -356,6 +356,10 @@ h6 {
 }
 .i-safe-prod-info {
   padding: 8px 0;
+  color: #999;
+}
+.i-safe-prod-c p {
+  color: #999;
 }
 .i-safe-prod-i:hover {
   background: #1e50ae;
@@ -364,6 +368,10 @@ h6 {
 .i-safe-prod-i:hover .i-safe-prod-t i {
   background: #fff;
 }
+.i-safe-prod-i:hover .i-safe-prod-info,
+.i-safe-prod-i:hover .i-safe-prod-c p {
+  color: #fff;
+}
 
 .i-solution {
   height: 994px;
@@ -371,32 +379,43 @@ h6 {
   background-size: cover;
 }
 .i-solution-cont {
-  width: 1380px;
-  margin: 0 auto;
-  padding: 30px 0 0 18px;
+  width: 1140px;
+  padding: 10px 0 0 0;
 }
 .i-solution-c-l {
   float: left;
-  width: 327px;
-  margin-right: 18px;
+  width: 268px;
+  margin-right: 14px;
+  padding: 3px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.i-solution-c-l:last-child {
+  margin-right: 0;
+}
+.i-solution-c-l img {
+  display: block;
+  width: 100%;
 }
 .i-solution-t {
   margin-top: 0;
-  color: #fff;
-  font-size: 20px;
+  padding: 10px 15px 15px;
+  color: #333;
+  font-size: 18px;
   font-weight: 600;
-  background: url(../img/index/arrow_solt.png) right bottom no-repeat;
+  background: url(../img/index/arrow_solt.jpg) right 15px bottom 16px no-repeat;
 }
 .i-solution-t-m {
-  margin: -16px 0 15px;
+  margin: -4px 0 5px;
 }
 .i-solution-t-n {
-  height: 55px;
+  height: 48px;
   margin-bottom: 5px;
-  font-size: 70px;
+  font-size: 60px;
   color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
   font-weight: 500;
+  color: #999;
 }
 
 .i-news-cont {
@@ -505,7 +524,7 @@ h6 {
 }
 .i-news-arrow-l {
   position: absolute;
-  left: 40px;
+  left: -80px;
   top: 220px;
   width: 40px;
   height: 40px;
@@ -514,7 +533,7 @@ h6 {
 }
 .i-news-arrow-r {
   position: absolute;
-  right: 40px;
+  right: -80px;
   top: 220px;
   width: 40px;
   height: 40px;
@@ -2049,7 +2068,7 @@ h6 {
   font-size: 16px;
 }
 .i-news-more-btn {
-  margin: 20px 0 40px 150px;
+  margin: 20px 0 40px 0;
 }
 .int-news-more-btn {
   margin: 20px 0 20px 100px;
@@ -2261,4 +2280,98 @@ h6 {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   padding: 0 60px 40px 120px;
   background: rgba(255, 255, 255, .8);
+}
+
+.i-page {
+  display: flex;
+  min-height: 600px;
+  align-items: center;
+}
+.i-page1 img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -245px;
+}
+.i-page1-cont {
+  width: 460px;
+}
+.i-page1-cont li {
+  padding: 18px 0;
+  border-bottom: solid 1px #d2d2d2;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+.i-page1-cont li:last-child {
+  border-bottom: 0;
+}
+.i-page1-cont li p {
+  padding-top: 10px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+.i-page2 {
+  position: relative;
+  background: url(../img/index/i_page2_bg.jpg) no-repeat;
+  background-size: cover;
+}
+.i-page2 .main {
+  display: flex;
+  min-height: 600px;
+  align-items: center;
+}
+.i-page2 img {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+}
+.i-page2-cont {
+  width: 470px;
+  color: #fff;
+}
+.i-page2-cont h3 {
+  font-size: 34px;
+}
+.i-page2-cont p {
+  line-height: 30px;
+  margin: 50px 0 40px;
+  font-size: 14px;
+}
+.i-page2-cont span {
+  display: inline-block;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  border: solid 1px #fff;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.i-page3-t1 {
+  font-size: 34px;
+  color: #1e50ae;
+  text-align: center;
+}
+.i-page3-title {
+  padding: 10px 0 30px;
+}
+.i-page3-title h3 {
+  background-image: url(../img/index/i_title_bg.jpg);
+  font-size: 14px;
+}
+.i-page3 img {
+  display: block;
+  margin: 0 auto;
+}
+.i-page4 {
+  position: relative;
+  background: url(../img/index/i_page4_bg.jpg) no-repeat;
+  background-size: cover;
+}
+.i-page5 {
+  position: relative;
+  background: url(../img/index/i_page5_bg.jpg) no-repeat;
+  background-size: cover;
 }
