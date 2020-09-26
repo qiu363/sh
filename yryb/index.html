@@ -164,7 +164,7 @@
             <br />
             同时为行业客户开发Html5版原笔迹手写工具，方便各行业用户集成在政务微信、钉钉、OA等场景的H5网页应用中，实现E本特色的原笔迹签批、手写识别等功能。
           </p>
-          <span>手写SDK获取 >></span>
+          <span id="J_sdk">手写SDK获取 >></span>
         </div>
 
         <img src="./img/index/i_page2_img.png" class="animate" data-ani="animated bounceInRight" />
@@ -389,6 +389,47 @@
     </div>
   </div>
 
+  <div class="sdk-pop hide" id="J_sdk_pop">
+    <div class="sdk-pop-title">
+      <span>联系方式</span>
+      <span>
+        <a href="###">在线咨询</a>
+      </span>
+    </div>
+    <div class="sdk-pop-cont">
+      <div class="sdk-pop-c-t">
+        请留下您的联系信息，我们会尽快给您回复，填写如遇问题，请拨打：
+        <span>010-8318 9026</span>
+      </div>
+      <div class="sdk-pop-c-f-t">您的联系方式</div>
+      <div class="sdk-pop-c-ipt">
+        <div class="sdk-pop-c-ipt-t">
+          <span>*</span>姓名：
+        </div>
+        <input type="text" id="J_name" placeholder="姓名" />
+      </div>
+      <div class="sdk-pop-c-ipt">
+        <div class="sdk-pop-c-ipt-t">
+          <span>*</span>联系电话：
+        </div>
+        <input type="text" id="J_mobile" placeholder="联系电话" />
+      </div>
+      <div class="sdk-pop-c-ipt">
+        <div class="sdk-pop-c-ipt-t">
+          <span>*</span>工作邮箱：
+        </div>
+        <input type="text" id="J_mail" placeholder="工作邮箱" />
+      </div>
+      <div class="sdk-pop-c-ipt">
+        <div class="sdk-pop-c-ipt-t">
+          <span>*</span>公司：
+        </div>
+        <input type="text" id="J_company" placeholder="公司" />
+      </div>
+      <div class="sdk-pop-c-btn" id="J_sub_btn">确认提交</div>
+    </div>
+  </div>
+
   <div class="mask hide" id="J_mask"></div>
 
   <script src="./js/swiper.min.js" type="text/javascript"></script>
@@ -462,6 +503,76 @@
         })
       }
     });
+
+    var isSubing = false;
+    $('#J_sub_btn').click(function () {
+      if (isSubing) {
+        return false;
+      }
+
+      var name = $('#J_name').val().replace(/^\s+|\s+$/g, '');
+      var mobile = $('#J_mobile').val().replace(/^\s+|\s+$/g, '');
+      var mail = $('#J_mail').val().replace(/^\s+|\s+$/g, '');
+      var company = $('#J_company').val().replace(/^\s+|\s+$/g, '');
+
+      if (name === '') {
+        alert('请输入姓名');
+        $('#J_name').focus()
+        return false;
+      }
+      if (!/^1\d{10}$/.test(mobile)) {
+        alert('请输入正确的电话号码');
+        $('#J_mobile').focus()
+        return false;
+      }
+      if (!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(mail)) {
+        alert('请输入正确的邮箱');
+        $('#J_mail').focus()
+        return false;
+      }
+      if (company === '') {
+        alert('请输入公司名称');
+        $('#J_company').focus()
+        return false;
+      }
+
+      isSubing = true;
+
+      $.ajax({
+        url: '',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+          name: name,
+          mobile: mobile,
+          mail: mail,
+          company: company
+        },
+        success: function (res) {
+          alert('提交成功');
+
+          $('#J_sdk_pop').hide();
+          $('#J_mask').hide();
+
+          isSubing = false;
+        },
+        error: function (res) {
+          alert('提交失败');
+
+          isSubing = false;
+        }
+      })
+    });
+
+    $('#J_sdk').click(function () {
+      $('#J_sdk_pop').show();
+      $('#J_mask').show();
+    })
+
+    $('#J_mask').click(function () {
+      $('#J_sdk_pop').hide();
+      $('#J_mask').hide();
+    })
   </script>
 </body>
 </html>

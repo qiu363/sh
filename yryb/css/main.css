@@ -2376,6 +2376,81 @@ h6 {
   background-size: cover;
 }
 
+.sdk-pop {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  z-index: 1000;
+  width: 470px;
+  height: 600px;
+  margin: -300px 0 0 -235px;
+  background: #fff;
+}
+.sdk-pop-title {
+  height: 58px;
+  line-height: 58px;
+}
+.sdk-pop-title span {
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+}
+.sdk-pop-title span a {
+  display: block;
+  height: 58px;
+}
+.sdk-pop-title span:nth-child(2) {
+  background: #e0e4e8;
+}
+.sdk-pop-cont {
+  padding: 15px 46px;
+}
+.sdk-pop-c-t {
+  font-size: 12px;
+}
+.sdk-pop-c-t span {
+  display: block;
+  padding-top: 4px;
+  font-size: 14px;
+  color: #1e50ae;
+}
+.sdk-pop-c-f-t {
+  padding: 15px 0 20px;
+  font-size: 24px;
+}
+.sdk-pop-c-ipt {
+  margin-bottom: 24px;
+}
+.sdk-pop-c-ipt-t {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+.sdk-pop-c-ipt-t span {
+  color: #f00;
+}
+.sdk-pop-c-ipt input {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 2px 8px;
+  border: solid 1px #b5b5b5;
+  box-sizing: border-box;
+  outline: none;
+}
+.sdk-pop-c-btn {
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
+  background: #1e50ae;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
 .animate {
   opacity: 0;
 }
