@@ -9,376 +9,383 @@
   <meta name="description" content="" />
   <link href="./css/swiper.min.css" rel="stylesheet" />
   <link href="./css/main.css" rel="stylesheet" />
+  <link href="./css/jquery.fullPage.css" rel="stylesheet" />
+  <link href="./css/animate.min.css" rel="stylesheet" />
   <script src="./js/jquery.min.js" type="text/javascript"></script>
+  <script src="./js/jquery.fullPage.min.js" type="text/javascript"></script>
 </head>
 <body style="min-width: 1140px;">
-  <div class="header-wrap">
-    <div class="header">
-      <a href="/" class="logo">
-        <img src="./img/logo.png" alt="E人E本" />
-      </a>
-
-      <ul class="nav">
-        <li class="cur">
-          <a href="./">首页</a>
-        </li>
-        <li>
-          <a href="product/index.html" class="nav-i-more" id="J_prod_link">安全产品</a>
-        </li>
-        <li>
-          <a href="solution.html" class="nav-i-more" id="J_solu_link">解决方案</a>
-        </li>
-        <li>
-          <a href="customer.html">客户服务</a>
-        </li>
-        <li>
-          <a href="introduce.html">公司介绍</a>
-        </li>
-        <li>
-          <a href="contactUs.html">联系我们</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="nav-l2 nav-l2-prod" id="J_prod">
-      <div class="nav-l2-item">
-        <div class="nav-l2-i-t">
-          <a href="###">
-            <i></i>T系列
+  <div id="fullpage">
+    <div class="section">
+      <div class="header-wrap animate animated" data-ani="animated bounceInDown">
+        <div class="header">
+          <a href="/" class="logo">
+            <img src="./img/logo.png" alt="E人E本" />
           </a>
+
+          <ul class="nav">
+            <li class="cur">
+              <a href="./">首页</a>
+            </li>
+            <li>
+              <a href="product/index.html" class="nav-i-more" id="J_prod_link">安全产品</a>
+            </li>
+            <li>
+              <a href="solution.html" class="nav-i-more" id="J_solu_link">解决方案</a>
+            </li>
+            <li>
+              <a href="customer.html">客户服务</a>
+            </li>
+            <li>
+              <a href="introduce.html">公司介绍</a>
+            </li>
+            <li>
+              <a href="contactUs.html">联系我们</a>
+            </li>
+          </ul>
         </div>
-        <div class="nav-l2-i-l">
-          <a href="###">> T12m</a>
-          <a href="###">> T11</a>
-          <a href="###">> T10\T10m</a>
-          <a href="###">> K9</a>
-        </div>
-      </div>
-      <div class="nav-l2-item">
-        <div class="nav-l2-i-t">
-          <a href="###">
-            <i></i>M系列
-          </a>
-        </div>
-        <div class="nav-l2-i-l">
-          <a href="###">> M11</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="nav-l2 nav-l2-solu" id="J_solu">
-      <div class="nav-l2-item">
-        <div class="nav-l2-i-t"><a href="###"><i></i>核心技术</a></div>
-        <div class="nav-l2-i-l">
-          <a href="###">> 原笔迹手写技术</a>
-          <a href="###">> 手写办公应用</a>
-        </div>
-      </div>
-      <div class="nav-l2-item">
-        <div class="nav-l2-i-t"><a href="###"><i></i>定制能力</a></div>
-        <div class="nav-l2-i-l">
-          <a href="###">> 安全定制</a>
-          <a href="###">> 软件定制</a>
-          <a href="###">> 硬件定制</a>
-          <a href="###">> 包材定制</a>
-        </div>
-      </div>
-      <div class="nav-l2-item">
-        <div class="nav-l2-i-t"><a href="###"><i></i>行业方案</a></div>
-        <div class="nav-l2-i-l">
-          <a href="###">> 移动政务</a>
-          <a href="###">> 移动会议</a>
-          <a href="###">> 移动执法</a>
-          <a href="###">> 移动学习</a>
-          <a href="###">> 移动医疗</a>
-          <a href="###">> 移动网络</a>
-        </div>
-      </div>
-      <div class="nav-l2-item">
-        <div class="nav-l2-i-t"><a href="###"><i></i>个人使用场景</a></div>
-        <div class="nav-l2-i-l">
-          <a href="###">> 手写移动办公</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="i-banner-wrap">
-    <div class="swiper-container" id="J_i_swiper">
-      <div class="swiper-wrapper">
-        <a href="hy/index.html" class="swiper-slide i-swiper-slide">
-          <img src="./img/index/banner/1.jpg" />
-        </a>
-        <a href="###" class="swiper-slide i-swiper-slide">
-          <img src="./img/index/banner/2.jpg" />
-        </a>
-        <a href="###" class="swiper-slide i-swiper-slide">
-          <img src="./img/index/banner/3.jpg" />
-        </a>
-        <a href="###" class="swiper-slide i-swiper-slide">
-          <img src="./img/index/banner/4.jpg" />
-        </a>
-      </div>
-    </div>
-
-    <div class="swiper-pagination i-banner-dot"></div>
-  </div>
-
-  <div class="i-page i-page1">
-    <div class="main">
-      <ul class="i-page1-cont">
-        <li>
-          真实手写
-          <p>笔尖能写，笔尾能擦，高度还原纸质书写体验，存储真实原笔迹。</p>
-        </li>
-        <li>
-          智能办公
-          <p>围绕商务人群办公场景打造的手写平板电脑，满足多样办公需求。</p>
-        </li>
-        <li>
-          行业应用
-          <p>可将原笔迹手写技术与客户办公系统无缝衔接，实现原笔迹签批、流程、记录等。</p>
-        </li>
-        <li>
-          安全定制
-          <p>根据客户安全标准要求，结合多种认证方式满足不同行业的安全定制需求。</p>
-        </li>
-      </ul>
-
-      <img src="./img/index/i_img_1.jpg" />
-    </div>
-  </div>
-
-  <div class="i-page i-page2">
-    <div class="main">
-      <div class="i-page2-cont">
-        <h3>原笔迹数字书写</h3>
-        <p>
-          “原笔迹数字书写技术”（MindMark®）是由壹人壹本公司自主研发并具有独立知识产权。融合领先的电磁压感技术和智能识别技术，在平板电脑上实现了原笔迹的输入、呈现、识别、转换和分享。
-          <br />
-          同时为行业客户开发Html5版原笔迹手写工具，方便各行业用户集成在政务微信、钉钉、OA等场景的H5网页应用中，实现E本特色的原笔迹签批、手写识别等功能。
-        </p>
-        <span>手写SDK获取 >></span>
-      </div>
-
-      <img src="./img/index/i_page2_img.png" />
-    </div>
-  </div>
-
-  <div class="i-page i-page3">
-    <div class="main">
-      <div class="i-page3-t1">Eben丰富实用的手写办公套件</div>
-      <div class="title i-page3-title">
-        <h3>满足多场景需求，不在办公室也可以办公签批，随时随地......</h3>
-      </div>
-      <img src="./img/index/i_page3_img.jpg" />
-    </div>
-  </div>
-
-  <div class="i-page i-page4">
-    <div class="main">
-      <div class="title title-w">
-        <h3>安全产品</h3>
-      </div>
-
-      <div class="i-safe-prod-l clearfix">
-        <a href="./product/seriesT.html" class="i-safe-prod-i">
-          <img src="./img/index/i_safe_1.jpg" />
-          <div class="i-safe-prod-c">
-            <div class="i-safe-prod-t">
-              <h4>T系列</h4>
-              <i></i>
+        <div class="nav-l2 nav-l2-prod" id="J_prod">
+          <div class="nav-l2-item">
+            <div class="nav-l2-i-t">
+              <a href="###">
+                <i></i>T系列
+              </a>
             </div>
-            <div class="i-safe-prod-info">原笔迹手写签批 会议记录 随时随地移动办公</div>
-            <p>查看更多.......</p>
-          </div>
-        </a>
-        <a href="./product/seriesM.html" class="i-safe-prod-i">
-          <img src="./img/index/i_safe_2.jpg" />
-          <div class="i-safe-prod-c">
-            <div class="i-safe-prod-t">
-              <h4>M系列</h4>
-              <i></i>
+            <div class="nav-l2-i-l">
+              <a href="###">> T12m</a>
+              <a href="###">> T11</a>
+              <a href="###">> T10\T10m</a>
+              <a href="###">> K9</a>
             </div>
-            <div class="i-safe-prod-info">智慧手写  安全办公   安全电子记事本</div>
-            <p>查看更多.......</p>
           </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="i-page i-page5">
-    <div class="main">
-      <div class="title">
-        <h3>解决方案</h3>
-      </div>
-
-      <div class="i-solution-cont clearfix">
-        <div class="i-solution-c-l">
-          <img src="./img/index/solut1.jpg" />
-          <div class="i-solution-t">
-            <div class="i-solution-t-n">01</div>
-            原笔迹手写技术
+          <div class="nav-l2-item">
+            <div class="nav-l2-i-t">
+              <a href="###">
+                <i></i>M系列
+              </a>
+            </div>
+            <div class="nav-l2-i-l">
+              <a href="###">> M11</a>
+            </div>
           </div>
         </div>
-        <div class="i-solution-c-l">
-          <div class="i-solution-t i-solution-t-m">
-            <div class="i-solution-t-n">02</div>
-            定制能力
+
+        <div class="nav-l2 nav-l2-solu" id="J_solu">
+          <div class="nav-l2-item">
+            <div class="nav-l2-i-t"><a href="###"><i></i>核心技术</a></div>
+            <div class="nav-l2-i-l">
+              <a href="###">> 原笔迹手写技术</a>
+              <a href="###">> 手写办公应用</a>
+            </div>
           </div>
-          <img src="./img/index/solut2.jpg" />
-        </div>
-        <div class="i-solution-c-l">
-          <img src="./img/index/solut3.jpg" />
-          <div class="i-solution-t">
-            <div class="i-solution-t-n">03</div>
-            行业应用方案
+          <div class="nav-l2-item">
+            <div class="nav-l2-i-t"><a href="###"><i></i>定制能力</a></div>
+            <div class="nav-l2-i-l">
+              <a href="###">> 安全定制</a>
+              <a href="###">> 软件定制</a>
+              <a href="###">> 硬件定制</a>
+              <a href="###">> 包材定制</a>
+            </div>
           </div>
-        </div>
-        <div class="i-solution-c-l">
-          <div class="i-solution-t i-solution-t-m">
-            <div class="i-solution-t-n">04</div>
-            个人使用场景
+          <div class="nav-l2-item">
+            <div class="nav-l2-i-t"><a href="###"><i></i>行业方案</a></div>
+            <div class="nav-l2-i-l">
+              <a href="###">> 移动政务</a>
+              <a href="###">> 移动会议</a>
+              <a href="###">> 移动执法</a>
+              <a href="###">> 移动学习</a>
+              <a href="###">> 移动医疗</a>
+              <a href="###">> 移动网络</a>
+            </div>
           </div>
-          <img src="./img/index/solut4.jpg" />
+          <div class="nav-l2-item">
+            <div class="nav-l2-i-t"><a href="###"><i></i>个人使用场景</a></div>
+            <div class="nav-l2-i-l">
+              <a href="###">> 手写移动办公</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="i-page i-page6">
-    <div class="main">
-      <div class="title">
-        <h3>新闻动态</h3>
-      </div>
-
-      <div class="i-news-cont">
-        <div class="swiper-container swiper-container-news" id="J_news_swiper">
+      <div class="i-banner-wrap">
+        <div class="swiper-container" id="J_i_swiper">
           <div class="swiper-wrapper">
-            <a href="###" class="swiper-slide i-news-swiper-slide">
-              <img src="./img/tmp/news.jpg" />
-              <div class="i-news-c">
-                <div class="i-news-c-time">
-                  <p>01/01</p>
-                  -2020
-                </div>
-                <div class="i-news-title">
-                  假的标题假的标题
-                  <p>Original handwriting technique</p>
-                </div>
-                <div class="i-news-brief">文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明说明文字说明文字说明文字说明</div>
-                <div class="i-news-more">MORE</div>
-              </div>
+            <a href="hy/index.html" class="swiper-slide i-swiper-slide">
+              <img src="./img/index/banner/1.jpg" />
             </a>
-            <a href="###" class="swiper-slide i-news-swiper-slide">
-              <img src="./img/tmp/news.jpg" />
-              <div class="i-news-c">
-                <div class="i-news-c-time">
-                  <p>01/01</p>
-                  -2020
-                </div>
-                <div class="i-news-title">
-                  假的标题假的标题
-                  <p>Original handwriting technique</p>
-                </div>
-                <div class="i-news-brief">文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明说明文字说明文字说明文字说明</div>
-                <div class="i-news-more">MORE</div>
-              </div>
+            <a href="###" class="swiper-slide i-swiper-slide">
+              <img src="./img/index/banner/2.jpg" />
             </a>
-            <a href="###" class="swiper-slide i-news-swiper-slide">
-              <img src="./img/tmp/news.jpg" />
-              <div class="i-news-c">
-                <div class="i-news-c-time">
-                  <p>01/01</p>
-                  -2020
-                </div>
-                <div class="i-news-title">
-                  假的标题假的标题
-                  <p>Original handwriting technique</p>
-                </div>
-                <div class="i-news-brief">文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明说明文字说明文字说明文字说明</div>
-                <div class="i-news-more">MORE</div>
-              </div>
+            <a href="###" class="swiper-slide i-swiper-slide">
+              <img src="./img/index/banner/3.jpg" />
             </a>
-            <a href="###" class="swiper-slide i-news-swiper-slide">
-              <img src="./img/tmp/news.jpg" />
-              <div class="i-news-c">
-                <div class="i-news-c-time">
-                  <p>01/01</p>
-                  -2020
-                </div>
-                <div class="i-news-title">
-                  假的标题假的标题
-                  <p>Original handwriting technique</p>
-                </div>
-                <div class="i-news-brief">文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明说明文字说明文字说明文字说明</div>
-                <div class="i-news-more">MORE</div>
-              </div>
+            <a href="###" class="swiper-slide i-swiper-slide">
+              <img src="./img/index/banner/4.jpg" />
             </a>
           </div>
         </div>
 
-        <span class="i-news-arrow-l" id="J_pre_news"></span>
-        <span class="i-news-arrow-r" id="J_next_news"></span>
-
-        <div class="i-news-list">
-          <a href="###">
-            <div class="i-news-l-time">
-              <p>13</p>
-              2020-01
-            </div>
-            <div class="i-news-l-t">
-              假的标题假的标题
-            </div>
-            <p class="i-news-l-t-c">假的文字假的文字假的文字假的文字假的文字假的文字假的文字的文字假的文字假的文字假的文字假的文字.......</p>
-          </a>
-          <a href="###">
-            <div class="i-news-l-time">
-              <p>13</p>
-              2020-01
-            </div>
-            <div class="i-news-l-t">
-              假的标题假的标题
-            </div>
-            <p class="i-news-l-t-c">假的文字假的文字假的文字假的文字假的文字假的文字假的文字的文字假的文字假的文字假的文字假的文字.......</p>
-          </a>
-        </div>
-
-        <a href="###" class="news-more-btn i-news-more-btn">查看更多新闻资讯 >></a>
+        <div class="swiper-pagination i-banner-dot"></div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-wrap">
-    <div class="footer clearfix">
-      <div class="footer-l">
-        <img src="./img/logo_f.png" />
-      </div>
-      <div class="footer-r">
-        <ul class="footer-link">
-          <li>
-            <div class="footer-l-t">售后寄修</div>
-            <p>400-139-1010</p>
+    <div class="i-page i-page1 section">
+      <div class="main">
+        <ul class="i-page1-cont">
+          <li class="animate" data-ani="animated flipInX">
+            真实手写
+            <p>笔尖能写，笔尾能擦，高度还原纸质书写体验，存储真实原笔迹。</p>
           </li>
-          <li class="footer-l-3">
-            <div class="footer-l-t">渠道招商</div>
-            <p>010-83189026</p>
+          <li class="animate" data-ani="animated flipInX" style="animation-delay: .2s;">
+            智能办公
+            <p>围绕商务人群办公场景打造的手写平板电脑，满足多样办公需求。</p>
+          </li>
+          <li class="animate" data-ani="animated flipInX" style="animation-delay: .4s;">
+            行业应用
+            <p>可将原笔迹手写技术与客户办公系统无缝衔接，实现原笔迹签批、流程、记录等。</p>
+          </li>
+          <li class="animate" data-ani="animated flipInX" style="animation-delay: .6s;">
+            安全定制
+            <p>根据客户安全标准要求，结合多种认证方式满足不同行业的安全定制需求。</p>
           </li>
         </ul>
 
-        <img class="footer-qrcode" src="./img/qrcode.png" alt="E人E本 公共号" />
+        <img src="./img/index/i_img_1.jpg" class="animate" data-ani="animated rotateIn" />
       </div>
     </div>
-    <div class="footer-copy">
-      <div class="footer-copy-cont">
-        版权所有：2009-2020© 北京壹人壹本信息科技有限公司
-        <a href="###">京ICP证120259号  京ICP备09102141号 </a>
-        公安备案号：1101050193
+
+    <div class="i-page i-page2 section">
+      <div class="main">
+        <div class="i-page2-cont animate" data-ani="animated bounceInLeft">
+          <h3>原笔迹数字书写</h3>
+          <p>
+            “原笔迹数字书写技术”（MindMark®）是由壹人壹本公司自主研发并具有独立知识产权。融合领先的电磁压感技术和智能识别技术，在平板电脑上实现了原笔迹的输入、呈现、识别、转换和分享。
+            <br />
+            同时为行业客户开发Html5版原笔迹手写工具，方便各行业用户集成在政务微信、钉钉、OA等场景的H5网页应用中，实现E本特色的原笔迹签批、手写识别等功能。
+          </p>
+          <span>手写SDK获取 >></span>
+        </div>
+
+        <img src="./img/index/i_page2_img.png" class="animate" data-ani="animated bounceInRight" />
       </div>
-      <a href="###" class="footer-copy-ser">
-        <img src="./img/footer_serve.png" />
-      </a>
+    </div>
+
+    <div class="i-page i-page3 section">
+      <div class="main">
+        <div class="i-page3-t1 animate" data-ani="animated fadeInDown">Eben丰富实用的手写办公套件</div>
+        <div class="title i-page3-title animate" data-ani="animated fadeInDown" style="animation-delay: .2s;">
+          <h3>满足多场景需求，不在办公室也可以办公签批，随时随地......</h3>
+        </div>
+        <img src="./img/index/i_page3_img.jpg" class="animate" data-ani="animated bounceIn" style="animation-delay: .6s;" />
+      </div>
+    </div>
+
+    <div class="i-page i-page4 section">
+      <div class="main">
+        <div class="title title-w" style="padding-top: 30px;">
+          <h3>安全产品</h3>
+        </div>
+
+        <div class="i-safe-prod-l clearfix">
+          <a href="./product/seriesT.html" class="i-safe-prod-i animate" data-ani="animated fadeInDown">
+            <img src="./img/index/i_safe_1.jpg" />
+            <div class="i-safe-prod-c">
+              <div class="i-safe-prod-t">
+                <h4>T系列</h4>
+                <i></i>
+              </div>
+              <div class="i-safe-prod-info">原笔迹手写签批 会议记录 随时随地移动办公</div>
+              <p>查看更多.......</p>
+            </div>
+          </a>
+          <a href="./product/seriesM.html" class="i-safe-prod-i animate" data-ani="animated fadeInDown" style="animation-delay: .4s;">
+            <img src="./img/index/i_safe_2.jpg" />
+            <div class="i-safe-prod-c">
+              <div class="i-safe-prod-t">
+                <h4>M系列</h4>
+                <i></i>
+              </div>
+              <div class="i-safe-prod-info">智慧手写  安全办公   安全电子记事本</div>
+              <p>查看更多.......</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="i-page i-page5 section">
+      <div class="main">
+        <div class="title" style="padding-top: 0;">
+          <h3>解决方案</h3>
+        </div>
+
+        <div class="i-solution-cont clearfix">
+          <div class="i-solution-c-l animate" data-ani="animated fadeInDown">
+            <img src="./img/index/solut1.jpg" />
+            <div class="i-solution-t">
+              <div class="i-solution-t-n">01</div>
+              原笔迹手写技术
+            </div>
+          </div>
+          <div class="i-solution-c-l animate" data-ani="animated fadeInDown" style="animation-delay: .4s;">
+            <div class="i-solution-t i-solution-t-m">
+              <div class="i-solution-t-n">02</div>
+              定制能力
+            </div>
+            <img src="./img/index/solut2.jpg" />
+          </div>
+          <div class="i-solution-c-l animate" data-ani="animated fadeInDown" style="animation-delay: .8s;">
+            <img src="./img/index/solut3.jpg" />
+            <div class="i-solution-t">
+              <div class="i-solution-t-n">03</div>
+              行业应用方案
+            </div>
+          </div>
+          <div class="i-solution-c-l animate" data-ani="animated fadeInDown" style="animation-delay: 1.2s;">
+            <div class="i-solution-t i-solution-t-m">
+              <div class="i-solution-t-n">04</div>
+              个人使用场景
+            </div>
+            <img src="./img/index/solut4.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="i-page i-page6 section">
+      <div class="main">
+        <div class="title" style="padding-top: 30px;">
+          <h3>新闻动态</h3>
+        </div>
+
+        <div class="i-news-cont">
+          <div class="swiper-container swiper-container-news" id="J_news_swiper">
+            <div class="swiper-wrapper">
+              <a href="###" class="swiper-slide i-news-swiper-slide">
+                <img src="./img/tmp/news.jpg" />
+                <div class="i-news-c">
+                  <div class="i-news-c-time">
+                    <p>01/01</p>
+                    -2020
+                  </div>
+                  <div class="i-news-title">
+                    假的标题假的标题
+                    <p>Original handwriting technique</p>
+                  </div>
+                  <div class="i-news-brief">文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明说明文字说明文字说明文字说明</div>
+                  <div class="i-news-more">MORE</div>
+                </div>
+              </a>
+              <a href="###" class="swiper-slide i-news-swiper-slide">
+                <img src="./img/tmp/news.jpg" />
+                <div class="i-news-c">
+                  <div class="i-news-c-time">
+                    <p>01/01</p>
+                    -2020
+                  </div>
+                  <div class="i-news-title">
+                    假的标题假的标题
+                    <p>Original handwriting technique</p>
+                  </div>
+                  <div class="i-news-brief">文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明说明文字说明文字说明文字说明</div>
+                  <div class="i-news-more">MORE</div>
+                </div>
+              </a>
+              <a href="###" class="swiper-slide i-news-swiper-slide">
+                <img src="./img/tmp/news.jpg" />
+                <div class="i-news-c">
+                  <div class="i-news-c-time">
+                    <p>01/01</p>
+                    -2020
+                  </div>
+                  <div class="i-news-title">
+                    假的标题假的标题
+                    <p>Original handwriting technique</p>
+                  </div>
+                  <div class="i-news-brief">文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明说明文字说明文字说明文字说明</div>
+                  <div class="i-news-more">MORE</div>
+                </div>
+              </a>
+              <a href="###" class="swiper-slide i-news-swiper-slide">
+                <img src="./img/tmp/news.jpg" />
+                <div class="i-news-c">
+                  <div class="i-news-c-time">
+                    <p>01/01</p>
+                    -2020
+                  </div>
+                  <div class="i-news-title">
+                    假的标题假的标题
+                    <p>Original handwriting technique</p>
+                  </div>
+                  <div class="i-news-brief">文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明说明文字说明文字说明文字说明</div>
+                  <div class="i-news-more">MORE</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <span class="i-news-arrow-l" id="J_pre_news"></span>
+          <span class="i-news-arrow-r" id="J_next_news"></span>
+
+          <div class="i-news-list">
+            <a href="###">
+              <div class="i-news-l-time">
+                <p>13</p>
+                2020-01
+              </div>
+              <div class="i-news-l-t">
+                假的标题假的标题
+              </div>
+              <p class="i-news-l-t-c">假的文字假的文字假的文字假的文字假的文字假的文字假的文字的文字假的文字假的文字假的文字假的文字.......</p>
+            </a>
+            <a href="###">
+              <div class="i-news-l-time">
+                <p>13</p>
+                2020-01
+              </div>
+              <div class="i-news-l-t">
+                假的标题假的标题
+              </div>
+              <p class="i-news-l-t-c">假的文字假的文字假的文字假的文字假的文字假的文字假的文字的文字假的文字假的文字假的文字假的文字.......</p>
+            </a>
+          </div>
+
+          <a href="###" class="news-more-btn i-news-more-btn">查看更多新闻资讯 >></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-wrap section">
+      <div class="footer clearfix">
+        <div class="footer-l">
+          <img src="./img/logo_f.png" />
+        </div>
+        <div class="footer-r">
+          <ul class="footer-link">
+            <li>
+              <div class="footer-l-t">售后寄修</div>
+              <p>400-139-1010</p>
+            </li>
+            <li class="footer-l-3">
+              <div class="footer-l-t">渠道招商</div>
+              <p>010-83189026</p>
+            </li>
+          </ul>
+
+          <img class="footer-qrcode" src="./img/qrcode.png" alt="E人E本 公共号" />
+        </div>
+      </div>
+      <div class="footer-copy">
+        <div class="footer-copy-cont">
+          版权所有：2009-2020© 北京壹人壹本信息科技有限公司
+          <a href="###">京ICP证120259号  京ICP备09102141号 </a>
+          公安备案号：1101050193
+        </div>
+        <a href="###" class="footer-copy-ser">
+          <img src="./img/footer_serve.png" />
+        </a>
+      </div>
     </div>
   </div>
 
@@ -441,6 +448,20 @@
         $('#J_solu').hide()
       }, 200)
     })
+
+    $('#fullpage').fullpage({
+      navigation: true,
+      afterLoad: function (anchorLink, index) {
+        $('.section').eq(index - 1).find('.animate').each(function () {
+          $(this).addClass($(this).attr('data-ani'))
+        })
+      },
+      onLeave: function (index, direction) {
+        $('.section').eq(index - 1).find('.animate').each(function () {
+          $(this).removeClass($(this).attr('data-ani'))
+        })
+      }
+    });
   </script>
 </body>
 </html>

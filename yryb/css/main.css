@@ -322,7 +322,6 @@ h6 {
 }
 
 .i-safe-prod-l {
-  width: 1230px;
   margin: 30px auto 80px;
   padding-left: 130px;
 }
@@ -2065,7 +2064,7 @@ h6 {
   border-radius: 20px;
   text-align: center;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
 }
 .i-news-more-btn {
   margin: 20px 0 40px 0;
@@ -2163,8 +2162,9 @@ h6 {
 .footer {
   width: 1100px;
 }
-.footer-wrap {
-  height: auto;
+.footer-wrap,
+.footer-wrap .fp-tableCell {
+  height: 440px !important;
 }
 .footer-l {
   padding: 110px 0 0 60px;
@@ -2374,4 +2374,11 @@ h6 {
   position: relative;
   background: url(../img/index/i_page5_bg.jpg) no-repeat;
   background-size: cover;
+}
+
+.animate {
+  opacity: 0;
+}
+.animate.animated {
+  opacity: 1;
 }
