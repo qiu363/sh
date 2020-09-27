@@ -293,6 +293,7 @@ h6 {
   position: relative;
   top: -120px;
   min-height: 600px;
+  height: 100%;
   margin-bottom: -120px;
 }
 .i-swiper-slide {
@@ -316,6 +317,8 @@ h6 {
 .i-swiper-slide img {
   position: relative;
   left: 50%;
+  height: 100%;
+  object-fit: cover;
   -webkit-transform: translate3d(-50%, 0, 0);
      -moz-transform: translate3d(-50%, 0, 0);
           transform: translate3d(-50%, 0, 0);
@@ -421,6 +424,9 @@ h6 {
   position: relative;
   width: 1140px;
   margin: 0 auto;
+}
+.swiper-container {
+  height: 100%;
 }
 .swiper-container-news {
   width: 1135px;
@@ -818,11 +824,18 @@ h6 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .intro-cont-honor {
+  height: 188px;
   margin: 20px 0;
+  padding: 20px 0 20px 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 .intro-cont-honor img {
-  display: block;
+  float: left;
+  width: 260px;
+  height: 188px;
+  margin-right: 20px;
+  object-fit: contain;
 }
 .intro-prod-evol-w {
   padding: 65px 0;
@@ -2393,19 +2406,27 @@ h6 {
 .sdk-pop-title span {
   float: left;
   width: 50%;
+  background: #e0e4e8;
   text-align: center;
   font-size: 16px;
   color: #000;
+  cursor: pointer;
 }
-.sdk-pop-title span a {
-  display: block;
-  height: 58px;
-}
-.sdk-pop-title span:nth-child(2) {
-  background: #e0e4e8;
+.sdk-pop-title span.cur {
+  background: #fff;
 }
 .sdk-pop-cont {
   padding: 15px 46px;
+}
+.sdk-pop-code img {
+  display: block;
+  width: 260px;
+  margin: 90px auto 55px;
+}
+.sdk-pop-code p {
+  font-size: 14px;
+  text-align: center;
+  color: #999;
 }
 .sdk-pop-c-t {
   font-size: 12px;
@@ -2449,6 +2470,20 @@ h6 {
   cursor: pointer;
   font-size: 16px;
   margin-top: 30px;
+}
+.news-list-main {
+  margin-bottom: 80px;
+}
+.sdk-pop-close {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  width: 50px;
+  height: 50px;
+  background: #e0e4e8 url(../img/close.jpg) center no-repeat;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .animate {

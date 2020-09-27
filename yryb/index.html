@@ -17,7 +17,7 @@
 <body style="min-width: 1140px;">
   <div id="fullpage">
     <div class="section">
-      <div class="header-wrap animate animated" data-ani="animated bounceInDown">
+      <div class="header-wrap">
         <div class="header">
           <a href="/" class="logo">
             <img src="./img/logo.png" alt="E人E本" />
@@ -151,7 +151,7 @@
           </li>
         </ul>
 
-        <img src="./img/index/i_img_1.jpg" class="animate" data-ani="animated rotateIn" />
+        <img src="./img/index/i_img_1.jpg" class="animate" data-ani="animated flipInX" />
       </div>
     </div>
 
@@ -390,13 +390,12 @@
   </div>
 
   <div class="sdk-pop hide" id="J_sdk_pop">
-    <div class="sdk-pop-title">
-      <span>联系方式</span>
-      <span>
-        <a href="###">在线咨询</a>
-      </span>
+    <div class="sdk-pop-title" id="J_sdk_tab">
+      <span class="cur">联系方式</span>
+      <span>在线咨询</span>
     </div>
-    <div class="sdk-pop-cont">
+
+    <div class="sdk-pop-cont J_sdk_tab_cont">
       <div class="sdk-pop-c-t">
         请留下您的联系信息，我们会尽快给您回复，填写如遇问题，请拨打：
         <span>010-8318 9026</span>
@@ -428,6 +427,14 @@
       </div>
       <div class="sdk-pop-c-btn" id="J_sub_btn">确认提交</div>
     </div>
+
+    <div class="sdk-pop-code hide J_sdk_tab_cont">
+      <img src="./img/qrcode.png" />
+
+      <p>用微信扫描二维码，即可在线咨询了解</p>
+    </div>
+
+    <i class="sdk-pop-close" id="J_close"></i>
   </div>
 
   <div class="mask hide" id="J_mask"></div>
@@ -564,12 +571,17 @@
       })
     });
 
+    $('#J_sdk_tab span').click(function () {
+      $(this).addClass('cur').siblings().removeClass('cur');
+      $('.J_sdk_tab_cont').hide().eq($('#J_sdk_tab span').index(this)).show()
+    });
+
     $('#J_sdk').click(function () {
       $('#J_sdk_pop').show();
       $('#J_mask').show();
     })
 
-    $('#J_mask').click(function () {
+    $('#J_close').click(function () {
       $('#J_sdk_pop').hide();
       $('#J_mask').hide();
     })
