@@ -957,10 +957,9 @@ h6 {
 }
 .solut-dz-list {
   position: relative;
-  top: -220px;
   z-index: 10;
   width: 1140px;
-  margin: 0 auto -160px;
+  margin: -220px auto 100px;
 }
 .solut-dz-list a {
   float: left;
@@ -1298,7 +1297,6 @@ h6 {
 /* 行业方案 */
 .solut-hy-sml-list {
   z-index: 20;
-  margin: 0 -20px -160px 0;
 }
 .solut-hy-sml-list a {
   width: 366px;
@@ -1320,7 +1318,7 @@ h6 {
 .solut-hy-list {
   width: 1140px;
   padding-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 100px;
 }
 .solut-hy-list a {
   width: 559px;
