@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link type="text/css" href="../css/bootstrap.min.css" rel="stylesheet">
-    <link type="text/css" href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link type="text/css" href="../css/style.css" rel="stylesheet">
     <meta name="x5-page-mode" content="app" />
     <meta name="imagemode" content="force" />
@@ -27,7 +26,7 @@
           <p>2003/05/12</p>
         </div>
         <div class="list-info-i-arr">
-          非会员
+          爸爸
           <img src="../img/arrow.png" class="list-info-i-arr-i" />
         </div>
       </a>
@@ -38,46 +37,13 @@
           <p>2003/05/12</p>
         </div>
         <div class="list-info-i-arr">
-          非会员
-          <img src="../img/arrow.png" class="list-info-i-arr-i" />
-        </div>
-      </a>
-      <a href="./detail.html" class="list-info-item">
-        <img src="../img/tmp/avatar.png" class="list-info-i-a" />
-        <div class="list-info-i-c">
-          王大海（大海）
-          <p>2003/05/12</p>
-        </div>
-        <div class="list-info-i-arr">
-          非会员
-          <img src="../img/arrow.png" class="list-info-i-arr-i" />
-        </div>
-      </a>
-      <a href="./detail.html" class="list-info-item">
-        <img src="../img/tmp/avatar.png" class="list-info-i-a" />
-        <div class="list-info-i-c">
-          王大海（大海）
-          <p>2003/05/12</p>
-        </div>
-        <div class="list-info-i-arr">
-          非会员
-          <img src="../img/arrow.png" class="list-info-i-arr-i" />
-        </div>
-      </a>
-      <a href="./detail.html" class="list-info-item">
-        <img src="../img/tmp/avatar.png" class="list-info-i-a" />
-        <div class="list-info-i-c">
-          王大海（大海）
-          <p>2003/05/12</p>
-        </div>
-        <div class="list-info-i-arr">
-          非会员
+          妈妈
           <img src="../img/arrow.png" class="list-info-i-arr-i" />
         </div>
       </a>
 
       <div class="list-info-add">
-        <span id="J_add" class="btn-add">添加</span>
+        <span id="J_add" class="btn-add">添加家长</span>
       </div>
     </div>
   </div>
@@ -87,19 +53,26 @@
   </div>
 
   <div class="stadent-add hide" id="J_pop">
-    <div class="stadent-add-cont">
-      <div class="list-info-i-l">学员姓名</div>
-      <input type="text" class="form-control" value="王大海" placeholder="请输入学员姓名" />
+    <div class="stadent-add-cont stadent-add-cont-par">
+      <div class="list-info-i-l">家长姓名</div>
+      <input type="text" class="form-control" value="" placeholder="请输入家长姓名" />
 
-      <div class="list-info-i-l">学员生日</div>
-      <input type="text" class="form-control" placeholder="请选择生日" id="J_date" />
+      <div class="list-info-i-l">亲子关系</div>
+      <select class="list-info-sel">
+        <option value="1">爸爸</option>
+        <option value="2">妈妈</option>
+      </select>
 
-      <div class="list-info-i-l">学员性别</div>
-      <div class="stadent-add-tag" id="J_sex_sel">
-        <span data-val="1" class="cur">男宝宝</span>
-        <span data-val="2">女宝宝</span>
-        <input type="hidden" value="1" id="J_sex" />
+      <div class="list-info-i-l">家长手机</div>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="请输入手机号码">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-primary">验证码</button>
+        </div>
       </div>
+
+      <div class="list-info-i-l">验证码</div>
+      <input type="text" class="form-control" value="" placeholder="请输入验证码" />
 
       <div class="list-info-i-btn">
         <span class="btn-add">添加</span>
@@ -113,8 +86,6 @@
   <div class="mask hide" id="J_mask"></div>
 
   <script src="../js/jquery.js"></script>
-  <script src="../js/moment-with-locales.js"></script>
-  <script src="../js/bootstrap-datetimepicker.min.js"></script>
   <script>
     $('#J_add').click(function () {
       $('#J_pop').removeClass('hide')
@@ -131,11 +102,6 @@
 
       $('#J_sex').val($(this).attr('data-val'))
     })
-
-    $('#J_date').datetimepicker({
-      format: 'YYYY-MM-DD',
-      locale: moment.locale('zh-cn')
-    });
   </script>
 </body>
 </html>

@@ -43,8 +43,14 @@ a {
     color: #fff;
     text-decoration: none;
 }
-a:hover {
-  text-decoration: none;
+
+a:focus, a:hover,a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+button {
+  outline: none !important;
 }
 
 .main-header {
@@ -203,6 +209,12 @@ a:hover {
   color: #000;
   font-size: 15px;
 }
+.list-link-a-tag {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  margin-top: -11px;
+}
 
 .list-info {
   padding: 20px 15px;
@@ -211,6 +223,190 @@ a:hover {
   padding: 15px;
   background: #fff;
   border-radius: 10px;
+}
+.list-info-item {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: solid 1px #f1f1f1;
+  align-items: center;
+  color: #000;
+}
+.list-info-i a:last-child {
+  border-bottom: 0;
+}
+.list-info-i-a {
+  width: 50px;
+  border-radius: 50%;
+  border: solid 1px #eee;
+  flex-shrink: 0;
+}
+.list-info-i-c {
+  flex: 1;
+  padding: 0 15px;
+}
+.list-info-i-c p {
+  margin-bottom: 0;
+}
+.list-info-i-arr {
+  display: flex;
+  align-items: center;
+}
+.list-info-i-arr-i {
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+}
+.list-info-add {
+  padding: 25px 0 10px;
+  text-align: center;
+}
+.list-info-i-l {
+  margin: 15px 0 4px;
+  font-size: 14px;
+}
+.list-info-i-btn {
+  padding: 20px 0 15px;
+  text-align: center;
+}
+.list-info-i-btn button,
+.list-info-i-btn span,
+.list-info-i-btn a {
+  margin: 0 20px;
+}
+.input-group-yz {
+  margin-top: 25px;
+}
+
+.title {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  padding: 0 15px;
+  font-size: 14px;
+}
+.title-more {
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+.title-more a {
+  display: inline-block;
+  margin-left: 10px;
+  color: #333;
+}
+
+.tab {
+  display: flex;
+  margin-bottom: 0;
+  padding: 15px 0 0;
+  text-align: center;
+}
+.tab li {
+  flex: 1;
+}
+.tab li span {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 12px;
+  border-bottom: solid 1px transparent;
+}
+.tab .cur span {
+  color: #0F4D96;
+  border-color: #0F4D96;
+}
+
+.stadent-add {
+  position: fixed;
+  top: 48%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+}
+.stadent-add-cont {
+  width: 300px;
+  height: 430px;
+  padding: 40px 25px 0;
+  background: url(../img/add-baby-tanchuang.png) no-repeat;
+  background-size: 300px auto;
+}
+.stadent-add-cont-par {
+  background-image: url(../img/add-jiazhang-tanchuang.png);
+}
+.stadent-add-close {
+  padding-top: 15px;
+  text-align: center;
+}
+.stadent-add-close span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/guanbi-tanchuang.png) no-repeat;
+  background-size: 30px;
+}
+.stadent-add-tag span {
+  display: inline-block;
+  height: 34px;
+  line-height: 34px;
+  margin-right: 15px;
+  padding: 0 15px;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+}
+.stadent-add-tag span.cur {
+  background: rgba(63, 112, 171, 1);
+  border-color: rgba(63, 112, 171, 1);
+  color: #fff;
+}
+
+.list-info-sel {
+  display: inline-block;
+  width: 100%;
+  height: 34px;
+  padding: 0 5px;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  outline: none;
+}
+
+.btn-add {
+  display: inline-block;
+  width: 100px;
+  height: 44px;
+  line-height: 44px;
+  background: url(../img/btn-ryb-1.png) no-repeat;
+  background-size: 100px 44px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+.btn-dis {
+  display: inline-block;
+  width: 100px;
+  height: 44px;
+  line-height: 44px;
+  background: url(../img/btn-ryb-3.png) no-repeat;
+  background-size: 100px 44px;
+  color: #fff !important;
+  font-size: 14px;
+  text-align: center;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, .5);
 }
 
 .loading-more {
@@ -222,9 +418,8 @@ a:hover {
 }
 
 .footer-logo {
-  position: absolute;
-  bottom: 30px;
-  z-index: -2;
+  margin: 30px auto;
+  z-index: 2;
 }
 .footer-logo img {
   width: 50%;
