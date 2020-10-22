@@ -98,6 +98,16 @@ h6 {
   height: 120px;
   background: rgba(255, 255, 255, 0.5);
 }
+.header-fix {
+  padding-top: 120px;
+}
+.header-fix .header-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 .header {
   position: relative;
   width: 1140px;
