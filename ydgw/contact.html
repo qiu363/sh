@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit" />
+  <title>联系我们 - 泰谱运动康复中心</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="./css/swiper.min.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="header">
+    <a href="./" class="logo">
+      <img src="./img/logo.png" alt="TAB" />
+    </a>
+
+    <ul class="nav clearfix">
+      <li>
+        <a href="./" class="nav-l">首页</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="nav-l">服务</a>
+        <div class="nav-more">
+          <a href="###">康复门诊</a>
+          <a href="./recovery.html">骨科康复</a>
+          <a href="###">小儿康复</a>
+          <a href="###">运动损伤康复</a>
+          <a href="###">产前/产后康复</a>
+          <a href="###">体能训练</a>
+          <a href="###">普拉提训练</a>
+          <a href="###">体态调整</a>
+          <a href="###">竞技体育医务保障</a>
+        </div>
+      </li>
+      <li>
+        <a href="###" class="nav-l">教育学院</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="nav-l">运动员管理系统</a>
+        <div class="nav-more">
+          <a href="./ydjkgl.html" class="cur">运动员健康管理</a>
+        </div>
+      </li>
+      <li>
+        <a href="./news.html" class="nav-l">新闻资讯</a>
+      </li>
+      <li class="cur">
+        <a href="./contact.html" class="nav-l">联系我们</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="banner">
+    <img src="./img/banner_sml.jpg" />
+
+    <div class="banner-tit">
+      <a href="./">首页</a>
+      <p>联系我们</p>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="title">
+      <span>T</span>AB
+      <h4>门店</h4>
+    </div>
+
+    <div class="contact clearfix">
+      <div class="contact-map">
+        <div class="contact-map-t">泰谱运动康复中心</div>
+        <div class="contact-map-c" id="J_map"></div>
+      </div>
+      <div class="contact-map">
+        <div class="contact-map-t">泰谱普拉提生活馆</div>
+        <div class="contact-map-c" id="J_map1"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-in">
+      <img src="./img/logo.png" class="footer-in-logo" />
+      <div class="footer-in-cont">
+        <p>info@tabhealing.com</p>
+        <p>周一至周日 09：00-18：00</p>
+        <p>北京市朝阳区望京大西洋新城B区202号楼1门1A底商</p>
+        <p>TAB Medicalfitness/泰谱运动康复中心</p>
+      </div>
+      <img src="./img/qrcode.png" class="footer-in-qr" />
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=6ccee8dda4a483d113a09ac300d8b7b5"></script>
+  <script>
+    var map = new AMap.Map('J_map', {
+      center: [116.460668, 39.996692],
+      zoom: 16
+    })
+    var marker = new AMap.Marker({
+      position: new AMap.LngLat(116.460668, 39.996692)
+    })
+    marker.setLabel({
+      offset: new AMap.Pixel(-42, -30),
+      content: "泰谱运动康复中心"
+    });
+
+    map.add(marker)
+
+    var map1 = new AMap.Map('J_map1', {
+      center: [116.467393, 39.991070],
+      zoom: 16
+    })
+    var marker1 = new AMap.Marker({
+      position: new AMap.LngLat(116.467393, 39.991070)
+    })
+    marker1.setLabel({
+      offset: new AMap.Pixel(-42, -30),
+      content: "泰谱普拉提生活馆"
+    });
+    map1.add(marker1)
+  </script>
+</body>
+</html>

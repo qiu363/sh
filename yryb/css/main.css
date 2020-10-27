@@ -2002,13 +2002,14 @@ h6 {
 }
 .prod-detail-param-i-big {
   width: 558px;
-  height: 744px;
+  height: 500px;
   margin: 20px 0;
 }
 .prod-detail-param-i-big img {
   width: 558px;
-  height: 744px;
-  object-fit: cover;
+  height: 500px;
+  margin: 0 auto;
+  object-fit: contain;
 }
 .prod-detail-param-i-list {
   margin-right: -12px;
