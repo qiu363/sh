@@ -98,6 +98,13 @@ h6 {
   height: 120px;
   background: rgba(255, 255, 255, 0.5);
 }
+.header-wrap-f {
+  position: fixed;
+  left: 0;
+  top: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
 .header-fix {
   padding-top: 120px;
 }
@@ -302,10 +309,8 @@ h6 {
 
 .i-banner-wrap {
   position: relative;
-  top: -120px;
   min-height: 600px;
   height: 100%;
-  margin-bottom: -120px;
 }
 .i-swiper-slide {
   position: relative;
