@@ -115,12 +115,12 @@ h6 {
 }
 .logo {
   display: block;
-  width: 384px;
+  width: 220px;
   height: 120px;
 }
 .logo img {
   display: block;
-  padding: 42px 0 0;
+  padding: 30px 0 0;
 }
 .nav {
   position: absolute;
@@ -138,6 +138,7 @@ h6 {
   padding: 0 30px;
   font-size: 14px;
   color: #221815;
+  font-weight: 600;
 }
 .nav li:hover a,
 .nav .cur a {
