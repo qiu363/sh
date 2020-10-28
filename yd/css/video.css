@@ -1,0 +1,45 @@
+.video-label {
+    margin: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.video-processing, .video-error {
+    background: none repeat scroll 0 0 black;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-shadow: none;
+    text-align: center;
+}
+
+.video-error {
+	color: red;
+}
+
+.nested-panel-label {
+    margin: 4px 0;
+    padding: 0 10px 10px 0;
+}
+
+.video-title-input {
+    width: 200px;
+}
+
+.video-upload-status {
+    background: none repeat scroll 0 0 black;
+    color: white;
+    font-weight: normal;
+    padding: 20px;
+    text-shadow: none;
+    text-align: center;
+}
+
+.ui-btn-video-back {
+    margin-right: 0;
+}
+
+.ui-btn-video-forward {
+    margin-left: 0;
+}

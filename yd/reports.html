@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+
+	<title>Select Athletes</title>
+
+	<style>
+		HTML {
+			margin: 0 !important;
+			border: none !important;
+		}
+
+		.dragdrop-handle {
+			cursor: move;
+			user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+		}
+
+		.Gybhf5kB {
+			zoom: 1;
+		}
+
+		.dragdrop-dragging {
+			zoom: normal;
+		}
+
+		.Gybhf5kI {
+			border: 1px dashed #1e90ff;
+			margin: 0 !important;
+			zoom: 1;
+			z-index: 100;
+		}
+
+		.dragdrop-flow-panel-positioner {
+			color: #1e90ff;
+			display: inline;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.dragdrop-proxy {
+			background-color: #7af;
+		}
+
+		.dragdrop-selected,
+		.dragdrop-dragging,
+		.dragdrop-proxy {
+			filter: alpha(opacity\=30);
+			opacity: 0.3;
+		}
+
+		.dragdrop-movable-panel {
+			z-index: 200;
+			margin: 0 !important;
+			border: none !important;
+		}
+	</style>
+	<style class="vjs-styles-defaults">
+		.video-js {
+			width: 300px;
+			height: 150px;
+		}
+
+		.vjs-fluid {
+			padding-top: 56.25%
+		}
+	</style>
+
+	<link rel="stylesheet" href="./css/legacy.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/materialdesignicons.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/semantic.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/uploadPanel.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/smartabase.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/nouislider.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video-js.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/d3-mobile-widgets.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/dropzone.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/theme.css" type="text/css" media="all">
+
+	<script src="./js/jquery.js" type="application/javascript"></script>
+	<script src="./js/nouislider.js" type="application/javascript"></script>
+	<script src="./js/video.js" type="application/javascript"></script>
+	<script type="application/javascript">
+		videojs.options.flash.swf = "swf/video-js.swf";
+	</script>
+	<script src="./js/screenfull.min.js" type="application/javascript"></script>
+	<script src="./js/d3.js" type="application/javascript"></script>
+	<script src="./js/d3-mobile-widgets.js" type="application/javascript"></script>
+	<script src="./js/iframeResizer.min.js" type="application/javascript"></script>
+	<script src="./js/wet_signature.min.js" type="application/javascript"></script>
+	<script src="./js/mfa-browser-auth.min.js" type="application/javascript"></script>
+	<script src="./js/pdf.js" type="application/javascript"></script>
+	<script src="./js/dropzone.min.js" type="application/javascript"></script>
+</head>
+
+<body id="body" class="ReportsPage">
+	<div class="wrapper">
+		<!-- 导航 -->
+		<div class="header-wrapper">
+			<div class="directional-panel-container-horizontal align-horizontal-left">
+				<div>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<img src="./img/yandingheadermain.png" class="gwt-Image" alt=" ">
+					</div>
+				</div>
+				<div class="directional-panel-container-horizontal align-horizontal-left">
+					<ul class="tab-navigation noprint">
+						<li>
+							<a class="gwt-Hyperlink Home" id="home" href="./home.html"><span>Home</span></a>
+						</li>
+					</ul>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<div class="dropdown">
+							<span class="dropdown-name link">Data Entry</span>
+							<span class="sb-icon-container">
+								<i class="mdi mdi-chevron-down mdi-18px"></i>
+							</span>
+							<ul class="sub-header-dropdown Data Entry">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink EnterData" id="enter-data" href="./typeOfEvent.html">
+										<span>Enter Data</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink ImportData" id="import-data" href="./importData.html">
+										<span>Import Data</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-name link">Reporting</span>
+							<span class="sb-icon-container"><i class="mdi mdi-chevron-down mdi-18px"></i></span>
+							<ul class="sub-header-dropdown Reporting">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Reports" id="reports" href="./reports.html">
+										<span>Reports</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Dashboards" id="dashboards" href="./account.html">
+										<span>Dashboards</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink MyHistory" id="my-history" href="./history.html">
+										<span>My History</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-name link">Other</span>
+							<span class="sb-icon-container">
+								<i class="mdi mdi-chevron-down mdi-18px"></i>
+							</span>
+							<ul class="sub-header-dropdown Other">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Groups" id="groups" href="./groups.html">
+										<span>Groups</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<a class="gwt-Hyperlink AllAccounts" id="all-accounts"><span>All Accounts</span></a>
+
+				<div class="dropdown">
+					<span class="sb-icon-container"><i class="mdi mdi-dots-horizontal mdi-36px"></i></span>
+					<ul class="sub-header-dropdown Navigation">
+						<li class="sub-header-list-item">
+							<a class="gwt-Hyperlink Account" id="account" href="./account.html">
+								<span>Account</span>
+							</a>
+						</li>
+						<li class="sub-header-list-item">
+							<div class="gwt-HTML">
+								<a id="documentation" href="https://learn.fusionsport.com/help" target="_blank">
+									<span>Help</span>
+								</a>
+							</div>
+						</li>
+						<li class="sub-header-list-item">
+							<a class="gwt-Hyperlink Logout" id="logout" href="./login.html"><span>Logout</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-container-wrapper">
+			<div class="page-container">
+				<div class="page-container-left" style="width: 280px;">
+					<div class="toggle-sidebar-button" style=""><span class="sb-icon-container"><i
+								class="mdi mdi-chevron-left mdi-36px"></i></span></div>
+					<div class="sidebar sidebardropdown page-container-sidebar">
+						<div style="overflow: auto; position: relative; zoom: 1; height: 669px;">
+							<div style="position: relative; zoom: 1;">
+								<div>
+									<div class="sidebarpanel">
+										<div class="sidebarpanel-header noprint">
+											<h5>Select Data To View</h5><span class="sb-icon-container"><i
+													class="mdi mdi-chevron-down mdi-18px"></i></span>
+										</div>
+										<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+											<div class="gwt-Label loading-text">Loading</div>
+										</div>
+										<div class="sidebarpanel-contents compressedview">
+											<div>
+												<div class="directional-panel-container-vertical align-horizontal-left form-item form-item-even"
+													style="width: 100%;">
+													<div class="form-label" title="Type of Event:">Type of Event:</div>
+													<div class="select-box-wrapper form-widget" id="formselector"><select tabindex="0"
+															class="gwt-ListBox">
+															<option value="9247">CTTM Injury Record</option>
+															<option value="9268">CTTM Training Log</option>
+															<option value="9267">CTTM Wellness</option>
+														</select></div>
+												</div>
+											</div>
+											<div>
+												<div class="directional-panel-container-vertical align-horizontal-left form-item form-item-odd"
+													style="width: 100%;">
+													<div class="form-label" title="Athlete(s):">Athlete(s):</div>
+													<div class="usersselector form-widget">
+														<div class="fake-hyperlink">1 Athlete selected</div>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="directional-panel-container-vertical align-horizontal-left form-item form-item-even"
+													style="width: 100%;">
+													<div class="form-label" title="Date Interval:">Date Interval:</div>
+													<div class="form-widget">
+														<div class="date-selection-controller">
+															<div>
+																<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+																		<option value="All History">All History</option>
+																		<option value="All (History and Future)">All (History and Future)</option>
+																		<option value="Date Range">Date Range</option>
+																		<option value="Last">Last</option>
+																		<option value="All Upcoming">All Upcoming</option>
+																		<option value="Last Custom">Last Custom</option>
+																		<option value="Today">Today</option>
+																	</select></div>
+															</div>
+															<div><input type="text" tabindex="0" class="gwt-DateBox" size="25" style="display: none;">
+															</div>
+															<div><input type="text" tabindex="0" class="gwt-DateBox" size="25" style="display: none;">
+															</div>
+															<div>
+																<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox"
+																		style="display: none;">
+																		<option value="1">1</option>
+																		<option value="2">2</option>
+																		<option value="3">3</option>
+																		<option value="4">4</option>
+																		<option value="5">5</option>
+																		<option value="6">6</option>
+																		<option value="7">7</option>
+																		<option value="8">8</option>
+																		<option value="9">9</option>
+																		<option value="10">10</option>
+																		<option value="11">11</option>
+																		<option value="12">12</option>
+																		<option value="13">13</option>
+																		<option value="14">14</option>
+																		<option value="15">15</option>
+																		<option value="16">16</option>
+																		<option value="17">17</option>
+																		<option value="18">18</option>
+																		<option value="19">19</option>
+																		<option value="20">20</option>
+																		<option value="21">21</option>
+																		<option value="22">22</option>
+																		<option value="23">23</option>
+																		<option value="24">24</option>
+																		<option value="25">25</option>
+																		<option value="26">26</option>
+																		<option value="27">27</option>
+																		<option value="28">28</option>
+																		<option value="29">29</option>
+																		<option value="30">30</option>
+																		<option value="31">31</option>
+																	</select></div>
+															</div>
+															<div>
+																<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox"
+																		style="display: none;">
+																		<option value="days">days</option>
+																		<option value="weeks">weeks</option>
+																		<option value="months">months</option>
+																		<option value="years">years</option>
+																	</select></div>
+															</div>
+															<div>
+																<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox"
+																		style="display: none;">
+																		<option value="weeks">weeks</option>
+																		<option value="months">months</option>
+																	</select></div>
+															</div>
+															<div>
+																<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox"
+																		style="display: none;">
+																		<option value="Sunday-Saturday">Sunday-Saturday</option>
+																		<option value="Monday-Sunday">Monday-Sunday</option>
+																		<option value="Tuesday-Monday">Tuesday-Monday</option>
+																		<option value="Wednesday-Tuesday">Wednesday-Tuesday</option>
+																		<option value="Thursday-Wednesday">Thursday-Wednesday</option>
+																		<option value="Friday-Thursday">Friday-Thursday</option>
+																		<option value="Saturday-Friday">Saturday-Friday</option>
+																	</select></div>
+															</div>
+															<div>
+																<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox"
+																		style="display: none;">
+																		<option value="1">1</option>
+																		<option value="2">2</option>
+																		<option value="3">3</option>
+																		<option value="4">4</option>
+																		<option value="5">5</option>
+																		<option value="6">6</option>
+																		<option value="7">7</option>
+																		<option value="8">8</option>
+																		<option value="9">9</option>
+																		<option value="10">10</option>
+																		<option value="11">11</option>
+																		<option value="12">12</option>
+																		<option value="13">13</option>
+																		<option value="14">14</option>
+																		<option value="15">15</option>
+																		<option value="16">16</option>
+																		<option value="17">17</option>
+																		<option value="18">18</option>
+																		<option value="19">19</option>
+																		<option value="20">20</option>
+																		<option value="21">21</option>
+																		<option value="22">22</option>
+																		<option value="23">23</option>
+																		<option value="24">24</option>
+																		<option value="25">25</option>
+																		<option value="26">26</option>
+																		<option value="27">27</option>
+																		<option value="28">28</option>
+																		<option value="29">29</option>
+																		<option value="30">30</option>
+																		<option value="31">31</option>
+																	</select></div>
+															</div>
+															<div>
+																<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+																		<option value="Include All">Include All</option>
+																		<option value="1">Include the most recent result</option>
+																		<option value="2">2 most recent results</option>
+																		<option value="3">3 most recent results</option>
+																		<option value="4">4 most recent results</option>
+																		<option value="5">5 most recent results</option>
+																		<option value="6">6 most recent results</option>
+																		<option value="7">7 most recent results</option>
+																		<option value="8">8 most recent results</option>
+																		<option value="9">9 most recent results</option>
+																	</select></div>
+															</div>
+														</div>
+														<div style="display: none;">
+															<div></div>
+															<div></div><button type="button" tabindex="0" class="gwt-Button primary-action"
+																id="add-date-range">Add Date Range</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="directional-panel-container-vertical align-horizontal-left form-item form-item-odd"
+													style="width: 100%;">
+													<div class="form-label" title="Saved/Draft">Saved/Draft</div>
+													<div class="select-box-wrapper form-widget"><select tabindex="0" class="gwt-ListBox">
+															<option value="Draft">Draft</option>
+															<option value="Saved ">Saved </option>
+															<option value="All Data">All Data</option>
+														</select></div>
+												</div>
+											</div>
+											<div>
+												<div class="directional-panel-container-vertical"><a class="link AddFilter"
+														id="add-filter"><span class="sb-icon-container"><i
+																class="mdi mdi-plus mdi-18px"></i></span><span>Add Filter</span></a></div>
+											</div>
+										</div>
+										<div class="sidebarpanel-footer"></div>
+									</div>
+									<div class="sidebarpanel">
+										<div class="sidebarpanel-header noprint">
+											<h5>Advanced</h5><span class="sb-icon-container"><i
+													class="mdi mdi-chevron-down mdi-18px"></i></span>
+										</div>
+										<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+											<div class="gwt-Label loading-text">Loading</div>
+										</div>
+										<div class="sidebarpanel-contents" style="display: none;">
+											<div>
+												<div class="directional-panel-container-vertical align-horizontal-left align-vertical-top"><span
+														class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-440" tabindex="0"><label
+															for="gwt-uid-440">Date Of Birth</label></span><span class="gwt-CheckBox"><input
+															type="checkbox" id="gwt-uid-441" tabindex="0"><label
+															for="gwt-uid-441">Age</label></span><span class="gwt-CheckBox"><input type="checkbox"
+															id="gwt-uid-439" tabindex="0"><label for="gwt-uid-439">Sex</label></span><span
+														class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-442" tabindex="0"><label
+															for="gwt-uid-442">Groups</label></span><span class="gwt-CheckBox"><input type="checkbox"
+															id="gwt-uid-443" tabindex="0"><label for="gwt-uid-443">Include Whole
+															Record</label></span><span class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-444"
+															tabindex="0"><label for="gwt-uid-444">Creation Date</label></span><span
+														class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-445" tabindex="0"><label
+															for="gwt-uid-445">Last Updated</label></span><span class="gwt-CheckBox"><input
+															type="checkbox" id="gwt-uid-446" tabindex="0"><label for="gwt-uid-446">Start
+															Time</label></span><span class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-447"
+															tabindex="0"><label for="gwt-uid-447">Finish Time</label></span></div>
+											</div>
+										</div>
+										<div class="sidebarpanel-footer"></div>
+									</div>
+									<div class="sidebarpanel">
+										<div class="sidebarpanel-header noprint">
+											<h5>Compare To</h5><span class="sb-icon-container"><i
+													class="mdi mdi-chevron-down mdi-18px"></i></span>
+										</div>
+										<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+											<div class="gwt-Label loading-text">Loading</div>
+										</div>
+										<div class="sidebarpanel-contents" style="display: none;">
+											<div>
+												<div class="directional-panel-container-vertical align-horizontal-left"><span
+														class="gwt-RadioButton"><input type="radio" name="ComparisonSelector0" id="gwt-uid-448"
+															tabindex="0"><label for="gwt-uid-448">Performance Standard</label></span>
+													<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox"
+															style="display: none;">
+															<option value="-2">Most Appropriate</option>
+														</select></div><span class="gwt-RadioButton"><input type="radio" name="ComparisonSelector0"
+															id="gwt-uid-449" tabindex="0"><label for="gwt-uid-449">Athlete</label></span>
+													<div class="select-box-wrapper" style="display: none;"><select tabindex="0"
+															class="gwt-ListBox">
+															<option value="37617">言鼎 何子夏</option>
+														</select></div><span class="gwt-RadioButton"><input type="radio" name="ComparisonSelector0"
+															id="gwt-uid-450" tabindex="0" checked=""><label for="gwt-uid-450">None</label></span>
+													<div class="directional-panel-container-vertical align-horizontal-left"
+														style="display: none;"></div>
+												</div>
+											</div>
+										</div>
+										<div class="sidebarpanel-footer"></div>
+									</div>
+									<div class="sidebarpanel">
+										<div class="sidebarpanel-header noprint">
+											<h5>View Fields</h5><span class="sb-icon-container"><i
+													class="mdi mdi-chevron-down mdi-18px"></i></span>
+										</div>
+										<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+											<div class="gwt-Label loading-text">Loading</div>
+										</div>
+										<div class="sidebarpanel-contents compressedview" style="display: none;">
+											<div><span class="gwt-CheckBox" style="display: none;"><input type="checkbox" id="gwt-uid-451"
+														tabindex="0"><label for="gwt-uid-451">Show ranks?</label></span></div>
+											<div><span class="gwt-CheckBox" style="display: none;"><input type="checkbox" id="gwt-uid-452"
+														tabindex="0"><label for="gwt-uid-452">%Chg?</label></span></div>
+											<div>
+												<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="display: none;">
+														<option value="Compare To Previous">Compare To Previous</option>
+														<option value="Compare To First">Compare To First</option>
+													</select></div>
+											</div>
+											<div><span class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-453" tabindex="0"><label
+														for="gwt-uid-453">Include Missing Users?</label></span></div>
+											<div><span class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-454" tabindex="0"
+														checked=""><label for="gwt-uid-454">Include Athlete?</label></span></div>
+											<div><span class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-455" tabindex="0"
+														checked=""><label for="gwt-uid-455">Include Who Entered Record?</label></span></div>
+											<div>
+												<div class="directional-panel-container-vertical align-horizontal-left form-item form-item-even"
+													style="width: 100%;">
+													<div class="form-label" title="Selected fields:">Selected fields:</div>
+													<div class="form-widget">
+														<div class="checkbox-group">
+															<div class="directional-panel-container-vertical align-horizontal-left"><span
+																	class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-456" tabindex="0"
+																		checked=""><label for="gwt-uid-456">Select None</label></span><span
+																	class="gwt-CheckBox"><input type="checkbox" id="gwt-uid-457" tabindex="0"><label
+																		for="gwt-uid-457">Invert Selection</label></span><input type="text" tabindex="0"
+																	class="gwt-TextBox textbox-hint"></div>
+															<div class="search-results-holder"></div>
+															<div>
+																<table style="width: 100%;">
+																	<colgroup>
+																		<col>
+																	</colgroup>
+																	<tbody>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-458" tabindex="0" checked=""><label for="gwt-uid-458">Last
+																						Name</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-459" tabindex="0" checked=""><label for="gwt-uid-459">First
+																						Name</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-460" tabindex="0" checked=""><label
+																						for="gwt-uid-460">Sex</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-461" tabindex="0" checked=""><label
+																						for="gwt-uid-461">DOB</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-462" tabindex="0" checked=""><label
+																						for="gwt-uid-462">Age</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-463" tabindex="0" checked=""><label
+																						for="gwt-uid-463">option</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-464" tabindex="0" checked=""><label for="gwt-uid-464">Date of
+																						First Symptoms</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-465" tabindex="0" checked=""><label for="gwt-uid-465">OSICS
+																						Diagnosis</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-466" tabindex="0" checked=""><label for="gwt-uid-466">Grade of
+																						Injury</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-467" tabindex="0" checked=""><label for="gwt-uid-467">Diagnosis
+																						(Other)</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-468" tabindex="0" checked=""><label for="gwt-uid-468">Body
+																						Area</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-469" tabindex="0" checked=""><label for="gwt-uid-469">Body Area
+																						c</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-470" tabindex="0" checked=""><label for="gwt-uid-470">Injury
+																						Side</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-471" tabindex="0" checked=""><label for="gwt-uid-471">Injury
+																						Aspect</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-472" tabindex="0" checked=""><label for="gwt-uid-472">Body
+																						Region</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-473" tabindex="0" checked=""><label for="gwt-uid-473">Injury
+																						Diagnosis</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-474" tabindex="0" checked=""><label for="gwt-uid-474">Injury
+																						Code</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-475" tabindex="0" checked=""><label for="gwt-uid-475">Unfit to
+																						Train/Compete</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-476" tabindex="0" checked=""><label for="gwt-uid-476">Injury
+																						History</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-477" tabindex="0" checked=""><label for="gwt-uid-477">Onset of
+																						Injury</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-478" tabindex="0" checked=""><label for="gwt-uid-478">Injured
+																						During</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-479" tabindex="0" checked=""><label
+																						for="gwt-uid-479">Activity</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-480" tabindex="0" checked=""><label
+																						for="gwt-uid-480">Mechanism</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-481" tabindex="0" checked=""><label for="gwt-uid-481">Mechanism
+																						Details</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-482" tabindex="0" checked=""><label for="gwt-uid-482">Additional
+																						Comments</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-483" tabindex="0" checked=""><label for="gwt-uid-483">Mechanism
+																						Video/Image</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-484" tabindex="0" checked=""><label for="gwt-uid-484">Surgery
+																						Required</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-485" tabindex="0" checked=""><label for="gwt-uid-485">Surgery
+																						Details</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-486" tabindex="0" checked=""><label for="gwt-uid-486">Consult
+																						Date</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-487" tabindex="0" checked=""><label
+																						for="gwt-uid-487">Subjective</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-488" tabindex="0" checked=""><label for="gwt-uid-488">Objective
+																						Notes</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-489" tabindex="0" checked=""><label for="gwt-uid-489">Objective
+																						Assessment</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-490" tabindex="0" checked=""><label
+																						for="gwt-uid-490">Treatment</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-491" tabindex="0" checked=""><label
+																						for="gwt-uid-491">Action</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-492" tabindex="0" checked=""><label
+																						for="gwt-uid-492">Plan</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-493" tabindex="0" checked=""><label
+																						for="gwt-uid-493">Status</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-494" tabindex="0" checked=""><label
+																						for="gwt-uid-494">Restrictions</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-495" tabindex="0" checked=""><label for="gwt-uid-495">Days since
+																						Tx</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-496" tabindex="0" checked=""><label for="gwt-uid-496">Days
+																						Unavailable</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-497" tabindex="0" checked=""><label for="gwt-uid-497">Entered
+																						By</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-498" tabindex="0" checked=""><label for="gwt-uid-498">Entered
+																						On</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-499" tabindex="0" checked=""><label for="gwt-uid-499">Expected
+																						Date Of Return</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-500" tabindex="0" checked=""><label for="gwt-uid-500">Fully
+																						resolved</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-501" tabindex="0" checked=""><label for="gwt-uid-501">Initial
+																						Status</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-502" tabindex="0" checked=""><label for="gwt-uid-502">Current
+																						Status</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-503" tabindex="0" checked=""><label for="gwt-uid-503">Current
+																						Restrictions</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-504" tabindex="0" checked=""><label for="gwt-uid-504">Current
+																						Consult Date</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-505" tabindex="0" checked=""><label for="gwt-uid-505">Test Table
+																						Date Sort</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-506" tabindex="0" checked=""><label for="gwt-uid-506">Current
+																						Subjective</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-507" tabindex="0" checked=""><label for="gwt-uid-507">Current
+																						Objective</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-508" tabindex="0" checked=""><label for="gwt-uid-508">Current
+																						Action</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-509" tabindex="0" checked=""><label for="gwt-uid-509">Current
+																						Plan</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-510" tabindex="0" checked=""><label for="gwt-uid-510">Current
+																						SOAP</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-511" tabindex="0" checked=""><label for="gwt-uid-511">Last
+																						Entered By</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-512" tabindex="0" checked=""><label for="gwt-uid-512">Date Fully
+																						Resolved</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-513" tabindex="0" checked=""><label for="gwt-uid-513">Training
+																						Days Missed</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-514" tabindex="0" checked=""><label for="gwt-uid-514">Games
+																						Missed</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-515" tabindex="0" checked=""><label for="gwt-uid-515">Expected
+																						Injury Duration</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-516" tabindex="0" checked=""><label for="gwt-uid-516">Injury
+																						Duration</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-517" tabindex="0" checked=""><label for="gwt-uid-517">No Days
+																						Unavailable</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-518" tabindex="0" checked=""><label for="gwt-uid-518">Diagnosis
+																						Summary</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-519" tabindex="0" checked=""><label for="gwt-uid-519">Injury
+																						Occurrence</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-520" tabindex="0" checked=""><label for="gwt-uid-520">Total Days
+																						Injured</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-521" tabindex="0" checked=""><label for="gwt-uid-521">Total Days
+																						Unavailable</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-522" tabindex="0" checked=""><label for="gwt-uid-522">Total
+																						Games Missed</label></span></td>
+																		</tr>
+																		<tr>
+																			<td><span class="gwt-CheckBox athlete-selection-checkbox"><input type="checkbox"
+																						id="gwt-uid-523" tabindex="0" checked=""><label for="gwt-uid-523">Total
+																						Training Days Missed</label></span></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sidebarpanel-footer"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebarpanel">
+							<div class="loading" style="display: none;"><img src="img/loadingspinner32.gif" class="gwt-Image">
+								<div class="gwt-Label loading-text">Loading</div>
+							</div>
+							<div class="sidebarpanel-contents">
+								<div>
+									<div class="directional-panel-container-horizontal align-horizontal-left"><button type="button"
+											tabindex="0" class="gwt-Button primary-action" id="run-report">Run Report</button><button
+											type="button" tabindex="0" class="gwt-Button primary-action" id="clear">Clear</button></div>
+								</div>
+							</div>
+							<div class="sidebarpanel-footer"></div>
+						</div>
+					</div>
+				</div>
+				<div class="page-container-center" style="width: 61.3197%;">
+					<div class="page-container-header">
+						<h1>Reports</h1>
+					</div>
+					<div class="trailbar-wrapper">
+						<div class="trailbar" style=""><a class="gwt-Hyperlink Home" id="home"
+								href="#"><span>Home</span></a><span>&nbsp;&gt;&nbsp;</span><span>Reports</span></div>
+					</div>
+					<div class="page-container-sub-header">
+						<div class="subheader-widget">
+							<ul class="page-container-header-links noprint">
+								<li class="header-list-item"></li>
+								<li class="header-list-item"></li>
+								<li class="header-list-item"></li>
+								<li class="header-list-item" style="display: none;"><a class="gwt-Hyperlink SendMessage"
+										id="send-message" href="#" style="display: none;"><span>Send Message</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="page-container-content">
+						<div class="page-container-content-inner">
+							<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+								<div class="gwt-Label loading-text">Loading</div>
+							</div>
+							<table cellspacing="0" cellpadding="0" style="display: none;">
+								<tbody></tbody>
+							</table>
+							<div id="page-container-content-inner-actual">
+								<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+									<div class="gwt-Label loading-text">Loading</div>
+								</div>
+								<div>
+									<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+										<div class="gwt-Label loading-text">Loading</div>
+									</div>
+									<table class="headerpanel savedreports-header">
+										<colgroup>
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<td align="center" style="vertical-align: top;"><span class="sb-icon-container"><i
+															class="mdi mdi-chart-bar-stacked mdi-18px"></i></span></td>
+												<td align="left" style="vertical-align: top;">
+													<div class="headerpanel-right">
+														<h3>Reports</h3><span>Select the report you want to view below, or create a new one with the
+															filter tools at the side.</span>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="savedreports-buttons">
+										<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+											<div class="gwt-Label loading-text">Loading</div>
+										</div>
+										<div class="directional-panel-container-horizontal align-horizontal-left">
+											<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false">
+												<input type="text" tabindex="-1"
+													style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+													class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+											<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false">
+												<input type="text" tabindex="-1"
+													style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+													class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+											<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false">
+												<input type="text" tabindex="-1"
+													style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+													class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div><a
+												class="link NationalTriathlonTeam savedreportbutton" id="national-triathlon-team"><span
+													class="sb-icon-container"><i class="mdi mdi-file-pdf mdi-18px"></i></span><span>National
+													Triathlon Team</span></a>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+										<div class="gwt-Label loading-text">Loading</div>
+									</div>
+									<table class="headerpanel">
+										<colgroup>
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<td align="center" style="vertical-align: top;"><span class="sb-icon-container"><i
+															class="mdi mdi-presentation mdi-48px"></i></span></td>
+												<td align="left" style="vertical-align: top;">
+													<div class="headerpanel-right">
+														<h3>Front Page Reports</h3><span>Select the report you want to create with the tools to the
+															side.</span>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page-container-footer"></div>
+				</div>
+				<div class="page-container-right" style="width: 0px; display: none;">
+					<div class="toggle-sidebar-button" style=""><span class="sb-icon-container"><i
+								class="mdi mdi-chevron-left mdi-36px"></i></span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="gwt-HTML poweredby">Version 6.5.11 on 06-August-2020 .<br>All Rights Reserved. © <a target="blank"
+					href="http://www.fusionsport.com/">Fusion Sport</a>&nbsp;2007-2020. <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/privacypolicy.html">Privacy Policy.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/termsofservice.html">Terms of Service.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/servicelevelagreement.html">Service Level Agreement.</a></div>
+		</div>
+	</div>
+
+	<script>
+		$('#load').click(function () {
+			window.location.href = './homeTrsx.html'
+		})
+	</script>
+</body>
+
+</html>

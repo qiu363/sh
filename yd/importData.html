@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+
+	<title>数据导入</title>
+
+	<style>
+		HTML {
+			margin: 0 !important;
+			border: none !important;
+		}
+
+		.dragdrop-handle {
+			cursor: move;
+			user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+		}
+
+		.Gybhf5kB {
+			zoom: 1;
+		}
+
+		.dragdrop-dragging {
+			zoom: normal;
+		}
+
+		.Gybhf5kI {
+			border: 1px dashed #1e90ff;
+			margin: 0 !important;
+			zoom: 1;
+			z-index: 100;
+		}
+
+		.dragdrop-flow-panel-positioner {
+			color: #1e90ff;
+			display: inline;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.dragdrop-proxy {
+			background-color: #7af;
+		}
+
+		.dragdrop-selected,
+		.dragdrop-dragging,
+		.dragdrop-proxy {
+			filter: alpha(opacity\=30);
+			opacity: 0.3;
+		}
+
+		.dragdrop-movable-panel {
+			z-index: 200;
+			margin: 0 !important;
+			border: none !important;
+		}
+	</style>
+	<style class="vjs-styles-defaults">
+		.video-js {
+			width: 300px;
+			height: 150px;
+		}
+
+		.vjs-fluid {
+			padding-top: 56.25%
+		}
+	</style>
+
+	<link rel="stylesheet" href="./css/legacy.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/materialdesignicons.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/semantic.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/uploadPanel.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/smartabase.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/nouislider.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video-js.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/d3-mobile-widgets.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/dropzone.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/theme.css" type="text/css" media="all">
+
+	<script src="./js/jquery.js" type="application/javascript"></script>
+	<script src="./js/nouislider.js" type="application/javascript"></script>
+	<script src="./js/video.js" type="application/javascript"></script>
+	<script type="application/javascript">
+		videojs.options.flash.swf = "swf/video-js.swf";
+	</script>
+	<script src="./js/screenfull.min.js" type="application/javascript"></script>
+	<script src="./js/d3.js" type="application/javascript"></script>
+	<script src="./js/d3-mobile-widgets.js" type="application/javascript"></script>
+	<script src="./js/iframeResizer.min.js" type="application/javascript"></script>
+	<script src="./js/wet_signature.min.js" type="application/javascript"></script>
+	<script src="./js/mfa-browser-auth.min.js" type="application/javascript"></script>
+	<script src="./js/pdf.js" type="application/javascript"></script>
+	<script src="./js/dropzone.min.js" type="application/javascript"></script>
+</head>
+
+<body id="body">
+	<div class="wrapper">
+		<!-- 导航 -->
+		<div class="header-wrapper">
+			<div class="directional-panel-container-horizontal align-horizontal-left">
+				<div>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<img src="./img/yandingheadermain.png" class="gwt-Image" alt=" ">
+					</div>
+				</div>
+				<div class="directional-panel-container-horizontal align-horizontal-left">
+					<ul class="tab-navigation noprint">
+						<li>
+							<a class="gwt-Hyperlink Home" id="home" href="./home.html"><span>Home</span></a>
+						</li>
+					</ul>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<div class="dropdown">
+							<span class="dropdown-name link">Data Entry</span>
+							<span class="sb-icon-container">
+								<i class="mdi mdi-chevron-down mdi-18px"></i>
+							</span>
+							<ul class="sub-header-dropdown Data Entry">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink EnterData" id="enter-data" href="./typeOfEvent.html">
+										<span>Enter Data</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink ImportData" id="import-data" href="./importData.html">
+										<span>Import Data</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-name link">Reporting</span>
+							<span class="sb-icon-container"><i class="mdi mdi-chevron-down mdi-18px"></i></span>
+							<ul class="sub-header-dropdown Reporting">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Reports" id="reports" href="./reports.html">
+										<span>Reports</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Dashboards" id="dashboards" href="./account.html">
+										<span>Dashboards</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink MyHistory" id="my-history" href="./history.html">
+										<span>My History</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-name link">Other</span>
+							<span class="sb-icon-container">
+								<i class="mdi mdi-chevron-down mdi-18px"></i>
+							</span>
+							<ul class="sub-header-dropdown Other">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Groups" id="groups" href="./groups.html">
+										<span>Groups</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<a class="gwt-Hyperlink AllAccounts" id="all-accounts"><span>All Accounts</span></a>
+
+				<div class="dropdown">
+					<span class="sb-icon-container"><i class="mdi mdi-dots-horizontal mdi-36px"></i></span>
+					<ul class="sub-header-dropdown Navigation">
+						<li class="sub-header-list-item">
+							<a class="gwt-Hyperlink Account" id="account" href="./account.html">
+								<span>Account</span>
+							</a>
+						</li>
+						<li class="sub-header-list-item">
+							<div class="gwt-HTML">
+								<a id="documentation" href="https://learn.fusionsport.com/help" target="_blank">
+									<span>Help</span>
+								</a>
+							</div>
+						</li>
+						<li class="sub-header-list-item">
+							<a class="gwt-Hyperlink Logout" id="logout" href="./login.html"><span>Logout</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-container-wrapper">
+			<div class="page-container">
+				<div class="page-container-left" style="width: 0px; display: none;">
+					<div class="toggle-sidebar-button" style="">
+						<span class="sb-icon-container">
+							<i class="mdi mdi-chevron-left mdi-36px"></i>
+						</span>
+					</div>
+				</div>
+				<div class="page-container-center" style="width: 93.1741%;">
+					<div class="page-container-header">
+						<h1>Import Data</h1>
+					</div>
+					<div class="trailbar-wrapper">
+						<div class="trailbar" style=""><a class="gwt-Hyperlink Home" id="home"
+								href="#"><span>Home</span></a><span>&nbsp;&gt;&nbsp;</span><span>Import Data</span></div>
+					</div>
+
+					<div class="page-container-sub-header"></div>
+
+					<div class="page-container-content">
+						<div class="page-container-content-inner">
+							<div id="page-container-content-inner-actual">
+								<div class="directional-panel-container-vertical align-horizontal-left">
+									<h3>Step 1: Choose events and Upload File</h3>
+									<div class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even">
+										<div class="form-label" title="Select The events for which you want to import data to."
+											style="text-align: right; width: 200px;">Select Events</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="directional-panel-container-vertical align-horizontal-left form-widget">
+												<div class="select-box-wrapper" id="formselector"><select tabindex="0" class="gwt-ListBox" id="J_sel">
+														<option value="-1"></option>
+														<option value="9247">CTTM Injury Record</option>
+														<option value="9268">CTTM Training Log</option>
+														<option value="9267">CTTM Wellness</option>
+													</select></div>
+											</div>
+											<div class="gwt-HTML form-instructions">Select The events for which you want to import data to.
+											</div>
+										</div>
+									</div>
+									<div class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd"
+										style="">
+										<div class="form-label"
+											title="are the fields which are able to be imported for the selected events. * indicates required field"
+											style="text-align: right; width: 200px;">Available Fields</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+
+											<div
+												id="J_form"
+												class="directional-panel-container-vertical align-horizontal-left form-widget"
+											></div>
+
+											<div class="gwt-HTML form-instructions">are the fields which are able to be imported for the
+												selected events. * indicates required field</div>
+										</div>
+									</div>
+									<div class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even"
+										style="">
+										<div class="form-label"
+											title="This will generate a template csv with examples that you will need to remove"
+											style="text-align: right; width: 200px;">Generate Template</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><button type="button"
+												tabindex="0" class="gwt-Button primary-action form-widget" id="generate">Generate</button>
+											<div class="gwt-HTML form-instructions">This will generate a template csv with examples that you
+												will need to remove</div>
+										</div>
+									</div>
+									<div class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd"
+										style="">
+										<div class="form-label"
+											title="Please select the file that contains the information to upload. This must be a csv file."
+											style="text-align: right; width: 200px;">Select your file</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="directional-panel-container-vertical align-horizontal-left form-widget">
+												<div class="uploadform directional-panel-container-vertical">
+													<form target="UploadFormIFrame" action="/x/fileupload" enctype="multipart/form-data"
+														method="post">
+														<div class="directional-panel-container-vertical align-horizontal-left"><input type="hidden"
+																name="hack-field" value="hack-value"><input type="hidden" name="session-token"
+																value="8763126017898992049"><input type="hidden" name="processorkey"
+																value="streaming-csv"><input type="hidden" name="filename" value=""><input type="hidden"
+																name="summarysize" value="1000">
+															<div class="directional-panel-container-horizontal align-horizontal-left"><input
+																	type="file" class="gwt-TextBox" name="filedata"></div>
+															<div class="gwt-Label warningtext" style="display: none;">Select a file to upload first
+															</div>
+															<div class="directional-panel-container-vertical align-horizontal-left"></div><button
+																type="button" tabindex="0" class="gwt-Button primary-action" id="upload">Upload</button>
+														</div>
+													</form>
+													<div class="uploaddescription"></div>
+												</div>
+											</div>
+											<div class="gwt-HTML form-instructions">Please select the file that contains the information to
+												upload. This must be a csv file.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-container-footer"></div>
+				</div>
+				<div class="page-container-right" style="width: 0px; display: none;">
+					<div class="toggle-sidebar-button" style=""><span class="sb-icon-container"><i
+								class="mdi mdi-chevron-left mdi-36px"></i></span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="gwt-HTML poweredby">Version 6.5.11 on 06-August-2020 .<br>All Rights Reserved. © <a target="blank"
+					href="http://www.fusionsport.com/">Fusion Sport</a>&nbsp;2007-2020. <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/privacypolicy.html">Privacy Policy.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/termsofservice.html">Terms of Service.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/servicelevelagreement.html">Service Level Agreement.</a></div>
+		</div>
+	</div>
+
+	<script type="text/html" id="J_9247">
+		<div class="gwt-Label">First Name</div>
+		<div class="gwt-Label">Last Name</div>
+		<div class="gwt-Label">Date</div>
+		<div class="gwt-Label">Time</div>
+		<div class="gwt-Label">Option</div>
+		<div class="gwt-Label">Date Of First Symptoms</div>
+		<div class="gwt-Label">OSICS Diagnosis</div>
+		<div class="gwt-Label">Grade Of Injury</div>
+		<div class="gwt-Label">Diagnosis (Other)</div>
+		<div class="gwt-Label">Unfit To Train/Compete</div>
+		<div class="gwt-Label">Injury History</div>
+		<div class="gwt-Label">Onset Of Injury</div>
+		<div class="gwt-Label">Injured During</div>
+		<div class="gwt-Label">Activity</div>
+		<div class="gwt-Label">Mechanism</div>
+		<div class="gwt-Label">Mechanism Details</div>
+		<div class="gwt-Label">Additional Comments</div>
+		<div class="gwt-Label">Mechanism Video/Image</div>
+		<div class="gwt-Label">Surgery Required</div>
+		<div class="gwt-Label">Surgery Details</div>
+		<div class="gwt-Label">Consult Date</div>
+		<div class="gwt-Label">Subjective</div>
+		<div class="gwt-Label">Objective Notes</div>
+		<div class="gwt-Label">Treatment</div>
+		<div class="gwt-Label">Action</div>
+		<div class="gwt-Label">Plan</div>
+		<div class="gwt-Label">Status</div>
+		<div class="gwt-Label">Restrictions</div>
+		<div class="gwt-Label">Expected Date Of Return</div>
+		<div class="gwt-Label">Fully Resolved</div>
+		<div class="gwt-Label">Date Fully Resolved</div>
+		<div class="gwt-Label">Training Days Missed</div>
+		<div class="gwt-Label">Games Missed</div>
+	</script>
+
+	<script type="text/html" id="J_9268">
+		<div class="gwt-Label">First Name</div>
+		<div class="gwt-Label">Last Name</div>
+		<div class="gwt-Label">Date</div>
+		<div class="gwt-Label">Time</div>
+		<div class="gwt-Label">Training</div>
+		<div class="gwt-Label">Load</div>
+		<div class="gwt-Label">Sets</div>
+		<div class="gwt-Label">Reps</div>
+		<div class="gwt-Label">上传训练计划</div>
+	</script>
+
+	<script type="text/html" id="J_9267">
+		<div class="gwt-Label">First Name</div>
+		<div class="gwt-Label">Last Name</div>
+		<div class="gwt-Label">Date</div>
+		<div class="gwt-Label">Time</div>
+		<div class="gwt-Label">Sleep</div>
+		<div class="gwt-Label">Appetite</div>
+		<div class="gwt-Label">Muscle State</div>
+		<div class="gwt-Label">Training Desire</div>
+	</script>
+
+	<script>
+		$('#J_sel').change(function () {
+			var val = $(this).val()
+
+			if (val === '-1') {
+				$('#J_form').html('')
+			} else {
+				$('#J_form').html($('#J_' + val).html())
+			}
+		})
+
+		$('#load').click(function () {
+			window.location.href = './homeTrsx.html'
+		})
+	</script>
+</body>
+
+</html>

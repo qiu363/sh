@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+
+	<title>个人主页 - 铁人三项</title>
+
+	<style>
+		HTML {
+			margin: 0 !important;
+			border: none !important;
+		}
+
+		.dragdrop-handle {
+			cursor: move;
+			user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+		}
+
+		.Gybhf5kB {
+			zoom: 1;
+		}
+
+		.dragdrop-dragging {
+			zoom: normal;
+		}
+
+		.Gybhf5kI {
+			border: 1px dashed #1e90ff;
+			margin: 0 !important;
+			zoom: 1;
+			z-index: 100;
+		}
+
+		.dragdrop-flow-panel-positioner {
+			color: #1e90ff;
+			display: inline;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.dragdrop-proxy {
+			background-color: #7af;
+		}
+
+		.dragdrop-selected,
+		.dragdrop-dragging,
+		.dragdrop-proxy {
+			filter: alpha(opacity\=30);
+			opacity: 0.3;
+		}
+
+		.dragdrop-movable-panel {
+			z-index: 200;
+			margin: 0 !important;
+			border: none !important;
+		}
+	</style>
+	<style class="vjs-styles-defaults">
+		.video-js {
+			width: 300px;
+			height: 150px;
+		}
+
+		.vjs-fluid {
+			padding-top: 56.25%
+		}
+	</style>
+
+	<link rel="stylesheet" href="./css/legacy.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/materialdesignicons.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/semantic.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/uploadPanel.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/smartabase.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/nouislider.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video-js.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/d3-mobile-widgets.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/dropzone.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/theme.css" type="text/css" media="all">
+
+	<script src="./js/jquery.js" type="application/javascript"></script>
+	<script src="./js/nouislider.js" type="application/javascript"></script>
+	<script src="./js/video.js" type="application/javascript"></script>
+	<script type="application/javascript">
+		videojs.options.flash.swf = "swf/video-js.swf";
+	</script>
+	<script src="./js/screenfull.min.js" type="application/javascript"></script>
+	<script src="./js/d3.js" type="application/javascript"></script>
+	<script src="./js/d3-mobile-widgets.js" type="application/javascript"></script>
+	<script src="./js/iframeResizer.min.js" type="application/javascript"></script>
+	<script src="./js/wet_signature.min.js" type="application/javascript"></script>
+	<script src="./js/mfa-browser-auth.min.js" type="application/javascript"></script>
+	<script src="./js/pdf.js" type="application/javascript"></script>
+	<script src="./js/dropzone.min.js" type="application/javascript"></script>
+</head>
+
+<body id="body">
+	<div class="wrapper">
+		<!-- 导航 -->
+		<div class="header-wrapper">
+			<div class="directional-panel-container-horizontal align-horizontal-left">
+				<div>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<img src="./img/yandingheadermain.png" class="gwt-Image" alt=" ">
+					</div>
+				</div>
+				<div class="directional-panel-container-horizontal align-horizontal-left">
+					<ul class="tab-navigation noprint">
+						<li>
+							<a class="gwt-Hyperlink Home" id="home" href="./home.html"><span>Home</span></a>
+						</li>
+					</ul>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<div class="dropdown">
+							<span class="dropdown-name link">Data Entry</span>
+							<span class="sb-icon-container">
+								<i class="mdi mdi-chevron-down mdi-18px"></i>
+							</span>
+							<ul class="sub-header-dropdown Data Entry">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink EnterData" id="enter-data" href="./typeOfEvent.html">
+										<span>Enter Data</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink ImportData" id="import-data" href="./importData.html">
+										<span>Import Data</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-name link">Reporting</span>
+							<span class="sb-icon-container"><i class="mdi mdi-chevron-down mdi-18px"></i></span>
+							<ul class="sub-header-dropdown Reporting">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Reports" id="reports" href="./reports.html">
+										<span>Reports</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Dashboards" id="dashboards" href="./account.html">
+										<span>Dashboards</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink MyHistory" id="my-history" href="./history.html">
+										<span>My History</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-name link">Other</span>
+							<span class="sb-icon-container">
+								<i class="mdi mdi-chevron-down mdi-18px"></i>
+							</span>
+							<ul class="sub-header-dropdown Other">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Groups" id="groups" href="./groups.html">
+										<span>Groups</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<a class="gwt-Hyperlink AllAccounts" id="all-accounts"><span>All Accounts</span></a>
+
+				<div class="dropdown">
+					<span class="sb-icon-container"><i class="mdi mdi-dots-horizontal mdi-36px"></i></span>
+					<ul class="sub-header-dropdown Navigation">
+						<li class="sub-header-list-item">
+							<a class="gwt-Hyperlink Account" id="account" href="./account.html">
+								<span>Account</span>
+							</a>
+						</li>
+						<li class="sub-header-list-item">
+							<div class="gwt-HTML">
+								<a id="documentation" href="https://learn.fusionsport.com/help" target="_blank">
+									<span>Help</span>
+								</a>
+							</div>
+						</li>
+						<li class="sub-header-list-item">
+							<a class="gwt-Hyperlink Logout" id="logout" href="./login.html"><span>Logout</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-container-wrapper">
+			<div class="page-container">
+				<div class="page-container-left" style="width: 260px;">
+					<div class="toggle-sidebar-button" style="">
+						<span class="sb-icon-container"><i class="mdi mdi-chevron-left mdi-36px"></i></span>
+					</div>
+					<div class="athletes-sidebar page-container-sidebar" style="width: 250px;">
+						<div class="directional-panel-container-vertical align-horizontal-left" style="width: 250px;">
+							<div class="directional-panel-container-horizontal align-horizontal-left">
+								<div>
+									<div class="gwt-SuggestBox">
+										<div class="directional-panel-container-horizontal align-horizontal-left">
+											<input type="text" placeholder="Start typing to search" tabindex="0"
+												class="gwt-TextBox textbox-hint"></div>
+									</div>
+								</div>
+								<div class="directional-panel-container-vertical align-horizontal-left">
+									<div class="gwt-Label gwt-conflictLabel"></div>
+									<div class="loading-small" style="display: none;"><img src="./img/loadingspinner16.gif"
+											class="gwt-Image">
+										<div class="loading-text-small">Checking for Conflicts</div>
+									</div>
+								</div>
+							</div>
+							<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="margin: 3px; width: 90%;">
+									<option value="All Athletes">All Athletes</option>
+									<option value="37617">言鼎 何子夏</option>
+								</select></div>
+							<div class="directional-panel-container-vertical align-horizontal-left" style="width: 100%;">
+								<div class="events-scroll-panel"
+									style="overflow: hidden auto; position: relative; zoom: 1; width: 240px; height: 580px;">
+									<div style="position: relative; zoom: 1;">
+										<div class="history-sidebar directional-panel-container-vertical" style="width: 100%;">
+											<div class="expandable-sidebar-link directional-panel-container-vertical sidebar-form"
+												style="width: 100%;">
+												<div class="clickable expandable-sidebar-link" style="width: 100%;">
+													<div class="directional-panel-container-horizontal align-horizontal-left">
+														<div class="expandable-sidebar-link-label">CTTM Injury Record</div>
+														<div class="athlete-details-status"></div><span class="sb-icon-container"><i
+																class="mdi mdi-chevron-up mdi-18px"></i></span>
+													</div>
+												</div>
+
+												<div
+													class="event-sidebar-panel directional-panel-container-vertical align-horizontal-left align-vertical-top expandable-sidebar-link-child">
+													<a class="event-link-summary" id="new-cttm-injury-record"><span>New CTTM Injury
+															Record</span></a><a class="event-link-summary" id="history"><span>History</span></a>
+													<div class="directional-panel-container-horizontal align-horizontal-left align-vertical-top">
+														<div
+															class="directional-panel-container-vertical align-horizontal-left align-vertical-top sidebar-event-link sidebar-event">
+															<div class="clickable">
+																<div class="directional-panel-container-vertical align-horizontal-left">
+																	<div class="directional-panel-container-horizontal align-horizontal-left">
+																		<div class="gwt-Label event-link-date">02-02-2019</div>
+																		<div class="athlete-details-status"></div>
+																	</div>
+																	<div class="gwt-Label event-link-summary">Last Name 铁人三项, First Name 俞欣颖, Sex Female,
+																		DOB 06-05-2002, Age 16, Body Area Knee, Body Area Interim Knee, Body Area c Knee,
+																		Injury Side Right, Injury Aspect Anterior, Body Region Knee/Lower leg, Injury
+																		Diagnosis Knee Muscle Strain/ Spasm/ Trigger Points, Injury Code KMXX, Days
+																		Unavailable 0, Entered By 何子夏 言鼎, Entered On 02-02-2019, Current Consult Date
+																		02-02-2019, Test Table Date Sort 02-02-2019, Current Subjective Right Knee pain,
+																		Current Objective Right lap muscle extremely tight, Current SOAP Subjective: Right
+																		Knee pain&lt;br/&gt;Objective: Right lap muscle extremely tight&lt;br/&gt;, Last
+																		Entered By 何子夏 言鼎, Injury Duration 0, No Days Unavailable 0, Diagnosis Summary
+																		Muscle tension, Injury Occurrence 100, Total Days Injured -65.0, Total Days
+																		Unavailable 0.0</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="directional-panel-container-horizontal align-horizontal-left align-vertical-top">
+														<div
+															class="directional-panel-container-vertical align-horizontal-left align-vertical-top sidebar-event-link sidebar-event">
+															<div class="clickable">
+																<div class="directional-panel-container-vertical align-horizontal-left">
+																	<div class="directional-panel-container-horizontal align-horizontal-left">
+																		<div class="gwt-Label event-link-date">28-12-2018</div>
+																		<div class="athlete-details-status"></div>
+																	</div>
+																	<div class="gwt-Label event-link-summary">Last Name 铁人三项, First Name 俞欣颖, Sex Female,
+																		DOB 06-05-2002, Age 16, Body Area Neck, Body Area Interim Neck, Body Area c Neck,
+																		Injury Side Left, Injury Aspect Posterior, Body Region Head/Neck, Injury Diagnosis
+																		Neck muscle and/or tendon strain/spasm/ trigger points, Injury Code NMXX, Days
+																		Unavailable 0, Entered By 何子夏 言鼎, Entered On 30-12-2018, Initial Status Available,
+																		Current Status Available, Current Consult Date 28-12-2018, Test Table Date Sort
+																		28-12-2018, Current Subjective Shoulder locked, Current Objective Traps tension,
+																		shoulder foward rotated, Current Plan Find a time to do a complete treatment,
+																		Current SOAP Subjective: Shoulder locked&lt;br/&gt;Objective: Traps tension,
+																		shoulder foward rotated&lt;br/&gt;Plan: Find a time to do a complete treatment, Last
+																		Entered By 何子夏 言鼎, Injury Duration 4, No Days Unavailable 0, Diagnosis Summary
+																		Shoulder foward rotated, Injury Occurrence 100, Total Days Injured -65.0, Total Days
+																		Unavailable 0.0</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="directional-panel-container-horizontal align-horizontal-left align-vertical-top">
+														<div
+															class="directional-panel-container-vertical align-horizontal-left align-vertical-top sidebar-event-link sidebar-event">
+															<div class="clickable">
+																<div class="directional-panel-container-vertical align-horizontal-left">
+																	<div class="directional-panel-container-horizontal align-horizontal-left">
+																		<div class="gwt-Label event-link-date">20-12-2018</div>
+																		<div class="athlete-details-status"></div>
+																	</div>
+																	<div class="gwt-Label event-link-summary">Last Name 铁人三项, First Name 俞欣颖, Sex Female,
+																		DOB 06-05-2002, Age 16, Body Area Lumbar Spine, Body Area Interim Lumbar Spine, Body
+																		Area c Lumbar Spine, Injury Aspect Posterior, Body Region Lumbar/Pelvis/Abd/Buttock,
+																		Injury Diagnosis Lumbar Spine Facet Joint Pain/ Stiffness, Injury Code LGXX, Days
+																		Unavailable 0, Current Status Available, Current Consult Date 20-12-2018, Test Table
+																		Date Sort 20-12-2018, Current Subjective Lower back pain, Current Objective
+																		L2&amp;amp;L3 mobility issue, Current Plan Keep report the situation, Current SOAP
+																		Subjective: Lower back pain&lt;br/&gt;Objective: L2&amp;amp;L3 mobility
+																		issue&lt;br/&gt;Plan: Keep report the situation, Last Entered By 何子夏 言鼎, Injury
+																		Duration -69, No Days Unavailable 0, Diagnosis Summary Mobility issue on
+																		L2&amp;amp;L3, Injury Occurrence 100, Total Days Injured -69.0, Total Days
+																		Unavailable 0.0</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="expandable-sidebar-link directional-panel-container-vertical sidebar-form"
+												style="width: 100%;">
+												<div class="clickable expandable-sidebar-link" style="width: 100%;">
+													<div class="directional-panel-container-horizontal align-horizontal-left">
+														<div class="expandable-sidebar-link-label">CTTM Training Log</div>
+														<div class="athlete-details-status"></div><span class="sb-icon-container"><i
+																class="mdi mdi-chevron-down mdi-18px"></i></span>
+													</div>
+												</div>
+
+												<div
+													class="event-sidebar-panel directional-panel-container-vertical align-horizontal-left align-vertical-top expandable-sidebar-link-child">
+													<a class="event-link-summary" id="new-cttm-injury-record"><span>New CTTM Injury
+															Record</span></a>
+													<div class="gwt-Label">No Data Found</div>
+												</div>
+											</div>
+											<div class="expandable-sidebar-link directional-panel-container-vertical sidebar-form"
+												style="width: 100%;">
+												<div class="clickable expandable-sidebar-link" style="width: 100%;">
+													<div class="directional-panel-container-horizontal align-horizontal-left">
+														<div class="expandable-sidebar-link-label">CTTM Wellness</div>
+														<div class="athlete-details-status"></div><span class="sb-icon-container"><i
+																class="mdi mdi-chevron-down mdi-18px"></i></span>
+													</div>
+												</div>
+
+												<div
+													class="event-sidebar-panel directional-panel-container-vertical align-horizontal-left align-vertical-top expandable-sidebar-link-child">
+													<a class="event-link-summary" id="new-cttm-injury-record"><span>New CTTM Injury
+															Record</span></a>
+													<div class="gwt-Label">No Data Found</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="page-container-center" style="width: 34.0278%;">
+					<div class="page-container-header">
+						<h1>铁人三项 俞欣颖's Performance History</h1>
+					</div>
+					<div class="trailbar-wrapper">
+						<div class="trailbar" style="">
+							<a class="gwt-Hyperlink Home" id="home" href="./home.html"><span>Home</span></a>
+							<span>&nbsp;&gt;&nbsp;</span>
+							<span>铁人三项 俞欣颖'S PERFORMANCE HISTORY</span>
+						</div>
+					</div>
+					<div class="page-container-sub-header">
+						<div class="page-container-sub-header">
+							<div class="subheader-widget">
+								<ul class="page-container-header-links noprint">
+									<li class="header-list-item" style=""><a class="link" style=""><span class="sb-icon-container"
+												alt=" "><i class="mdi mdi-plus mdi-18px"></i></span><span>New</span></a></li>
+									<li class="header-list-item"><a class="gwt-Hyperlink Excel" id="excel" href="#"
+											style=""><span>Excel</span></a></li>
+									<li class="header-list-item"><a class="gwt-Hyperlink DeleteAll" id="delete-all" href="#"
+											style=""><span>Delete All</span></a></li>
+								</ul>
+							</div>
+							<div class="subheader-widget">
+								<div class="directional-panel-container-horizontal align-horizontal-left noprint">
+									<div class="gwt-Label">History to view:</div>
+									<div class="select-box-wrapper" id="formselector"><select tabindex="0" class="gwt-ListBox">
+											<option value="-1">All Recent Entries</option>
+											<option value="9247">CTTM Injury Record</option>
+											<option value="9268">CTTM Training Log</option>
+											<option value="9267">CTTM Wellness</option>
+										</select></div>
+								</div>
+							</div>
+							<div class="subheader-widget">
+								<div class="noprint">
+									<div class="directional-panel-container-vertical align-horizontal-left">
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="gwt-Label formfieldgroupselector-label">Select Grade of Injury</div>
+											<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+													<option value="Include All Grade of Injurys">Include All Grade of Injurys</option>
+													<option value="Equal To">Equal To</option>
+													<option value="Not Equal To">Not Equal To</option>
+												</select></div>
+											<div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="subheader-widget">
+								<div class="directional-panel-container-horizontal align-horizontal-left noprint">
+									<div class="gwt-Label">Dates</div>
+									<div class="directional-panel-container-horizontal align-horizontal-left date-selection-controller">
+										<div>
+											<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+													<option value="All History">All History</option>
+													<option value="All (History and Future)">All (History and Future)</option>
+													<option value="Date Range">Date Range</option>
+													<option value="Last">Last</option>
+													<option value="All Upcoming">All Upcoming</option>
+													<option value="Last Custom">Last Custom</option>
+													<option value="Today">Today</option>
+												</select></div>
+										</div>
+										<div><input type="text" tabindex="0" class="gwt-DateBox" size="25" style="display: none;"></div>
+										<div><input type="text" tabindex="0" class="gwt-DateBox" size="25" style="display: none;"></div>
+										<div>
+											<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="display: none;">
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+													<option value="21">21</option>
+													<option value="22">22</option>
+													<option value="23">23</option>
+													<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="26">26</option>
+													<option value="27">27</option>
+													<option value="28">28</option>
+													<option value="29">29</option>
+													<option value="30">30</option>
+													<option value="31">31</option>
+												</select></div>
+										</div>
+										<div>
+											<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="display: none;">
+													<option value="days">days</option>
+													<option value="weeks">weeks</option>
+													<option value="months">months</option>
+													<option value="years">years</option>
+												</select></div>
+										</div>
+										<div>
+											<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="display: none;">
+													<option value="weeks">weeks</option>
+													<option value="months">months</option>
+												</select></div>
+										</div>
+										<div>
+											<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="display: none;">
+													<option value="Sunday-Saturday">Sunday-Saturday</option>
+													<option value="Monday-Sunday">Monday-Sunday</option>
+													<option value="Tuesday-Monday">Tuesday-Monday</option>
+													<option value="Wednesday-Tuesday">Wednesday-Tuesday</option>
+													<option value="Thursday-Wednesday">Thursday-Wednesday</option>
+													<option value="Friday-Thursday">Friday-Thursday</option>
+													<option value="Saturday-Friday">Saturday-Friday</option>
+												</select></div>
+										</div>
+										<div>
+											<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="display: none;">
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+													<option value="21">21</option>
+													<option value="22">22</option>
+													<option value="23">23</option>
+													<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="26">26</option>
+													<option value="27">27</option>
+													<option value="28">28</option>
+													<option value="29">29</option>
+													<option value="30">30</option>
+													<option value="31">31</option>
+												</select></div>
+										</div>
+										<div>
+											<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+													<option value="Include All">Include All</option>
+													<option value="1">Include the most recent result</option>
+													<option value="2">2 most recent results</option>
+													<option value="3">3 most recent results</option>
+													<option value="4">4 most recent results</option>
+													<option value="5">5 most recent results</option>
+													<option value="6">6 most recent results</option>
+													<option value="7">7 most recent results</option>
+													<option value="8">8 most recent results</option>
+													<option value="9">9 most recent results</option>
+												</select></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="subheader-widget">
+								<div class="directional-panel-container-horizontal align-horizontal-left noprint" style="">
+									<div class="gwt-Label">Compare To</div><span class="gwt-RadioButton"><input type="radio"
+											name="ComparisonSelector14" id="gwt-uid-395" tabindex="0"><label for="gwt-uid-395">Performance
+											Standard</label></span>
+									<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="display: none;">
+											<option value="-2">Most Appropriate</option>
+										</select></div><span class="gwt-RadioButton"><input type="radio" name="ComparisonSelector14"
+											id="gwt-uid-396" tabindex="0"><label for="gwt-uid-396">Athlete</label></span>
+									<div class="select-box-wrapper" style="display: none;"><select tabindex="0" class="gwt-ListBox">
+											<option value="37655">铁人三项 俞欣颖</option>
+											<option value="37646">铁人三项 刘忱</option>
+											<option value="37649">铁人三项 姜嘉祥</option>
+											<option value="37651">铁人三项 张弛</option>
+											<option value="37648">铁人三项 李明旭</option>
+											<option value="37657">铁人三项 沙田骐</option>
+											<option value="37647">铁人三项 王亦凡</option>
+											<option value="37791">铁人三项 王树川</option>
+											<option value="37654">铁人三项 王涵</option>
+											<option value="37656">铁人三项 王铭宇</option>
+											<option value="37652">铁人三项 范俊杰</option>
+											<option value="37792">铁人三项 贾惠雯</option>
+											<option value="37653">铁人三项 郭玮瑶</option>
+											<option value="37650">铁人三项 隋华健</option>
+										</select></div><span class="gwt-RadioButton"><input type="radio" name="ComparisonSelector14"
+											id="gwt-uid-397" tabindex="0" checked=""><label for="gwt-uid-397">None</label></span>
+									<div class="directional-panel-container-vertical align-horizontal-left" style="display: none;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-container-content">
+						<div class="page-container-content-inner">
+							<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+								<div class="gwt-Label loading-text">Loading</div>
+							</div>
+							<table cellspacing="0" cellpadding="0" style="display: none;">
+								<tbody></tbody>
+							</table>
+							<div id="page-container-content-inner-actual">
+								<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+									<div class="gwt-Label loading-text">Loading history for CTTM Injury Record</div>
+								</div>
+								<div>
+									<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+										<div class="gwt-Label loading-text">Loading</div>
+									</div>
+									<div class="directional-panel-container-vertical align-horizontal-left">
+										<h3>OSICS Diagnosis</h3>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="directional-panel-container-horizontal align-horizontal-left">
+												<div class="gwt-Label">Group By:</div>
+												<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox" style="width: 200px;">
+														<option value="No Grouping">No Grouping</option>
+														<option value="option">option</option>
+														<option value="Grade of Injury">Grade of Injury</option>
+														<option value="Body Area">Body Area</option>
+														<option value="Body Area Interim">Body Area Interim</option>
+														<option value="Body Area c">Body Area c</option>
+														<option value="Injury Side">Injury Side</option>
+														<option value="Injury Aspect">Injury Aspect</option>
+														<option value="Body Region">Body Region</option>
+														<option value="Injury Code">Injury Code</option>
+														<option value="Unfit to Train/Compete">Unfit to Train/Compete</option>
+														<option value="Injury History">Injury History</option>
+														<option value="Onset of Injury">Onset of Injury</option>
+														<option value="Injured During">Injured During</option>
+														<option value="Activity">Activity</option>
+														<option value="Mechanism">Mechanism</option>
+														<option value="Surgery Required">Surgery Required</option>
+														<option value="Status">Status</option>
+														<option value="Fully resolved">Fully resolved</option>
+														<option value="Initial Status">Initial Status</option>
+														<option value="Current Status">Current Status</option>
+													</select></div>
+											</div>
+											<div class="directional-panel-container-vertical align-horizontal-left">
+												<div class="diagram body-diagram" id="1">
+													<div style="position: relative; overflow: hidden; width: 250px; height: 250px;"><img
+															src="./img/bodies/grey_1_with_doctor.gif?version=1" class="gwt-Image" alt=" "
+															style="width: 250px; height: 250px; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Head_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Head_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Shoulder_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Shoulder_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Chest_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Chest_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Upper_Arm_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Upper_Arm_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Forearm_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Forearm_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Elbow_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Elbow_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Hand_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Hand_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Wrist_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Wrist_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Abdomen_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Abdomen_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Hip_and_Groin_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Hip_and_Groin_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Thigh_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Thigh_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Knee_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Knee_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Lower_Leg_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Lower_Leg_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Ankle_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Ankle_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Foot_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Anterior_Foot_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Head_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Head_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Buttock_and_Pelvis_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Buttock_and_Pelvis_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Thoracic_Spine_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Thoracic_Spine_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Neck_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Neck_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="position: absolute; left: 0px; top: 0px; opacity: 1;"><img
+															src="./img/bodyparts2/Left_Posterior_Shoulder_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Shoulder_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Chest_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Chest_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Side_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Side_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Thigh_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Thigh_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Lower_Leg_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Lower_Leg_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Ankle_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Ankle_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Foot_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Foot_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Upper_Arm_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Upper_Arm_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Elbow_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Elbow_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Forearm_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Forearm_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Wrist_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Wrist_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Hand_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Left_Posterior_Hand_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Head_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Head_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Shoulder_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Shoulder_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Upper_Arm_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Upper_Arm_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Elbow_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Elbow_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Forearm_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Forearm_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Wrist_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Wrist_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Hand_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Hand_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Chest_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Chest_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Abdomen_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Abdomen_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Hip_and_Groin_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Hip_and_Groin_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Thigh_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Thigh_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Knee_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Knee_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="position: absolute; left: 0px; top: 0px; opacity: 1;"><img
+															src="./img/bodyparts2/Right_Anterior_Lower_Leg_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Lower_Leg_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Ankle_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Ankle_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Foot_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Anterior_Foot_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Head_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Head_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Buttock_and_Pelvis_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Buttock_and_Pelvis_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Thoracic_Spine_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Thoracic_Spine_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Neck_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Neck_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Shoulder_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Shoulder_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Chest_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Chest_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Side_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Side_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Thigh_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Thigh_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Lower_Leg_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Lower_Leg_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Ankle_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Ankle_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Foot_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Foot_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Upper_Arm__mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Upper_Arm__sel.gif?version=1" class="gwt-Image"
+															alt=" " style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Elbow_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Elbow_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Forearm_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Forearm_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Wrist_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Wrist_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Hand_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Right_Posterior_Hand_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Lumbar_Spine_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Lumbar_Spine_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="position: absolute; left: 0px; top: 0px; opacity: 1;"><img
+															src="./img/bodyparts2/Medical_Illness_mo.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodyparts2/Medical_Illness_sel.gif?version=1" class="gwt-Image" alt=" "
+															style="display: none; position: absolute; left: 0px; top: 0px;"><img
+															src="./img/bodies/lines_1_with_doctor.gif?version=1" class="gwt-Image" alt=" "
+															style="width: 250px; height: 250px; position: absolute; left: 0px; top: 0px;">
+														<div class="gwt-Label diagram-count" style="position: absolute; left: 36px; top: 171px;">1
+														</div>
+														<div class="gwt-Label diagram-count" style="position: absolute; left: 125px; top: 36px;">1
+														</div>
+														<div class="gwt-Label diagram-count" style="position: absolute; left: 129px; top: 95px;">1
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<h5>Click on a row to view the record in more detail.</h5>
+									<div class="gwt-ScrollTable"
+										style="padding: 0px; overflow: hidden; position: relative; height: auto;">
+										<div class="headerWrapper"
+											style="overflow: hidden; padding: 0px; margin: 0px 0px 0px 224px; border: 0px;">
+											<div style="height: 1px; width: 10000px; position: absolute; top: 1px; left: 5100px;"></div>
+											<table border="0" cellspacing="0" cellpadding="0" class="headerTable"
+												style="table-layout: fixed; width: 0px; height: 24px; margin: 0px; border: 0px;">
+												<colgroup>
+													<col>
+												</colgroup>
+												<colgroup>
+													<col>
+												</colgroup>
+												<tbody>
+													<tr style="margin: 0px; padding: 0px; height: 0px; overflow: hidden;">
+														<td colspan="1" rowspan="1" class="fixed-column"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 110px; margin-left: 0px;">
+														</td>
+														<td colspan="1" rowspan="1" class="fixed-column"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 110px; margin-left: 112px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; width: 100px;">
+														</td>
+													</tr>
+													<tr>
+														<td colspan="1" rowspan="1" align="center" class="fixed-column"
+															style="width: 110px; margin-left: 0px;">
+															<div class="gwt-Label">Date</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center" class="fixed-column"
+															style="width: 110px; margin-left: 112px;">
+															<div class="gwt-Label">by</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Last Name</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">First Name</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Sex</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">DOB</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Age</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">option</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Date of First Symptoms</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">OSICS Diagnosis</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Grade of Injury</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Diagnosis (Other)</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Body Area</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Body Area Interim</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Body Area c</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Injury Side</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Injury Aspect</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Body Region</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Injury Diagnosis</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Injury Code</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Unfit to Train/Compete</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Injury History</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Onset of Injury</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Injured During</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Activity</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Mechanism</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Mechanism Details</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Additional Comments</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Mechanism Video/Image</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Surgery Required</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Surgery Details</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Consult Date</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Subjective</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Objective Notes</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Objective Assessment</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Treatment</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Action</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Plan</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Status</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Restrictions</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Days since Tx</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Days Unavailable</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Entered By</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Entered On</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Expected Date Of Return</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Fully resolved</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Initial Status</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Current Status</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Current Restrictions</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Current Consult Date</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Test Table Date Sort</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">
+															<div class="gwt-Label">Current Subjective</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="dataWrapper"
+											style="overflow: auto; padding: 0px; margin: 0px 0px 0px 224px; border: 0px;">
+											<table border="0" cellpadding="0" cellspacing="0" class="dataTable"
+												style="table-layout: fixed; width: 0px; margin: 0px; border: 0px;">
+												<colgroup>
+													<col>
+												</colgroup>
+												<colgroup>
+													<col>
+												</colgroup>
+												<tbody>
+													<tr style="margin: 0px; padding: 0px; height: 0px; overflow: hidden;">
+														<td colspan="1" rowspan="1" class="fixed-column"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 110px;">
+														</td>
+														<td colspan="1" rowspan="1" class="fixed-column"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px 0px 0px 112px; width: 110px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+														<td colspan="1" rowspan="1"
+															style="height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-bottom: 0px; margin: 0px; width: 100px;">
+														</td>
+													</tr>
+													<tr class="odd" style="vertical-align: top;">
+														<td colspan="1" rowspan="1" align="center" class="fixed-column"
+															style="width: 110px; margin-left: 0px;">02-02-2019</td>
+														<td colspan="1" rowspan="1" align="center" class="table-nowrap fixed-column"
+															style="width: 110px; margin-left: 112px;">何子夏 言鼎</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">铁人三项</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">俞欣颖</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Female</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">06-05-2002</div>
+														</td>
+														<td colspan="1" rowspan="1" align="right">16</td>
+														<td colspan="1" rowspan="1" align="center">治疗信息(Treatment Information)</td>
+														<td colspan="1" rowspan="1" align="center">02-02-2019</td>
+														<td colspan="1" rowspan="1" align="center">Right Knee, KMXX, Knee Muscle Strain/ Spasm/
+															Trigger Points</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">Muscle tension</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Knee</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Knee</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Knee</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Right</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Anterior</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Knee/Lower leg</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Knee Muscle Strain/ Spasm/ Trigger Points</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">KMXX</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">能(Yes)</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1"></td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">02 02 2019</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Right Knee pain</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Right lap muscle extremely tight</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Massage and DMS</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1"></td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="right">0</td>
+														<td colspan="1" rowspan="1" align="right">何子夏 言鼎</td>
+														<td colspan="1" rowspan="1" align="center">02-02-2019</td>
+														<td colspan="1" rowspan="1" align="center">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">02-02-2019</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">02-02-2019</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Right Knee pain</div>
+														</td>
+													</tr>
+													<tr class="even" style="vertical-align: top;">
+														<td colspan="1" rowspan="1" align="center" class="fixed-column"
+															style="width: 110px; margin-left: 0px;">28-12-2018</td>
+														<td colspan="1" rowspan="1" align="center" class="table-nowrap fixed-column"
+															style="width: 110px; margin-left: 112px;">何子夏 言鼎</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">铁人三项</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">俞欣颖</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Female</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">06-05-2002</div>
+														</td>
+														<td colspan="1" rowspan="1" align="right">16</td>
+														<td colspan="1" rowspan="1" align="center">治疗信息(Treatment Information)</td>
+														<td colspan="1" rowspan="1" align="center">12-26-2018</td>
+														<td colspan="1" rowspan="1" align="center">Left Neck, NMXX, Neck muscle and/or tendon
+															strain/spasm/ trigger points</td>
+														<td colspan="1" rowspan="1" align="center">I</td>
+														<td colspan="1" rowspan="1" align="center">Shoulder foward rotated</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Neck</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Neck</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Neck</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Left</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Posterior</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Head/Neck</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Neck muscle and/or tendon strain/spasm/ trigger points</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">NMXX</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">能(Yes)</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">其他（Other）</td>
+														<td colspan="1" rowspan="1" align="center">Other Sport/Activity</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Bad movement partten</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1"></td>
+														<td colspan="1" rowspan="1" align="center">未知（Pending）</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">28 12 2018</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Shoulder locked</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Traps tension, shoulder foward rotated</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Fascia treatment</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Find a time to do a complete treatment</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">Available</td>
+														<td colspan="1" rowspan="1"></td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="right">0</td>
+														<td colspan="1" rowspan="1" align="right">何子夏 言鼎</td>
+														<td colspan="1" rowspan="1" align="center">30-12-2018</td>
+														<td colspan="1" rowspan="1" align="center">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">No</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Available</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Available</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">28-12-2018</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">28-12-2018</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Shoulder locked</div>
+														</td>
+													</tr>
+													<tr class="odd" style="vertical-align: top;">
+														<td colspan="1" rowspan="1" align="center" class="fixed-column"
+															style="width: 110px; margin-left: 0px;">20-12-2018</td>
+														<td colspan="1" rowspan="1" align="center" class="table-nowrap fixed-column"
+															style="width: 110px; margin-left: 112px;">何子夏 言鼎</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">铁人三项</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">俞欣颖</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Female</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">06-05-2002</div>
+														</td>
+														<td colspan="1" rowspan="1" align="right">16</td>
+														<td colspan="1" rowspan="1" align="center">治疗信息(Treatment Information)</td>
+														<td colspan="1" rowspan="1" align="center">12-20-2018</td>
+														<td colspan="1" rowspan="1" align="center">Lumbar Spine, LGXX, Lumbar Spine Facet Joint
+															Pain/ Stiffness</td>
+														<td colspan="1" rowspan="1" align="center">I</td>
+														<td colspan="1" rowspan="1" align="center">Mobility issue on L2&amp;L3</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar Spine</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar Spine</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar Spine</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Posterior</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar/Pelvis/Abd/Buttock</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar Spine Facet Joint Pain/ Stiffness</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">LGXX</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">能(Yes)</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">慢性（Chronic）</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">Other Sport/Activity</td>
+														<td colspan="1" rowspan="1" align="center">训练过度（Overuse）</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Joint mobility decreased caues the muscle compensatory.</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1"></td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1"></td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="right">0</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Available</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">20-12-2018</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">20-12-2018</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lower back pain</div>
+														</td>
+													</tr>
+													<tr class="odd" style="vertical-align: top;">
+														<td colspan="1" rowspan="1" align="center" class="fixed-column"
+															style="width: 110px; margin-left: 0px;">20-12-2018</td>
+														<td colspan="1" rowspan="1" align="center" class="table-nowrap fixed-column"
+															style="width: 110px; margin-left: 112px;">何子夏 言鼎</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">铁人三项</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">俞欣颖</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Female</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">06-05-2002</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">治疗信息(Treatment Information)</td>
+														<td colspan="1" rowspan="1" align="center">12-20-2018</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">I</td>
+														<td colspan="1" rowspan="1" align="center">Mobility issue on L2&amp;L3</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar Spine</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar Spine</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar Spine</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Posterior</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar/Pelvis/Abd/Buttock</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lumbar Spine Facet Joint Pain/ Stiffness</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">LGXX</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">能(Yes)</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">慢性（Chronic）</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">Other Sport/Activity</td>
+														<td colspan="1" rowspan="1" align="center">训练过度（Overuse）</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Joint mobility decreased caues the muscle compensatory.</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1"></td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="center">20 12 2018</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lower back pain</div>
+														</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">L2&amp;L3 mobility issue</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Massage and SFMA lumber moboliazation movement.</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Keep report the situation</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">Available</td>
+														<td colspan="1" rowspan="1"></td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="right">0</td>
+														<td colspan="1" rowspan="1" align="right">何子夏 言鼎</td>
+														<td colspan="1" rowspan="1" align="center">23-12-2018</td>
+														<td colspan="1" rowspan="1" align="center">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Available</div>
+														</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">20-12-2018</div>
+														</td>
+														<td colspan="1" rowspan="1" align="center">20-12-2018</td>
+														<td colspan="1" rowspan="1" align="left">
+															<div class="multiline">Lower back pain</div>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="1" rowspan="1" class="fixed-column" style="width: 110px; margin-left: 0px;">
+															&nbsp;</td>
+														<td colspan="1" rowspan="1" class="fixed-column" style="width: 110px; margin-left: 112px;">
+															&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+														<td colspan="1" rowspan="1">&nbsp;</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal pagination align-horizontal-center align-vertical-middle"
+										style="display: none;">
+										<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input
+												type="text" tabindex="-1"
+												style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+												class="sb-icon-container"><i class="mdi mdi-arrow-collapse-left mdi-18px"></i></span></div>
+										<div tabindex="0" class="gwt-PushButton disabled gwt-PushButton-up" role="button"
+											aria-pressed="false"><input type="text" tabindex="-1"
+												style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+												class="sb-icon-container"><i class="mdi mdi-arrow-left mdi-18px"></i></span></div><a
+											class="gwt-Hyperlink 1 current-page" id="1" href="#"><span>1</span></a>
+										<div tabindex="0" class="gwt-PushButton disabled gwt-PushButton-up" role="button"
+											aria-pressed="false"><input type="text" tabindex="-1"
+												style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+												class="sb-icon-container"><i class="mdi mdi-arrow-right mdi-18px"></i></span></div>
+										<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input
+												type="text" tabindex="-1"
+												style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+												class="sb-icon-container"><i class="mdi mdi-arrow-collapse-right mdi-18px"></i></span></div>
+										<div class="gwt-Label">Showing</div>
+										<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+												<option value="5">5</option>
+												<option value="10">10</option>
+												<option value="15">15</option>
+												<option value="20">20</option>
+												<option value="25">25</option>
+												<option value="30">30</option>
+												<option value="35">35</option>
+												<option value="40">40</option>
+												<option value="45">45</option>
+												<option value="50">50</option>
+												<option value="55">55</option>
+												<option value="60">60</option>
+												<option value="65">65</option>
+												<option value="70">70</option>
+												<option value="75">75</option>
+												<option value="80">80</option>
+												<option value="85">85</option>
+												<option value="90">90</option>
+												<option value="95">95</option>
+												<option value="100">100</option>
+												<option value="200">200</option>
+												<option value="400">400</option>
+												<option value="1000">1000</option>
+												<option value="5000">5000</option>
+												<option value="10000">10000</option>
+											</select></div>
+										<div class="gwt-Label">per page</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-container-footer"></div>
+				</div>
+
+				<div class="page-container-right" style="width: 250px;">
+					<div class="toggle-sidebar-button" style=""><span class="sb-icon-container"><i
+								class="mdi mdi-chevron-left mdi-36px"></i></span></div>
+					<div class="selected-athlete-sidebar page-container-sidebar" style="height: 620px;">
+						<div class="athlete-details-core">
+							<div class="athlete-details-avatar" style="background-image: url(&quot;img/default_athlete.png&quot;);">
+							</div>
+							<div class="athlete-details-name">
+								<div class="gwt-Label">何子夏 言鼎</div>
+							</div>
+							<div class="athlete-details-age-sex">
+								<div class="gwt-Label">Male, 2, 04-09-2018</div>
+							</div>
+							<div class="athlete-details-message-history"><button type="button" tabindex="0"
+									class="gwt-Button primary-action" id="history">History</button></div>
+						</div>
+						<div class="athlete-details-critical" style="display: none;"></div>
+						<div class="athlete-details-favourites" style="">
+							<div class="athlete-details-label">Create New</div>
+							<div style="overflow: auto; position: relative; zoom: 1; height: 467px;">
+								<div style="position: relative; zoom: 1;">
+									<div class="athlete-details-favourites">
+										<div class="athlete-details-favourite-event"><span class="sb-icon-container"><i
+													class="mdi mdi-plus mdi-18px"></i></span><a class="event-link-summary NewCTTMInjuryRecord"
+												id="new-cttm-injury-record"><span>New CTTM Injury Record</span></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="gwt-HTML poweredby">Version 6.5.11 on 06-August-2020 .<br>All Rights Reserved. © <a target="blank"
+					href="http://www.fusionsport.com/">Fusion Sport</a>&nbsp;2007-2020. <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/privacypolicy.html">Privacy Policy.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/termsofservice.html">Terms of Service.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/servicelevelagreement.html">Service Level Agreement.</a></div>
+		</div>
+	</div>
+
+	<script>
+		$('.page-container-right .toggle-sidebar-button').click(function () {
+			if ($('.page-container-right').hasClass('collapsed')) {
+				$('.page-container-right').css({
+					width: 250
+				}).removeClass('collapsed')
+			} else {
+				$('.page-container-right').css({
+					width: 1
+				}).addClass('collapsed')
+			}
+		})
+
+		$('.page-container-left .toggle-sidebar-button').click(function () {
+			if ($('.page-container-left').hasClass('collapsed')) {
+				$('.page-container-left').css({
+					width: 250
+				}).removeClass('collapsed')
+			} else {
+				$('.page-container-left').css({
+					width: 1
+				}).addClass('collapsed')
+			}
+		})
+	</script>
+</body>
+
+</html>

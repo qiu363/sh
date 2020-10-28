@@ -1,0 +1,289 @@
+/*	CSS2017 SMARTABASE-MAIN THEME
+ *  Version: 1.17
+ *  Last updated: 26/04/2018
+ */
+/* HOTFIX 21/12/2017 - Colour inputs for import warnings */
+.usable-suggest-box-warning input,
+.usable-suggest-box-warning select {
+  background-color: inherit; }
+
+/* END HOTFIX */
+/* HOTFIX 23/02/2018 - Fix for center area sizing */
+.page-container-center {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
+
+/* END HOTFIX */
+/* HOTFIX 07/03/2018 - Enable scroll on 'Add Attachment' popup */
+.popup-type-add-attachment {
+  overflow-y: auto !important; }
+
+/* END HOTFIX */
+/* HOTFIX 27/03/2018 - Fix positioning of 'Confirm' label on Registration panel */
+.registration-panel .form-item.person-password .form-widget {
+  height: 55px; }
+
+/* END HOTFIX */
+/* HOTFIX 20/04/2018 - Enable scroll on ANOTHER 'Add Attachment' popup */
+.popup-type-attachments {
+  overflow-y: auto !important; }
+
+/* END HOTFIX */
+body {
+  background-color: #E9E9E9; }
+
+body.Login_Page,
+body.LoginPageVersionTwo,
+body.OfflineLoginPageVersionTwo {
+  background-color: #333333;
+  background-image: url("../img/background.png"); }
+
+body > div > div#loading {
+  background-color: #333333 !important;
+  background-image: url("../img/background.png"); }
+
+.login-page-left-panel {
+  background-color: #DC2C1F;
+  background-image: url("../img/loginbanner.png");
+ }
+
+.login-page-validation,
+.forgot-password-panel .warningtext,
+.warningtext,
+.ajax-table .link:hover i.mdi-delete,
+.master-detail-button#delete:hover *,
+table[class^="activated-alert"] i,
+.userselector-popup .gwt-PushButton i {
+  color: #F64747; }
+
+.notice.error,
+button.form-cancel,
+button#cancel,
+.search-controls .gwt-Button#reset,
+.fileupload.form-widget #delete,
+.tablepopup .gwt-Button#cancel,
+.validation-invalid,
+.Resources_Page .page-container-left button#reset,
+.ResourcesPage .page-container-left button#reset,
+.userselector-popup .gwt-conflictLabel {
+  background-color: #F64747; }
+
+.athlete-details-critical .athlete-details-critical-entry * {
+  color: #F64747 !important; }
+
+.history-sidebar .sidebar-event.event-cancelled,
+table.activated-alert-notreviewed tr {
+  border-left-color: #F64747; }
+
+.sub-header-list-item * {
+  color: #333333 !important; }
+
+.attachments a {
+  text-decoration: underline dotted #333333; }
+
+.athlete-entry-card .dashboard-whatwhen {
+  text-decoration-color: #333333; }
+
+body[class^=Initializing_],
+body.LoadingPage,
+.athletes-sidebar.page-container-sidebar,
+.Reports_Page .page-container-left .page-container-sidebar > .sidebarpanel:last-child,
+.ReportsPage .page-container-left .page-container-sidebar > .sidebarpanel:last-child,
+.Resources_Page .page-container-left .sidebarpanel-contents > div:nth-child(2),
+.ResourcesPage .page-container-left .sidebarpanel-contents > div:nth-child(2) {
+  background-color: #333333; }
+
+.header-wrapper,
+.gwt-PopupPanel .popup-panel-label {
+  background: #333333; }
+
+.Reports_Page .page-container-left .page-container-sidebar,
+.ReportsPage .page-container-left .page-container-sidebar,
+.Resources_Page .page-container-left .page-container-sidebar,
+.ResourcesPage .page-container-left .page-container-sidebar {
+  background-color: #404040; }
+
+.login-heading,
+.Login_Page .terms-and-conditions h2,
+.LoginPageVersionTwo .terms-and-conditions h2,
+.OfflineLoginPageVersionTwo .terms-and-conditions h2,
+.login-page-label,
+.login-page-terms-label a,
+.login-page-links,
+.registration-panel .login-page-links span,
+.Login_Page .terms-and-conditions > button,
+.LoginPageVersionTwo .terms-and-conditions > button,
+.OfflineLoginPageVersionTwo .terms-and-conditions > button,
+.footer a:hover,
+body > div > div#loading #loading-title,
+.page-container-sub-header .pagination .gwt-PushButton:hover i,
+.page-container-header-links .pagination td a.current-page span,
+.athlete-details-favourite-event:hover i,
+.athlete-details-favourite-event:hover .event-link-summary span,
+.favorite-event-small-button:hover i,
+.favorite-event-small-button:hover .gwt-Label,
+.ajax-table .link:hover i,
+.master-detail-button:hover *,
+.savedreports-buttons i:hover,
+.savedreportbutton span:not(.sb-icon-container):hover,
+.page-container-left .form-editor-tabs .gwt-TabBar .gwt-TabBarItem.gwt-TabBarItem-selected .gwt-Label,
+.multi-factor-authentication-panel .back-button,
+.multi-factor-authentication-panel h1,
+.multi-factor-authentication-panel > div:nth-child(6) .fake-hyperlink,
+.login-panel.sso-frame button#cancel {
+  color: #DC2C1F; }
+
+.login-page-field {
+  border: 2px solid #DC2C1F; }
+
+body[class^=Initializing_] .progressbar-bar,
+body.LoadingPage .progressbar-bar,
+.tab-navigation a:hover,
+.header-wrapper .dropdown:hover,
+.header-wrapper > div > .gwt-Hyperlink,
+.page-container-sub-header .header-list-item:hover,
+.page-container-sub-header .subheader-widget > div > a:hover,
+.sub-header-dropdown,
+.athlete-sidebar-master-container .sidebar-close-icon,
+.startpage-button:hover,
+.selection-controller .facetlink-main-down,
+.selection-controller .facetlink-secondary-down,
+.selection-controller > div:nth-child(2) .fake-hyperlink:hover,
+.selection-controller .selectable:hover,
+button.form-save,
+button.form-saveandlock,
+button#save,
+button#save-and-continue,
+button#login,
+button#run-report,
+button#create-application,
+button#next,
+.search-controls .gwt-Button#search,
+.select-group-container .gwt-Button#load,
+.tablepopup .gwt-Button#done,
+#page-container-content-inner-actual > .ftrgwtdate-dateTypePanel > tbody > tr > td > .ftrgwtdate-dateTypePanel > .directional-panel-container-horizontal:nth-child(2) .cbg-RPContainer .ftrgwtdate-tabSelectedBody,
+.Reports_Page .page-container-left .sidebarpanel-header,
+.ReportsPage .page-container-left .sidebarpanel-header,
+.Resources_Page .page-container-left .sidebarpanel-header,
+.ResourcesPage .page-container-left .sidebarpanel-header,
+.Reports_Page .page-container-left #add-filter,
+.ReportsPage .page-container-left #add-filter,
+.pagination .gwt-Hyperlink.current-page,
+.page-container-left .formbuilder-itemtype:hover,
+.athlete-selection-toolbar .view-toggle .gwt-RadioButton input:checked + label,
+.Resources_Page .resource-filter-owner-button,
+.ResourcesPage .resource-filter-owner-button,
+.Resources_Page .page-container-left button#search,
+.ResourcesPage .page-container-left button#search,
+.popup-type-fill-down #fill-down,
+.Recent_Entries_Page .recent-entries-athlete-panel .link,
+.selection-controller a#hide,
+.selection-controller a#show,
+.favorite-event-button[id*="hub"]:hover,
+.terms-document-panel #i-consent,
+.multi-factor-authentication-panel button#continue,
+.login-panel.sso-frame .provider-launch a {
+  background-color: #DC2C1F; }
+
+.trailbar > span:last-child {
+  color: #DC2C1F;
+  border-bottom-color: #DC2C1F; }
+
+.titledglasspane #loading .loading-inner-content:before,
+div#loading #img:before,
+.loading .loading-text:before,
+.loading-small .loading-text-small:before {
+  border-top-color: #DC2C1F; }
+
+.progressbar-bar,
+.add-row-button,
+.add-row-button:hover,
+.gwt-ToggleButton-down-hovering {
+  background: #DC2C1F; }
+
+.sub-header-list-item:hover * {
+  color: #DC2C1F !important; }
+
+.page-container-left .form-editor-tabs .gwt-TabBar .gwt-TabBarItem.gwt-TabBarItem-selected {
+  border-color: #DC2C1F; }
+
+.tab-navigation a:hover span,
+.header-wrapper .dropdown:hover .dropdown-name,
+.header-wrapper .dropdown:hover i,
+.header-wrapper > div > .gwt-Hyperlink span,
+.header-wrapper > div > .dropdown:last-child:hover i,
+.startpage-button:hover .startpage-button-image i,
+.startpage-button:hover .startpage-button-heading,
+.Reports_Page .page-container-left .sidebarpanel-header h5,
+.ReportsPage .page-container-left .sidebarpanel-header h5,
+.Resources_Page .page-container-left .sidebarpanel-header h5,
+.ResourcesPage .page-container-left .sidebarpanel-header h5,
+.Reports_Page .page-container-left #add-filter span,
+.ReportsPage .page-container-left #add-filter span,
+.Reports_Page .page-container-left #add-filter i,
+.ReportsPage .page-container-left #add-filter i,
+button.form-save,
+button.form-saveandlock,
+button#save,
+button#save-and-continue,
+button#login,
+button#run-report,
+button#create-application,
+button#next,
+.search-controls .gwt-Button#search,
+.select-group-container .gwt-Button#load,
+.page-container-sub-header .header-list-item:hover,
+.page-container-sub-header .subheader-widget > div > a:hover,
+.athlete-sidebar-master-container .sidebar-close-icon,
+.selection-controller .facetlink-main-down .html-face,
+.selection-controller .facetlink-secondary-down .html-face,
+.selection-controller > div:nth-child(2) .fake-hyperlink:hover,
+.selection-controller .selectable:hover,
+.tablepopup .gwt-Button#done,
+#page-container-content-inner-actual > .ftrgwtdate-dateTypePanel > tbody > tr > td > .ftrgwtdate-dateTypePanel > .directional-panel-container-horizontal:nth-child(2) .cbg-RPContainer .ftrgwtdate-tabSelectedBody,
+.pagination .gwt-Hyperlink.current-page span,
+.page-container-left .formbuilder-itemtype:hover *,
+.athlete-selection-toolbar .view-toggle .gwt-RadioButton input:checked + label,
+.Resources_Page .resource-filter-owner-button,
+.ResourcesPage .resource-filter-owner-button,
+.Resources_Page .page-container-left button#search,
+.ResourcesPage .page-container-left button#search,
+.popup-type-fill-down #fill-down,
+.Recent_Entries_Page .recent-entries-athlete-panel .link *,
+.selection-controller a#hide *,
+.selection-controller a#show *,
+.favorite-event-button[id*="hub"]:hover > .sb-icon-container i,
+.favorite-event-button[id*="hub"]:hover .favorite-event-button-label,
+.terms-document-panel #i-consent,
+.multi-factor-authentication-panel button#continue,
+.login-panel.sso-frame .provider-launch a {
+  color: #FFFFFF; }
+
+.page-container-header h1,
+.LoginPageVersionTwo .error-panel h2,
+.OfflineLoginPageVersionTwo .error-panel h2 {
+  color: #DC2C1F; }
+
+/* Enable pretty print */
+@media print {
+  body {
+    visibility: hidden;
+    background: none; }
+
+  .header-wrapper {
+    visibility: visible;
+    padding-right: 0;
+    position: absolute;
+    left: 0;
+    top: 0; }
+
+  .header-wrapper > .directional-panel-container-horizontal > .directional-panel-container-horizontal,
+  .header-wrapper > .directional-panel-container-horizontal > .dropdown,
+  .trailbar-wrapper,
+  .page-container-sub-header,
+  .form-button-panel,
+  button {
+    display: none; }
+
+  .page-

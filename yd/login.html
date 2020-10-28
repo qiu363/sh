@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+
+	<title>登录</title>
+
+	<style>
+		HTML {
+			margin: 0 !important;
+			border: none !important;
+		}
+
+		.dragdrop-handle {
+			cursor: move;
+			user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+		}
+
+		.Gybhf5kB {
+			zoom: 1;
+		}
+
+		.dragdrop-dragging {
+			zoom: normal;
+		}
+
+		.Gybhf5kI {
+			border: 1px dashed #1e90ff;
+			margin: 0 !important;
+			zoom: 1;
+			z-index: 100;
+		}
+
+		.dragdrop-flow-panel-positioner {
+			color: #1e90ff;
+			display: inline;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.dragdrop-proxy {
+			background-color: #7af;
+		}
+
+		.dragdrop-selected,
+		.dragdrop-dragging,
+		.dragdrop-proxy {
+			filter: alpha(opacity\=30);
+			opacity: 0.3;
+		}
+
+		.dragdrop-movable-panel {
+			z-index: 200;
+			margin: 0 !important;
+			border: none !important;
+		}
+	</style>
+	<style class="vjs-styles-defaults">
+		.video-js {
+			width: 300px;
+			height: 150px;
+		}
+
+		.vjs-fluid {
+			padding-top: 56.25%
+		}
+	</style>
+
+	<link rel="stylesheet" href="./css/legacy.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/materialdesignicons.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/semantic.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/uploadPanel.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/smartabase.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/nouislider.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video-js.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/d3-mobile-widgets.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/dropzone.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/theme.css" type="text/css" media="all">
+
+	<script src="./js/jquery.js" type="application/javascript"></script>
+	<script src="./js/nouislider.js" type="application/javascript"></script>
+	<script src="./js/video.js" type="application/javascript"></script>
+	<script type="application/javascript">
+		videojs.options.flash.swf = "swf/video-js.swf";
+	</script>
+	<script src="./js/screenfull.min.js" type="application/javascript"></script>
+	<script src="./js/d3.js" type="application/javascript"></script>
+	<script src="./js/d3-mobile-widgets.js" type="application/javascript"></script>
+	<script src="./js/iframeResizer.min.js" type="application/javascript"></script>
+	<script src="./js/wet_signature.min.js" type="application/javascript"></script>
+	<script src="./js/mfa-browser-auth.min.js" type="application/javascript"></script>
+	<script src="./js/pdf.js" type="application/javascript"></script>
+	<script src="./js/dropzone.min.js" type="application/javascript"></script>
+</head>
+
+<body id="body" class="LoginPageVersionTwo">
+	<div class="wrapper">
+		<div class="header-wrapper">
+			<div class="directional-panel-container-horizontal align-horizontal-left">
+				<div>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<img src="./img/yandingheadermain.png" class="gwt-Image" alt="">
+					</div>
+				</div>
+
+				<div class="directional-panel-container-horizontal align-horizontal-left">
+					<ul class="tab-navigation noprint">
+						<li><a class="gwt-Hyperlink Login" href="./login.html"><span>Login</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-container-wrapper">
+			<div class="page-container">
+				<div class="page-container-left" style="display: none; width: 0px;">
+					<div class="toggle-sidebar-button" style="display: none;"><span class="sb-icon-container"><i
+								class="mdi mdi-chevron-left mdi-36px"></i></span></div>
+				</div>
+				<div class="page-container-center" style="width: 95.8333%;">
+					<div class="page-container-header">
+						<h1>Login</h1>
+					</div>
+					<div class="trailbar-wrapper">
+						<div class="trailbar" style="display: none;"><span>Login</span></div>
+					</div>
+					<div class="page-container-sub-header"></div>
+					<div class="page-container-content">
+						<div class="page-container-content-inner">
+							<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+								<div class="gwt-Label loading-text">Loading</div>
+							</div>
+							<table cellspacing="0" cellpadding="0" style="display: none;">
+								<tbody></tbody>
+							</table>
+							<div id="page-container-content-inner-actual" style="">
+								<div class="login-page-left-panel">
+									<img src="./img/yandingheadermain.png" class="gwt-Image" alt=" ">
+								</div>
+								<div class="login-page-right-panel">
+									<div class="login-panel username-frame" id="J_login">
+										<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+											<div class="gwt-Label loading-text">Loading</div>
+										</div>
+										<h1 class="login-heading">User Login</h1>
+										<div class="login-page-field"><span class="login-page-label">Username or Email</span><input
+												type="text" tabindex="0" class="gwt-TextBox loginusername"></div><button type="button"
+											tabindex="0" class="gwt-Button primary-action login-button primary-action bold"
+											id="next">Next</button>
+										<div class="login-page-links">
+											<div class="gwt-Label register-description" style="">Don't have an account?</div><a
+												class="gwt-Hyperlink Register" id="register" style=""><span>Register</span></a>
+										</div>
+									</div>
+
+									<!-- 密码 -->
+									<div class="login-panel password-frame" id="J_password" style="display: none;">
+										<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+											<div class="gwt-Label loading-text">Loading</div>
+										</div>
+										<h1 class="login-heading">Enter Password</h1>
+										<div class="login-page-field"><span class="login-page-label"></span><input type="password"
+												tabindex="0" class="gwt-PasswordTextBox loginpassword"></div>
+										<div class="gwt-Label login-page-validation"></div><button type="button" tabindex="0"
+											class="gwt-Button primary-action login-button bold" id="cancel">Cancel</button><button
+											type="button" tabindex="0" class="gwt-Button primary-action login-button bold"
+											id="login-btn">Login</button>
+										<div class="login-page-links"><a class="gwt-Hyperlink ForgotPassword"
+												id="forgot-password"><span>Forgot Password</span></a></div>
+									</div>
+
+									<!-- 忘记密码 -->
+									<div class="forgot-password-panel" id="J_forgot" style="display: none;">
+										<h1 class="login-heading">Forgot Password</h1>
+										<div class="gwt-Label">Enter your email address and we will send you a link to reset your password.
+										</div><input type="text" tabindex="0" class="gwt-TextBox textbox-hint">
+										<div><button type="button" tabindex="0" class="gwt-Button primary-action"
+												id="send-reset-password-link">Send Reset Password Link</button>
+											<div class="gwt-Label"></div>
+										</div>
+										<div class="login-page-links"><a class="gwt-Hyperlink ReturntoLogin"
+												id="return-to-login"><span>Return to Login</span></a></div>
+									</div>
+
+									<!-- 注册 -->
+									<div class="registration-panel" id="J_region" style="display: none;">
+										<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+											<div class="gwt-Label loading-text">Loading</div>
+										</div>
+										<h1 class="login-heading">Register Account</h1>
+										<div class="section-panel">
+											<div class="gwt-Label sectionheader"></div>
+											<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+												<div class="gwt-Label loading-text">Loading</div>
+											</div>
+											<table cellspacing="0" cellpadding="0" style="display: none;">
+												<tbody></tbody>
+											</table>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-firstname form-row-error">
+												<div class="form-label" title="First Name" style="text-align: right; width: 200px;">First Name
+												</div>
+												<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+														tabindex="0" class="gwt-TextBox form-widget" id="1"></div>
+											</div>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-lastname form-row-error">
+												<div class="form-label" title="Last Name" style="text-align: right; width: 200px;">Last Name
+												</div>
+												<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+														tabindex="0" class="gwt-TextBox form-widget" id="2"></div>
+											</div>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-username form-row-error">
+												<div class="form-label" title="Username" style="text-align: right; width: 200px;">Username</div>
+												<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+														tabindex="0" class="gwt-TextBox form-widget" id="3"></div>
+											</div>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-emailaddress form-row-error">
+												<div class="form-label" title="Email Address" style="text-align: right; width: 200px;">Email
+													Address</div>
+												<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+														tabindex="0" class="gwt-TextBox form-widget" id="4"></div>
+											</div>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-password form-row-error">
+												<div class="form-label" style="text-align: right; width: 200px;"></div>
+												<div class="directional-panel-container-vertical align-horizontal-left">
+													<div class="form-widget" id="5">
+														<div class="directional-panel-container-vertical align-horizontal-left">
+															<div class="label" style="display: none;">An email will be sent to the user prompting them
+																to set up their password</div>
+															<div class="directional-panel-container-horizontal align-horizontal-left">
+																<div class="gwt-Label form-label">Password</div><input type="password" tabindex="0"
+																	class="gwt-PasswordTextBox">
+																<div class="gwt-Label form-label">Confirm</div><input type="password" tabindex="0"
+																	class="gwt-PasswordTextBox">
+															</div>
+														</div><button type="button" tabindex="0" class="gwt-Button primary-action"
+															id="reset-password" style="display: none;">Reset Password</button>
+													</div>
+												</div>
+											</div>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-dateofbirth form-row-success">
+												<div class="form-label" title="Date Of Birth" style="text-align: right; width: 200px;">Date Of
+													Birth</div>
+												<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+														tabindex="0" class="gwt-DateBox form-widget" size="25" id="6"></div>
+											</div>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-sex">
+												<div class="form-label" title="Sex" style="text-align: right; width: 200px;">Sex</div>
+												<div class="directional-panel-container-vertical align-horizontal-left">
+													<div class="select-box-wrapper form-widget" id="7"><select tabindex="0" class="gwt-ListBox">
+															<option value="Male">Male</option>
+															<option value="Female">Female</option>
+														</select></div>
+												</div>
+											</div>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-phonenumbers">
+												<div class="form-label" title="Phone Numbers" style="text-align: right; width: 200px;">Phone
+													Numbers</div>
+												<div class="directional-panel-container-vertical align-horizontal-left">
+													<div class="form-widget" id="8">
+														<div></div>
+														<div>
+															<div
+																class="directional-panel-container-horizontal align-vertical-top align-horizontal-left">
+																<div class="directional-panel-container-horizontal align-horizontal-left">
+																	<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+																			<option value="Home">Home</option>
+																			<option value="Mobile">Mobile</option>
+																			<option value="Work">Work</option>
+																			<option value="Emergency">Emergency</option>
+																			<option value="Other">Other</option>
+																		</select></div>
+																	<div class="gwt-Label">+</div><input type="text" tabindex="0" class="gwt-TextBox"
+																		title="Country Code" maxlength="2" style="width: 20px;">
+																	<div class="gwt-Label">-</div><input type="text" tabindex="0" class="gwt-TextBox"
+																		title="Prefix" maxlength="3" style="width: 30px;">
+																	<div class="gwt-Label">-</div><input type="text" tabindex="0" class="gwt-TextBox"
+																		title="Number" maxlength="10" style="width: 100px;">
+																	<div class="gwt-Label">E.g. +64-275-123123</div><button type="button" tabindex="0"
+																		class="gwt-Button primary-action" id="test" style="">Test</button>
+																	<div class="directional-panel-container-vertical" style="display: none;"></div>
+																</div>
+																<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+																	aria-pressed="false"><input type="text" tabindex="-1"
+																		style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																		class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+																<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+																	aria-pressed="false"><input type="text" tabindex="-1"
+																		style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																		class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+																<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+																	aria-pressed="false"><input type="text" tabindex="-1"
+																		style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																		class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div>
+															</div>
+														</div><button type="button" tabindex="0" class="gwt-Button primary-action"
+															id="add-phone-number">Add Phone Number</button>
+													</div>
+												</div>
+											</div>
+											<div
+												class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even">
+												<div class="form-label" title="Default Role" style="text-align: right; width: 200px;">Default
+													Role</div>
+												<div class="directional-panel-container-vertical align-horizontal-left">
+													<div class="select-box-wrapper form-widget" id="9"><select tabindex="0"
+															class="gwt-ListBox"></select></div>
+												</div>
+											</div>
+											<div class="validation-invalid directional-panel-container-vertical" style="">
+												<div class="gwt-Label validation-title">The following errors need to be fixed before moving on:
+												</div>
+												<div class="gwt-Label validation-errormessage">First Name must be entered</div>
+												<div class="gwt-Label validation-errormessage">Last Name must be entered</div>
+												<div class="gwt-Label validation-errormessage">Username must be entered</div>
+												<div class="gwt-Label validation-errormessage">Email Address does not look correct. Please check
+													the email is valid. If you are sure, please continue.</div>
+												<div class="gwt-Label validation-errormessage">Password must be at least 10 characters |
+													Password must have at least 1 numbers | Password must have at least 1 uppercase characters |
+													Password must have at least 1 lowercase characters</div>
+											</div>
+											<div class="form-button-panel directional-panel-container-horizontal"><button type="button"
+													tabindex="0" class="gwt-Button primary-action bold" id="save" disabled="">Save</button><button
+													type="button" tabindex="0" class="gwt-Button primary-action" id="cancel">Cancel</button></div>
+										</div>
+										<div class="login-page-links"><span class="login-page-link-info">Already have an account?</span><a
+												class="gwt-Hyperlink Login" id="login"><span>Login</span></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page-container-footer"></div>
+				</div>
+				<div class="page-container-right" style="display: none; width: 0px;">
+					<div class="toggle-sidebar-button" style="display: none;"><span class="sb-icon-container"><i
+								class="mdi mdi-chevron-left mdi-36px"></i></span></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="gwt-HTML poweredby">Version 6.5.11 on 06-August-2020 .<br>All Rights Reserved. © <a target="blank"
+					href="http://www.fusionsport.com/">Fusion Sport</a>&nbsp;2007-2020. <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/privacypolicy.html">Privacy Policy.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/termsofservice.html">Terms of Service.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/servicelevelagreement.html">Service Level Agreement.</a></div>
+		</div>
+	</div>
+
+	<script>
+		$('#next').click(function () {
+			$('#J_login').hide()
+			$('#J_password').show()
+		})
+
+		$('#cancel').click(function () {
+			$('#J_password').hide()
+			$('#J_login').show()
+		})
+
+		$('#login, #cancel').click(function () {
+			$('#J_region').hide()
+			$('#J_login').show()
+		})
+
+		$('#register').click(function () {
+			$('#J_login').hide()
+			$('#J_region').show()
+		})
+
+		$('#forgot-password').click(function () {
+			$('#J_password').hide()
+			$('#J_forgot').show()
+		})
+
+		$('#return-to-login').click(function () {
+			$('#J_forgot').hide()
+			$('#J_login').show()
+		})
+
+		$('#login-btn').click(function () {
+			window.location.href = './home.html'
+		})
+	</script>
+</body>
+
+</html>

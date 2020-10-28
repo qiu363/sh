@@ -2501,3 +2501,18 @@ h6 {
 .animate.animated {
   opacity: 1;
 }
+
+.solut-meeting {
+  position: relative;
+}
+.solut-after {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #aaa;
+  font-size: 12px;
+}

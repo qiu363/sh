@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+
+	<title>账号设置</title>
+
+	<style>
+		HTML {
+			margin: 0 !important;
+			border: none !important;
+		}
+
+		.dragdrop-handle {
+			cursor: move;
+			user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+		}
+
+		.Gybhf5kB {
+			zoom: 1;
+		}
+
+		.dragdrop-dragging {
+			zoom: normal;
+		}
+
+		.Gybhf5kI {
+			border: 1px dashed #1e90ff;
+			margin: 0 !important;
+			zoom: 1;
+			z-index: 100;
+		}
+
+		.dragdrop-flow-panel-positioner {
+			color: #1e90ff;
+			display: inline;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.dragdrop-proxy {
+			background-color: #7af;
+		}
+
+		.dragdrop-selected,
+		.dragdrop-dragging,
+		.dragdrop-proxy {
+			filter: alpha(opacity\=30);
+			opacity: 0.3;
+		}
+
+		.dragdrop-movable-panel {
+			z-index: 200;
+			margin: 0 !important;
+			border: none !important;
+		}
+	</style>
+	<style class="vjs-styles-defaults">
+		.video-js {
+			width: 300px;
+			height: 150px;
+		}
+
+		.vjs-fluid {
+			padding-top: 56.25%
+		}
+	</style>
+
+	<link rel="stylesheet" href="./css/legacy.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/materialdesignicons.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/semantic.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/uploadPanel.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/smartabase.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/nouislider.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video-js.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/video.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/d3-mobile-widgets.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/dropzone.css" type="text/css" media="all">
+	<link rel="stylesheet" href="./css/theme.css" type="text/css" media="all">
+
+	<script src="./js/jquery.js" type="application/javascript"></script>
+	<script src="./js/nouislider.js" type="application/javascript"></script>
+	<script src="./js/video.js" type="application/javascript"></script>
+	<script type="application/javascript">
+		videojs.options.flash.swf = "swf/video-js.swf";
+	</script>
+	<script src="./js/screenfull.min.js" type="application/javascript"></script>
+	<script src="./js/d3.js" type="application/javascript"></script>
+	<script src="./js/d3-mobile-widgets.js" type="application/javascript"></script>
+	<script src="./js/iframeResizer.min.js" type="application/javascript"></script>
+	<script src="./js/wet_signature.min.js" type="application/javascript"></script>
+	<script src="./js/mfa-browser-auth.min.js" type="application/javascript"></script>
+	<script src="./js/pdf.js" type="application/javascript"></script>
+	<script src="./js/dropzone.min.js" type="application/javascript"></script>
+</head>
+
+<body id="body" class="AccountPage">
+	<div class="wrapper">
+		<!-- 导航 -->
+		<div class="header-wrapper">
+			<div class="directional-panel-container-horizontal align-horizontal-left">
+				<div>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<img src="./img/yandingheadermain.png" class="gwt-Image" alt=" ">
+					</div>
+				</div>
+				<div class="directional-panel-container-horizontal align-horizontal-left">
+					<ul class="tab-navigation noprint">
+						<li>
+							<a class="gwt-Hyperlink Home" id="home" href="./home.html"><span>Home</span></a>
+						</li>
+					</ul>
+					<div class="directional-panel-container-horizontal align-horizontal-left">
+						<div class="dropdown">
+							<span class="dropdown-name link">Data Entry</span>
+							<span class="sb-icon-container">
+								<i class="mdi mdi-chevron-down mdi-18px"></i>
+							</span>
+							<ul class="sub-header-dropdown Data Entry">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink EnterData" id="enter-data" href="./typeOfEvent.html">
+										<span>Enter Data</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink ImportData" id="import-data" href="./importData.html">
+										<span>Import Data</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-name link">Reporting</span>
+							<span class="sb-icon-container"><i class="mdi mdi-chevron-down mdi-18px"></i></span>
+							<ul class="sub-header-dropdown Reporting">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Reports" id="reports" href="./reports.html">
+										<span>Reports</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Dashboards" id="dashboards" href="./account.html">
+										<span>Dashboards</span>
+									</a>
+								</li>
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink MyHistory" id="my-history" href="./history.html">
+										<span>My History</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-name link">Other</span>
+							<span class="sb-icon-container">
+								<i class="mdi mdi-chevron-down mdi-18px"></i>
+							</span>
+							<ul class="sub-header-dropdown Other">
+								<li class="sub-header-list-item">
+									<a class="gwt-Hyperlink Groups" id="groups" href="./groups.html">
+										<span>Groups</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<a class="gwt-Hyperlink AllAccounts" id="all-accounts"><span>All Accounts</span></a>
+
+				<div class="dropdown">
+					<span class="sb-icon-container"><i class="mdi mdi-dots-horizontal mdi-36px"></i></span>
+					<ul class="sub-header-dropdown Navigation">
+						<li class="sub-header-list-item">
+							<a class="gwt-Hyperlink Account" id="account" href="./account.html">
+								<span>Account</span>
+							</a>
+						</li>
+						<li class="sub-header-list-item">
+							<div class="gwt-HTML">
+								<a id="documentation" href="https://learn.fusionsport.com/help" target="_blank">
+									<span>Help</span>
+								</a>
+							</div>
+						</li>
+						<li class="sub-header-list-item">
+							<a class="gwt-Hyperlink Logout" id="logout" href="./login.html"><span>Logout</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-container-wrapper">
+			<div class="page-container">
+				<div class="page-container-left" style="width: 0px; display: none;">
+					<div class="toggle-sidebar-button">
+						<span class="sb-icon-container">
+							<i class="mdi mdi-chevron-left mdi-36px"></i>
+						</span>
+					</div>
+				</div>
+				<div class="page-container-center" style="width: 93.1741%;">
+					<div class="page-container-header">
+						<h1>Select Athletes</h1>
+					</div>
+
+					<div class="page-container-content">
+						<div class="page-container-content-inner">
+							<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+								<div class="gwt-Label loading-text">Loading</div>
+							</div>
+							<table cellspacing="0" cellpadding="0" style="display: none;">
+								<tbody></tbody>
+							</table>
+							<div id="page-container-content-inner-actual">
+								<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+									<div class="gwt-Label loading-text">Loading</div>
+								</div>
+								<div class="section-panel">
+									<div class="gwt-Label sectionheader"></div>
+									<div class="loading" style="display: none;"><img src="./img/loadingspinner32.gif" class="gwt-Image">
+										<div class="gwt-Label loading-text">Loading</div>
+									</div>
+									<table cellspacing="0" cellpadding="0" style="display: none;">
+										<tbody></tbody>
+									</table>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-firstname form-row-success">
+										<div class="form-label" title="First Name" style="text-align: right; width: 200px;">First Name</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+												tabindex="0" class="gwt-TextBox form-widget" id="1"></div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-middlenames">
+										<div class="form-label" title="Middle Names" style="text-align: right; width: 200px;">Middle Names
+										</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+												tabindex="0" class="gwt-TextBox form-widget" id="2"></div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-lastname form-row-success">
+										<div class="form-label" title="Last Name" style="text-align: right; width: 200px;">Last Name</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+												tabindex="0" class="gwt-TextBox form-widget" id="3"></div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-username form-row-success">
+										<div class="form-label" title="Username" style="text-align: right; width: 200px;">Username</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+												tabindex="0" class="gwt-TextBox form-widget" disabled="" id="4"></div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-knownas">
+										<div class="form-label" title="Known As" style="text-align: right; width: 200px;">Known As</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+												tabindex="0" class="gwt-TextBox form-widget" id="5"></div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-emailaddress form-row-success">
+										<div class="form-label" title="Email Address" style="text-align: right; width: 200px;">Email Address
+										</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+												tabindex="0" class="gwt-TextBox form-widget" id="6"></div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-password form-row-success">
+										<div class="form-label" title="Password" style="text-align: right; width: 200px;">Password</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="form-widget" id="7">
+												<div class="directional-panel-container-vertical align-horizontal-left">
+													<div class="label" style="display: none;">An email will be sent to the user prompting them to
+														set up their password</div>
+													<div class="directional-panel-container-horizontal align-horizontal-left">
+														<div class="gwt-Label form-label">Password</div><input type="password" tabindex="0"
+															class="gwt-PasswordTextBox">
+														<div class="gwt-Label form-label">Confirm</div><input type="password" tabindex="0"
+															class="gwt-PasswordTextBox">
+													</div>
+												</div><button type="button" tabindex="0" class="gwt-Button primary-action" id="reset-password"
+													style="display: none;">Reset Password</button>
+											</div>
+										</div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-dateofbirth form-row-success">
+										<div class="form-label" title="Date Of Birth" style="text-align: right; width: 200px;">Date Of Birth
+										</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+												tabindex="0" class="gwt-DateBox form-widget" size="25" id="8"></div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-sex">
+										<div class="form-label" title="Sex" style="text-align: right; width: 200px;">Sex</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="select-box-wrapper form-widget" id="9"><select tabindex="0" class="gwt-ListBox">
+													<option value="Male">Male</option>
+													<option value="Female">Female</option>
+												</select></div>
+										</div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-avatarid">
+										<div class="form-label" title="Picture" style="text-align: right; width: 200px;">Picture</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="fileupload form-widget" id="10">
+												<div class="directional-panel-container-horizontal align-horizontal-left">
+													<div class="uploadform directional-panel-container-vertical">
+														<form target="UploadFormIFrame" action="/x/fileupload" enctype="multipart/form-data"
+															method="post">
+															<div class="directional-panel-container-vertical align-horizontal-left"><input
+																	type="hidden" name="hack-field" value="hack-value"><input type="hidden"
+																	name="session-token" value="8763126017898992049"><input type="hidden"
+																	name="processorkey" value="avatar-key"><input type="hidden" name="filename" value="">
+																<div class="directional-panel-container-horizontal align-horizontal-left"><input
+																		type="file" class="gwt-TextBox" name="filedata"></div>
+																<div class="gwt-Label warningtext" style="display: none;">Select a file to upload first
+																</div>
+																<div class="directional-panel-container-vertical align-horizontal-left"></div><button
+																	type="button" tabindex="0" class="gwt-Button primary-action"
+																	id="upload">Upload</button>
+															</div>
+														</form>
+														<div class="uploaddescription"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-uuid">
+										<div class="form-label" title="Uuid" style="text-align: right; width: 200px;">Uuid</div>
+										<div class="directional-panel-container-vertical align-horizontal-left"><input type="text"
+												tabindex="0" class="gwt-TextBox form-widget" disabled="" id="11"></div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-addresses">
+										<div class="form-label" title="Addresses" style="text-align: right; width: 200px;">Addresses</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="form-widget" id="12">
+												<div></div>
+												<div></div><button type="button" tabindex="0" class="gwt-Button primary-action"
+													id="add-address">Add Address</button>
+											</div>
+										</div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-even person-phonenumbers">
+										<div class="form-label" title="Phone Numbers" style="text-align: right; width: 200px;">Phone Numbers
+										</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="form-widget" id="13">
+												<div></div>
+												<div>
+													<div class="directional-panel-container-horizontal align-vertical-top align-horizontal-left">
+														<div class="directional-panel-container-horizontal align-horizontal-left">
+															<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+																	<option value="Home">Home</option>
+																	<option value="Mobile">Mobile</option>
+																	<option value="Work">Work</option>
+																	<option value="Emergency">Emergency</option>
+																	<option value="Other">Other</option>
+																</select></div>
+															<div class="gwt-Label">+</div><input type="text" tabindex="0" class="gwt-TextBox"
+																title="Country Code" maxlength="2" style="width: 20px;">
+															<div class="gwt-Label">-</div><input type="text" tabindex="0" class="gwt-TextBox"
+																title="Prefix" maxlength="3" style="width: 30px;">
+															<div class="gwt-Label">-</div><input type="text" tabindex="0" class="gwt-TextBox"
+																title="Number" maxlength="10" style="width: 100px;">
+															<div class="gwt-Label">E.g. +64-275-123123</div><button type="button" tabindex="0"
+																class="gwt-Button primary-action" id="test" style="display: none;">Test</button>
+															<div class="directional-panel-container-vertical" style="display: none;"></div>
+														</div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div>
+													</div>
+													<div class="directional-panel-container-horizontal align-vertical-top align-horizontal-left">
+														<div class="directional-panel-container-horizontal align-horizontal-left">
+															<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+																	<option value="Home">Home</option>
+																	<option value="Mobile">Mobile</option>
+																	<option value="Work">Work</option>
+																	<option value="Emergency">Emergency</option>
+																	<option value="Other">Other</option>
+																</select></div>
+															<div class="gwt-Label">+</div><input type="text" tabindex="0" class="gwt-TextBox"
+																title="Country Code" maxlength="2" style="width: 20px;">
+															<div class="gwt-Label">-</div><input type="text" tabindex="0" class="gwt-TextBox"
+																title="Prefix" maxlength="3" style="width: 30px;">
+															<div class="gwt-Label">-</div><input type="text" tabindex="0" class="gwt-TextBox"
+																title="Number" maxlength="10" style="width: 100px;">
+															<div class="gwt-Label">E.g. +64-275-123123</div><button type="button" tabindex="0"
+																class="gwt-Button primary-action" id="test" style="display: none;">Test</button>
+															<div class="directional-panel-container-vertical" style="display: none;"></div>
+														</div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div>
+													</div>
+												</div><button type="button" tabindex="0" class="gwt-Button primary-action"
+													id="add-phone-number">Add Phone Number</button>
+											</div>
+										</div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item form-item-odd person-language">
+										<div class="form-label" title="Language" style="text-align: right; width: 200px;">Language</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="select-box-wrapper form-widget" id="14"><select tabindex="0" class="gwt-ListBox">
+													<option value="Arabic">Arabic</option>
+													<option value="Dutch">Dutch</option>
+													<option value="English">English</option>
+													<option value="French">French</option>
+													<option value="German">German</option>
+													<option value="Hebrew">Hebrew</option>
+													<option value="Italian">Italian</option>
+													<option value="Japanese">Japanese</option>
+													<option value="Mandarin">Mandarin</option>
+													<option value="Portuguese">Portuguese</option>
+													<option value="Russian">Russian</option>
+													<option value="Spanish">Spanish</option>
+												</select></div>
+										</div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item person-favoriteevents form-item-even">
+										<div class="form-label" title="Favourite Events" style="text-align: right; width: 200px;">Favourite
+											Events</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="form-widget" id="16">
+												<div></div>
+												<div>
+													<div class="directional-panel-container-horizontal align-vertical-top align-horizontal-left">
+														<div class="select-box-wrapper" id="formselector"><select tabindex="0" class="gwt-ListBox">
+																<option value="9247">CTTM Injury Record</option>
+																<option value="9268">CTTM Training Log</option>
+																<option value="9267">CTTM Wellness</option>
+															</select></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div>
+													</div>
+													<div class="directional-panel-container-horizontal align-vertical-top align-horizontal-left">
+														<div class="select-box-wrapper" id="formselector"><select tabindex="0" class="gwt-ListBox">
+																<option value="9247">CTTM Injury Record</option>
+																<option value="9268">CTTM Training Log</option>
+																<option value="9267">CTTM Wellness</option>
+															</select></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+														<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button"
+															aria-pressed="false"><input type="text" tabindex="-1"
+																style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+																class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div>
+													</div>
+												</div><button type="button" tabindex="0" class="gwt-Button primary-action" id="add">Add</button>
+											</div>
+										</div>
+									</div>
+									<div
+										class="directional-panel-container-horizontal align-horizontal-left form-item mfa-hierarchy-of-trust form-item-odd">
+										<div class="form-label" title="MFA Key Communication Preference"
+											style="text-align: right; width: 200px;">MFA Key Communication Preference</div>
+										<div class="directional-panel-container-vertical align-horizontal-left">
+											<div class="directional-panel-container-horizontal align-horizontal-left form-widget" id="18">
+												<div class="directional-panel-container-horizontal comm-preference-selector"><span
+														class="gwt-RadioButton"><input type="radio" name="mfaHierarchyRadioGroup-radio_group_6"
+															id="gwt-uid-116" tabindex="0" value="authenticator-permitted"><label
+															for="gwt-uid-116">Authentication App</label></span><span class="gwt-RadioButton"><input
+															type="radio" name="mfaHierarchyRadioGroup-radio_group_6" id="gwt-uid-117" tabindex="0"
+															value="sms-permitted"><label for="gwt-uid-117">SMS</label></span><span
+														class="gwt-RadioButton"><input type="radio" name="mfaHierarchyRadioGroup-radio_group_6"
+															id="gwt-uid-118" tabindex="0" value="email-permitted" checked=""><label
+															for="gwt-uid-118">Email</label></span></div>
+											</div>
+										</div>
+									</div>
+									<div class="loading" style="display: none;"><img src="img/loadingspinner32.gif" class="gwt-Image">
+										<div class="gwt-Label loading-text">Loading</div>
+									</div>
+									<div class="validation-invalid directional-panel-container-vertical" style="display: none;"></div>
+									<div class="form-button-panel directional-panel-container-horizontal"><button type="button"
+											tabindex="0" class="gwt-Button primary-action bold" id="save">Save</button><button type="button"
+											tabindex="0" class="gwt-Button primary-action" id="cancel">Cancel</button></div>
+									<div class="directional-panel-container-horizontal align-horizontal-left mfa-key-widget">
+										<div class="gwt-Label mfa-key-label">Multi-Factor Authentication Key</div><input type="password"
+											tabindex="0" class="gwt-TextBox mfa-key-value gwt-TextBox-readonly" readonly=""><span
+											class="sb-icon-container mfa-key-reveal"><i class="mdi mdi-eye mdi-36px"></i></span>
+									</div>
+									<div class="directional-panel-container-vertical align-horizontal-left td-acceptance-widget"
+										style="display: none;">
+										<h1 class="td-acceptance-label">Terms Document Consents</h1>
+										<div class="gwt-Label">Your organisation requires your consent to *all* of the following Terms
+											Documents in order to collect, store, and use your data in Smartabase. Smartabase is a highly
+											secured environment with strict access controls.</div>
+										<div class="gwt-Hyperlink"><a href="privacypolicy.html" target="_blank">View privacy policy</a>
+										</div>
+										<div class="gwt-Label">You are able to withdraw your consent to any of the following Terms Documents
+											at any time. When you do that, your organisation will be notified and you won't be able to
+											continue using Smartabase. </div>
+										<p>If you have any concerns, please contact your Smartabase administrator directly.</p>
+									</div>
+									<table cellspacing="3" cellpadding="0" style="display: none;">
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-container-footer"></div>
+				</div>
+				<div class="page-container-right" style="width: 0px; display: none;">
+					<div class="toggle-sidebar-button" style=""><span class="sb-icon-container"><i
+								class="mdi mdi-chevron-left mdi-36px"></i></span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="gwt-HTML poweredby">Version 6.5.11 on 06-August-2020 .<br>All Rights Reserved. © <a target="blank"
+					href="http://www.fusionsport.com/">Fusion Sport</a>&nbsp;2007-2020. <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/privacypolicy.html">Privacy Policy.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/termsofservice.html">Terms of Service.</a> <a target="blank"
+					href="https://my.yandingsmartabase.com/yanding/servicelevelagreement.html">Service Level Agreement.</a></div>
+		</div>
+	</div>
+
+	<script type="text/html" id="J_address">
+		<div class="directional-panel-container-horizontal align-vertical-top align-horizontal-left">
+			<table>
+				<colgroup>
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<td align="right" style="vertical-align: top;">Type</td>
+						<td>
+							<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+									<option value="Primary">Primary</option>
+									<option value="Alternative">Alternative</option>
+									<option value="Alternative 1">Alternative 1</option>
+									<option value="Alternative 2">Alternative 2</option>
+								</select></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" style="vertical-align: top;">Address</td>
+						<td><textarea tabindex="0" class="gwt-TextArea large" title="Address"></textarea></td>
+					</tr>
+					<tr>
+						<td align="right" style="vertical-align: top;">Suburb</td>
+						<td><input type="text" tabindex="0" class="gwt-TextBox" title="Suburb"></td>
+					</tr>
+					<tr>
+						<td align="right" style="vertical-align: top;">City</td>
+						<td><input type="text" tabindex="0" class="gwt-TextBox" title="City"></td>
+					</tr>
+					<tr>
+						<td align="right" style="vertical-align: top;">Country</td>
+						<td><input type="text" tabindex="0" class="gwt-TextBox" title="Country" style="width: 300px;"></td>
+					</tr>
+					<tr>
+						<td align="right" style="vertical-align: top;">Postcode</td>
+						<td><input type="text" tabindex="0" class="gwt-TextBox" title="Postcode"></td>
+					</tr>
+				</tbody>
+			</table>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div>
+		</div>
+	</script>
+
+	<script type="text/html" id="J_phone">
+		<div class="directional-panel-container-horizontal align-vertical-top align-horizontal-left">
+			<div class="directional-panel-container-horizontal align-horizontal-left">
+				<div class="select-box-wrapper"><select tabindex="0" class="gwt-ListBox">
+						<option value="Home">Home</option>
+						<option value="Mobile">Mobile</option>
+						<option value="Work">Work</option>
+						<option value="Emergency">Emergency</option>
+						<option value="Other">Other</option>
+					</select></div>
+				<div class="gwt-Label">+</div><input type="text" tabindex="0" class="gwt-TextBox" title="Country Code"
+					maxlength="2" style="width: 20px;">
+				<div class="gwt-Label">-</div><input type="text" tabindex="0" class="gwt-TextBox" title="Prefix" maxlength="3"
+					style="width: 30px;">
+				<div class="gwt-Label">-</div><input type="text" tabindex="0" class="gwt-TextBox" title="Number" maxlength="10"
+					style="width: 100px;">
+				<div class="gwt-Label">E.g. +64-275-123123</div><button type="button" tabindex="0"
+					class="gwt-Button primary-action" id="test" style="display: none;">Test</button>
+				<div class="directional-panel-container-vertical" style="display: none;"></div>
+			</div>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div>
+		</div>
+	</script>
+
+	<script type="text/html" id="J_fav">
+		<div class="directional-panel-container-horizontal align-vertical-top align-horizontal-left">
+			<div class="select-box-wrapper" id="formselector"><select tabindex="0" class="gwt-ListBox">
+					<option value="9247">CTTM Injury Record</option>
+					<option value="9268">CTTM Training Log</option>
+					<option value="9267">CTTM Wellness</option>
+				</select></div>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-delete mdi-18px"></i></span></div>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-arrow-up mdi-18px"></i></span></div>
+			<div tabindex="0" class="gwt-PushButton gwt-PushButton-up" role="button" aria-pressed="false"><input type="text"
+					tabindex="-1"
+					style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><span
+					class="sb-icon-container"><i class="mdi mdi-arrow-down mdi-18px"></i></span></div>
+		</div>
+	</script>
+
+	<script>
+		$('#load').click(function () {
+			window.location.href = './homeTrsx.html'
+		})
+	</script>
+</body>
+
+</html>
