@@ -288,6 +288,8 @@ h6 {
   height: 400px;
   margin: 0 auto;
   overflow: hidden;
+  background-position: center 0;
+  background-size: auto 400px;
 }
 .banner img {
   display: block;
@@ -2347,17 +2349,17 @@ h6 {
   background-size: cover;
 }
 .i-page2 .main {
-  display: flex;
   min-height: 600px;
-  align-items: center;
 }
 .i-page2 img {
   position: absolute;
-  right: -20px;
-  bottom: 0;
+  right: 30px;
+  top: 50%;
+  margin-top: -228px;
 }
 .i-page2-cont {
   width: 470px;
+  padding-top: 110px;
   color: #fff;
 }
 .i-page2-cont h3 {
