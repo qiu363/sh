@@ -405,6 +405,7 @@ h6 {
 .service-i {
   width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .service-i h4 {
   padding: 90px 0 50px;
