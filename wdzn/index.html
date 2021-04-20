@@ -14,7 +14,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
 	<link rel="stylesheet" type="text/css" href="./styles/main.css"/>
-	<link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="./styles/swiper.min.css" />
 </head>
 <body>
 
@@ -23,7 +23,7 @@
 		<img src="./images/logo.png" alt="沃德智能">
 	</a>
 	<div class="nav">
-		<a href="###">首页</a>
+		<a href="###" class="cur">首页</a>
 		<a href="###">产品服务</a>
 		<a href="###">解决方案</a>
 		<a href="###">CSP国际认证培训中心</a>
@@ -32,32 +32,23 @@
 	</div>
 </div>
 
-<div class="footer-t">
-	<div class="footer-t-i">
-		<p>指导单位</p>
-		<p>中宣部</p>
-		<p>国家新闻出版广电总局</p>
-		<p>贵州省人民政府</p>
-		<div class="footer-t-code">
-			<div class="footer-t-c">
-				<img src="./images/code1.gif">
-				<p>关注客户端</p>
-			</div>
-			<div class="footer-t-c">
-				<img src="./images/code2.gif">
-				<p>关注客户端</p>
-			</div>
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide">
+			<img src="./images/banner.jpg" />
+		</div>
+		<div class="swiper-slide">
+			<img src="./images/banner.jpg" />
+		</div>
+		<div class="swiper-slide">
+			<img src="./images/banner.jpg" />
 		</div>
 	</div>
-</div>
-
-<div class="footer">
-	京ICP备11017824号-4
-	<span>北京市公安局朝阳分局备案编号:110105000501</span>
-	Copyright &copy; 2017 CDO-CHINA
+	<div class="swiper-pagination"></div>
 </div>
 
 <script src="./js/jquery.js"></script>
+<script src="./js/swiper.min.js"></script>
 <script src="./js/main.js"></script>
 
 </body>
