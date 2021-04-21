@@ -13,8 +13,8 @@
 	<meta name="imagemode" content="force" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <link rel="stylesheet" type="text/css" href="./styles/swiper.min.css" />
 	<link rel="stylesheet" type="text/css" href="./styles/main.css"/>
-	<link rel="stylesheet" type="text/css" href="./styles/swiper.min.css" />
 </head>
 <body>
 
@@ -34,14 +34,15 @@
 
 <div class="swiper-container">
 	<div class="swiper-wrapper">
-		<div class="swiper-slide">
-			<img src="./images/banner.jpg" />
-		</div>
+
 		<div class="swiper-slide">
 			<img src="./images/banner_1.jpg" />
 		</div>
 		<div class="swiper-slide">
 			<img src="./images/banner_2.jpg" />
+		</div>
+    <div class="swiper-slide">
+			<img src="./images/banner.jpg" />
 		</div>
 	</div>
 	<div class="swiper-pagination"></div>
@@ -52,7 +53,7 @@
 	<p>Cause of landmark failure</p>
 </div>
 
-<div class="main">
+<div class="main clearfix">
 	<ul class="cause-list">
 		<li>
 			<span></span>
@@ -61,40 +62,140 @@
 		</li>
 		<li>
 			<span></span>
-			<div class="cause-list-t">造型不当</div>
-			<p>设计不满足工况需求，安全系数偏低。</p>
+			<div class="cause-list-t">断轴失效</div>
+			<p>
+        1.安装不对中 <br>
+        2.设计安全系数低 <br>
+        3.严重超载 <br>
+        4.应力集中
+      </p>
 		</li>
 		<li>
 			<span></span>
-			<div class="cause-list-t">造型不当</div>
-			<p>设计不满足工况需求，安全系数偏低。</p>
+			<div class="cause-list-t">齿面点蚀剥落失效</div>
+			<p>齿面硬度低，硬化层深度小，硬度梯度不均匀,润滑不良。</p>
 		</li>
 		<li>
 			<span></span>
-			<div class="cause-list-t">造型不当</div>
-			<p>设计不满足工况需求，安全系数偏低。</p>
+			<div class="cause-list-t">轮齿断齿、崩齿</div>
+			<p style="padding: 0;">轮齿断齿、崩齿原因1.超载2.原材料成分不达标、轮热处理不达标,齿根有力集中,齿轮修形不符合实际工况，箱体轴承孔同轴度不达标。</p>
 		</li>
 		<li>
 			<span></span>
-			<div class="cause-list-t">造型不当</div>
-			<p>设计不满足工况需求，安全系数偏低。</p>
+			<div class="cause-list-t">花键轮齿挤压变形</div>
+			<p>热处理问题，硬度问题。</p>
 		</li>
 		<li>
 			<span></span>
-			<div class="cause-list-t">造型不当</div>
-			<p>设计不满足工况需求，安全系数偏低。</p>
+			<div class="cause-list-t">漏油</div>
+			<p style="padding: 0;">1.密封件老化2.加热安装联轴器后失效3.轴硬度或油封套硬度低4.油封抱紧力大5.密封面涂抹密封胶6.通气帽失效。</p>
 		</li>
 		<li>
 			<span></span>
-			<div class="cause-list-t">造型不当</div>
-			<p>设计不满足工况需求，安全系数偏低。</p>
+			<div class="cause-list-t">轴承烧毁</div>
+			<p>轴承润滑不良,轴承间隙不达标,回油不畅。</p>
 		</li>
 		<li>
 			<span></span>
-			<div class="cause-list-t">造型不当</div>
-			<p>设计不满足工况需求，安全系数偏低。</p>
+			<div class="cause-list-t">高温</div>
+			<p>润滑不良,冷却不良,对中不良,轴承间隙不达标，回油不畅,进油量不足。</p>
 		</li>
 	</ul>
+</div>
+
+<div class="title">
+	产品服务
+	<p>Intelligent hardware</p>
+</div>
+
+<div class="hardware">
+  <div class="main">
+    <ul class="hardware-list clearfix">
+      <li>
+        <div class="hardware-list-img">
+          <img src="./images/icon_1.jpg" />
+        </div>
+        <div class="hardware-list-cont">
+          <p>智能硬件</p>
+          智能传感器 <br>
+          采集设备 <br>
+          辅助设备 <br>
+          相关证书 <br>
+        </div>
+      </li>
+      <li>
+        <div class="hardware-list-img">
+          <img src="./images/icon_1.jpg" />
+        </div>
+        <div class="hardware-list-cont">
+          <p>软件系统</p>
+          C/S设备管理系统 <br>
+          B/S客户端管理系统 <br>
+          APP/小程序
+        </div>
+      </li>
+      <li>
+        <div class="hardware-list-img">
+          <img src="./images/icon_1.jpg" />
+        </div>
+        <div class="hardware-list-cont">
+          <p>行业服务</p>
+          本地运维 <br>
+          在线诊疗 <br>
+          专家智囊团 <br>
+          企业培训 <br>
+          信息智库&咨询 <br>
+          诊断报告
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="hardware-bg"></div>
+</div>
+
+<div class="title">
+	服务项目
+	<p>service project</p>
+</div>
+
+<div class="main">
+  <ul class="service-list clearfix">
+    <li>
+      <img src="./images/icon_2.jpg" />
+      <p>高级诊断工程师</p>
+      <span>点击了解</span>
+    </li>
+    <li>
+      <img src="./images/icon_3.jpg" />
+      <p>现场服务工程师</p>
+      <span>点击了解</span>
+    </li>
+    <li>
+      <img src="./images/icon_4.jpg" />
+      <p>行业联合专家智囊团</p>
+      <span>点击了解</span>
+    </li>
+  </ul>
+</div>
+
+<div class="title">
+	11000+  跨行业、跨品牌【故障设备标本】
+	<p>Sample of faulty equipment</p>
+</div>
+
+<div class="faulty">
+  <ul>
+    <li>
+      <img src="./images/icon_5.jpg" />
+    </li>
+    <li>
+      <img src="./images/icon_5.jpg" />
+    </li>
+    <li>
+      <img src="./images/icon_5.jpg" />
+    </li>
+  </ul>
+  <p>沃德依托工业实体,对万台套传动设备实施再生制造手术,积累了跨行业、跨品牌故障特征大数据库....</p>
 </div>
 
 <script src="./js/jquery.js"></script>

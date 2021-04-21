@@ -1,5 +1,5 @@
 /* -------------------- Reset Start --------------------*/
-body{font:12px/1.5 "Microsoft Yahei",\5b8b\4f53,tahoma,arial;color:#333;background:#f7f7f7;-webkit-font-smoothing:antialiased;}
+body{font:12px/1.5 "Microsoft Yahei",\5b8b\4f53,tahoma,arial;color:#333;background:#fff;-webkit-font-smoothing:antialiased;}
 button, input, select, textarea{font:12px/1.5 "Microsoft Yahei",tahoma,arial,\5b8b\4f53}
 input, select, textarea{font-size:100%}
 html, body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, legend, button, input, textarea, blockquote, th, td{margin:0;padding:0}
@@ -81,12 +81,12 @@ body {
 	height: 988px;
 	object-fit: cover;
 }
-.swiper-pagination {
+.swiper-container-horizontal .swiper-pagination {
   bottom: 50px;
 }
 .swiper-pagination .swiper-pagination-bullet {
-	width: 28px;
-	height: 2px;
+	width: 38px;
+	height: 5px;
 	background: #ffffff;
 	border-radius: 1px;
 	opacity: 1;
@@ -104,6 +104,7 @@ body {
 .title p {
 	font-size: 56px;
 	color: #222;
+  text-transform: uppercase;
 }
 .title::after {
 	content: "";
@@ -133,7 +134,8 @@ body {
 	text-align: center;
 }
 .cause-list li p {
-	padding: 0 30px;
+  line-height: 24px;
+	padding: 0 24px;
 	font-size: 18px;
 	font-weight: 600;
 	color: #999;
@@ -160,14 +162,14 @@ body {
 	width: 78px;
 	height: 77px;
 	background: url(../images/icon_sp.png) no-repeat;
-	-webkit-transition: all .3s;
-	transition: all .3s;
+	-webkit-transition: all .5s;
+	transition: all .5s;
 }
 .cause-list li:hover span::before {
-	opacity: 0;
+	opacity: 0 !important;
 }
 .cause-list li:hover span::after {
-	opacity: 1;
+	opacity: 1 !important;
 }
 .cause-list li span::after {
 	opacity: 0;
@@ -202,7 +204,6 @@ body {
 	background-position: -78px -308px;
 }
 .cause-list li:nth-child(6) span::before {
-	opacity: 0;
 	background-position: 0 -385px;
 }
 .cause-list li:nth-child(6) span::after {
@@ -222,6 +223,101 @@ body {
 .cause-list li:nth-child(8) span::after {
 	opacity: 0;
 	background-position: -78px -539px;
+}
+
+.hardware {
+  position: relative;
+}
+.hardware-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 1200px;
+  height: 348px;
+  background: #222;
+}
+.hardware .main {
+  position: relative;
+  z-index: 100;
+}
+.hardware-list li {
+  float: left;
+  width: 372px;
+  padding: 30px 14px 0;
+  -webkit-transition: padding .3s ease-in;
+  transition: padding .3s ease-in;
+}
+.hardware-list-img {
+  overflow: hidden;
+}
+.hardware-list-img img {
+  display: block;
+  width: 100%;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+.hardware-list-cont {
+  height: 268px;
+  padding: 0 24px;
+  background: #f7f7f7;
+  font-size: 20px;
+  color: #b7b7b7;
+  -webkit-transition: height .3s ease-in;
+  transition: height .3s ease-in;
+}
+.hardware-list-cont p {
+  padding: 25px 0 10px;
+  font-size: 24px;
+  color: #535353;
+}
+.hardware-list li:hover {
+  padding-top: 0;
+}
+.hardware-list li:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.hardware-list li:hover .hardware-list-cont {
+  height: 298px;
+}
+
+.service-list {
+  padding: 50px 0;
+}
+.service-list li {
+  position: relative;
+  float: left;
+  width: 300px;
+  text-align: center;
+  font-size: 30px;
+  color: #292929;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+.service-list li img {
+  display: block;
+  width: 274px;
+  margin: 0 auto;
+}
+.service-list li p {
+  padding: 20px 0 0;
+}
+.service-list li span {
+  letter-spacing: 8px;
+  font-size: 22px;
+  color: #eea537;
+}
+.service-list li:nth-child(2) {
+  padding: 0 150px;
+}
+.service-list li:hover {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.faulty {
+  background: #f3f4f5;
 }
 
 .hide{
