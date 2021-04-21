@@ -95,4 +95,135 @@ body {
 	background: #2b75ff;
 }
 
-.hide{display:none;}
+.title {
+	padding: 60px 0;
+	font-size: 36px;
+	color: #00b7ee;
+	text-align: center;
+}
+.title p {
+	font-size: 56px;
+	color: #222;
+}
+.title::after {
+	content: "";
+	display: inline-block;
+	width: 60px;
+	height: 2px;
+	background: #222;
+}
+
+.cause-list li {
+	float: left;
+	width: 280px;
+	height: 270px;
+	margin: 0 20px 20px 0;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+	text-align: center;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.cause-list-t {
+	padding: 10px 0;
+	font-size: 20px;
+	font-weight: 600;
+	color: #444;
+	text-align: center;
+}
+.cause-list li p {
+	padding: 0 30px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #999;
+	text-align: left;
+}
+.cause-list li:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+.cause-list li span {
+	position: relative;
+	display: block;
+	width: 78px;
+	height: 77px;
+	margin: 30px auto 0;
+}
+.cause-list li span::before,
+.cause-list li span::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 78px;
+	height: 77px;
+	background: url(../images/icon_sp.png) no-repeat;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.cause-list li:hover span::before {
+	opacity: 0;
+}
+.cause-list li:hover span::after {
+	opacity: 1;
+}
+.cause-list li span::after {
+	opacity: 0;
+	background-position: -78px 0;
+}
+.cause-list li:nth-child(2) span::before {
+	background-position: 0 -77px;
+}
+.cause-list li:nth-child(2) span::after {
+	opacity: 0;
+	background-position: -78px -77px;
+}
+.cause-list li:nth-child(3) span::before {
+	background-position: 0 -154px;
+}
+.cause-list li:nth-child(3) span::after {
+	opacity: 0;
+	background-position: -78px -154px;
+}
+.cause-list li:nth-child(4) span::before {
+	background-position: 0 -231px;
+}
+.cause-list li:nth-child(4) span::after {
+	opacity: 0;
+	background-position: -78px -231px;
+}
+.cause-list li:nth-child(5) span::before {
+	background-position: 0 -308px;
+}
+.cause-list li:nth-child(5) span::after {
+	opacity: 0;
+	background-position: -78px -308px;
+}
+.cause-list li:nth-child(6) span::before {
+	opacity: 0;
+	background-position: 0 -385px;
+}
+.cause-list li:nth-child(6) span::after {
+	opacity: 0;
+	background-position: -78px -385px;
+}
+.cause-list li:nth-child(7) span::before {
+	background-position: 0 -462px;
+}
+.cause-list li:nth-child(7) span::after {
+	opacity: 0;
+	background-position: -78px -462px;
+}
+.cause-list li:nth-child(8) span::before {
+	background-position: 0 -539px;
+}
+.cause-list li:nth-child(8) span::after {
+	opacity: 0;
+	background-position: -78px -539px;
+}
+
+.hide{
+	display: none;
+}
