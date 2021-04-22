@@ -328,7 +328,7 @@ body {
 	overflow: hidden;
 }
 .faulty-list li:nth-child(2) {
-	padding: 0 27px;
+	margin: 0 27px;
 }
 .faulty-list li img {
 	display: block;
@@ -356,10 +356,11 @@ body {
 .solution img {
 	display: block;
 	width: 100%;
-	margin-bottom: 60px;
+	margin: 30px 0 60px;
 }
 
 .title-about {
+  padding: 50px 0;
 	color: #fff;
 }
 .title-about::after {
@@ -371,6 +372,31 @@ body {
 .about {
 	background: #00b7ee;
 }
+.about-list li {
+  float: left;
+  width: 264px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+}
+.about-list li:nth-child(2) {
+  margin: 0 200px;
+}
+.about-list li img {
+  display: block;
+  width: 264px;
+  border-radius: 50%;
+  box-shadow: -10px 10px 14px rgba(0, 0, 0, .4);
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+.about-list li:hover img {
+  box-shadow: 10px 10px 14px rgba(0, 0, 0, .4);
+}
+.about-list li p {
+  padding: 40px 0 50px;
+}
+
 
 .title-training {
 	text-shadow: 0 0 10px rgba(0, 183, 238, .4);
@@ -396,6 +422,70 @@ body {
 .talent span img {
 	padding-right: 5px;
 	vertical-align: middle;
+}
+
+.map {
+  min-width: 1200px;
+  height: 747px;
+  margin: 60px 0 0;
+  background: url(../images/banner_map.jpg) center no-repeat;
+  background-size: cover;
+  border-bottom: solid 1px #919191;
+}
+.title-map {
+  padding-top: 40px;
+  color: #fff;
+}
+.title-map::after {
+  display: none;
+}
+.title-map p {
+  padding: 10px 0 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer {
+  min-width: 1200px;
+  padding: 0 120px;
+  background: #303030;
+}
+.footer-nav {
+  position: relative;
+  padding: 60px 0 236px;
+  text-align: center;
+}
+.footer-nav span {
+  display: inline-block;
+  margin: 0 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+.footer-qr {
+  position: absolute;
+  right: 0;
+  top: 64px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
+.footer-qr img {
+  display: block;
+  width: 170px;
+  margin-bottom: 14px;
+}
+.footer-copy {
+  position: relative;
+  height: 88px;
+  line-height: 88px;
+  border-top: solid 2px #434343;
+  color: #999;
+  font-size: 20px;
+}
+.footer-copy span {
+  position: absolute;
+  right: 0;
 }
 
 .hide{

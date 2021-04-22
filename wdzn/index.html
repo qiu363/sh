@@ -23,13 +23,13 @@
 	<a href="###" class="logo">
 		<img src="./images/logo.png" alt="沃德智能">
 	</a>
-	<div class="nav">
-		<a href="###" class="cur">首页</a>
-		<a href="###">产品服务</a>
-		<a href="###">解决方案</a>
-		<a href="###">CSP国际认证培训中心</a>
-		<a href="###">人才招聘</a>
-		<a href="###">关于我们</a>
+	<div class="nav" id="J_nav">
+		<a href="###" class="cur" data-mod="">首页</a>
+		<a href="###" data-mod="prod">产品服务</a>
+		<a href="###" data-mod="solu">解决方案</a>
+    <a href="###" data-mod="about">关于我们</a>
+		<a href="###" data-mod="csp">CSP国际认证培训中心</a>
+		<a href="###" data-mod="tale">人才招聘</a>
 	</div>
 </div>
 
@@ -104,7 +104,7 @@
 	</ul>
 </div>
 
-<div class="title">
+<div class="title J_title" data-mod="prod">
 	产品服务
 	<p>Intelligent hardware</p>
 </div>
@@ -196,7 +196,7 @@
   <p>沃德依托工业实体,对万台套传动设备实施再生制造手术,积累了跨行业、跨品牌故障特征大数据库....</p>
 </div>
 
-<div class="title title-solut">
+<div class="title title-solut J_title" data-mod="solu">
 	解决方案
 	<p>Solution</p>
 </div>
@@ -206,19 +206,28 @@
 </div>
 
 <div class="about">
-	<div class="title title-about">
+	<div class="title title-about J_title" data-mod="about">
 		关于我们
 		<p>ABOUT US</p>
 	</div>
 
-	<ul class="main clearfix">
+	<ul class="main about-list clearfix">
 		<li>
-			<img src="./images/" />
+			<img src="./images/about_1.png" />
+      <p>传动设备制造商</p>
+		</li>
+    <li>
+			<img src="./images/about_2.png" />
+      <p>设备管理专家</p>
+		</li>
+    <li>
+			<img src="./images/about_3.png" />
+      <p>IT运营服务商</p>
 		</li>
 	</ul>
 </div>
 
-<div class="title title-training">
+<div class="title title-training J_title" data-mod="csp">
 	CSP 国际认证培训中心
 	<p>training center</p>
 </div>
@@ -227,7 +236,7 @@
 	<img src="./images/training.jpg" />
 </div>
 
-<div class="title">
+<div class="title J_title" data-mod="tale">
 	人才招聘
 	<p>Talent recruitment</p>
 </div>
@@ -241,6 +250,39 @@
 		<img src="./images/icon_mail.jpg" />
 		简历投递邮箱：daisy.wei@iwotech.cn
 	</span>
+</div>
+
+<div class="map">
+  <div class="title title-map">
+    网络工程师分布地图
+    <p>Distribution map of network engineers</p>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-nav">
+    <span>首页</span>
+    <span>产品服务</span>
+    <span>解决方案</span>
+    <span>CSP 国际认证培训中心</span>
+    <span>人才招聘</span>
+    <span>关于我们</span>
+
+    <div class="footer-qr">
+      <img src="./images/qr.jpg" />
+      关注微信公众号
+    </div>
+  </div>
+  <div class="footer-copy">
+    @ 工业心脏医院官方网站
+    <span>
+      <a href="###">网站地图</a>
+      丨
+      <a href="###">法律声明</a>
+      丨
+      <a href="###">联系我们</a>
+    </span>
+  </div>
 </div>
 
 <script src="./js/jquery.js"></script>
