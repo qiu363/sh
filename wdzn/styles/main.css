@@ -319,6 +319,84 @@ body {
 .faulty {
   background: #f3f4f5;
 }
+.faulty-list {
+	padding: 120px 0 0;
+}
+.faulty-list li {
+	float: left;
+	width: 378px;
+	overflow: hidden;
+}
+.faulty-list li:nth-child(2) {
+	padding: 0 27px;
+}
+.faulty-list li img {
+	display: block;
+	width: 100%;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.faulty-list li:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.faulty p {
+	padding: 50px 0;
+	font-size: 24px;
+	text-align: center;
+	color: #8b8b8b;
+}
+
+.title-solut {
+	width: 650px;
+	margin: 60px auto 40px;
+	background: #f3f4f5;
+	color: #222;
+}
+.solution img {
+	display: block;
+	width: 100%;
+	margin-bottom: 60px;
+}
+
+.title-about {
+	color: #fff;
+}
+.title-about::after {
+	background: #fff;
+}
+.title-about p {
+	color: #fff;
+}
+.about {
+	background: #00b7ee;
+}
+
+.title-training {
+	text-shadow: 0 0 10px rgba(0, 183, 238, .4);
+}
+.title-training p {
+	text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+.training img {
+	width: 100%;
+}
+
+.talent {
+	height: 260px;
+	line-height: 260px;
+	background: #f5f6f9;
+	font-size: 28px;
+	color: #444;
+	text-align: center;
+}
+.talent span:nth-child(1) {
+	padding: 0 100px 0 0;
+}
+.talent span img {
+	padding-right: 5px;
+	vertical-align: middle;
+}
 
 .hide{
 	display: none;
