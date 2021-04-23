@@ -20,7 +20,7 @@
 <body>
 
 <div class="header">
-	<a href="###" class="logo">
+	<a href="javascript:;" class="logo" style="cursor: default;">
 		<img src="./images/logo.png" alt="沃德智能">
 	</a>
 	<div class="nav" id="J_nav">
@@ -31,6 +31,10 @@
 		<a href="###" data-mod="csp">CSP国际认证培训中心</a>
 		<a href="###" data-mod="tale">人才招聘</a>
 	</div>
+
+	<span class="menu" id="J_menu">
+		<i></i>
+	</span>
 </div>
 
 <div class="swiper-container">
@@ -54,7 +58,7 @@
 	<p>Cause of landmark failure</p>
 </div>
 
-<div class="main clearfix">
+<div class="main main-cause clearfix">
 	<ul class="cause-list">
 		<li>
 			<span></span>
@@ -244,7 +248,7 @@
 <div class="talent">
 	<span>
 		<img src="./images/icon_phone.jpg" />
-		招聘热线：18502282790
+		招聘热线：<a href="tel:18502282790">18502282790</a>
 	</span>
 	<span>
 		<img src="./images/icon_mail.jpg" />
@@ -260,13 +264,13 @@
 </div>
 
 <div class="footer">
-  <div class="footer-nav">
-    <span>首页</span>
-    <span>产品服务</span>
-    <span>解决方案</span>
-    <span>CSP 国际认证培训中心</span>
-    <span>人才招聘</span>
-    <span>关于我们</span>
+  <div class="footer-nav" id="J_nav_f">
+    <span data-mod="">首页</span>
+    <span data-mod="prod">产品服务</span>
+    <span data-mod="solu">解决方案</span>
+    <span data-mod="csp">CSP 国际认证培训中心</span>
+    <span data-mod="tale">人才招聘</span>
+    <span data-mod="about">关于我们</span>
 
     <div class="footer-qr">
       <img src="./images/qr.jpg" />
