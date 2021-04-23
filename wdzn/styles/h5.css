@@ -124,6 +124,7 @@
 
   .main-cause {
     padding: 20px;
+    box-sizing: border-box;
     overflow-y: auto;
   }
   .cause-list {
