@@ -418,6 +418,9 @@ body {
 .talent span:nth-child(1) {
 	padding: 0 100px 0 0;
 }
+.talent span a {
+	color: #222;
+}
 .talent span img {
 	padding-right: 5px;
 	vertical-align: middle;
