@@ -282,7 +282,9 @@
     width: 24px;
     vertical-align: -3px;
   }
-  .talent span a {
+  .talent span a,
+  .talent span a:hover,
+  .talent span a:active {
     color: #222;
   }
 
