@@ -123,7 +123,7 @@
   }
 
   .main-cause {
-    padding: 20px;
+    padding: 10px 20px 20px;
     box-sizing: border-box;
     overflow-y: auto;
   }
@@ -132,7 +132,7 @@
   }
   .cause-list li {
     width: 200px;
-    height: 220px;
+    height: 210px;
     margin-bottom: 0;
   }
   .cause-list-t {
@@ -184,13 +184,16 @@
     width: 33.333%;
     padding: 0 0 0 20px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px;
   }
   .service-list li img {
     width: 100%;
   }
   .service-list li:nth-child(2) {
     padding: 0 0 0 20px;
+  }
+  .service-list li p {
+    padding: 10px 0 0;
   }
 
   .faulty-list {
@@ -199,14 +202,18 @@
   }
   .faulty-list li {
     width: 33.33%;
+    height: auto;
     padding: 0 0 0 12px;
     box-sizing: border-box;
   }
   .faulty-list li:nth-child(2) {
     margin: 0;
   }
+  .faulty-list li img {
+    height: auto;
+  }
   .faulty p {
-    padding: 20px;
+    padding: 10px 20px;
     font-size: 14px;
   }
 
@@ -265,7 +272,7 @@
   .talent {
     height: auto;
     line-height: 1.5;
-    padding: 20px 0 0;
+    padding: 15px 0 0;
     font-size: 16px;
   }
   .talent span {
@@ -276,7 +283,7 @@
     padding-right: 0;
   }
   .talent span:nth-child(2) {
-    padding: 20px 0;
+    padding: 15px 0;
   }
   .talent span img {
     width: 24px;
@@ -308,14 +315,14 @@
     padding: 0 20px;
   }
   .footer-nav {
-    padding: 20px 0;
+    padding: 15px 0;
   }
   .footer-nav span {
     display: none;
   }
   .footer-qr {
-    padding-top: 10px;
-    font-size: 16px;
+    padding-top: 0;
+    font-size: 14px;
   }
   .footer-qr img {
     width: 120px;
@@ -325,6 +332,7 @@
     line-height: 40px;
     text-align: center;
     font-size: 14px;
+    border-top: solid 1px #434343;
   }
   .footer-copy span {
     display: none;
