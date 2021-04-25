@@ -74,11 +74,16 @@ body {
 .swiper-container {
 	position: relative;
 	min-width: 1200px;
-	height: 700px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.swiper-slide {
+  display: block;
+  height: 700px;
 }
 .swiper-slide img {
 	width: 100%;
-	height: 700px;
+  height: 100%;
 	object-fit: cover;
 }
 .swiper-container-horizontal .swiper-pagination {
@@ -96,28 +101,29 @@ body {
 }
 
 .title {
-	padding: 40px 0;
-	font-size: 26px;
+	padding: 30px 0;
+	font-size: 22px;
 	color: #00b7ee;
 	text-align: center;
 }
 .title p {
-	font-size: 34px;
+	font-size: 26px;
 	color: #222;
   text-transform: uppercase;
 }
 .title::after {
 	content: "";
-	display: inline-block;
-	width: 60px;
+	display: block;
+	width: 50px;
 	height: 2px;
+  margin: 10px auto;
 	background: #222;
 }
 
 .cause-list li {
 	float: left;
 	width: 280px;
-	height: 270px;
+	height: 254px;
 	margin: 0 20px 20px 0;
 	background: #fff;
 	border-radius: 10px;
@@ -128,7 +134,7 @@ body {
 }
 .cause-list-t {
 	padding: 10px 0;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 600;
 	color: #444;
 	text-align: center;
@@ -136,7 +142,7 @@ body {
 .cause-list li p {
   line-height: 24px;
 	padding: 0 24px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
 	color: #999;
 	text-align: left;
@@ -151,7 +157,9 @@ body {
 	display: block;
 	width: 78px;
 	height: 77px;
-	margin: 30px auto 0;
+	margin: 20px auto 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
 .cause-list li span::before,
 .cause-list li span::after {
@@ -244,7 +252,7 @@ body {
 .hardware-list li {
   float: left;
   width: 372px;
-  padding: 30px 14px 0;
+  padding: 20px 14px 0;
   -webkit-transition: padding .3s ease-in;
   transition: padding .3s ease-in;
 }
@@ -258,17 +266,17 @@ body {
   transition: all .3s ease-in;
 }
 .hardware-list-cont {
-  height: 268px;
-  padding: 0 24px;
+  height: 210px;
+  padding: 0 18px;
   background: #f7f7f7;
-  font-size: 20px;
+  font-size: 16px;
   color: #b7b7b7;
   -webkit-transition: height .3s ease-in;
   transition: height .3s ease-in;
 }
 .hardware-list-cont p {
-  padding: 25px 0 10px;
-  font-size: 24px;
+  padding: 10px 0 10px;
+  font-size: 18px;
   color: #535353;
 }
 .hardware-list li:hover {
@@ -279,18 +287,18 @@ body {
   transform: scale(1.1);
 }
 .hardware-list li:hover .hardware-list-cont {
-  height: 298px;
+  height: 230px;
 }
 
 .service-list {
-  padding: 50px 0;
+  padding: 10px 0 30px;
 }
 .service-list li {
   position: relative;
   float: left;
   width: 300px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   color: #292929;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
@@ -312,19 +320,20 @@ body {
   padding: 0 150px;
 }
 .service-list li:hover {
-  -webkit-transform: scale(1.4);
-  transform: scale(1.4);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .faulty {
   background: #f3f4f5;
 }
 .faulty-list {
-	padding: 120px 0 0;
+	padding: 40px 0 0;
 }
 .faulty-list li {
 	float: left;
 	width: 378px;
+  height: 300px;
 	overflow: hidden;
 }
 .faulty-list li:nth-child(2) {
@@ -333,16 +342,18 @@ body {
 .faulty-list li img {
 	display: block;
 	width: 100%;
+  height: 300px;
 	-webkit-transition: all .3s;
 	transition: all .3s;
+  object-fit: cover;
 }
 .faulty-list li:hover img {
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
 .faulty p {
-	padding: 50px 0;
-	font-size: 24px;
+	padding: 20px 0 30px;
+	font-size: 18px;
 	text-align: center;
 	color: #8b8b8b;
 }
@@ -355,12 +366,14 @@ body {
 }
 .solution img {
 	display: block;
-	width: 100%;
+  width: 100%;
 	margin: 30px 0 60px;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .title-about {
-  padding: 50px 0;
+  padding: 30px 0;
 	color: #fff;
 }
 .title-about::after {
@@ -376,7 +389,7 @@ body {
   float: left;
   width: 264px;
   text-align: center;
-  font-size: 30px;
+  font-size: 22px;
   color: #fff;
 }
 .about-list li:nth-child(2) {
@@ -394,7 +407,7 @@ body {
   box-shadow: 10px 10px 14px rgba(0, 0, 0, .4);
 }
 .about-list li p {
-  padding: 40px 0 50px;
+  padding: 20px 0 30px;
 }
 
 .title-training {
@@ -404,14 +417,17 @@ body {
 	text-shadow: 0 0 10px rgba(0, 0, 0, .4);
 }
 .training img {
-	width: 100%;
+	display: block;
+  width: 100%;
+  padding: 0 40px 20px;
+  box-sizing: border-box;
 }
 
 .talent {
-	height: 260px;
-	line-height: 260px;
+	height: 160px;
+	line-height: 160px;
 	background: #f5f6f9;
-	font-size: 28px;
+	font-size: 24px;
 	color: #444;
 	text-align: center;
 }
@@ -422,6 +438,7 @@ body {
 	color: #222;
 }
 .talent span img {
+  width: 40px;
 	padding-right: 5px;
 	vertical-align: middle;
 }
@@ -429,7 +446,7 @@ body {
 .map {
   min-width: 1200px;
   height: 600px;
-  margin: 60px 0 0;
+  margin: 40px 0 0;
   background: url(../images/banner_map.jpg) center no-repeat;
   background-size: cover;
   border-bottom: solid 1px #919191;
@@ -455,7 +472,7 @@ body {
 }
 .footer-nav {
   position: relative;
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: center;
 }
 .footer-nav span {
@@ -466,7 +483,7 @@ body {
   font-size: 16px;
 }
 .footer-qr {
-	padding-top: 50px;
+	padding-top: 20px;
   text-align: center;
   font-size: 14px;
   color: #fff;
@@ -474,7 +491,7 @@ body {
 .footer-qr img {
   display: block;
   width: 150px;
-  margin: 0 auto 14px;
+  margin: 0 auto 8px;
 }
 .footer-copy {
   position: relative;
