@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>数字艺术藏品APP - 伊美尔</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./css/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+<body>
+
+<div class="detail-topbar">
+  <a href="index.html" class="detail-topbar-arrow">
+    <img src="./img/icon_arrow_bk.png" />
+  </a>
+  <div class="detail-topbar-tit">藏品详情</div>
+  <!-- <div class="detail-topbar-cont">
+    <a href="share.html">
+      <img src="./img/icon_share.png" />
+      分享
+    </a>
+  </div> -->
+</div>
+
+<div class="detail-prod">
+  <img src="./img/prod1.jpg" />
+</div>
+
+<div class="detail-word">
+  生命如行云流水，抽象的瞬间是自我独白，色彩的变幻是个性的交响，每个瞬间，都是律动的散文诗。
+</div>
+
+<a class="detail-share" href="share1.html">
+  <img src="./img/icon_pyq_b.png" />
+  分享海报
+  <i></i>
+</a>
+
+<div class="detail-title">
+  作品信息
+</div>
+
+<ul class="detail-info">
+  <li>
+    <span>作品名称</span>
+    <h5>移动的风景系列</h5>
+  </li>
+  <li>
+    <span>作者</span>
+    <h5>罗力</h5>
+  </li>
+  <li>
+    <span>创作时间</span>
+    <h5>2016年</h5>
+  </li>
+  <li>
+    <span>原作地点</span>
+    <h5>私人收藏</h5>
+  </li>
+</ul>
+
+<div class="detail-title detail-title-jd">
+  作品解读
+  <span id="J_play">点击播放语音</span>
+</div>
+
+<div class="detail-intro">
+  罗力教授的作品具有很强的表现性，是一种对物像的抽象表达，作品具有抽象元素的美学意味。画中充满激情，时而燥动，时而平静，用笔奔放，收放自如。画面色彩在控制中追求丰富的变化，色层和痕迹的美感使画面耐人寻味。作品充满律动，如歌如诗。作品以感性形象传达寓意，眼前之象已褪去其静止再现或实体形质的指向，形成了一种对自我修养和个性气质主体追求的变化。
+</div>
+
+<div class="detail-footer"></div>
+
+<audio id="J_audio">
+  <source src="./img/horse.ogg" type="audio/ogg">
+  您的浏览器不支持 audio 元素。
+</audio>
+
+<script src="./js/zepto.min.js"></script>
+<script>
+  var isPlay = false
+  $('#J_play').click(function () {
+    if (!isPlay) {
+      $('#J_audio')[0].play()
+      isPlay = true
+    } else {
+      $('#J_audio')[0].pause()
+      isPlay = false
+    }
+  })
+</script>
+
+</body>
+</html>

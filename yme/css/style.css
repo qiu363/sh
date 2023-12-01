@@ -40,11 +40,11 @@ img {
 }
 
 a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
 }
 
-a:focus, a:hover,a:visited {
+a:focus, a:hover, a:visited {
     color: #333;
     text-decoration: none;
 }
@@ -56,8 +56,30 @@ button {
 .main-index {
   width: 100vw;
   height: 100vh;
-  background: url(../img//bg.jpg) no-repeat;
+  background: url(../img/bg.jpg) no-repeat;
   background-size: cover;
+}
+.main-share-1 {
+  background-image: url(../img/prod1.jpg);
+}
+.main-share-2 {
+  background-image: url(../img/prod2.jpg);
+}
+.main-share-3 {
+  background-image: url(../img/prod3.mp4);
+}
+.share-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.share-bg video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .index-cont {
   position: absolute;
@@ -180,7 +202,6 @@ button {
 }
 
 .share-tit {
-  padding: 72px 0 0;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -190,8 +211,9 @@ button {
   line-height: 24px;
   font-size: 15px;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 4px;
+  text-indent: 2em;
 }
 .share-cont p {
   padding: 15px 0 0;
@@ -204,11 +226,23 @@ button {
   z-index: 10;
   width: 100%;
 }
+.share-logo a {
+  display: block;
+  margin: 0 16px 10px;
+  height: 36px;
+  line-height: 36px;
+  border: solid 1px #fff;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 4px;
+}
 .share-logo img {
   display: block;
-  width: 100px;
-  margin: 0 auto;
-  padding: 12px;
+  width: 80px;
+  margin: 24px auto 0;
+  padding: 8px;
   background: #fff;
   border-radius: 8px;
 }
@@ -236,9 +270,9 @@ button {
 }
 .list {
   margin: 0 16px;
-  padding-bottom: 70px;
-  padding-bottom: calc(constant(safe-area-inset-bottom) + 70px); /* 兼容 iOS < 11.2 */
-  padding-bottom: calc(env(safe-area-inset-bottom) + 70px); /* 兼容 iOS >= 11.2 */
+  padding-bottom: 20px;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 20px); /* 兼容 iOS < 11.2 */
+  padding-bottom: calc(env(safe-area-inset-bottom) + 20px); /* 兼容 iOS >= 11.2 */
   overflow: hidden;
 }
 .list li {
@@ -252,7 +286,8 @@ button {
   padding-right: 0;
   padding-left: 6px;
 }
-.list li img {
+.list li img,
+.list li video {
   display: block;
   width: 100%;
   height: 156px;
@@ -282,8 +317,9 @@ button {
   z-index: 1000;
 }
 .detail-topbar-arrow {
-  float: left;
-  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 62px;
   height: 62px;
 }
@@ -291,8 +327,18 @@ button {
   width: 26px;
   padding: 18px 0 0 18px;
 }
+.detail-topbar-tit {
+  line-height: 62px;
+  padding: 0 70px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 3px;
+}
 .detail-topbar-cont {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
   padding: 14px 18px 0 0;
   font-size: 12px;
 }
@@ -303,7 +349,8 @@ button {
 .detail-prod {
   padding: 80px 16px 0;
 }
-.detail-prod img {
+.detail-prod img,
+.detail-prod video {
   display: block;
   width: 100%;
   border: solid 6px #F2F2F2;
@@ -314,7 +361,7 @@ button {
   padding-left: 36px;
   background: url(../img/icon_info.png) 0 center no-repeat;
   background-size: 24px;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
 }
 .detail-info {
@@ -356,12 +403,48 @@ button {
   vertical-align: middle;
 }
 .detail-intro {
+  line-height: 18px;
   margin: 0 16px 30px;
   padding: 8px 16px;
   border: solid 1px #D7D7D7;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 13px;
   text-indent: 2em;
+  letter-spacing: 1px;
+}
+.detail-word {
+  padding: 16px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  text-indent: 2em;
+  letter-spacing: 2px;
+}
+.detail-share {
+  position: relative;
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 16px 22px;
+  padding: 0 20px;
+  border: solid 1px #D7D7D7;
+  border-radius: 8px;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+.detail-share img {
+  display: inline-block;
+  width: 22px;
+  vertical-align: -5px;
+}
+.detail-share i {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/arrow.png) no-repeat;
+  background-size: 30px;
 }
 .detail-footer {
   padding: 1px;
