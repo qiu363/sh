@@ -135,6 +135,16 @@ body {
     width: 1186px;
     height: 102px;
 }
+.logo-v1 {
+    width: 1497px;
+    margin: 2px auto 0;
+    padding: 14px 0 15px;
+}
+.logo-v1 img {
+    display: block;
+    width: 1497px;
+    height: 113px;
+}
 .nav {
     width: 1740px;
     height: 64px;
@@ -205,8 +215,18 @@ body {
 .index-video video {
     display: block;
     width: 688px;
-    height: 390px;
+    height: 360px;
     background: #DBB27F;
+    object-fit: cover;
+}
+.index-video-more {
+    line-height: 30px;
+    padding: 0 15px;
+    text-align: right;
+}
+.index-video-more a {
+    color: #62270C;
+    font-weight: 600;
 }
 .index-dangan {
     float: right;
@@ -346,7 +366,7 @@ body {
 .index-honor-list li {
     float: left;
     padding: 7px 0 0;
-    margin-right: 30px;
+    margin-left: 30px;
     cursor: pointer;
 }
 .index-honor-list li img {
@@ -421,6 +441,42 @@ body {
 }
 .detail-list-info h3 {
     font-size: 16px;
+}
+.detail-list-dt {
+    padding: 0 0 10px 18px;
+}
+.detail-list-dt li {
+    position: relative;
+    float: left;
+    width: 180px;
+    height: 228px;
+    margin: 0 14px 40px;
+    border-radius: 4px;
+    background: #FFEAB8;
+}
+.detail-list-dt li img {
+    display: block;
+    width: 180px;
+    height: 158px;
+    object-fit: contain;
+    border-radius: 4px 4px 0 0;
+}
+.detail-list-dt-info {
+    height: 70px;
+    background: #E4C399;
+    color: #653D0E;
+    font-size: 14px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.detail-list-dt-info p {
+    display: -webkit-box;
+    height: 40px;
+    margin: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .whfw-menu {
     float: left;
