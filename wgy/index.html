@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/style-starter.css" />
+    <link rel="stylesheet" href="assets/css/style-starter.css?" />
   </head>
 
   <body>
@@ -47,9 +47,9 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-lg-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html"
-                  >首页 <span class="sr-only">(当前)</span></a
-                >
+                <a class="nav-link" href="index.html">
+                  首页 <span class="sr-only">(当前)</span>
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">关于我们</a>
@@ -119,6 +119,7 @@
           muted
           loop
           id="myVideo"
+          poster="assets/images/video_cover.png"
         >
           <source src="assets/images/line-edu.mp4" type="video/mp4" />
           Your browser does not support HTML5 video.
@@ -818,7 +819,7 @@
 
     <!-- Js scripts -->
     <!-- move top -->
-    <button onclick="topFunction()" id="movetop" title="Go to top">
+    <button onclick="topFunction()" id="movetop" title="返回顶部">
       <span class="fas fa-level-up-alt" aria-hidden="true"></span>
     </button>
     <script>
@@ -883,6 +884,10 @@
             $('header').removeClass('active')
           }
         })
+      })
+
+      document.addEventListener('touchstart', function () {
+        document.getElementById('myVideo').play()
       })
     </script>
     <!--//MENU-JS-->
