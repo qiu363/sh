@@ -20640,5 +20640,43 @@ p.inner-page-para {
   }
 }
 
+.nav-item:hover .nav-dropdown {
+  display: block;
+}
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  width: 180px;
+  margin: 0 0 0 -90px;
+  padding: 5px 0;
+  background: var(--bg-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+}
+.nav-dropdown a {
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+  color: var(--heading-color);
+}
+.nav-dropdown a:hover {
+  color: #f90;
+}
+
+@media all and (max-width: 415px) {
+  .nav-dropdown {
+    display: block;
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+    background: rgba(255, 255, 255, .3);
+  }
+  .nav-dropdown a {
+    color: #fff;
+  }
+}
+
 /*--//contact--*/
 /*# sourceMappingURL=style-freedom.css.map */
