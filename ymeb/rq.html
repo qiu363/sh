@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>数字艺术藏品APP - 伊美尔</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./css/style.css" rel="stylesheet">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="browsermode" content="application" />
+</head>
+<body>
+
+<div class="detail-wrap">
+  <div class="detail-wrap-bg">
+    <img src="./img/prod.jpg" />
+  </div>
+
+  <div class="detail-h-title">
+    <a href="###">
+      <img src="./img/icon_close.png" />
+    </a>
+    生日的欢愉
+  </div>
+
+  <div class="detail-prod">
+    <img src="./img/prod.jpg" />
+  </div>
+
+  <div class="detail-textarea">
+    <div class="detail-textarea-tit">填写日签内容</div>
+    <textarea id="J_area">AI生成默认文字</textarea>
+    <div class="detail-textarea-btn" id="J_submit">提交</div>
+  </div>
+</div>
+
+<div class="detail-footer"></div>
+
+<script src="./js/zepto.min.js"></script>
+<script>
+  $('#J_submit').click(function () {
+    var word = $('#J_area').val();
+    window.location.href = './rqResult.html?word=' + encodeURIComponent(word);
+  })
+</script>
+
+</body>
+</html>
