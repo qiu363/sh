@@ -111,24 +111,45 @@
     <!--/header-->
 
     <div class="main-wrap">
-      <div class="contact-tit">北外校区</div>
-      <div class="contact-map-wrap">
-        <div id="J_map" class="contact-map"></div>
-
-        <div class="contact-address">
-          <p><span>热线</span>   010-88815806</p>
-          <p><span>地址</span>   北京市海淀区西三环北路2号北京外国语大学</p>
+      <div class="bxys-list">
+        <div class="bxys-list-cont">
+          <span class="fas jsdw-icon-1"></span>
+          <h4>
+            双语教学
+          </h4>
+          <p>
+            大部分中方教师是硕士以上学历且 <br />
+            具有海外留学背景，均可进行双语教学
+          </p>
+        </div>
+        <img src="./assets/images/jsdw_1.jpg" />
+      </div>
+      <div class="bxys-list">
+        <img src="./assets/images/jsdw_2.jpg" />
+        <div class="bxys-list-cont">
+          <div class="area-box">
+            <span class="fas jsdw-icon-2"></span>
+            <h4>
+              教学保障
+            </h4>
+            <p>
+              外教主要来自以英语为母语的国家 <br />
+              和地区，均具有国际教师资格证
+            </p>
+          </div>
         </div>
       </div>
-
-      <div class="contact-tit contact-tit-o">金盏校区</div>
-      <div class="contact-map-wrap">
-        <div id="J_map1" class="contact-map"></div>
-
-        <div class="contact-address contact-address-o">
-          <p><span>热线</span>   010-88815806</p>
-          <p><span>地址</span>   北京市朝阳区金盏乡金盏村512号</p>
+      <div class="bxys-list">
+        <div class="bxys-list-cont">
+          <div class="area-box">
+            <span class="fas jsdw-icon-3"></span>
+            <h4>
+              师资占比
+            </h4>
+            <p>中外教比例4:1</p>
+          </div>
         </div>
+        <img src="./assets/images/jsdw_3.jpg" />
       </div>
     </div>
 
@@ -357,9 +378,9 @@
         var scroll = $(window).scrollTop()
 
         if (scroll >= 80) {
-          // $('#site-header').addClass('nav-fixed')
+          //$('#site-header').addClass('nav-fixed')
         } else {
-          // $('#site-header').removeClass('nav-fixed')
+          //$('#site-header').removeClass('nav-fixed')
         }
       })
 
@@ -384,29 +405,5 @@
     </script>
     <!--//MENU-JS-->
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="https://webapi.amap.com/maps?v=2.0&key=4b71439c03e386d55aa6e5ae452854e6"></script>
-    <script>
-      var map = new AMap.Map('J_map', {
-        viewMode: '2D', // 默认使用 2D 模式，如果希望使用带有俯仰角的 3D 模式，请设置 viewMode: '3D'
-        zoom:11, // 初始化地图层级
-        center: [116.397428, 39.90923] // 初始化地图中心点
-      });
-      var infoWindow = new AMap.InfoWindow({
-        content: '北京外国语大学', //传入字符串拼接的 DOM 元素
-        anchor: "bottom-center",
-      });
-      infoWindow.open(map, map.getCenter());
-
-      var map1 = new AMap.Map('J_map1', {
-        viewMode: '2D', // 默认使用 2D 模式，如果希望使用带有俯仰角的 3D 模式，请设置 viewMode: '3D'
-        zoom:11, // 初始化地图层级
-        center: [116.397428, 39.90923] // 初始化地图中心点
-      });
-      var infoWindow1 = new AMap.InfoWindow({
-        content: '北京市朝阳区北外同文外国语学院', //传入字符串拼接的 DOM 元素
-        anchor: "bottom-center",
-      });
-      infoWindow1.open(map1, map1.getCenter());
-    </script>
   </body>
 </html>

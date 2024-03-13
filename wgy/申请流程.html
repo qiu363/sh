@@ -111,24 +111,53 @@
     <!--/header-->
 
     <div class="main-wrap">
-      <div class="contact-tit">北外校区</div>
-      <div class="contact-map-wrap">
-        <div id="J_map" class="contact-map"></div>
-
-        <div class="contact-address">
-          <p><span>热线</span>   010-88815806</p>
-          <p><span>地址</span>   北京市海淀区西三环北路2号北京外国语大学</p>
-        </div>
-      </div>
-
-      <div class="contact-tit contact-tit-o">金盏校区</div>
-      <div class="contact-map-wrap">
-        <div id="J_map1" class="contact-map"></div>
-
-        <div class="contact-address contact-address-o">
-          <p><span>热线</span>   010-88815806</p>
-          <p><span>地址</span>   北京市朝阳区金盏乡金盏村512号</p>
-        </div>
+      <div class="zsjz-wrap">
+        <ul class="zsjz-list sqlc-list">
+          <li>
+            <div class="zsjz-list-tit">
+              第一步  |  入学申请
+            </div>
+            <p>
+              校园开放日：学校会定期举办校园开放日，您可在校园开放日提前预约访校。<br />
+              工作日访校：您可在周一到周五到校咨询测试，请提前一天预约。<br />
+              预约方式：<br />
+              1、网站预约：您可在官网直接预约访校<br />
+              2、微信公众号预约：关注“北京市朝阳区北外附校双语学校”，进入微信公众号，点击预约访校即可<br />
+              3、电话预约：直接致电学校招生办电话预约访校，电话：010-88815806<br />
+              备注：在访校时需携带《入学申请表》（可在网站自行下载）、学生身份证复印件1份、学生1寸证件照1张。
+            </p>
+            <i></i>
+          </li>
+          <li>
+            <div class="zsjz-list-tit">
+              第二步  |  入学测试
+            </div>
+            <p>
+              测试包括: 笔试、口语测试、综合面试三个环节，总时长120分钟。<br />
+              笔试：英语基础，数学及逻辑思维能力<br />
+              口语测试：语言表达能力（英文），综合面试，考生综合素养
+            </p>
+            <i></i>
+          </li>
+          <li>
+            <div class="zsjz-list-tit">
+              第三步  |  正式录取
+            </div>
+            <p>
+              测试结束后3个工作日内，校方将通过电话告知测试结果。测试通过，5个工作日内发放录取通知书。收到录取通知书需在规定时间内缴纳相关费用保留入学资格。
+            </p>
+            <i></i>
+          </li>
+          <li>
+            <div class="zsjz-list-tit">
+              第四步  |  开学报到
+            </div>
+            <p>
+              成功办理入学手续的学生，将会收到学校开学报到的时间确认等相关信息。携带相关证件及生活物品到校报到，正式开启国际教育学习之旅。
+            </p>
+            <i></i>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -384,29 +413,5 @@
     </script>
     <!--//MENU-JS-->
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="https://webapi.amap.com/maps?v=2.0&key=4b71439c03e386d55aa6e5ae452854e6"></script>
-    <script>
-      var map = new AMap.Map('J_map', {
-        viewMode: '2D', // 默认使用 2D 模式，如果希望使用带有俯仰角的 3D 模式，请设置 viewMode: '3D'
-        zoom:11, // 初始化地图层级
-        center: [116.397428, 39.90923] // 初始化地图中心点
-      });
-      var infoWindow = new AMap.InfoWindow({
-        content: '北京外国语大学', //传入字符串拼接的 DOM 元素
-        anchor: "bottom-center",
-      });
-      infoWindow.open(map, map.getCenter());
-
-      var map1 = new AMap.Map('J_map1', {
-        viewMode: '2D', // 默认使用 2D 模式，如果希望使用带有俯仰角的 3D 模式，请设置 viewMode: '3D'
-        zoom:11, // 初始化地图层级
-        center: [116.397428, 39.90923] // 初始化地图中心点
-      });
-      var infoWindow1 = new AMap.InfoWindow({
-        content: '北京市朝阳区北外同文外国语学院', //传入字符串拼接的 DOM 元素
-        anchor: "bottom-center",
-      });
-      infoWindow1.open(map1, map1.getCenter());
-    </script>
   </body>
 </html>

@@ -110,25 +110,89 @@
     </header>
     <!--/header-->
 
-    <div class="main-wrap">
-      <div class="contact-tit">北外校区</div>
-      <div class="contact-map-wrap">
-        <div id="J_map" class="contact-map"></div>
-
-        <div class="contact-address">
-          <p><span>热线</span>   010-88815806</p>
-          <p><span>地址</span>   北京市海淀区西三环北路2号北京外国语大学</p>
-        </div>
-      </div>
-
-      <div class="contact-tit contact-tit-o">金盏校区</div>
-      <div class="contact-map-wrap">
-        <div id="J_map1" class="contact-map"></div>
-
-        <div class="contact-address contact-address-o">
-          <p><span>热线</span>   010-88815806</p>
-          <p><span>地址</span>   北京市朝阳区金盏乡金盏村512号</p>
-        </div>
+    <div class="cjwt-wrap">
+      <div class="main-wrap">
+        <ul class="cjwt-list">
+          <li>
+            <i></i>
+            学校校区在哪？
+          </li>
+          <li>
+            <i></i>
+            我校目前有二个校区，分别是北外校区和金盏校区，<br />
+            除了地理位置不同以外，在管理和课程设置方面没有区别。
+          </li>
+          <li>
+            <i></i>
+            申请截止日期是什么时候？
+          </li>
+          <li>
+            <i></i>
+            学校招生为滚动招生，招满即止，<br />
+            一般秋季招生会在当年的8月底截止招生。
+          </li>
+          <li>
+            <i></i>
+            入学考试的形式、时间和内容是什么样的？
+          </li>
+          <li>
+            <i></i>
+            入学测试分为笔试和面试两个部分，<br />
+            笔试：英语和数学。一共需要100分钟。
+          </li>
+          <li>
+            <i></i>
+            学校是否接受插班生？
+          </li>
+          <li>
+            <i></i>
+            可以接受插班生，但需要满足两个条件：<br />
+            1.学生通过我校入学考试；2.申请年级有空余学位。
+          </li>
+          <li>
+            <i></i>
+            对于申请学生是否有户籍要求？
+          </li>
+          <li>
+            <i></i>
+            北外对于学生没有户籍和国籍的要求。
+          </li>
+          <li>
+            <i></i>
+            学校报名申请流程是怎样的？
+          </li>
+          <li>
+            <i></i>
+            (1)预约参加学校组织的入学测试； (2)测试通过后收到录取通知书； <br />
+            (3)在规定时间内缴纳相关费用，保留入学资格； (4)携带入学材料到校报到。
+          </li>
+          <li>
+            <i></i>
+            各国家方向和不同班型学生成绩有差异吗？
+          </li>
+          <li>
+            <i></i>
+            没有大的差异，都是在通过入学测试的基础上，<br />
+            尊重家长的意愿、根据学生的英语基础和综合能力做的选择。
+          </li>
+          <li>
+            <i></i>
+            每个班有多少人？师生比是多少
+          </li>
+          <li>
+            <i></i>
+            每班学生最多不超过24人，师生比例1:4。
+          </li>
+          <li>
+            <i></i>
+            是否可以选择住宿或走读？
+          </li>
+          <li>
+            <i></i>
+            学校宿舍分为四人间和两人间，<br />
+            均有独立卫生间可以洗澡，每个房间配备了空调和新风系统。
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -384,29 +448,5 @@
     </script>
     <!--//MENU-JS-->
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="https://webapi.amap.com/maps?v=2.0&key=4b71439c03e386d55aa6e5ae452854e6"></script>
-    <script>
-      var map = new AMap.Map('J_map', {
-        viewMode: '2D', // 默认使用 2D 模式，如果希望使用带有俯仰角的 3D 模式，请设置 viewMode: '3D'
-        zoom:11, // 初始化地图层级
-        center: [116.397428, 39.90923] // 初始化地图中心点
-      });
-      var infoWindow = new AMap.InfoWindow({
-        content: '北京外国语大学', //传入字符串拼接的 DOM 元素
-        anchor: "bottom-center",
-      });
-      infoWindow.open(map, map.getCenter());
-
-      var map1 = new AMap.Map('J_map1', {
-        viewMode: '2D', // 默认使用 2D 模式，如果希望使用带有俯仰角的 3D 模式，请设置 viewMode: '3D'
-        zoom:11, // 初始化地图层级
-        center: [116.397428, 39.90923] // 初始化地图中心点
-      });
-      var infoWindow1 = new AMap.InfoWindow({
-        content: '北京市朝阳区北外同文外国语学院', //传入字符串拼接的 DOM 元素
-        anchor: "bottom-center",
-      });
-      infoWindow1.open(map1, map1.getCenter());
-    </script>
   </body>
 </html>
