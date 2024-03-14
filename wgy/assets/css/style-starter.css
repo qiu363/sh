@@ -21206,6 +21206,7 @@ p.inner-page-para {
   padding: 0 0 0 100px;
   align-items: center;
   background: #fff;
+  color: #222;
 }
 .cjwt-list li i {
   position: absolute;
@@ -21251,6 +21252,7 @@ p.inner-page-para {
   background: #f7f7f7;
   border: solid 1px #949494;
   text-align: center;
+  color: #222;
 }
 .hzdx-table tr th:nth-child(1) {
   width: 100px;
@@ -21259,6 +21261,7 @@ p.inner-page-para {
   height: 80px;
   border: solid 1px #d1d1d1;
   text-align: center;
+  color: #222;
 }
 .hzdx-right {
   float: right;
@@ -21279,6 +21282,9 @@ p.inner-page-para {
 }
 .fxkc-cont p {
   padding: 10px 0 0;
+}
+.hzdx-main {
+  background: #fff;
 }
 
 [data-theme="dark"] {
@@ -21309,6 +21315,50 @@ p.inner-page-para {
 }
 
 @media all and (max-width: 991px) {
+  .fxkc-cont-wrap {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .fxkc-cont-img {
+    width: 100%;
+    height: auto;
+  }
+  .fxkc-cont {
+    width: 100%;
+    padding: 20px 15px 0;
+  }
+  .fxkc-list {
+    padding: 0 15px;
+  }
+  .hzdx-wrap {
+    padding: 30px 15px;
+  }
+  .hzdx-title img {
+    width: 150px;
+  }
+  .hzdx-left,
+  .hzdx-right {
+    float: none;
+    width: 100%;
+  }
+  .hzdx-table th {
+    height: 50px;
+  }
+  .hzdx-table td {
+    height: 70px;
+  }
+  .hzdx-table tr th:nth-child(1) {
+    width: 80px;
+  }
+  .contact-map {
+    height: 360px;
+  }
+  .contact-address {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 10px;
+  }
   .zsjz-wrap {
     padding: 50px 15px 20px;
   }
@@ -21405,6 +21455,15 @@ p.inner-page-para {
     margin: 0;
     padding: 20px 15px;
   }
+  .xzjy-cont .xj-cont {
+    width: 100%;
+    min-height: 200px;
+    margin: 0;
+    padding: 20px 15px;
+  }
+  .xzjy-cont .xj-cont strong {
+    padding: 10px 0 15px;
+  }
   .xj-cont strong {
     font-size: 14px;
   }
@@ -21462,6 +21521,32 @@ p.inner-page-para {
   }
   .hm-mail-intro {
     padding: 20px;
+  }
+  .cjwt-list {
+    padding: 30px 15px;
+  }
+  .cjwt-list li {
+    min-height: 60px;
+    height: auto;
+    line-height: 1.5;
+    margin: 0 0 20px 40px;
+    padding: 10px 10px 10px 50px;
+    font-size: 12px;
+  }
+  .cjwt-list li:nth-child(2n) {
+    margin: 0 40px 40px 0;
+    padding: 10px 50px 10px 10px;
+  }
+  .cjwt-list li i {
+    left: -40px;
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+  }
+  .cjwt-list li:nth-child(2n) i {
+    left: auto;
+    right: -40px;
+    background-size: 30px;
   }
 }
 
