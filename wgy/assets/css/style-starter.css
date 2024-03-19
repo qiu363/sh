@@ -21862,10 +21862,10 @@ p.inner-page-para {
     padding: 40px 0 0;
   }
   .news-tab li {
-    width: 90px;
+    width: 120px;
     height: 36px;
     line-height: 36px;
-    margin: 0 4px;
+    margin: 0 4px 15px;
     font-size: 16px;
   }
   .index-jxj-list {
