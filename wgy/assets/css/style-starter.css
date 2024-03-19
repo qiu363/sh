@@ -22090,5 +22090,86 @@ p.inner-page-para {
   }
 }
 
+@media all and (max-width: 991px) {
+  .stats_info {
+    display: flex;
+    flex-direction: column;
+  }
+  .stats_info .stat-icon {
+    width: 100%;
+    height: 150px;
+  }
+  .stats_info .stat-icon img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: cover;
+  }
+}
+
+/* 2024/03/19 新增 */
+.footer-follow-wrap {
+  background: var(--footer-bg);
+  margin: -50px 0 0;
+  padding: 0 0 50px;
+}
+.footer-follow {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  color: #fff;
+}
+.footer-follow-qr {
+  display: flex;
+}
+.footer-follow-qr li {
+  margin-right: 18px;
+  text-align: center;
+}
+.footer-follow-qr li p {
+  padding: 4px 0 0;
+  font-size: 14px;
+  color: #fff;
+}
+.footer-follow-cont {
+  width: 430px;
+  padding-right: 60px;
+}
+.footer-follow-cont p {
+  color: #fff;
+}
+.footer-follow-cont a {
+  color: #fff;
+}
+
+@media all and (max-width: 991px) {
+  .footer-follow-wrap {
+    margin-top: -30px;
+  }
+  .footer-follow {
+    max-width: 540px;
+    flex-direction: column;
+  }
+  .footer-follow-qr {
+    flex-direction: column;
+    padding: 0 0 0;
+  }
+  .footer-follow-qr li {
+    width: 110px;
+    margin-bottom: 20px;
+  }
+  .footer-follow-qr li p {
+    font-size: 16px;
+  }
+  .footer-follow-qr li img {
+    width: 80px;
+  }
+  .footer-follow-cont {
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
 /*--//contact--*/
 /*# sourceMappingURL=style-freedom.css.map */
