@@ -22174,6 +22174,9 @@ p.inner-page-para {
   .swiper-container {
     margin-top: 64px;
   }
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
 }
 
 /*--//contact--*/
