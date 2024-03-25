@@ -18239,7 +18239,7 @@ nav ul li a:hover {
 @media (max-width:1280px) {
 	.w3apply-admission {
 		position: absolute;
-		bottom: -20%;
+		bottom: -15%;
 		right: 8%;
 		max-width: 400px;
 	}
@@ -22177,6 +22177,11 @@ p.inner-page-para {
   .swiper-button-prev, .swiper-button-next {
     display: none;
   }
+}
+
+/* 2024/03/25 新增 */
+.fxkc-cont p {
+  color: #444;
 }
 
 /*--//contact--*/
