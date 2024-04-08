@@ -22184,5 +22184,78 @@ p.inner-page-para {
   color: #444;
 }
 
+/* 2024/04/09 新增 */
+.index-bxys {
+  background: none;
+}
+.index-bxys-list-wrap {
+  padding: 60px 0 40px;
+  background: #f1f2f1;
+}
+.index-bxys-list {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.index-bxys-list-i {
+  position: relative;
+  float: left;
+  width: 420px;
+  padding-right: 110px;
+  padding-top: 10px;
+  text-align: right;
+}
+.index-bxys-list .index-bxys-list-i:nth-child(2n) {
+  float: right;
+  padding-left: 110px;
+  padding-right: 0;
+  text-align: left;
+}
+.index-bxys-list .index-bxys-list-i:nth-child(1),
+.index-bxys-list .index-bxys-list-i:nth-child(2) {
+  margin-bottom: 80px
+}
+.index-bxys-list-i .fas {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 96px;
+  height: 110px;
+  background: url(../images/icon_bxys_1.png) no-repeat;
+  background-size: 96px 110px;
+}
+.index-bxys-list-i .fas-icon-5 {
+  background-image: url(../images/icon_bxys_2.png);
+}
+.index-bxys-list-i .fas-icon-4 {
+  background-image: url(../images/icon_bxys_3.png);
+}
+.index-bxys-list-i .fas-icon-2 {
+  background-image: url(../images/icon_bxys_4.png);
+}
+.index-bxys-list .index-bxys-list-i:nth-child(2n) .fas {
+  right: auto;
+  left: 0;
+}
+.index-bxys h4 a.title-head {
+  font-size: 20px;
+  margin: 0 0 5px;
+}
+.index-bxys-list-i p {
+  font-size: 16px;
+}
+.index-bxys-center {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  width: 252px;
+  height: 288px;
+  margin: 0 0 0 -126px;
+  background: url(../images/icon_bxys_c.png) no-repeat;
+}
+
+
 /*--//contact--*/
 /*# sourceMappingURL=style-freedom.css.map */
