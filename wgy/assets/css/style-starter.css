@@ -22256,6 +22256,36 @@ p.inner-page-para {
   background: url(../images/icon_bxys_c.png) no-repeat;
 }
 
+@media all and (max-width: 991px) {
+  .index-bxys-list-wrap {
+    padding: 30px 0 15px;
+  }
+  .index-bxys-list .index-bxys-list-i:nth-child(1),
+  .index-bxys-list .index-bxys-list-i:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .index-bxys-list {
+    width: 100%;
+  }
+  .index-bxys-center {
+    display: none;
+  }
+  .index-bxys-list-i {
+    float: none;
+    width: 100%;
+    margin: 0 0 30px;
+    padding-right: 90px;
+  }
+  .index-bxys-list .index-bxys-list-i:nth-child(2n) {
+    float: none;
+    padding-left: 90px;
+  }
+  .index-bxys-list-i .fas {
+    width: 70px;
+    height: 84px;
+    background-size: 70px 84px;
+  }
+}
 
 /*--//contact--*/
 /*# sourceMappingURL=style-freedom.css.map */
