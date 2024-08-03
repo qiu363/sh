@@ -22256,6 +22256,148 @@ p.inner-page-para {
   background: url(../images/icon_bxys_c.png) no-repeat;
 }
 
+@media all and (max-width: 991px) {
+  .index-bxys-list-wrap {
+    padding: 30px 0 15px;
+  }
+  .index-bxys-list .index-bxys-list-i:nth-child(1),
+  .index-bxys-list .index-bxys-list-i:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .index-bxys-list {
+    width: 100%;
+  }
+  .index-bxys-center {
+    display: none;
+  }
+  .index-bxys-list-i {
+    float: none;
+    width: 100%;
+    margin: 0 0 30px;
+    padding-right: 90px;
+  }
+  .index-bxys-list .index-bxys-list-i:nth-child(2n) {
+    float: none;
+    padding-left: 90px;
+  }
+  .index-bxys-list-i .fas {
+    width: 70px;
+    height: 84px;
+    background-size: 70px 84px;
+  }
+}
 
+/* 2024/04/16 新增 */
+.bxys-list-cont p {
+  font-size: 18px;
+  text-align: justify;
+}
+.zsjz-list-tit {
+  padding: 6px 0 10px;
+  font-size: 20px;
+}
+.zsjz-list li p {
+  font-size: 18px;
+}
+.cjwt-list li {
+  height: 120px;
+  padding: 0px 0px 0px 60px;
+  font-size: 18px;
+}
+.cjwt-list li i {
+  width: 120px;
+  height: 120px;
+}
+.hzdx-table {
+  font-size: 18px;
+}
+.hzdx-table th {
+  font-size: 20px;
+}
+.chnkc-bx-l2 img {
+  height: 510px;
+}
+.chnkc-bx-l2 .bxys-list-cont {
+  height: 510px;
+}
+.chnkc-ymxc-list li p {
+  text-align: justify;
+}
+.cankc-partial {
+  padding: 20px 0 0;
+}
+.cankc-title-desc {
+  font-size: 16px;
+}
+.cankc-partial-tit {
+  font-size: 20px;
+}
+.cankc-partial-desc {
+  font-size: 18px;
+}
+.index-jxj-cont p {
+  text-align: justify;
+}
+.uskc-adv-l-tit {
+  font-size: 20px;
+}
+.uskc-adv-l-cont-p {
+  font-size: 18px;
+  text-align: justify;
+}
+.ukkc-adv-item .bxys-list-cont {
+  padding-top: 25px;
+}
+.ukkc-adv-item .bxys-list-cont h4 {
+  padding: 10px 0px 15px;
+}
+.aukc-offical-list li {
+  margin: 0 0 0 18px;
+}
+.aukc-offical-item {
+  text-align: justify;
+}
+.fxkc-cont p {
+  text-align: justify;
+}
+.cankc-sxys-title {
+  font-size: 20px;
+}
+.cankc-sxys-cont {
+  text-align: justify;
+  font-size: 18px;
+}
+.cankc-list-offical .bxys-list-cont p {
+  font-size: 18px;
+}
+.hm-mail-cont {
+  text-align: justify;
+}
+.hm-mail-cont-join {
+  width: 100%;
+}
+.xj-cont p {
+  text-align: justify;
+}
+.xj-cont-only p {
+  text-align: justify;
+}
+
+@media all and (max-width: 991px) {
+  .cjwt-list li i {
+    left: -40px;
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+  }
+  .cjwt-list li {
+    min-height: 60px;
+    height: auto;
+    line-height: 1.5;
+    margin: 0 0 20px 40px;
+    padding: 10px 10px 10px 50px;
+    font-size: 12px;
+  }
+}
 /*--//contact--*/
 /*# sourceMappingURL=style-freedom.css.map */
