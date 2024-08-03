@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Factorship - Industrial Category Bootstrap Responsive Template | 404</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-liberty.css">
+</head>
+
+<body>
+    <!--/Error-Page-->
+    <div class="w3l-error-grid py-5 text-center">
+        <div class="container">
+            <div class="error-block">
+                <h1>404</h1>
+                <h2>Oops, Page not found!</h2>
+                <p class="mt-4">Sorry, we're offline right now to make our site even better. Please, comeback later and check what we've
+                    been upto.</p>
+                <form class="form-inline d-sm-flex search-form mt-md-5 mt-4" action="#" method="post">
+                    <input class="form-control" type="search" placeholder="Enter your text" aria-label="email" required="">
+                    <button class="btn search ms-sm-3" type="submit"><i class="fas fa-search me-2"></i> </button>
+                </form>
+                <a href="index.html" class="btn back-button mt-md-5 mt-4"> <span class="fas fa-angle-double-left me-2"></span> Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <!--//Error-Page-->
+
+    <!-- Template JavaScript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+    <!--/search-->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/demo1.js"></script>
+    <!--//search-->
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
