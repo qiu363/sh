@@ -243,6 +243,17 @@
 .contact-social li a:hover img {
   transform: scale(1.1);
 }
+.w3l-contact-main .map-content-9 form input, 
+.w3l-contact-main .map-content-9 form textarea {
+    border: none;
+}
+.w3l-contact-main .map-content-9 form input {
+    height: 40px;
+} 
+.w3l-contact-main .map-content-9 form input:focus, 
+.w3l-contact-main .map-content-9 form textarea:focus {
+    border: none;
+}
 
 /* footer */
 section.footer-inner-main {
@@ -331,4 +342,7 @@ section.footer-inner-main {
     width: 60%;
     margin: 0 auto;
   }
+  .w3l-contact-main .map-content-9 form input:nth-child(2n) {
+    text-align: left;
+  } 
 }
