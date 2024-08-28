@@ -17196,6 +17196,11 @@ fieldset:disabled .btn {
     content: "\f099";
 }
 
+.fa-x-twitter:before {
+    content: "\e61b";
+}
+
+
 .fa-twitter-square:before {
     content: "\f081";
 }
