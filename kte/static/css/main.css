@@ -1,0 +1,328 @@
+.social-icons li img {
+  margin: 0 6px 0 0;
+}
+.top-right-menu .social-icons {
+  gap: 20px;
+}
+.allcostyle .btnallt {
+  background: var(--brcolor);
+}
+.txbdsinner {
+  position: relative;
+  z-index: 100;
+}
+.banner-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+}
+.index-product-banner {
+  display: block;
+}
+.index-product-banner img {
+  display: block;
+  width: 100%;
+}
+.index-about-wrap {
+  padding: 90px 0;
+  background: var(--brcolor);
+}
+.index-about {
+  display: flex;
+  width: 100%;
+  color: #fff;
+}
+.index-about-title {
+  width: 30%;
+}
+.index-about-title p {
+  font-size: 32px;
+}
+.index-about-content {
+  width: 70%;
+}
+.ser_witr_pra {
+  padding-bottom: 40px;
+}
+.ser_witr_pra::before {
+  display: none;
+}
+.ef_ser_area .txbdsvtitle {
+  margin-bottom: 20px;
+}
+.ef_ser_area .allcostyle p {
+  font-size: 14px;
+}
+.witrlistw ul li span {
+  display: flex;
+  color: #656565;
+}
+.ab_left_img {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .1);
+}
+.ef_blog_area {
+  padding-top: 40px;
+}
+.ef_blog_area .allcostyle .btnall:hover, .ef_blog_area .allcostyle .btnallt:hover {
+  background: var(--brcolor);
+}
+.all_list_color ul li a i, .all_list_color ul li span i {
+  color: var(--brcolor);
+}
+.menu-our-services-container,
+.menu-explore-container {
+  display: flex;
+}
+.menu-our-services-container .menu,
+.menu-explore-container .menu {
+  padding: 0 20px 0 0;
+  font-size: 12px;
+}
+.ecarif_theme_widget_app {
+  width: 20%;
+}
+.ecarif_theme_widget_prod {
+  width: 30%;
+}
+.widget-title {
+  font-size: 20px;
+}
+.footer-address {
+  font-size: 12px;
+}
+.footer_s_inner .social-icons {
+  display: flex;
+}
+.footer_s_inner .social-icons li {
+  padding: 0 20px 0 0 !important;
+}
+.ecarif_theme_widget_prod .widget-title::before {
+  width: 80%;
+}
+.w3l-join-main {
+  position: relative;
+  background: url(../image/about_index_bg.jpg) no-repeat center;
+  background-size: cover
+}
+.header-section {
+  color: #fff;
+}
+.header-section h3 {
+  color: #fff;
+  font-size: 18px;
+}
+.header-section h4 {
+  padding: 0 0 15px 0;
+  color: #fff;
+  font-size: 32px;
+}
+.subscribe-wthree-field {
+  display: flex;
+  padding: 50px 0 0;
+}
+.subscribe-wthree-field .form-control {
+  flex: 1;
+  width: auto;
+  margin-right: 20px;
+  height: 50px;
+  border-radius: 4px;
+}
+.subscribe-wthree-field .btn {
+  width: 140px;
+  border-radius: 4px;
+}
+.subscribe-wthree-field .btn:hover {
+  background-color: var(--brhovercolor);
+  border-color: var(--brhovercolor);
+}
+.index-about-cont {
+  position: relative;
+  z-index: 1;
+}
+.index-about-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+}
+.breadcumb-inner {
+  padding-bottom: 6px;
+}
+.about-cont-img {
+  margin-right: 30px;
+}
+.about-cont-img img {
+  width: 100%;
+}
+.about-content {
+  padding-bottom: 50px;
+  font-size: 16px;
+}
+.about-content-s {
+  font-weight: 600;
+}
+.breadcumb-area-app {
+  background-image: url(../image/breadcume_app.jpg);
+}
+.breadcumb-area-news {
+  background-image: url(../image/breadcume_news.jpg);
+}
+.breadcumb-area-contact {
+  background-image: url(../image/breadcume_contact.jpg);
+}
+.breadcumb-area-prod {
+  background-image: url(../image/breadcume_prod.jpg);
+}
+.ef_blog_area_news {
+  padding-top: 90px;
+}
+.ef_blog_area_news .witr_nth_child {
+  width: 50%;
+}
+.witr_apartment_form .col-lg-12 {
+  width: 50%;
+}
+.witr_apartment_form .contact-full {
+  width: 100%;
+}
+.witr_apartment_form .contact-btn {
+  margin: 0 auto;
+}
+.flaticon-map-1:before {
+  font-family: themify;
+  content: "\e69b";
+}
+.iconalltf i.flaticon-email-global {
+  background-image: url(../image/icon_global_b.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cont_btm_ser .txbdsva:hover .iconallactive i.flaticon-email-global {
+  background-color: var(--brhovercolor);
+  background-image: url(../image/icon_global_b.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.product-title {
+  text-align: center;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product-list li {
+  display: flex;
+  width: 50%;
+  margin: 0 0 30px;
+}
+.product-img {
+  flex-shrink: 0;
+  width: 258px;
+  padding-right: 20px;
+}
+.product-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.proudct-cont {
+  flex: 1;
+}
+.proudct-cont h3 {
+  padding: 20px 0 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.product-cont-info {
+  font-size: 14px;
+}
+.product-cont-info p {
+  display: flex;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .index-about-wrap {
+    padding: 50px 20px;
+  }
+  .index-about {
+    flex-direction: column;
+  }
+  .index-about-title {
+    width: 100%;
+    padding: 0 0 30px;
+  }
+  .index-about-content {
+    width: 100%;
+  }
+  .ef_ser_area {
+    padding: 60px 0 0;
+  }
+  .ab_left_img {
+    margin-bottom: 30px;
+  }
+  .ef_about_area {
+    padding: 60px 0 0;
+  }
+  .ecarif-description-area {
+    padding-bottom: 30px;
+  }
+  .menu-our-services-container {
+    justify-content: center;
+  }
+  .menu-our-services-container .menu {
+    padding: 0 20px;
+  }
+  .menu-explore-container .menu {
+    width: 50%;
+    padding: 0;
+  }
+  .ecarif_theme_widget_prod,
+  .ecarif_theme_widget_app {
+    width: 100%;
+  }
+  .footer_s_inner .social-icons {
+    justify-content: center;
+  }
+  .footer_s_inner .social-icons li {
+    padding: 0 10px !important;
+  }
+  .ecarif_theme_widget .widget-title::before,
+  .ecarif_theme_widget_prod .widget-title::before {
+    width: 22%;
+  }
+  .subscribe-wthree-field {
+    display: flex;
+    padding: 0 0 20px;
+  }
+  .subscribe-wthree-field .btn {
+    width: auto;
+  }
+  .about-cont-img {
+    margin-right: 0;
+  }
+  .ef_about_area_au {
+    padding-bottom: 60px;
+  }
+  .ef_blog_area_news {
+    padding-top: 40px;
+  }
+  .ef_blog_area_news .witr_nth_child {
+    width: 100%;
+  }
+  .ef_blog_area_news .witr_nth_child {
+    width: 100%;
+  }
+  .witr_apartment_form .col-lg-12 {
+    width: 100%;
+  }
+  .ef_cont_area {
+    padding: 90px 0 50px;
+  }
+}
