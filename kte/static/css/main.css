@@ -201,6 +201,7 @@
   background-image: url(../image/icon_global_b.png);
   background-repeat: no-repeat;
   background-position: center;
+  vertical-align: middle;
 }
 .cont_btm_ser .txbdsva:hover .iconallactive i.flaticon-email-global {
   background-color: var(--brhovercolor);
@@ -245,6 +246,10 @@
 .product-cont-info p {
   display: flex;
   font-size: 14px;
+}
+.news-content {
+  font-size: 14px;
+  min-height: 68px;
 }
 
 @media (max-width: 600px) {
