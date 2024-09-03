@@ -196,15 +196,6 @@ label {
 figure {
     margin: 0;
 }
-*::-moz-selection {
-    text-shadow: none;
-}
-::-moz-selection {
-    text-shadow: none;
-}
-::selection {
-    text-shadow: none;
-}
 ::-moz-placeholder {
     font-size: 16px;
 }
