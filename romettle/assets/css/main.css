@@ -346,3 +346,13 @@ section.footer-inner-main {
     text-align: left;
   } 
 }
+
+@media (min-width:576px) {
+    .w3l-breadcrumb {
+        display: flex;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+    }
+}
