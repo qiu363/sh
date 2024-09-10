@@ -138,7 +138,14 @@
                     </p>
                 </div>
                 <div class="col-lg-6 w3hny-passion-item">
-                    <img src="./assets/images/about/about_1.jpg" alt="" class="img-fluid about-img-full">
+                    <div class="owl-one owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="./assets/images/about/about_1.jpg" alt="" class="img-fluid about-img-full">
+                        </div>
+                        <div class="item">
+                            <img src="./assets/images/about/about_1.jpg" alt="" class="img-fluid about-img-full">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,7 +156,14 @@
         <div class="about-pd">
             <div class="about-full w3l-passion-mid-grids">
                 <div class="col-lg-6 w3hny-passion-item pe-lg-5 mb-lg-0 mb-5">
-                    <img src="assets/images/about/about_2.jpg" alt="" class="img-fluid radius-image about-img-full">
+                    <div class="owl-one owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="assets/images/about/about_2.jpg" alt="" class="img-fluid radius-image about-img-full">
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/about/about_2.jpg" alt="" class="img-fluid radius-image about-img-full">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 passion-grid-item-info">
                     <h3 class="about-full-word-r title-w3l mb-4">Production Bases</h3>
@@ -175,7 +189,14 @@
                     </p>
                 </div>
                 <div class="col-lg-6 w3hny-passion-item">
-                    <img src="./assets/images/about/about_4.jpg" alt="" class="img-fluid about-img-full">
+                    <div class="owl-one owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="./assets/images/about/about_4.jpg" alt="" class="img-fluid about-img-full">
+                        </div>
+                        <div class="item">
+                            <img src="./assets/images/about/about_4.jpg" alt="" class="img-fluid about-img-full">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -381,13 +402,39 @@
     <!-- //MENU-JS -->
 
     <!-- disable body scroll which navbar is in active -->
+    <script src="assets/js/owl.carousel.js"></script>
     <script>
         $(function() {
             $('.navbar-toggler').click(function() {
                 $('body').toggleClass('noscroll');
             })
         });
-
+        $(document).ready(function() {
+            $('.owl-one').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    480: {
+                        items: 1
+                    },
+                    667: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            })
+        })
     </script>
     <!-- //disable body scroll which navbar is in active -->
     <!-- //bootstrap -->
