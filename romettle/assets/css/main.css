@@ -385,7 +385,10 @@ section.footer-inner-main {
     padding-bottom: 50px;
   }
   .about-swiper-wrap {
-      position: relative;
-      width:100%;
+    position: relative;
+    width:100%;
+  }
+  .index-cont-full {
+    padding: 40px 0 0;
   }
 }
