@@ -384,4 +384,8 @@ section.footer-inner-main {
   .about-pd {
     padding-bottom: 50px;
   }
+  .about-swiper-wrap {
+      position: relative;
+      width:100%;
+  }
 }
