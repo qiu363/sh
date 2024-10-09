@@ -259,9 +259,9 @@
 section.footer-inner-main {
   background: #7a7a7a;
 }
-.w3l-footer9 .footer-inner-main .sub-one-left h6, 
+.w3l-footer9 .footer-inner-main .sub-one-left h6,
 .w3l-footer9 .footer-inner-main .sub-two-right h6 {
-    color: #f49e00; 
+    color: #f49e00;
 }
 .w3l-footer9 .footer-inner-main ul.social li a {
   background: none;
@@ -395,4 +395,19 @@ section.footer-inner-main {
   .index-cont-full {
     padding: 40px 0 0;
   }
+}
+
+.process-list li {
+  margin-bottom: 30px;
+}
+.process-list .process-img {
+  padding: 20px 20px 10px;
+}
+.process-list .process-img p {
+  margin: 10px 0;
+  text-align: center;
+}
+.process-list .process-img img {
+  width: 100%;
+  display: block;
 }
