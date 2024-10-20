@@ -412,3 +412,10 @@ section.footer-inner-main {
   width: 100%;
   display: block;
 }
+
+ul.gallery_agile_2 {
+  grid-template-columns: 1fr 1fr;
+}
+.about-mb-10 {
+  margin-bottom: 80px;
+}
