@@ -419,3 +419,7 @@ ul.gallery_agile_2 {
 .about-mb-10 {
   margin-bottom: 80px;
 }
+.product-content-track p {
+  line-height: 40px;
+  font-size: 20px;
+}
