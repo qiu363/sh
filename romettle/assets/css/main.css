@@ -420,6 +420,33 @@ ul.gallery_agile_2 {
   margin-bottom: 80px;
 }
 .product-content-track p {
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 50px;
+  font-size: 30px;
+  color: #1a1a1a;
+}
+.product-content-track p img {
+  vertical-align: 4px;
+}
+.prod-img-full {
+  height: 500px;
+  object-fit: cover;
+}
+.prod-aside h3 {
+  padding: 0 0 10px;
+  color: #de0036;
+  font-size: 36px;
+}
+.prod-aside .category {
+  color: #1a1a1a;
+  font-size: 26px;
+}
+.prod-aside .category li {
+  margin: 10px 0 0;
+}
+.prod-aside .category li span {
+  padding-right: 10px;
+}
+
+.navbar h1 a img {
+  width: 300px;
 }
