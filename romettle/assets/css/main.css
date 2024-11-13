@@ -450,3 +450,12 @@ ul.gallery_agile_2 {
 .navbar h1 a img {
   width: 300px;
 }
+
+.img-fluid {
+    width: 100%;
+}
+.product-content-track p {
+    text-align: justify;
+}
+
+
