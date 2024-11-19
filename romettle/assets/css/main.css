@@ -375,6 +375,11 @@ section.footer-inner-main {
   display: block;
   width: 100%;
 }
+
+.dropdown-menu-prod {
+  width: 180px;
+  transform: translateX(-38px);
+}
 @media (max-width: 600px) {
   .about-full {
     flex-direction: column;
@@ -394,6 +399,10 @@ section.footer-inner-main {
   }
   .index-cont-full {
     padding: 40px 0 0;
+  }
+  .dropdown-menu-prod {
+    width: 100%;
+    transform: translateX(0);
   }
 }
 
