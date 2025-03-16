@@ -437,7 +437,6 @@ ul.gallery_agile_2 {
   vertical-align: 4px;
 }
 .prod-img-full {
-  height: 500px;
   object-fit: cover;
 }
 .prod-aside h3 {
@@ -464,9 +463,12 @@ ul.gallery_agile_2 {
     width: 100%;
 }
 .product-content-track p {
-    text-align: justify;
 }
 
 .product-mid-bg {
   background: #e2e2e2;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
