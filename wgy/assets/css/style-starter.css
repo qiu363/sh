@@ -22401,3 +22401,79 @@ p.inner-page-para {
 }
 /*--//contact--*/
 /*# sourceMappingURL=style-freedom.css.map */
+
+/* 20250327新增 */
+.japan-adv-list {
+  width: 980px;
+  margin: 0 auto;
+}
+.japan-adv-list .bxys-list-cont {
+  width: 468px;
+  height: 400px;
+  margin: 0 10px;
+  padding: 42px 35px 50px;
+}
+.japan-list-wrap {
+  margin: 30px 0 60px;
+  background: #f6f5f5;
+}
+.japan-list {
+  width: 1040px;
+  margin: 0 auto;
+  padding: 80px 0 20px;
+  overflow: hidden;
+}
+.japan-list li {
+  position: relative;
+  float: left;
+  width: 400px;
+  height: 200px;
+  margin: 0 60px;
+  padding: 0 0 0 130px;
+}
+.japan-list li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.japan-list-cont h6 {
+  padding: 10px 0;
+  font-size: 20px;
+}
+.japan-list-cont p {
+  line-height: 1.5;
+  font-size: 14px;
+}
+@media all and (max-width: 991px) {
+  .fxkc-cont {
+    margin-top: 20px;
+  }
+  .japan-adv-list {
+    width: 100%;
+  }
+  .japan-adv-list .bxys-list-cont {
+    width: 90%;
+    height: auto;
+    margin: 0 auto 20px;
+    padding: 20px;
+  }
+  .japan-list {
+    width: 100%;
+    padding: 30px 0;
+  }
+  .japan-list li {
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    margin: 20px 0 30px;
+  }
+  .japan-list li img {
+    position: relative;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .japan-list-cont h6 {
+    text-align: center;
+  }
+}
