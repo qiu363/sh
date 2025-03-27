@@ -468,3 +468,10 @@ ul.gallery_agile_2 {
 .product-mid-bg {
   background: #e2e2e2;
 }
+<<<<<<< HEAD
+=======
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+>>>>>>> 6eed38453a75c5cc6f881279f9d24568aa29dc89
