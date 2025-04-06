@@ -22477,3 +22477,16 @@ p.inner-page-para {
     text-align: center;
   }
 }
+
+/* 20250406新增 */
+.train-mode .item {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  margin-top: 30px !important;
+}
+@media all and (max-width: 991px) {
+  .train-mode .item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
