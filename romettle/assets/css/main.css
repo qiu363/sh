@@ -472,3 +472,22 @@ ul.gallery_agile_2 {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+/* 20250424 修改 */
+.nav-language-change {
+  position: relative;
+}
+.nav-language-change .nav-link {
+  color: #fff;
+}
+.nav-language-change .dropdown-menu {
+  min-width: auto;
+  padding: 0;
+}
+.nav-language-change a.dropdown-item {
+  width: 70px;
+  text-align: center;
+}
+.nav-language-change a.dropdown-item:before {
+  left: 0;
+}
