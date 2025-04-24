@@ -491,3 +491,16 @@ ul.gallery_agile_2 {
 .nav-language-change a.dropdown-item:before {
   left: 0;
 }
+@media (max-width: 600px) {
+  .nav-language-change .nav-link {
+    color: #000;
+  }
+  .nav-language-change .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+  .nav-language-change a.dropdown-item {
+    margin: 0 auto;
+  } 
+}
+
